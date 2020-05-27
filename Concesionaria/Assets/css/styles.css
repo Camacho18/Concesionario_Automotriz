@@ -90,7 +90,7 @@
 
 .main-content {
     width: 100%;
-    background: #F3F8FB;
+    background:  #F3F8FB;
 }
 
 .main-content-inner {
@@ -232,7 +232,7 @@
 /*-------------------- 2.1.1 Horizontal Menu -------------------*/
 
 .body-bg {
-    background: #F3F8FB;
+    background:#d3d8fb  /*#F3F8FB;*/
 }
 
 .horizontal-main-wrapper {
