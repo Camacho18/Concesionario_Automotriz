@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <br />
+    <div class="row">
+        <div class="col-12">
+            <div class="card">              
+                <div class="card-body">
+                    <div class="row">
+                        <button class="btn btn-primary col-2" id="Btn_NewEmp">Nuevo +</button>
+                    </div>
+                    <br />
+                    <div class="row">
+                        @Html.EJS().Grid("Grid_Empleado").RowSelected("SelectEmp").AllowResizing(true).AllowSorting().AllowFiltering().Columns(col =>
+                   {
+                       col.Field("IdEmpleado").HeaderText("Usuario").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Visible(false).Add();
+                       col.Field("Nombre").HeaderText("Nombre").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                       col.Field("Telefono").HeaderText("Teléfono").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   }).AllowPaging().SelectionSettings(select => select.Type(Syncfusion.EJ2.Grids.SelectionType.Single)).PageSettings(page => page.PageCount(2)).Render()
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="CreateEmpModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div id="frmEmp">
+
+                </div>
+               
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        $(function () { EmpleadoLoad(); })
+
+        function EmpleadoLoad() {
+
+            $.get('@Url.Action("EmpleadoJson","Empleado")', function (data) {
+                var grid = document.getElementById('Grid_Empleado').ej2_instances[0]; // Grid instance
+                grid.dataSource = JSON.parse(data);
+            });
+        }
+
+        $('#Btn_NewEmp').click(function(){
+             $.get('@Url.Action("CreateEmp","Empleado")', function (data) {
+                 $('#frmEmp').html(data);
+                 $('#CreateEmpModal').modal("show");
+                });
+        });
+
+        function SelectEmp() {
+            var grid = document.getElementById("Grid_Empleado").ej2_instances[0];
+            var selectedrecords = grid.getSelectedRecords()[0].IdEmpleado;           
+            $.get('@Url.Action("UpdateEmp", "Empleado", new { IdEmpleado = "_id_" })'.replace('_id_', selectedrecords), function (data) {
+                $("#frmEmp").html(data);
+                $("#CreateEmpModal").modal("show");
+            });
+
+        }
+
+    </script>

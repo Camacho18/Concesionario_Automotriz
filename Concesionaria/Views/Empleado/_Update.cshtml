@@ -1,0 +1,63 @@
+﻿@model Concesionaria.Models.ModelsSupport.EmpleadoCreate
+
+@using (Ajax.BeginForm("UpdateEmp", "Empleado", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "frmEmp", OnSuccess = "SuccessEmp_U" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <div class="modal-header">
+            <h5 class="modal-title">Actualizar Empleado</h5>
+            <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Telefono, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Telefono, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Telefono, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            @*<div class="form-group">
+                @Html.LabelFor(model => model.C_Estado, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <div class="checkbox">
+                        @Html.EditorFor(model => model.C_Estado)
+                        @Html.ValidationMessageFor(model => model.C_Estado, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>*@
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.IdTipoEmpleado, "IdTipoEmpleado", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.IdTipoEmpleado, new SelectList(ViewBag.TipoEmp, "Id", "Value"), htmlAttributes: new { @class = "custom-select custom-select-md", @data_style = "btn btn-primary btn-round" })
+                    @Html.ValidationMessageFor(model => model.IdTipoEmpleado, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-success">Aceptar</button>
+        </div>
+
+    </div>
+<script>
+    function SuccessEmp_U(data) {
+        if (data == "1") {
+            $('#CreateEmpModal').modal("hide");
+            EmpleadoLoad();
+            alert("Correcto");
+        }
+    }
+</script>
+        }

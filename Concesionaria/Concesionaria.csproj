@@ -47,7 +47,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Syncfusion.EJ2, Version=17.4500.0.46, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <HintPath>packages\Syncfusion.EJ2.MVC5.17.4.0.46\lib\net45\Syncfusion.EJ2.dll</HintPath>
     </Reference>
@@ -57,6 +66,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -107,9 +118,6 @@
       <Private>True</Private>
       <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -128,9 +136,97 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="AutoComplete\DropDownList.cs" />
+    <Compile Include="Controllers\EmpleadoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Accesorio.cs">
+      <DependentUpon>Concesionaria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AutoAccesorio.cs">
+      <DependentUpon>Concesionaria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AutoCliente.cs">
+      <DependentUpon>Concesionaria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AutoColorList.cs">
+      <DependentUpon>Concesionaria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AutoEstadoList.cs">
+      <DependentUpon>Concesionaria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AutoMarca.cs">
+      <DependentUpon>Concesionaria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AutoModelo.cs">
+      <DependentUpon>Concesionaria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Automovil.cs">
+      <DependentUpon>Concesionaria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cliente.cs">
+      <DependentUpon>Concesionaria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Concesinaria.cs">
+      <DependentUpon>Concesionaria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Concesionaria.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Concesionaria.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Concesionaria.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Concesionaria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Concesionaria.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Concesionaria.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Empleado.cs">
+      <DependentUpon>Concesionaria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Estado.cs">
+      <DependentUpon>Concesionaria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Fabrica.cs">
+      <DependentUpon>Concesionaria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelsSupport\DropDownListModel.cs" />
+    <Compile Include="Models\ModelsSupport\EmpleadoCreate.cs" />
+    <Compile Include="Models\ModelsSupport\EmpleadoJson.cs" />
+    <Compile Include="Models\ModelsSupport\Login.cs" />
+    <Compile Include="Models\Municipio.cs">
+      <DependentUpon>Concesionaria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrigenEstado.cs">
+      <DependentUpon>Concesionaria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Origen_Fabrica.cs">
+      <DependentUpon>Concesionaria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Origen_Traspaso.cs">
+      <DependentUpon>Concesionaria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Pais.cs">
+      <DependentUpon>Concesionaria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Referencias.cs">
+      <DependentUpon>Concesionaria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoEmpleado.cs">
+      <DependentUpon>Concesionaria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Usuario.cs">
+      <DependentUpon>Concesionaria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VentaAuto.cs">
+      <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -215,6 +311,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\Concesionaria.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Concesionaria.edmx</DependentUpon>
+      <LastGenOutput>Concesionaria.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Concesionaria.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Concesionaria.edmx</DependentUpon>
+      <LastGenOutput>Concesionaria.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Assets\fonts\fontawesome-webfont.eot" />
@@ -229,12 +335,21 @@
     <Content Include="Assets\images\icon\Thumbs.db" />
     <Content Include="Scripts\ej2\ej2.min.js" />
     <Content Include="Scripts\ej2\ej2.min.js.map" />
+    <EntityDeploy Include="Models\Concesionaria.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Concesionaria.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Concesionaria.edmx.diagram">
+      <DependentUpon>Concesionaria.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -254,10 +369,13 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Empleado\Index.cshtml" />
+    <Content Include="Views\Empleado\_Create.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Empleado\_Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -274,6 +392,7 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
