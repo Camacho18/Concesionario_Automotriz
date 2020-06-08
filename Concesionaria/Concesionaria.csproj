@@ -140,6 +140,8 @@
     <Compile Include="Controllers\EmpleadoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -204,6 +206,7 @@
     <Compile Include="Models\ModelsSupport\EmpleadoCreate.cs" />
     <Compile Include="Models\ModelsSupport\EmpleadoJson.cs" />
     <Compile Include="Models\ModelsSupport\Login.cs" />
+    <Compile Include="Models\ModelsSupport\UsuarioModel.cs" />
     <Compile Include="Models\Municipio.cs">
       <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
@@ -364,7 +367,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Scripts\sweetalert2.all.min.js" />
+    <Content Include="Scripts\.js" />
+    <Content Include="Scripts\sweetalert2.min.css" />
+    <Content Include="Scripts\sweetalert2.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -383,6 +388,10 @@
     <Content Include="Views\Empleado\_Create.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Empleado\_Update.cshtml" />
+    <Content Include="Views\Usuario\_Create.cshtml" />
+    <Content Include="Views\Usuario\_Update.cshtml" />
+    <Content Include="Views\Menu\_MenuHorizontal.cshtml" />
+    <Content Include="Views\Menu\_VistaHorizontal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

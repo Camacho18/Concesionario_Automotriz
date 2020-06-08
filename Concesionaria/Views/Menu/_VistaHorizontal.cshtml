@@ -1,0 +1,29 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="col-md-3">
+    @*<div class="logo">*@
+        <a href="/home/"><h2 style="color:black">@ViewBag.NombreCon</h2>@*<img src="~/Assets/images/icon/logo2.png" alt="logo">*@</a>
+    @*</div>*@
+</div>
+<!-- profile info & task notification -->
+<div class="col-md-9 clearfix text-right">
+    <div class="d-md-inline-block d-block mr-md-4">
+        <ul class="notification-area">
+            <li id="full-view"><i class="ti-fullscreen"></i></li>
+            <li id="full-view-exit"><i class="ti-zoom-out"></i></li>
+        </ul>
+    </div>
+    <div class="clearfix d-md-inline-block d-block">
+        <div class="user-profile m-0">
+            <img class="avatar user-thumb" src="~/Assets/images/author/avatar.png" alt="avatar">
+            <h4 class="user-name dropdown-toggle" data-toggle="dropdown">@ViewBag.Usuario<i class="fa fa-angle-down"></i></h4>
+            <div class="dropdown-menu">
+                @*<a class="dropdown-item" href="#">Message</a>
+                <a class="dropdown-item" href="#">Settings</a>*@
+                <a class="dropdown-item" href="/login/deslog">Cerrar Sesión</a>
+            </div>
+        </div>
+    </div>
+</div>

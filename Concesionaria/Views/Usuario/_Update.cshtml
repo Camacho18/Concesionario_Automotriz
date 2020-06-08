@@ -1,0 +1,78 @@
+﻿@model Concesionaria.Models.ModelsSupport.UsuarioModel
+@{
+    Layout = null;
+}
+
+    <script type="text/javascript">
+@if (Model.C_Estado == false)
+{
+        <text>
+    $("#btn_Aceptar").prop("disabled",true);
+        </text>
+}
+    </script>
+
+
+@using (Ajax.BeginForm("Update", "Usuario", new AjaxOptions { HttpMethod = "POST", OnSuccess = "SuccessUsu_U" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="modal-header">
+        <h5 class=" modal-title text-center" id="exampleModalLabel">Actualizar Usuario</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.NomUsuario, "Usuario", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NomUsuario, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                @Html.ValidationMessageFor(model => model.NomUsuario, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Contrasena, "Contraseña", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Contrasena, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Contrasena, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Acceso, "Acceso", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.Acceso, new List<SelectListItem> { new SelectListItem { Text = "Autorizado", Value = "true" }, new SelectListItem { Text = "Denegado", Value = "false" } }, htmlAttributes: new { @class = "custom-select custom-select-md", @data_style = "btn btn-primary btn-round" })
+                @Html.ValidationMessageFor(model => model.Acceso, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <input type="submit" id="btn_Aceptar" value="Aceptar" class="btn btn-primary" />
+    </div>
+}
+
+
+<script>
+    function SuccessUsu_U(data)
+    {
+        if (data == "1") {
+            $('#CreateEmpModal').modal("hide");
+            EmpleadoLoad();
+            Swal.fire({
+                position: "top",
+                title: "Correcto",
+                text: "Usuario Actualizado",
+                icon: "success",
+                button: "Aceptar",
+            });
+        }
+    }
+
+
+
+</script>

@@ -8,19 +8,24 @@
         <div class="col-12">
             <div class="card">              
                 <div class="card-body">
-                    <div class="row">
-                        <button class="btn btn-primary col-2" id="Btn_NewEmp">Nuevo +</button>
-                    </div>
-                    <br />
-                    <div class="row">
-                        @Html.EJS().Grid("Grid_Empleado").AllowResizing(true).AllowSorting().AllowFiltering().Columns(col =>
-                   {
-                       col.Field("IdEmpleado").HeaderText("Usuario").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Visible(false).Add();
-                       col.Field("Nombre").HeaderText("Nombre").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
-                       col.Field("Telefono").HeaderText("Teléfono").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
-                       col.HeaderText("Opciones").Template("#templateEmp").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
-                   }).AllowPaging().SelectionSettings(select => select.Type(Syncfusion.EJ2.Grids.SelectionType.Single)).PageSettings(page => page.PageCount(2)).Render()
-                    </div>
+                    
+                        <div class="">
+                            <button class="btn btn-primary col-2" id="Btn_NewEmp">Nuevo +</button>
+                        </div>
+                        <br />
+                        <div class="">
+                            @Html.EJS().Grid("Grid_Empleado").AllowResizing(true).AllowSorting().AllowFiltering().Columns(col =>
+                       {
+                           col.Field("IdEmpleado").HeaderText("Usuario").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Visible(false).Add();
+                           col.Field("Numero").HeaderText("Número").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                           col.Field("Nombre").HeaderText("Nombre").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                           col.Field("Telefono").HeaderText("Teléfono").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                           col.Field("Tipo").HeaderText("Tipo").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                           col.Field("Estado").HeaderText("Estado").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                           col.HeaderText("Opciones").Template("#templateEmp").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                       }).AllowPaging().SelectionSettings(select => select.Type(Syncfusion.EJ2.Grids.SelectionType.Single)).PageSettings(page => page.PageCount(2)).Render()
+                        </div>
+                  
                 </div>
             </div>
         </div>
@@ -36,9 +41,15 @@
                     <a class="text-secondary " style="padding:0px,5px,0px,5px; margin-left:10px; margin-right:10px" href="javascript:void(0)" onclick="Usuario(${IdEmpleado})" data-toggle="tooltip" data-placement="top" title="Ver Autos">
                         <i class="fa fa-user"> </i>
                     </a>
-                    <a class="text-danger" href="javascript:void(0)" onclick="DeleteEmp(${IdEmpleado})" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                    ${if(Estado==="Eliminado")}
+                    <a class="text-danger"  href="javascript:void(0)" onclick="ActivateEmp(${ IdEmpleado })" data-toggle="tooltip" data-placement="top" title="Activar">
+                        <i class="fa fa-check"></i>
+                    </a>
+                    ${else}
+                    <a class="text-danger" href="javascript:void(0)" onclick="DeleteEmp(${ IdEmpleado })" data-toggle="tooltip" data-placement="top" title="Eliminar">
                         <i class="fa fa-remove"></i>
                     </a>
+                    ${/if}
                 </div>
             </div>
         </div>
@@ -84,16 +95,18 @@
         }
 
         function Usuario(id) {
-         $.get('@Url.Action("CreateUsu","Empleado", new { Id = "_ID_"})'.replace('_ID_', id), function (data) {
+         $.get('@Url.Action("Create","Usuario", new { Id = "_ID_"})'.replace('_ID_', id), function (data) {
              $('#frmEmp').html(data);
-            $('#ModalEmp').modal("show");
+             $('#CreateEmpModal').modal("show");
                     });
     }
 
         function DeleteEmp(id) {
-        swal.fire({
-            title: "Eliminar",
-            text: "Desea eliminar Empleado",
+          
+            swal.fire({
+            position: "top",
+                title: "Eliminar",
+                text: "Desea eliminar empleado",
             icon: "warning",
             buttons: ["Cancelar", "Aceptar"],
             dangerMode: true,
@@ -101,9 +114,38 @@
             .then((willDelete) => {
                 if (willDelete) {
                     $.get('@Url.Action("DeleteEmp","Empleado", new { Id = "_ID_"})'.replace('_ID_', id), function (data) {
-                        EmpJson();
-                        swal.fire("Empleado Eliminado", {
+                        EmpleadoLoad();
+                        Swal.fire({
+                            position: "top",
+                            title: "Correcto",
+                            text: "Empleado Eliminado",
                             icon: "success",
+                            button: "Aceptar",
+                        });
+                    });
+                }
+            });
+        };
+        function ActivateEmp(id) {
+          
+            swal.fire({
+            position: "top",
+                title: "Activar",
+                text: "Desea activar empleado",
+            icon: "warning",
+            buttons: ["Cancelar", "Aceptar"],
+            dangerMode: true,
+        })
+            .then((willDelete) => {
+                if (willDelete) {
+                    $.get('@Url.Action("ActiveEmp","Empleado", new { Id = "_ID_"})'.replace('_ID_', id), function (data) {
+                        EmpleadoLoad();
+                        Swal.fire({
+                            position: "top",
+                            title: "Correcto",
+                            text: "Empleado Activado",
+                            icon: "success",
+                            button: "Aceptar",
                         });
                     });
                 }

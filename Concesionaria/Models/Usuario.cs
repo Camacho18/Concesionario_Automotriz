@@ -26,6 +26,7 @@ namespace Concesionaria.Models
         public int IdUsuario { get; set; }
         public string NomUsuario { get; set; }
         public string Contrasena { get; set; }
+        public Nullable<bool> Acceso { get; set; }
         public Nullable<int> IdEmpleado { get; set; }
     
         public virtual Empleado Empleado { get; set; }

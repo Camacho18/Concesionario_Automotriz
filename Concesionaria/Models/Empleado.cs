@@ -23,7 +23,7 @@ namespace Concesionaria.Models
         public int IdEmpleado { get; set; }
         public string Numero { get; set; }
         public string Nombre { get; set; }
-        public Nullable<int> Telefono { get; set; }
+        public string Telefono { get; set; }
         public Nullable<bool> C_Estado { get; set; }
         public Nullable<int> IdTipoEmpleado { get; set; }
         public Nullable<int> IdConcesinaria { get; set; }

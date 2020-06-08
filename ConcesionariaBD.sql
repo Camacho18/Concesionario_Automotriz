@@ -40,7 +40,7 @@ create table Empleado(
 	IdEmpleado int identity(1,1) primary key,
 	Numero VARCHAR(30),
 	Nombre varchar(50),	
-	Telefono int,
+	Telefono Varchar(20),
 	_Estado BIT DEFAULT 1,
 	IdTipoEmpleado int foreign key(IdTipoEmpleado) references TipoEmpleado(IdTipoEmpleado),
 	IdConcesinaria int foreign key(IdConcesinaria) references Concesinaria(IdConcesinaria)
@@ -50,6 +50,7 @@ create table Usuario(
 	IdUsuario int identity(1,1) primary key,
 	NomUsuario varchar(50),
 	Contrasena varchar(50),
+	Acceso BIT Default 1,
 	IdEmpleado int foreign key(IdEmpleado) references Empleado(IdEmpleado)
 	)
 

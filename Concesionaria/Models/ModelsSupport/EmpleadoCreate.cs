@@ -11,12 +11,14 @@ namespace Concesionaria.Models.ModelsSupport
     {
         public int IdEmpleado { get; set; }
 
+        public string Numero { get; set; }
+
         [Required(ErrorMessage = "Campo obligatorio")]
         public string Nombre { get; set; }
 
         [Required(ErrorMessage ="Campo necesario")]
-        public int? Telefono { get; set; }
-        public bool C_Estado { get; set; }
+        public string Telefono { get; set; }
+        public bool? C_Estado { get; set; }
         public int? IdTipoEmpleado { get; set; }
         public int? IdConcesinaria { get; set; }
     }

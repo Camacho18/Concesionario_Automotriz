@@ -32,10 +32,13 @@ namespace Concesionaria.Controllers
         // GET: Empleado/Details/5
         public ActionResult EmpleadoJson()
         {
-            List<EmpleadoJson> json = (from emp in db.Empleado select new EmpleadoJson{
+            List<EmpleadoJson> json = (from emp in db.Empleado orderby emp.IdEmpleado descending select new EmpleadoJson{
+            Numero=emp.Numero,
             IdEmpleado=emp.IdEmpleado,
             Nombre=emp.Nombre,
-            Telefono=emp.Telefono
+            Telefono=emp.Telefono,
+            Tipo = (from TipoEmp in db.TipoEmpleado where TipoEmp.IdTipoEmpleado==emp.IdTipoEmpleado select TipoEmp.Nombre ).FirstOrDefault(),
+            Estado = (emp.C_Estado==true ? "Activo" : "Eliminado")
             }).ToList();
             JsonString = JsonConvert.SerializeObject(json);
             return Json(JsonString, JsonRequestBehavior.AllowGet);
@@ -63,10 +66,17 @@ namespace Concesionaria.Controllers
                 Empleado emp = new Empleado();
                 try
                 {
-                    emp.Nombre = model.Nombre;
-                    emp.Telefono = model.Telefono;
+                    int comd = (from E in db.Empleado where E.Numero == model.Numero select E.IdEmpleado).Count();
+
+                    if (comd >= 1)
+                        return Json("2", JsonRequestBehavior.AllowGet);
+
+                    emp.Numero = model.Numero.Trim();
+                    emp.Nombre = model.Nombre.Trim();
+                    emp.Telefono = model.Telefono.Trim();
                     emp.IdTipoEmpleado = model.IdTipoEmpleado;
                     emp.IdConcesinaria = Convert.ToInt32(Session["IdSucursal"]);
+                    emp.C_Estado = true;
                     db.Empleado.Add(emp);
                     db.SaveChanges();
 
@@ -74,7 +84,7 @@ namespace Concesionaria.Controllers
                 }
                 catch
                 {
-                    return View();
+                    return Json("0", JsonRequestBehavior.AllowGet);
                 }
             }
         }
@@ -85,10 +95,13 @@ namespace Concesionaria.Controllers
             ViewBag.TipoEmp = Model.TipoEmpleado();
             EmpleadoCreate model = (from E in db.Empleado where E.IdEmpleado == IdEmpleado
                                     select new EmpleadoCreate
-                                    {                                        
+                                    {                     
+                                        Numero = E.Numero,
                                         Nombre=E.Nombre,
                                         Telefono=E.Telefono,
-                                        IdTipoEmpleado=E.IdTipoEmpleado
+                                        IdTipoEmpleado=E.IdTipoEmpleado,
+                                        C_Estado=E.C_Estado
+
                                     }
                                     ).FirstOrDefault();
             Session["IdEmpleado"] = IdEmpleado;
@@ -126,5 +139,41 @@ namespace Concesionaria.Controllers
                 }
             }
         }
+        public ActionResult DeleteEmp(int Id)
+        {
+            Empleado e = db.Empleado.Where(x => x.IdEmpleado == Id).FirstOrDefault();
+            e.C_Estado = false;
+            db.Entry(e).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+
+
+            Usuario u = db.Usuario.Where(x => x.IdEmpleado == Id).FirstOrDefault();
+            if (u != null)
+            {
+                u.Acceso = false;
+                db.Entry(u).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+            }
+
+            return Json("1",JsonRequestBehavior.AllowGet);
+        }
+        public ActionResult ActiveEmp(int Id)
+        {
+            Empleado e = db.Empleado.Where(x => x.IdEmpleado == Id).FirstOrDefault();
+            e.C_Estado = true;
+            db.Entry(e).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+
+            Usuario u = db.Usuario.Where(x => x.IdEmpleado == Id).FirstOrDefault();
+            if (u != null)
+            {
+                u.Acceso = true;
+                db.Entry(u).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+            }
+            return Json("1", JsonRequestBehavior.AllowGet);
+        }
+
+
     }
 }
