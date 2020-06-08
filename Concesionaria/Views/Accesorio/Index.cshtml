@@ -3,85 +3,85 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-    <br />
-    <div class="row">
-        <div class="col-12">
-            <div class="card">              
-                <div class="card-body">
-                    
-                        <div class="">
-                            <button class="btn btn-primary col-2" id="Btn_NewEmp">Nuevo +</button>
-                        </div>
-                        <br />
-                        <div class="">
-                            @Html.EJS().Grid("Grid_Empleado").AllowResizing(true).AllowSorting().AllowFiltering().Columns(col =>
-                       {
-                           col.Field("IdEmpleado").HeaderText("Usuario").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Visible(false).Add();
-                           col.Field("Numero").HeaderText("Número").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
-                           col.Field("Nombre").HeaderText("Nombre").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
-                           col.Field("Telefono").HeaderText("Teléfono").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
-                           col.Field("Tipo").HeaderText("Tipo").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
-                           col.Field("Estado").HeaderText("Estado").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
-                           col.HeaderText("Opciones").Template("#templateEmp").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
-                       }).AllowPaging().SelectionSettings(select => select.Type(Syncfusion.EJ2.Grids.SelectionType.Single)).PageSettings(page => page.PageCount(2)).Render()
-                        </div>
-                  
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <script id="templateEmp" type="text/x-template">
-        <div class="row text-center">
-            <div class="col-md-12 ">
+<br />
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
                 <div class="">
-                    <a class="text-succcess" href="javascript:void(0)" onclick="RowSelectEmp(${IdEmpleado})" data-toggle="tooltip" data-placement="top" title="Editar">
-                        <i class="ti-user"></i>
-                    </a>
-                    <a class="text-secondary " style="padding:0px,5px,0px,5px; margin-left:10px; margin-right:10px" href="javascript:void(0)" onclick="Usuario(${IdEmpleado})" data-toggle="tooltip" data-placement="top" title="Ver Autos">
-                        <i class="fa fa-user"> </i>
-                    </a>
-                    ${if(Estado==="Eliminado")}
-                    <a class="text-danger"  href="javascript:void(0)" onclick="ActivateEmp(${ IdEmpleado })" data-toggle="tooltip" data-placement="top" title="Activar">
-                        <i class="fa fa-check"></i>
-                    </a>
-                    ${else}
-                    <a class="text-danger" href="javascript:void(0)" onclick="DeleteEmp(${ IdEmpleado })" data-toggle="tooltip" data-placement="top" title="Eliminar">
-                        <i class="fa fa-remove"></i>
-                    </a>
-                    ${/if}
+                    <button class="btn btn-primary col-2" id="Btn_NewAcce">Nuevo +</button>
                 </div>
-            </div>
-        </div>
-    </script>
-
-    <div class="modal fade" id="CreateEmpModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div id="frmEmp">
-
+                <br />
+                <div class="">
+                    @Html.EJS().Grid("Grid_Accesorio").AllowResizing(true).AllowSorting().AllowFiltering().Columns(col =>
+               {
+                   col.Field("IdAccesorio").HeaderText("Usuario").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Visible(false).Add();
+                   col.Field("Numero").HeaderText("Número").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("Nombre").HeaderText("Nombre").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("CantidadExistencia").HeaderText("Existencia").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("CantidadVendido").HeaderText("Vendido").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();                   
+                   col.HeaderText("Opciones").Template("#templateAcce").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+               }).AllowPaging().SelectionSettings(select => select.Type(Syncfusion.EJ2.Grids.SelectionType.Single)).PageSettings(page => page.PageCount(2)).Render()
                 </div>
-               
+
             </div>
         </div>
     </div>
+</div>
 
-    <script>
+<script id="templateAcce" type="text/x-template">
+    <div class="row text-center">
+        <div class="col-md-12 ">
+            <div class="">
+                <a class="text-succcess" href="javascript:void(0)" onclick="RowSelectEmp(${IdAccesorio})" data-toggle="tooltip" data-placement="top" title="Editar">
+                    <i class="ti-user"></i>
+                </a>
+                <a class="text-secondary " style="padding:0px,5px,0px,5px; margin-left:10px; margin-right:10px" href="javascript:void(0)" onclick="Usuario(${IdAccesorio})" data-toggle="tooltip" data-placement="top" title="Ver Autos">
+                    <i class="fa fa-user"> </i>
+                </a>
+                ${if(Estado==="Eliminado")}
+                <a class="text-danger" href="javascript:void(0)" onclick="ActivateEmp(${ IdAccesorio })" data-toggle="tooltip" data-placement="top" title="Activar">
+                    <i class="fa fa-check"></i>
+                </a>
+                ${else}
+                <a class="text-danger" href="javascript:void(0)" onclick="DeleteEmp(${ IdAccesorio })" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                    <i class="fa fa-remove"></i>
+                </a>
+                ${/if}
+            </div>
+        </div>
+    </div>
+</script>
 
-        $(function () { EmpleadoLoad(); })
+<div class="modal fade" id="AcceModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div id="frmAcce">
 
-        function EmpleadoLoad() {
+            </div>
 
-            $.get('@Url.Action("EmpleadoJson","Empleado")', function (data) {
-                var grid = document.getElementById('Grid_Empleado').ej2_instances[0]; // Grid instance
+        </div>
+    </div>
+</div>
+
+<script>
+
+        $(function () { AccesorioLoad(); })
+
+    function AccesorioLoad() {
+
+            $.get('@Url.Action("AccesorioJson","Accesorio")', function (data) {
+                var grid = document.getElementById('Grid_Accesorio').ej2_instances[0]; // Grid instance
                 grid.dataSource = JSON.parse(data);
             });
         }
 
-        $('#Btn_NewEmp').click(function(){
-             $.get('@Url.Action("CreateEmp","Empleado")', function (data) {
-                 $('#frmEmp').html(data);
-                 $('#CreateEmpModal').modal("show");
+    $('#Btn_NewAcce').click(function(){
+             $.get('@Url.Action("CreateAcce","Accesorio")', function (data) {
+                 $('#frmAcce').html(data);
+                 $('#AcceModal').modal("show");
                 });
         });
 
@@ -202,4 +202,5 @@
         // [F] Row Select Grid
 
 
-    </script>
+</script>
+

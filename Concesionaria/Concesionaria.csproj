@@ -137,6 +137,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="AutoComplete\DropDownList.cs" />
+    <Compile Include="Controllers\AccesorioController.cs" />
     <Compile Include="Controllers\EmpleadoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -202,6 +203,8 @@
     <Compile Include="Models\Fabrica.cs">
       <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ModelsSupport\AccesorioCreate.cs" />
+    <Compile Include="Models\ModelsSupport\AccesorioJson.cs" />
     <Compile Include="Models\ModelsSupport\DropDownListModel.cs" />
     <Compile Include="Models\ModelsSupport\EmpleadoCreate.cs" />
     <Compile Include="Models\ModelsSupport\EmpleadoJson.cs" />
@@ -392,6 +395,8 @@
     <Content Include="Views\Usuario\_Update.cshtml" />
     <Content Include="Views\Menu\_MenuHorizontal.cshtml" />
     <Content Include="Views\Menu\_VistaHorizontal.cshtml" />
+    <Content Include="Views\Accesorio\Index.cshtml" />
+    <Content Include="Views\Accesorio\_Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

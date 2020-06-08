@@ -109,6 +109,7 @@ create table Automovil(
 
 create table Accesorio(
 	IdAccesorio int identity(1,1) primary key,
+	Numero VARCHAR(30),
 	Nombre varchar(50),
 	CantidadExistencia INT,
 	CantidadVendido INT,
