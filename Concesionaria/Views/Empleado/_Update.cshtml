@@ -56,7 +56,14 @@
         if (data == "1") {
             $('#CreateEmpModal').modal("hide");
             EmpleadoLoad();
-            alert("Correcto");
+            $('#ModalEmp').modal("hide");            
+            Swal.fire({
+                position:"top",
+                title: "Correcto",
+                text: "Empleado Actualizado",
+                icon: "success",
+                button: "Aceptar",
+            });
         }
     }
 </script>

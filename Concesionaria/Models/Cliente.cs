@@ -22,6 +22,7 @@ namespace Concesionaria.Models
         }
     
         public int IdCliente { get; set; }
+        public string Numero { get; set; }
         public string Nombre { get; set; }
         public Nullable<int> Edad { get; set; }
         public string Direccion { get; set; }
@@ -32,7 +33,9 @@ namespace Concesionaria.Models
         public string Correo { get; set; }
         public string RFC { get; set; }
         public Nullable<int> IdMunicipio { get; set; }
+        public Nullable<int> IdEstado_Cliente { get; set; }
     
+        public virtual Estado_Cliente Estado_Cliente { get; set; }
         public virtual Municipio Municipio { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Referencias> Referencias { get; set; }

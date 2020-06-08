@@ -13,17 +13,36 @@
                     </div>
                     <br />
                     <div class="row">
-                        @Html.EJS().Grid("Grid_Empleado").RowSelected("SelectEmp").AllowResizing(true).AllowSorting().AllowFiltering().Columns(col =>
+                        @Html.EJS().Grid("Grid_Empleado").AllowResizing(true).AllowSorting().AllowFiltering().Columns(col =>
                    {
                        col.Field("IdEmpleado").HeaderText("Usuario").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Visible(false).Add();
                        col.Field("Nombre").HeaderText("Nombre").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
                        col.Field("Telefono").HeaderText("Teléfono").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                       col.HeaderText("Opciones").Template("#templateEmp").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
                    }).AllowPaging().SelectionSettings(select => select.Type(Syncfusion.EJ2.Grids.SelectionType.Single)).PageSettings(page => page.PageCount(2)).Render()
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script id="templateEmp" type="text/x-template">
+        <div class="row text-center">
+            <div class="col-md-12 ">
+                <div class="">
+                    <a class="text-succcess" href="javascript:void(0)" onclick="RowSelectEmp(${IdEmpleado})" data-toggle="tooltip" data-placement="top" title="Editar">
+                        <i class="ti-user"></i>
+                    </a>
+                    <a class="text-secondary " style="padding:0px,5px,0px,5px; margin-left:10px; margin-right:10px" href="javascript:void(0)" onclick="Usuario(${IdEmpleado})" data-toggle="tooltip" data-placement="top" title="Ver Autos">
+                        <i class="fa fa-user"> </i>
+                    </a>
+                    <a class="text-danger" href="javascript:void(0)" onclick="DeleteEmp(${IdEmpleado})" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                        <i class="fa fa-remove"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </script>
 
     <div class="modal fade" id="CreateEmpModal">
         <div class="modal-dialog">
@@ -55,14 +74,42 @@
                 });
         });
 
-        function SelectEmp() {
-            var grid = document.getElementById("Grid_Empleado").ej2_instances[0];
-            var selectedrecords = grid.getSelectedRecords()[0].IdEmpleado;           
-            $.get('@Url.Action("UpdateEmp", "Empleado", new { IdEmpleado = "_id_" })'.replace('_id_', selectedrecords), function (data) {
+        // [I] Row Select Grid          
+        function RowSelectEmp(Id) {
+            $.get('@Url.Action("UpdateEmp", "Empleado", new { IdEmpleado = "_id_" })'.replace('_id_', Id), function (data) {
                 $("#frmEmp").html(data);
                 $("#CreateEmpModal").modal("show");
             });
 
         }
+
+        function Usuario(id) {
+         $.get('@Url.Action("CreateUsu","Empleado", new { Id = "_ID_"})'.replace('_ID_', id), function (data) {
+             $('#frmEmp').html(data);
+            $('#ModalEmp').modal("show");
+                    });
+    }
+
+        function DeleteEmp(id) {
+        swal.fire({
+            title: "Eliminar",
+            text: "Desea eliminar Empleado",
+            icon: "warning",
+            buttons: ["Cancelar", "Aceptar"],
+            dangerMode: true,
+        })
+            .then((willDelete) => {
+                if (willDelete) {
+                    $.get('@Url.Action("DeleteEmp","Empleado", new { Id = "_ID_"})'.replace('_ID_', id), function (data) {
+                        EmpJson();
+                        swal.fire("Empleado Eliminado", {
+                            icon: "success",
+                        });
+                    });
+                }
+            });
+        };
+        // [F] Row Select Grid          
+
 
     </script>

@@ -38,6 +38,7 @@ create table TipoEmpleado(
 
 create table Empleado(
 	IdEmpleado int identity(1,1) primary key,
+	Numero VARCHAR(30),
 	Nombre varchar(50),	
 	Telefono int,
 	_Estado BIT DEFAULT 1,
@@ -52,6 +53,15 @@ create table Usuario(
 	IdEmpleado int foreign key(IdEmpleado) references Empleado(IdEmpleado)
 	)
 
+-- __________________________________________________________________ Promoción
+
+create table PromocionList(
+	IdPromocion int identity(1,1) primary key,
+	Numero VARCHAR(30),
+	Cantidad_Auto INT,
+	Descuento INT
+)
+
 -- __________________________________________________________________ Automovil
 
 create table AutoMarca(
@@ -65,18 +75,29 @@ create table AutoModelo(
 	IdAutoMarca int foreign key (IdAutoMarca) references AutoMarca(IdAutoMarca),
 	)
 
+CREATE TABLE Promocion_Auto(
+	IdPromocion_Auto INT IDENTITY(1,1),
+	IdAutoModelo int foreign key (IdAutoModelo) references AutoModelo(IdAutoModelo),
+	IdPromocion int foreign key (IdPromocion) references PromocionList(IdPromocion),
+	IdConcesinaria int foreign key (IdConcesinaria) references Concesinaria(IdConcesinaria),
+	Vigente bit default 1
+)
+
 CREATE TABLE AutoEstadoList(
 	IdAutoEstado INT IDENTITY(1,1) PRIMARY KEY,
+	Numero VARCHAR(30),
 	Nombre VARCHAR(40)
 	)
 
 CREATE TABLE AutoColorList(
 	IdAutoColor INT IDENTITY(1,1) PRIMARY KEY,
+	Numero VARCHAR(30),
 	Nombre VARCHAR(40)
 )
 
 create table Automovil(
 	IdAutomovil int identity(1,1) primary key,
+	Numero VARCHAR(30),
 	Anio int,	
 	IdAutoModelo int foreign key (IdAutoModelo) references AutoModelo(IdAutoModelo),
 	IdAutoColor int foreign key (IdAutoColor) references AutoColorList(IdAutoColor),
@@ -103,6 +124,7 @@ create table AutoAccesorio(
 
 create table Fabrica(
 	IdFabrica int identity(1,1) primary key,
+	Numero VARCHAR(30),
 	Nombre varchar(50),
 	)
 -- __________________________________________________________________ Origen 
@@ -114,7 +136,7 @@ CREATE TABLE OrigenEstado(
 
 create table Origen_Fabrica(
 	IdOrigen_Fabrica int identity(1,1) primary key,
-	Numero INT,
+	Numero VARCHAR(30),
 	IdFabrica int foreign key(IdFabrica) references Fabrica(IdFabrica),
 	IdUsuario int foreign key(IdUsuario) references Usuario(IdUsuario),
 	IdAutomovil int foreign key(IdAutomovil) references Automovil(IdAutomovil),
@@ -132,8 +154,14 @@ create table Origen_Traspaso(
 	)
 
 -- __________________________________________________________________ Cliente
+CREATE TABLE Estado_Cliente(
+	IdEstado_Cliente INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	Nombre VARCHAR(30)
+)
+
 create table Cliente (
 	IdCliente int identity(1,1) primary key,
+	Numero VARCHAR(30),
 	Nombre varchar(50),
 	Edad int,
 	Direccion varchar(60),
@@ -143,11 +171,13 @@ create table Cliente (
 	TelCel int,
 	Correo varchar(50),
 	RFC varchar(13),
-	IdMunicipio int foreign key(IdMunicipio) references Municipio(IdMunicipio)
+	IdMunicipio int foreign key(IdMunicipio) references Municipio(IdMunicipio),
+	IdEstado_Cliente int foreign key(IdEstado_Cliente) references Estado_Cliente(IdEstado_Cliente)
 	)
 
 create table Referencias(
 	IdReferencia int identity(1,1) primary key,
+	Numero VARCHAR(30),
 	Nombre varchar(50),
 	TelCel int,
 	IdCliente int foreign key(IdCliente) references Cliente(IdCliente)
@@ -158,6 +188,7 @@ create table Referencias(
 CREATE TABLE VentaAuto(
 	IdVentaAuto INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 	IdUsuario int foreign key(IdUsuario) references Usuario(IdUsuario),
+	IdPromocion int foreign key (IdPromocion) references PromocionList(IdPromocion),
 	IdCliente int foreign key(IdCliente) references Cliente(IdCliente),
 )
 
@@ -166,3 +197,27 @@ CREATE TABLE AutoCliente(
 	IdAutomovil int foreign key(IdAutomovil) references Automovil(IdAutomovil),
 	IdVentaAuto int foreign key(IdVentaAuto) references VentaAuto(IdVentaAuto)
 )
+
+
+-- __________________________________________________________________ Mantenimiento
+
+/*
+create table CategoriaAutoparte(
+	IdCategoriaAutoparte int identity(1,1) primary key,
+	Categoria varchar(70)
+	)
+
+create table Autopartes(
+	IdAutopartes int identity(1,1) primary key,
+	Nombre varchar(50),
+	IdCategoriaAutoparte int foreign key(IdCategoriaAutoparte) references CategoriaAutoparte(IdCategoriaAutoparte),
+	IdConcesinaria int foreign key(IdConcesinaria) references Concesinaria(IdConcesinaria)
+	)
+
+create table Mantenimiento(
+	IdMantenimiento int identity(1,1) primary key,
+	Descripcion varchar(70),	
+	IdAutopartes int foreign key(IdAutopartes) references Autopartes(IdAutopartes),
+	IdVentaAuto int foreign key(IdVentaAuto) references VentaAuto(IdVentaAuto)
+	)
+	*/

@@ -24,6 +24,7 @@ namespace Concesionaria.Models
         }
     
         public int IdAutomovil { get; set; }
+        public string Numero { get; set; }
         public Nullable<int> Anio { get; set; }
         public Nullable<int> IdAutoModelo { get; set; }
         public Nullable<int> IdAutoColor { get; set; }

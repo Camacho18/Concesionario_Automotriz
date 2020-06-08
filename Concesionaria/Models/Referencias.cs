@@ -15,6 +15,7 @@ namespace Concesionaria.Models
     public partial class Referencias
     {
         public int IdReferencia { get; set; }
+        public string Numero { get; set; }
         public string Nombre { get; set; }
         public Nullable<int> TelCel { get; set; }
         public Nullable<int> IdCliente { get; set; }
