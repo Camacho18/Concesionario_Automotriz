@@ -1,8 +1,18 @@
 ﻿@model Concesionaria.Models.ModelsSupport.EmpleadoCreate
 
+<script type="text/javascript">
+@if (Model.C_Estado == false)
+{
+        <text>
+    $("#btn_Aceptar").prop("disabled",true);
+        </text>
+}
+</script>
+
 @using (Ajax.BeginForm("UpdateEmp", "Empleado", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "frmEmp", OnSuccess = "SuccessEmp_U" }))
 {
     @Html.AntiForgeryToken()
+
 
     <div class="form-horizontal">
         <div class="modal-header">
@@ -11,6 +21,15 @@
         </div>
         <div class="modal-body">
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Numero, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Numero, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                    @Html.ValidationMessageFor(model => model.Numero, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
             <div class="form-group">
                 @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
@@ -28,14 +47,14 @@
             </div>
 
             @*<div class="form-group">
-                @Html.LabelFor(model => model.C_Estado, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    <div class="checkbox">
-                        @Html.EditorFor(model => model.C_Estado)
-                        @Html.ValidationMessageFor(model => model.C_Estado, "", new { @class = "text-danger" })
+                    @Html.LabelFor(model => model.C_Estado, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.C_Estado)
+                            @Html.ValidationMessageFor(model => model.C_Estado, "", new { @class = "text-danger" })
+                        </div>
                     </div>
-                </div>
-            </div>*@
+                </div>*@
 
             <div class="form-group">
                 @Html.LabelFor(model => model.IdTipoEmpleado, "IdTipoEmpleado", htmlAttributes: new { @class = "control-label col-md-2" })
@@ -47,17 +66,24 @@
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-            <button type="submit" class="btn btn-success">Aceptar</button>
+            <button type="submit" id="btn_Aceptar" class="btn btn-success">Aceptar</button>
         </div>
 
     </div>
-<script>
-    function SuccessEmp_U(data) {
-        if (data == "1") {
-            $('#CreateEmpModal').modal("hide");
-            EmpleadoLoad();
-            alert("Correcto");
+    <script>
+        function SuccessEmp_U(data) {
+            if (data == "1") {
+                $('#CreateEmpModal').modal("hide");
+                EmpleadoLoad();
+                $('#ModalEmp').modal("hide");
+                Swal.fire({
+                    position: "top",
+                    title: "Correcto",
+                    text: "Empleado Actualizado",
+                    icon: "success",
+                    button: "Aceptar",
+                });
+            }
         }
-    }
-</script>
-        }
+    </script>
+}

@@ -12,14 +12,16 @@ namespace Concesionaria.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Referencias
+    public partial class Promocion_Auto
     {
-        public int IdReferencia { get; set; }
-        public string Numero { get; set; }
-        public string Nombre { get; set; }
-        public Nullable<int> TelCel { get; set; }
-        public Nullable<int> IdCliente { get; set; }
+        public int IdPromocion_Auto { get; set; }
+        public Nullable<int> IdAutoModelo { get; set; }
+        public Nullable<int> IdPromocion { get; set; }
+        public Nullable<int> IdConcesinaria { get; set; }
+        public Nullable<bool> Vigente { get; set; }
     
-        public virtual Cliente Cliente { get; set; }
+        public virtual AutoModelo AutoModelo { get; set; }
+        public virtual Concesinaria Concesinaria { get; set; }
+        public virtual PromocionList PromocionList { get; set; }
     }
 }

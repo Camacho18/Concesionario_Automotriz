@@ -12,30 +12,22 @@ namespace Concesionaria.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Usuario
+    public partial class PromocionList
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Usuario()
+        public PromocionList()
         {
-            this.Origen_Fabrica = new HashSet<Origen_Fabrica>();
-            this.Origen_Traspaso = new HashSet<Origen_Traspaso>();
-            this.Origen_Traspaso1 = new HashSet<Origen_Traspaso>();
+            this.Promocion_Auto = new HashSet<Promocion_Auto>();
             this.VentaAuto = new HashSet<VentaAuto>();
         }
     
-        public int IdUsuario { get; set; }
-        public string NomUsuario { get; set; }
-        public string Contrasena { get; set; }
-        public Nullable<bool> Acceso { get; set; }
-        public Nullable<int> IdEmpleado { get; set; }
+        public int IdPromocion { get; set; }
+        public string Numero { get; set; }
+        public Nullable<int> Cantidad_Auto { get; set; }
+        public Nullable<int> Descuento { get; set; }
     
-        public virtual Empleado Empleado { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Origen_Fabrica> Origen_Fabrica { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Origen_Traspaso> Origen_Traspaso { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Origen_Traspaso> Origen_Traspaso1 { get; set; }
+        public virtual ICollection<Promocion_Auto> Promocion_Auto { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<VentaAuto> VentaAuto { get; set; }
     }

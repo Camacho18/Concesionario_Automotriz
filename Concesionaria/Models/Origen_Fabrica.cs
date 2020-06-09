@@ -15,7 +15,7 @@ namespace Concesionaria.Models
     public partial class Origen_Fabrica
     {
         public int IdOrigen_Fabrica { get; set; }
-        public Nullable<int> Numero { get; set; }
+        public string Numero { get; set; }
         public Nullable<int> IdFabrica { get; set; }
         public Nullable<int> IdUsuario { get; set; }
         public Nullable<int> IdAutomovil { get; set; }
