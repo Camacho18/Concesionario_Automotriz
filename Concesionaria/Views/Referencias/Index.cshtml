@@ -1,0 +1,102 @@
+﻿@{
+    Layout = null;
+}
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title text-center">Cliente: </h5><h5></h5>
+                <div class="card-body">
+                    <div class="row">
+                        <button class="btn btn-primary col-2" id="Btn_NewRef">Nuevo +</button>
+                    </div>
+                    <br />
+                    <div class="row">
+                        @Html.EJS().Grid("Grid_Referencias").RowSelected("SelectRef").AllowResizing(true).AllowSorting().AllowFiltering().Columns(col =>
+                   {
+                       col.Field("IdReferencia").HeaderText("Referencia").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Visible(false).Add();
+                       col.Field("Nombre").HeaderText("Nombre").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                       col.Field("TelCel").HeaderText("Tel. Celular").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                       col.HeaderText("Opciones").Template("#templateRef").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   }).AllowPaging().SelectionSettings(select => select.Type(Syncfusion.EJ2.Grids.SelectionType.Single)).PageSettings(page => page.PageCount(3)).Render()
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script id="templateRef" type="text/x-template">
+    <div class="row text-center">
+        <div class="col-md-12 ">
+            <div class="">
+                <a class="text-succcess" href="javascript:void(0)" onclick="SelectRef(${IdReferencia})" data-toggle="tooltip" data-placement="top" title="Editar">
+                    <i class="ti-slice"></i>
+                </a>
+                <a class="text-danger" style="padding:0px,5px,0px,5px; margin-left:10px; margin-right:10px" href="javascript:void(0)" onclick="DeleteRef(${IdReferencia})" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                    <i class="fa fa-remove"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</script>
+
+<div class="modal fade" id="CreateRefModal">
+    <div class="modal-dialog  modal-lg">
+        <div class="modal-content">
+            <div id="frmRef">
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    $(function () { ReferenciasLoad(); })
+
+    function ReferenciasLoad() {
+        $.get('@Url.Action("RefJson","Referencias")', function (data) {
+            var grid = document.getElementById('Grid_Referencias').ej2_instances[0]; // Grid instance
+            grid.dataSource = JSON.parse(data);
+        });
+    }
+
+    $('#Btn_NewRef').click(function () {
+        //swal("Hello world!");
+        $.get('@Url.Action("CreateRef","Referencias")', function (data) {
+            $('#frmRef').html(data);
+            $('#CreateRefModal').modal("show");
+        });
+    });
+
+    function SelectRef(IdReferencia) {
+        $('#Btn_NewRef').attr("disabled", false);
+        $.get('@Url.Action("UpdateRef", "Referencias", new { IdReferencia = "_id_" })'.replace('_id_', IdReferencia), function (data) {
+            $("#frmRef").html(data);
+            $("#CreateRefModal").modal("show");
+        });
+    }
+
+     function DeleteRef(IdReferencia) {
+        alert("Entro para eliminar");
+        swal({
+            title: "Eliminar",
+            text: "¿Desea eliminar la referencia?",
+            icon: "warning",
+            buttons: ["Cancelar", "Aceptar"],
+            dangerMode: true,
+        })
+        .then((willDelete) => {
+            if (willDelete) {
+                $.get('@Url.Action("DeleteRef","Referencias", new { IdReferencia = "_id_"})'.replace('_id_', IdReferencia), function (data) {
+                    ReferenciasLoad();
+                    swal("Referencia Eliminada", {
+                        icon: "success",
+                    });
+                });
+            }
+        });
+    };
+</script>

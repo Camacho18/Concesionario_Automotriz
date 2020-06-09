@@ -4,6 +4,7 @@ SELECT * FROM Pais
 SELECT * FROM Estado
 SELECT * FROM Municipio
 SELECT * FROM TipoEmpleado
+SELECT * FROM Cliente
 
 INSERT INTO TipoEmpleado VALUES 
 ('Gerente',1),

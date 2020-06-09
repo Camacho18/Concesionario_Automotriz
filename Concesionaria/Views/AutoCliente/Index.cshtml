@@ -1,0 +1,48 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title text-center">Cliente: </h5><h5></h5>
+                <div class="card-body">
+                    <br />
+                    <div class="row">
+                        @Html.EJS().Grid("Grid_AutoCliente").RowSelected("SelectAutoClte").AllowResizing(true).AllowSorting().AllowFiltering().Columns(col =>
+                   {
+                       col.Field("IdAutoCliente").HeaderText("AutoCliente").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Visible(false).Add();
+                       col.Field("Marca").HeaderText("Marca").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                       col.Field("Modelo").HeaderText("Modelo").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                       col.Field("Color").HeaderText("Color").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                       col.Field("Año").HeaderText("Año").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   }).AllowPaging().SelectionSettings(select => select.Type(Syncfusion.EJ2.Grids.SelectionType.Single)).PageSettings(page => page.PageCount(4)).Render()
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(function () { AutoClienteLoad(); })
+
+    function AutoClienteLoad() {
+        $.get('@Url.Action("AutoClienteJson","AutoCliente")', function (data) {
+            var grid = document.getElementById('Grid_AutoCliente').ej2_instances[0]; // Grid instance
+            grid.dataSource = JSON.parse(data);
+        });
+    }
+
+    function SelectAutoClte() {
+        var grid = document.getElementById("Grid_Referencias").ej2_instances[0];
+        var selectedrecords = grid.getSelectedRecords()[0].IdReferencia;
+        @*$.get('@Url.Action("UpdateRef", "Referencias", new { Id = "_id_" })'.replace('_id_', selectedrecords), function (data) {
+            $("#frmRef").html(data);
+            $("#CreateRefModal").modal("show");
+        });*@
+    }
+</script>
+

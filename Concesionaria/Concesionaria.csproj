@@ -137,9 +137,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="AutoComplete\DropDownList.cs" />
+    <Compile Include="Controllers\AutoClienteController.cs" />
+    <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\EmpleadoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ReferenciasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -197,10 +200,16 @@
     <Compile Include="Models\Fabrica.cs">
       <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ModelsSupport\AutoClienteCreate.cs" />
+    <Compile Include="Models\ModelsSupport\AutoClienteJson.cs" />
+    <Compile Include="Models\ModelsSupport\ClienteCreate.cs" />
+    <Compile Include="Models\ModelsSupport\ClienteJson.cs" />
     <Compile Include="Models\ModelsSupport\DropDownListModel.cs" />
     <Compile Include="Models\ModelsSupport\EmpleadoCreate.cs" />
     <Compile Include="Models\ModelsSupport\EmpleadoJson.cs" />
     <Compile Include="Models\ModelsSupport\Login.cs" />
+    <Compile Include="Models\ModelsSupport\ReferenciaCreate.cs" />
+    <Compile Include="Models\ModelsSupport\ReferenciaJson.cs" />
     <Compile Include="Models\Municipio.cs">
       <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
@@ -373,6 +382,14 @@
     <Content Include="Views\Empleado\_Create.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Empleado\_Update.cshtml" />
+    <Content Include="Views\Cliente\_CreateCliente.cshtml" />
+    <Content Include="Views\Cliente\Index.cshtml" />
+    <Content Include="Views\Cliente\_UpdateCliente.cshtml" />
+    <Content Include="Views\Cliente\Options.cshtml" />
+    <Content Include="Views\Referencias\Index.cshtml" />
+    <Content Include="Views\Referencias\_CreateReferencia.cshtml" />
+    <Content Include="Views\AutoCliente\Index.cshtml" />
+    <Content Include="Views\Referencias\_UpdateRef.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

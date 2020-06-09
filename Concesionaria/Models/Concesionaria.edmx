@@ -201,7 +201,7 @@
           <Property Name="IdUsuario" Type="int" />
           <Property Name="IdCliente" Type="int" />
         </EntityType>
-        <Association Name="FK__Accesorio__IdCon__46E78A0C">
+        <Association Name="FK__Accesorio__IdCon__6C190EBB">
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="0..1" />
           <End Role="Accesorio" Type="Self.Accesorio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -213,7 +213,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__AutoAcces__IdAcc__49C3F6B7">
+        <Association Name="FK__AutoAcces__IdAcc__6EF57B66">
           <End Role="Accesorio" Type="Self.Accesorio" Multiplicity="0..1" />
           <End Role="AutoAccesorio" Type="Self.AutoAccesorio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -225,7 +225,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__AutoAcces__IdAut__4AB81AF0">
+        <Association Name="FK__AutoAcces__IdAut__6FE99F9F">
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="AutoAccesorio" Type="Self.AutoAccesorio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -237,7 +237,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__AutoClien__IdAut__6754599E">
+        <Association Name="FK__AutoClien__IdAut__0C85DE4D">
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="AutoCliente" Type="Self.AutoCliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -249,7 +249,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__AutoClien__IdVen__68487DD7">
+        <Association Name="FK__AutoClien__IdVen__0D7A0286">
           <End Role="VentaAuto" Type="Self.VentaAuto" Multiplicity="0..1" />
           <End Role="AutoCliente" Type="Self.AutoCliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -261,7 +261,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__AutoModel__IdAut__3B75D760">
+        <Association Name="FK__AutoModel__IdAut__60A75C0F">
           <End Role="AutoMarca" Type="Self.AutoMarca" Multiplicity="0..1" />
           <End Role="AutoModelo" Type="Self.AutoModelo" Multiplicity="*" />
           <ReferentialConstraint>
@@ -273,7 +273,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Automovil__IdAut__4222D4EF">
+        <Association Name="FK__Automovil__IdAut__6754599E">
           <End Role="AutoModelo" Type="Self.AutoModelo" Multiplicity="0..1" />
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="*" />
           <ReferentialConstraint>
@@ -285,7 +285,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Automovil__IdAut__4316F928">
+        <Association Name="FK__Automovil__IdAut__68487DD7">
           <End Role="AutoColorList" Type="Self.AutoColorList" Multiplicity="0..1" />
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="*" />
           <ReferentialConstraint>
@@ -297,7 +297,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Automovil__IdAut__440B1D61">
+        <Association Name="FK__Automovil__IdAut__693CA210">
           <End Role="AutoEstadoList" Type="Self.AutoEstadoList" Multiplicity="0..1" />
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="*" />
           <ReferentialConstraint>
@@ -309,7 +309,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Cliente__IdMunic__5DCAEF64">
+        <Association Name="FK__Cliente__IdMunic__02FC7413">
           <End Role="Municipio" Type="Self.Municipio" Multiplicity="0..1" />
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -321,7 +321,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Concesina__IdMun__2C3393D0">
+        <Association Name="FK__Concesina__IdMun__5165187F">
           <End Role="Municipio" Type="Self.Municipio" Multiplicity="0..1" />
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="*" />
           <ReferentialConstraint>
@@ -333,7 +333,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Empleado__IdConc__33D4B598">
+        <Association Name="FK__Empleado__IdConc__59063A47">
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="0..1" />
           <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
           <ReferentialConstraint>
@@ -345,7 +345,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Empleado__IdTipo__32E0915F">
+        <Association Name="FK__Empleado__IdTipo__5812160E">
           <End Role="TipoEmpleado" Type="Self.TipoEmpleado" Multiplicity="0..1" />
           <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
           <ReferentialConstraint>
@@ -357,7 +357,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Estado__IdPais__267ABA7A">
+        <Association Name="FK__Estado__IdPais__4BAC3F29">
           <End Role="Pais" Type="Self.Pais" Multiplicity="0..1" />
           <End Role="Estado" Type="Self.Estado" Multiplicity="*" />
           <ReferentialConstraint>
@@ -369,7 +369,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Municipio__IdEst__29572725">
+        <Association Name="FK__Municipio__IdEst__4E88ABD4">
           <End Role="Estado" Type="Self.Estado" Multiplicity="0..1" />
           <End Role="Municipio" Type="Self.Municipio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -381,7 +381,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Origen_Fa__IdAut__534D60F1">
+        <Association Name="FK__Origen_Fa__IdAut__787EE5A0">
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="Origen_Fabrica" Type="Self.Origen_Fabrica" Multiplicity="*" />
           <ReferentialConstraint>
@@ -393,7 +393,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Origen_Fa__IdFab__5165187F">
+        <Association Name="FK__Origen_Fa__IdFab__76969D2E">
           <End Role="Fabrica" Type="Self.Fabrica" Multiplicity="0..1" />
           <End Role="Origen_Fabrica" Type="Self.Origen_Fabrica" Multiplicity="*" />
           <ReferentialConstraint>
@@ -405,7 +405,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Origen_Fa__IdOri__5441852A">
+        <Association Name="FK__Origen_Fa__IdOri__797309D9">
           <End Role="OrigenEstado" Type="Self.OrigenEstado" Multiplicity="0..1" />
           <End Role="Origen_Fabrica" Type="Self.Origen_Fabrica" Multiplicity="*" />
           <ReferentialConstraint>
@@ -417,7 +417,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Origen_Fa__IdUsu__52593CB8">
+        <Association Name="FK__Origen_Fa__IdUsu__778AC167">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="Origen_Fabrica" Type="Self.Origen_Fabrica" Multiplicity="*" />
           <ReferentialConstraint>
@@ -429,7 +429,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Origen_Tr__IdAut__59FA5E80">
+        <Association Name="FK__Origen_Tr__IdAut__7F2BE32F">
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -441,7 +441,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Origen_Tr__IdCom__5812160E">
+        <Association Name="FK__Origen_Tr__IdCom__7D439ABD">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -453,7 +453,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Origen_Tr__IdCon__59063A47">
+        <Association Name="FK__Origen_Tr__IdCon__7E37BEF6">
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -465,7 +465,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Origen_Tr__IdOri__5AEE82B9">
+        <Association Name="FK__Origen_Tr__IdOri__00200768">
           <End Role="OrigenEstado" Type="Self.OrigenEstado" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -477,7 +477,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Origen_Tr__IdVen__571DF1D5">
+        <Association Name="FK__Origen_Tr__IdVen__7C4F7684">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -489,7 +489,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Referenci__IdCli__60A75C0F">
+        <Association Name="FK__Referenci__IdCli__05D8E0BE">
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
           <End Role="Referencias" Type="Self.Referencias" Multiplicity="*" />
           <ReferentialConstraint>
@@ -501,7 +501,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Usuario__IdEmple__36B12243">
+        <Association Name="FK__Usuario__IdEmple__5BE2A6F2">
           <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
           <ReferentialConstraint>
@@ -513,7 +513,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__VentaAuto__IdCli__6477ECF3">
+        <Association Name="FK__VentaAuto__IdCli__09A971A2">
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
           <End Role="VentaAuto" Type="Self.VentaAuto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -525,7 +525,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__VentaAuto__IdUsu__6383C8BA">
+        <Association Name="FK__VentaAuto__IdUsu__08B54D69">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="VentaAuto" Type="Self.VentaAuto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -560,115 +560,115 @@
           <EntitySet Name="TipoEmpleado" EntityType="Self.TipoEmpleado" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VentaAuto" EntityType="Self.VentaAuto" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Accesorio__IdCon__46E78A0C" Association="Self.FK__Accesorio__IdCon__46E78A0C">
+          <AssociationSet Name="FK__Accesorio__IdCon__6C190EBB" Association="Self.FK__Accesorio__IdCon__6C190EBB">
             <End Role="Concesinaria" EntitySet="Concesinaria" />
             <End Role="Accesorio" EntitySet="Accesorio" />
           </AssociationSet>
-          <AssociationSet Name="FK__AutoAcces__IdAcc__49C3F6B7" Association="Self.FK__AutoAcces__IdAcc__49C3F6B7">
+          <AssociationSet Name="FK__AutoAcces__IdAcc__6EF57B66" Association="Self.FK__AutoAcces__IdAcc__6EF57B66">
             <End Role="Accesorio" EntitySet="Accesorio" />
             <End Role="AutoAccesorio" EntitySet="AutoAccesorio" />
           </AssociationSet>
-          <AssociationSet Name="FK__AutoAcces__IdAut__4AB81AF0" Association="Self.FK__AutoAcces__IdAut__4AB81AF0">
+          <AssociationSet Name="FK__AutoAcces__IdAut__6FE99F9F" Association="Self.FK__AutoAcces__IdAut__6FE99F9F">
             <End Role="Automovil" EntitySet="Automovil" />
             <End Role="AutoAccesorio" EntitySet="AutoAccesorio" />
           </AssociationSet>
-          <AssociationSet Name="FK__AutoClien__IdAut__6754599E" Association="Self.FK__AutoClien__IdAut__6754599E">
+          <AssociationSet Name="FK__AutoClien__IdAut__0C85DE4D" Association="Self.FK__AutoClien__IdAut__0C85DE4D">
             <End Role="Automovil" EntitySet="Automovil" />
             <End Role="AutoCliente" EntitySet="AutoCliente" />
           </AssociationSet>
-          <AssociationSet Name="FK__AutoClien__IdVen__68487DD7" Association="Self.FK__AutoClien__IdVen__68487DD7">
+          <AssociationSet Name="FK__AutoClien__IdVen__0D7A0286" Association="Self.FK__AutoClien__IdVen__0D7A0286">
             <End Role="VentaAuto" EntitySet="VentaAuto" />
             <End Role="AutoCliente" EntitySet="AutoCliente" />
           </AssociationSet>
-          <AssociationSet Name="FK__AutoModel__IdAut__3B75D760" Association="Self.FK__AutoModel__IdAut__3B75D760">
+          <AssociationSet Name="FK__AutoModel__IdAut__60A75C0F" Association="Self.FK__AutoModel__IdAut__60A75C0F">
             <End Role="AutoMarca" EntitySet="AutoMarca" />
             <End Role="AutoModelo" EntitySet="AutoModelo" />
           </AssociationSet>
-          <AssociationSet Name="FK__Automovil__IdAut__4222D4EF" Association="Self.FK__Automovil__IdAut__4222D4EF">
+          <AssociationSet Name="FK__Automovil__IdAut__6754599E" Association="Self.FK__Automovil__IdAut__6754599E">
             <End Role="AutoModelo" EntitySet="AutoModelo" />
             <End Role="Automovil" EntitySet="Automovil" />
           </AssociationSet>
-          <AssociationSet Name="FK__Automovil__IdAut__4316F928" Association="Self.FK__Automovil__IdAut__4316F928">
+          <AssociationSet Name="FK__Automovil__IdAut__68487DD7" Association="Self.FK__Automovil__IdAut__68487DD7">
             <End Role="AutoColorList" EntitySet="AutoColorList" />
             <End Role="Automovil" EntitySet="Automovil" />
           </AssociationSet>
-          <AssociationSet Name="FK__Automovil__IdAut__440B1D61" Association="Self.FK__Automovil__IdAut__440B1D61">
+          <AssociationSet Name="FK__Automovil__IdAut__693CA210" Association="Self.FK__Automovil__IdAut__693CA210">
             <End Role="AutoEstadoList" EntitySet="AutoEstadoList" />
             <End Role="Automovil" EntitySet="Automovil" />
           </AssociationSet>
-          <AssociationSet Name="FK__Cliente__IdMunic__5DCAEF64" Association="Self.FK__Cliente__IdMunic__5DCAEF64">
+          <AssociationSet Name="FK__Cliente__IdMunic__02FC7413" Association="Self.FK__Cliente__IdMunic__02FC7413">
             <End Role="Municipio" EntitySet="Municipio" />
             <End Role="Cliente" EntitySet="Cliente" />
           </AssociationSet>
-          <AssociationSet Name="FK__Concesina__IdMun__2C3393D0" Association="Self.FK__Concesina__IdMun__2C3393D0">
+          <AssociationSet Name="FK__Concesina__IdMun__5165187F" Association="Self.FK__Concesina__IdMun__5165187F">
             <End Role="Municipio" EntitySet="Municipio" />
             <End Role="Concesinaria" EntitySet="Concesinaria" />
           </AssociationSet>
-          <AssociationSet Name="FK__Empleado__IdConc__33D4B598" Association="Self.FK__Empleado__IdConc__33D4B598">
+          <AssociationSet Name="FK__Empleado__IdConc__59063A47" Association="Self.FK__Empleado__IdConc__59063A47">
             <End Role="Concesinaria" EntitySet="Concesinaria" />
             <End Role="Empleado" EntitySet="Empleado" />
           </AssociationSet>
-          <AssociationSet Name="FK__Empleado__IdTipo__32E0915F" Association="Self.FK__Empleado__IdTipo__32E0915F">
+          <AssociationSet Name="FK__Empleado__IdTipo__5812160E" Association="Self.FK__Empleado__IdTipo__5812160E">
             <End Role="TipoEmpleado" EntitySet="TipoEmpleado" />
             <End Role="Empleado" EntitySet="Empleado" />
           </AssociationSet>
-          <AssociationSet Name="FK__Estado__IdPais__267ABA7A" Association="Self.FK__Estado__IdPais__267ABA7A">
+          <AssociationSet Name="FK__Estado__IdPais__4BAC3F29" Association="Self.FK__Estado__IdPais__4BAC3F29">
             <End Role="Pais" EntitySet="Pais" />
             <End Role="Estado" EntitySet="Estado" />
           </AssociationSet>
-          <AssociationSet Name="FK__Municipio__IdEst__29572725" Association="Self.FK__Municipio__IdEst__29572725">
+          <AssociationSet Name="FK__Municipio__IdEst__4E88ABD4" Association="Self.FK__Municipio__IdEst__4E88ABD4">
             <End Role="Estado" EntitySet="Estado" />
             <End Role="Municipio" EntitySet="Municipio" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdAut__534D60F1" Association="Self.FK__Origen_Fa__IdAut__534D60F1">
+          <AssociationSet Name="FK__Origen_Fa__IdAut__787EE5A0" Association="Self.FK__Origen_Fa__IdAut__787EE5A0">
             <End Role="Automovil" EntitySet="Automovil" />
             <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdFab__5165187F" Association="Self.FK__Origen_Fa__IdFab__5165187F">
+          <AssociationSet Name="FK__Origen_Fa__IdFab__76969D2E" Association="Self.FK__Origen_Fa__IdFab__76969D2E">
             <End Role="Fabrica" EntitySet="Fabrica" />
             <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdOri__5441852A" Association="Self.FK__Origen_Fa__IdOri__5441852A">
+          <AssociationSet Name="FK__Origen_Fa__IdOri__797309D9" Association="Self.FK__Origen_Fa__IdOri__797309D9">
             <End Role="OrigenEstado" EntitySet="OrigenEstado" />
             <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdUsu__52593CB8" Association="Self.FK__Origen_Fa__IdUsu__52593CB8">
+          <AssociationSet Name="FK__Origen_Fa__IdUsu__778AC167" Association="Self.FK__Origen_Fa__IdUsu__778AC167">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdAut__59FA5E80" Association="Self.FK__Origen_Tr__IdAut__59FA5E80">
+          <AssociationSet Name="FK__Origen_Tr__IdAut__7F2BE32F" Association="Self.FK__Origen_Tr__IdAut__7F2BE32F">
             <End Role="Automovil" EntitySet="Automovil" />
             <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdCom__5812160E" Association="Self.FK__Origen_Tr__IdCom__5812160E">
+          <AssociationSet Name="FK__Origen_Tr__IdCom__7D439ABD" Association="Self.FK__Origen_Tr__IdCom__7D439ABD">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdCon__59063A47" Association="Self.FK__Origen_Tr__IdCon__59063A47">
+          <AssociationSet Name="FK__Origen_Tr__IdCon__7E37BEF6" Association="Self.FK__Origen_Tr__IdCon__7E37BEF6">
             <End Role="Concesinaria" EntitySet="Concesinaria" />
             <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdOri__5AEE82B9" Association="Self.FK__Origen_Tr__IdOri__5AEE82B9">
+          <AssociationSet Name="FK__Origen_Tr__IdOri__00200768" Association="Self.FK__Origen_Tr__IdOri__00200768">
             <End Role="OrigenEstado" EntitySet="OrigenEstado" />
             <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdVen__571DF1D5" Association="Self.FK__Origen_Tr__IdVen__571DF1D5">
+          <AssociationSet Name="FK__Origen_Tr__IdVen__7C4F7684" Association="Self.FK__Origen_Tr__IdVen__7C4F7684">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
           </AssociationSet>
-          <AssociationSet Name="FK__Referenci__IdCli__60A75C0F" Association="Self.FK__Referenci__IdCli__60A75C0F">
+          <AssociationSet Name="FK__Referenci__IdCli__05D8E0BE" Association="Self.FK__Referenci__IdCli__05D8E0BE">
             <End Role="Cliente" EntitySet="Cliente" />
             <End Role="Referencias" EntitySet="Referencias" />
           </AssociationSet>
-          <AssociationSet Name="FK__Usuario__IdEmple__36B12243" Association="Self.FK__Usuario__IdEmple__36B12243">
+          <AssociationSet Name="FK__Usuario__IdEmple__5BE2A6F2" Association="Self.FK__Usuario__IdEmple__5BE2A6F2">
             <End Role="Empleado" EntitySet="Empleado" />
             <End Role="Usuario" EntitySet="Usuario" />
           </AssociationSet>
-          <AssociationSet Name="FK__VentaAuto__IdCli__6477ECF3" Association="Self.FK__VentaAuto__IdCli__6477ECF3">
+          <AssociationSet Name="FK__VentaAuto__IdCli__09A971A2" Association="Self.FK__VentaAuto__IdCli__09A971A2">
             <End Role="Cliente" EntitySet="Cliente" />
             <End Role="VentaAuto" EntitySet="VentaAuto" />
           </AssociationSet>
-          <AssociationSet Name="FK__VentaAuto__IdUsu__6383C8BA" Association="Self.FK__VentaAuto__IdUsu__6383C8BA">
+          <AssociationSet Name="FK__VentaAuto__IdUsu__08B54D69" Association="Self.FK__VentaAuto__IdUsu__08B54D69">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="VentaAuto" EntitySet="VentaAuto" />
           </AssociationSet>
@@ -687,8 +687,8 @@
           <Property Name="CantidadExistencia" Type="Int32" />
           <Property Name="CantidadVendido" Type="Int32" />
           <Property Name="IdConcesinaria" Type="Int32" />
-          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Accesorio__IdCon__46E78A0C" FromRole="Accesorio" ToRole="Concesinaria" />
-          <NavigationProperty Name="AutoAccesorio" Relationship="Self.FK__AutoAcces__IdAcc__49C3F6B7" FromRole="Accesorio" ToRole="AutoAccesorio" />
+          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Accesorio__IdCon__6C190EBB" FromRole="Accesorio" ToRole="Concesinaria" />
+          <NavigationProperty Name="AutoAccesorio" Relationship="Self.FK__AutoAcces__IdAcc__6EF57B66" FromRole="Accesorio" ToRole="AutoAccesorio" />
         </EntityType>
         <EntityType Name="AutoAccesorio">
           <Key>
@@ -697,8 +697,8 @@
           <Property Name="IdAutoAccesorio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdAccesorio" Type="Int32" />
           <Property Name="IdAutomovil" Type="Int32" />
-          <NavigationProperty Name="Accesorio" Relationship="Self.FK__AutoAcces__IdAcc__49C3F6B7" FromRole="AutoAccesorio" ToRole="Accesorio" />
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__AutoAcces__IdAut__4AB81AF0" FromRole="AutoAccesorio" ToRole="Automovil" />
+          <NavigationProperty Name="Accesorio" Relationship="Self.FK__AutoAcces__IdAcc__6EF57B66" FromRole="AutoAccesorio" ToRole="Accesorio" />
+          <NavigationProperty Name="Automovil" Relationship="Self.FK__AutoAcces__IdAut__6FE99F9F" FromRole="AutoAccesorio" ToRole="Automovil" />
         </EntityType>
         <EntityType Name="AutoCliente">
           <Key>
@@ -707,8 +707,8 @@
           <Property Name="IdAutoCliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdAutomovil" Type="Int32" />
           <Property Name="IdVentaAuto" Type="Int32" />
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__AutoClien__IdAut__6754599E" FromRole="AutoCliente" ToRole="Automovil" />
-          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__AutoClien__IdVen__68487DD7" FromRole="AutoCliente" ToRole="VentaAuto" />
+          <NavigationProperty Name="Automovil" Relationship="Self.FK__AutoClien__IdAut__0C85DE4D" FromRole="AutoCliente" ToRole="Automovil" />
+          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__AutoClien__IdVen__0D7A0286" FromRole="AutoCliente" ToRole="VentaAuto" />
         </EntityType>
         <EntityType Name="AutoColorList">
           <Key>
@@ -716,7 +716,7 @@
           </Key>
           <Property Name="IdAutoColor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAut__4316F928" FromRole="AutoColorList" ToRole="Automovil" />
+          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAut__68487DD7" FromRole="AutoColorList" ToRole="Automovil" />
         </EntityType>
         <EntityType Name="AutoEstadoList">
           <Key>
@@ -724,7 +724,7 @@
           </Key>
           <Property Name="IdAutoEstado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAut__440B1D61" FromRole="AutoEstadoList" ToRole="Automovil" />
+          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAut__693CA210" FromRole="AutoEstadoList" ToRole="Automovil" />
         </EntityType>
         <EntityType Name="AutoMarca">
           <Key>
@@ -732,7 +732,7 @@
           </Key>
           <Property Name="IdAutoMarca" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="AutoModelo" Relationship="Self.FK__AutoModel__IdAut__3B75D760" FromRole="AutoMarca" ToRole="AutoModelo" />
+          <NavigationProperty Name="AutoModelo" Relationship="Self.FK__AutoModel__IdAut__60A75C0F" FromRole="AutoMarca" ToRole="AutoModelo" />
         </EntityType>
         <EntityType Name="AutoModelo">
           <Key>
@@ -741,8 +741,8 @@
           <Property Name="IdAutoModelo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
           <Property Name="IdAutoMarca" Type="Int32" />
-          <NavigationProperty Name="AutoMarca" Relationship="Self.FK__AutoModel__IdAut__3B75D760" FromRole="AutoModelo" ToRole="AutoMarca" />
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAut__4222D4EF" FromRole="AutoModelo" ToRole="Automovil" />
+          <NavigationProperty Name="AutoMarca" Relationship="Self.FK__AutoModel__IdAut__60A75C0F" FromRole="AutoModelo" ToRole="AutoMarca" />
+          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAut__6754599E" FromRole="AutoModelo" ToRole="Automovil" />
         </EntityType>
         <EntityType Name="Automovil">
           <Key>
@@ -753,13 +753,13 @@
           <Property Name="IdAutoModelo" Type="Int32" />
           <Property Name="IdAutoColor" Type="Int32" />
           <Property Name="IdAutoEstado" Type="Int32" />
-          <NavigationProperty Name="AutoAccesorio" Relationship="Self.FK__AutoAcces__IdAut__4AB81AF0" FromRole="Automovil" ToRole="AutoAccesorio" />
-          <NavigationProperty Name="AutoCliente" Relationship="Self.FK__AutoClien__IdAut__6754599E" FromRole="Automovil" ToRole="AutoCliente" />
-          <NavigationProperty Name="AutoColorList" Relationship="Self.FK__Automovil__IdAut__4316F928" FromRole="Automovil" ToRole="AutoColorList" />
-          <NavigationProperty Name="AutoEstadoList" Relationship="Self.FK__Automovil__IdAut__440B1D61" FromRole="Automovil" ToRole="AutoEstadoList" />
-          <NavigationProperty Name="AutoModelo" Relationship="Self.FK__Automovil__IdAut__4222D4EF" FromRole="Automovil" ToRole="AutoModelo" />
-          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdAut__534D60F1" FromRole="Automovil" ToRole="Origen_Fabrica" />
-          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdAut__59FA5E80" FromRole="Automovil" ToRole="Origen_Traspaso" />
+          <NavigationProperty Name="AutoAccesorio" Relationship="Self.FK__AutoAcces__IdAut__6FE99F9F" FromRole="Automovil" ToRole="AutoAccesorio" />
+          <NavigationProperty Name="AutoCliente" Relationship="Self.FK__AutoClien__IdAut__0C85DE4D" FromRole="Automovil" ToRole="AutoCliente" />
+          <NavigationProperty Name="AutoColorList" Relationship="Self.FK__Automovil__IdAut__68487DD7" FromRole="Automovil" ToRole="AutoColorList" />
+          <NavigationProperty Name="AutoEstadoList" Relationship="Self.FK__Automovil__IdAut__693CA210" FromRole="Automovil" ToRole="AutoEstadoList" />
+          <NavigationProperty Name="AutoModelo" Relationship="Self.FK__Automovil__IdAut__6754599E" FromRole="Automovil" ToRole="AutoModelo" />
+          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdAut__787EE5A0" FromRole="Automovil" ToRole="Origen_Fabrica" />
+          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdAut__7F2BE32F" FromRole="Automovil" ToRole="Origen_Traspaso" />
         </EntityType>
         <EntityType Name="Cliente">
           <Key>
@@ -776,9 +776,9 @@
           <Property Name="Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="RFC" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
           <Property Name="IdMunicipio" Type="Int32" />
-          <NavigationProperty Name="Municipio" Relationship="Self.FK__Cliente__IdMunic__5DCAEF64" FromRole="Cliente" ToRole="Municipio" />
-          <NavigationProperty Name="Referencias" Relationship="Self.FK__Referenci__IdCli__60A75C0F" FromRole="Cliente" ToRole="Referencias" />
-          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__VentaAuto__IdCli__6477ECF3" FromRole="Cliente" ToRole="VentaAuto" />
+          <NavigationProperty Name="Municipio" Relationship="Self.FK__Cliente__IdMunic__02FC7413" FromRole="Cliente" ToRole="Municipio" />
+          <NavigationProperty Name="Referencias" Relationship="Self.FK__Referenci__IdCli__05D8E0BE" FromRole="Cliente" ToRole="Referencias" />
+          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__VentaAuto__IdCli__09A971A2" FromRole="Cliente" ToRole="VentaAuto" />
         </EntityType>
         <EntityType Name="Concesinaria">
           <Key>
@@ -789,10 +789,10 @@
           <Property Name="Clave" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="IdMunicipio" Type="Int32" />
-          <NavigationProperty Name="Accesorio" Relationship="Self.FK__Accesorio__IdCon__46E78A0C" FromRole="Concesinaria" ToRole="Accesorio" />
-          <NavigationProperty Name="Municipio" Relationship="Self.FK__Concesina__IdMun__2C3393D0" FromRole="Concesinaria" ToRole="Municipio" />
-          <NavigationProperty Name="Empleado" Relationship="Self.FK__Empleado__IdConc__33D4B598" FromRole="Concesinaria" ToRole="Empleado" />
-          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdCon__59063A47" FromRole="Concesinaria" ToRole="Origen_Traspaso" />
+          <NavigationProperty Name="Accesorio" Relationship="Self.FK__Accesorio__IdCon__6C190EBB" FromRole="Concesinaria" ToRole="Accesorio" />
+          <NavigationProperty Name="Municipio" Relationship="Self.FK__Concesina__IdMun__5165187F" FromRole="Concesinaria" ToRole="Municipio" />
+          <NavigationProperty Name="Empleado" Relationship="Self.FK__Empleado__IdConc__59063A47" FromRole="Concesinaria" ToRole="Empleado" />
+          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdCon__7E37BEF6" FromRole="Concesinaria" ToRole="Origen_Traspaso" />
         </EntityType>
         <EntityType Name="Empleado">
           <Key>
@@ -804,9 +804,9 @@
           <Property Name="C_Estado" Type="Boolean" />
           <Property Name="IdTipoEmpleado" Type="Int32" />
           <Property Name="IdConcesinaria" Type="Int32" />
-          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Empleado__IdConc__33D4B598" FromRole="Empleado" ToRole="Concesinaria" />
-          <NavigationProperty Name="TipoEmpleado" Relationship="Self.FK__Empleado__IdTipo__32E0915F" FromRole="Empleado" ToRole="TipoEmpleado" />
-          <NavigationProperty Name="Usuario" Relationship="Self.FK__Usuario__IdEmple__36B12243" FromRole="Empleado" ToRole="Usuario" />
+          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Empleado__IdConc__59063A47" FromRole="Empleado" ToRole="Concesinaria" />
+          <NavigationProperty Name="TipoEmpleado" Relationship="Self.FK__Empleado__IdTipo__5812160E" FromRole="Empleado" ToRole="TipoEmpleado" />
+          <NavigationProperty Name="Usuario" Relationship="Self.FK__Usuario__IdEmple__5BE2A6F2" FromRole="Empleado" ToRole="Usuario" />
         </EntityType>
         <EntityType Name="Estado">
           <Key>
@@ -815,8 +815,8 @@
           <Property Name="IdEstado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="IdPais" Type="Int32" />
-          <NavigationProperty Name="Pais" Relationship="Self.FK__Estado__IdPais__267ABA7A" FromRole="Estado" ToRole="Pais" />
-          <NavigationProperty Name="Municipio" Relationship="Self.FK__Municipio__IdEst__29572725" FromRole="Estado" ToRole="Municipio" />
+          <NavigationProperty Name="Pais" Relationship="Self.FK__Estado__IdPais__4BAC3F29" FromRole="Estado" ToRole="Pais" />
+          <NavigationProperty Name="Municipio" Relationship="Self.FK__Municipio__IdEst__4E88ABD4" FromRole="Estado" ToRole="Municipio" />
         </EntityType>
         <EntityType Name="Fabrica">
           <Key>
@@ -824,7 +824,7 @@
           </Key>
           <Property Name="IdFabrica" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdFab__5165187F" FromRole="Fabrica" ToRole="Origen_Fabrica" />
+          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdFab__76969D2E" FromRole="Fabrica" ToRole="Origen_Fabrica" />
         </EntityType>
         <EntityType Name="Municipio">
           <Key>
@@ -833,9 +833,9 @@
           <Property Name="IdMunicipio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="IdEstado" Type="Int32" />
-          <NavigationProperty Name="Cliente" Relationship="Self.FK__Cliente__IdMunic__5DCAEF64" FromRole="Municipio" ToRole="Cliente" />
-          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Concesina__IdMun__2C3393D0" FromRole="Municipio" ToRole="Concesinaria" />
-          <NavigationProperty Name="Estado" Relationship="Self.FK__Municipio__IdEst__29572725" FromRole="Municipio" ToRole="Estado" />
+          <NavigationProperty Name="Cliente" Relationship="Self.FK__Cliente__IdMunic__02FC7413" FromRole="Municipio" ToRole="Cliente" />
+          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Concesina__IdMun__5165187F" FromRole="Municipio" ToRole="Concesinaria" />
+          <NavigationProperty Name="Estado" Relationship="Self.FK__Municipio__IdEst__4E88ABD4" FromRole="Municipio" ToRole="Estado" />
         </EntityType>
         <EntityType Name="Origen_Fabrica">
           <Key>
@@ -847,10 +847,10 @@
           <Property Name="IdUsuario" Type="Int32" />
           <Property Name="IdAutomovil" Type="Int32" />
           <Property Name="IdOrigenEstado" Type="Int32" />
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__Origen_Fa__IdAut__534D60F1" FromRole="Origen_Fabrica" ToRole="Automovil" />
-          <NavigationProperty Name="Fabrica" Relationship="Self.FK__Origen_Fa__IdFab__5165187F" FromRole="Origen_Fabrica" ToRole="Fabrica" />
-          <NavigationProperty Name="OrigenEstado" Relationship="Self.FK__Origen_Fa__IdOri__5441852A" FromRole="Origen_Fabrica" ToRole="OrigenEstado" />
-          <NavigationProperty Name="Usuario" Relationship="Self.FK__Origen_Fa__IdUsu__52593CB8" FromRole="Origen_Fabrica" ToRole="Usuario" />
+          <NavigationProperty Name="Automovil" Relationship="Self.FK__Origen_Fa__IdAut__787EE5A0" FromRole="Origen_Fabrica" ToRole="Automovil" />
+          <NavigationProperty Name="Fabrica" Relationship="Self.FK__Origen_Fa__IdFab__76969D2E" FromRole="Origen_Fabrica" ToRole="Fabrica" />
+          <NavigationProperty Name="OrigenEstado" Relationship="Self.FK__Origen_Fa__IdOri__797309D9" FromRole="Origen_Fabrica" ToRole="OrigenEstado" />
+          <NavigationProperty Name="Usuario" Relationship="Self.FK__Origen_Fa__IdUsu__778AC167" FromRole="Origen_Fabrica" ToRole="Usuario" />
         </EntityType>
         <EntityType Name="Origen_Traspaso">
           <Key>
@@ -863,11 +863,11 @@
           <Property Name="IdConcesinaria" Type="Int32" />
           <Property Name="IdAutomovil" Type="Int32" />
           <Property Name="IdOrigenEstado" Type="Int32" />
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__Origen_Tr__IdAut__59FA5E80" FromRole="Origen_Traspaso" ToRole="Automovil" />
-          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Origen_Tr__IdCon__59063A47" FromRole="Origen_Traspaso" ToRole="Concesinaria" />
-          <NavigationProperty Name="Usuario" Relationship="Self.FK__Origen_Tr__IdCom__5812160E" FromRole="Origen_Traspaso" ToRole="Usuario" />
-          <NavigationProperty Name="OrigenEstado" Relationship="Self.FK__Origen_Tr__IdOri__5AEE82B9" FromRole="Origen_Traspaso" ToRole="OrigenEstado" />
-          <NavigationProperty Name="Usuario1" Relationship="Self.FK__Origen_Tr__IdVen__571DF1D5" FromRole="Origen_Traspaso" ToRole="Usuario" />
+          <NavigationProperty Name="Automovil" Relationship="Self.FK__Origen_Tr__IdAut__7F2BE32F" FromRole="Origen_Traspaso" ToRole="Automovil" />
+          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Origen_Tr__IdCon__7E37BEF6" FromRole="Origen_Traspaso" ToRole="Concesinaria" />
+          <NavigationProperty Name="Usuario" Relationship="Self.FK__Origen_Tr__IdCom__7D439ABD" FromRole="Origen_Traspaso" ToRole="Usuario" />
+          <NavigationProperty Name="OrigenEstado" Relationship="Self.FK__Origen_Tr__IdOri__00200768" FromRole="Origen_Traspaso" ToRole="OrigenEstado" />
+          <NavigationProperty Name="Usuario1" Relationship="Self.FK__Origen_Tr__IdVen__7C4F7684" FromRole="Origen_Traspaso" ToRole="Usuario" />
         </EntityType>
         <EntityType Name="OrigenEstado">
           <Key>
@@ -875,8 +875,8 @@
           </Key>
           <Property Name="IdOrigenEstado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdOri__5441852A" FromRole="OrigenEstado" ToRole="Origen_Fabrica" />
-          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdOri__5AEE82B9" FromRole="OrigenEstado" ToRole="Origen_Traspaso" />
+          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdOri__797309D9" FromRole="OrigenEstado" ToRole="Origen_Fabrica" />
+          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdOri__00200768" FromRole="OrigenEstado" ToRole="Origen_Traspaso" />
         </EntityType>
         <EntityType Name="Pais">
           <Key>
@@ -884,7 +884,7 @@
           </Key>
           <Property Name="IdPais" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Estado" Relationship="Self.FK__Estado__IdPais__267ABA7A" FromRole="Pais" ToRole="Estado" />
+          <NavigationProperty Name="Estado" Relationship="Self.FK__Estado__IdPais__4BAC3F29" FromRole="Pais" ToRole="Estado" />
         </EntityType>
         <EntityType Name="Referencias">
           <Key>
@@ -894,7 +894,7 @@
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="TelCel" Type="Int32" />
           <Property Name="IdCliente" Type="Int32" />
-          <NavigationProperty Name="Cliente" Relationship="Self.FK__Referenci__IdCli__60A75C0F" FromRole="Referencias" ToRole="Cliente" />
+          <NavigationProperty Name="Cliente" Relationship="Self.FK__Referenci__IdCli__05D8E0BE" FromRole="Referencias" ToRole="Cliente" />
         </EntityType>
         <EntityType Name="TipoEmpleado">
           <Key>
@@ -903,7 +903,7 @@
           <Property Name="IdTipoEmpleado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="C_Estado" Type="Boolean" />
-          <NavigationProperty Name="Empleado" Relationship="Self.FK__Empleado__IdTipo__32E0915F" FromRole="TipoEmpleado" ToRole="Empleado" />
+          <NavigationProperty Name="Empleado" Relationship="Self.FK__Empleado__IdTipo__5812160E" FromRole="TipoEmpleado" ToRole="Empleado" />
         </EntityType>
         <EntityType Name="Usuario">
           <Key>
@@ -913,11 +913,11 @@
           <Property Name="NomUsuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Contrasena" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="IdEmpleado" Type="Int32" />
-          <NavigationProperty Name="Empleado" Relationship="Self.FK__Usuario__IdEmple__36B12243" FromRole="Usuario" ToRole="Empleado" />
-          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdUsu__52593CB8" FromRole="Usuario" ToRole="Origen_Fabrica" />
-          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdCom__5812160E" FromRole="Usuario" ToRole="Origen_Traspaso" />
-          <NavigationProperty Name="Origen_Traspaso1" Relationship="Self.FK__Origen_Tr__IdVen__571DF1D5" FromRole="Usuario" ToRole="Origen_Traspaso" />
-          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__VentaAuto__IdUsu__6383C8BA" FromRole="Usuario" ToRole="VentaAuto" />
+          <NavigationProperty Name="Empleado" Relationship="Self.FK__Usuario__IdEmple__5BE2A6F2" FromRole="Usuario" ToRole="Empleado" />
+          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdUsu__778AC167" FromRole="Usuario" ToRole="Origen_Fabrica" />
+          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdCom__7D439ABD" FromRole="Usuario" ToRole="Origen_Traspaso" />
+          <NavigationProperty Name="Origen_Traspaso1" Relationship="Self.FK__Origen_Tr__IdVen__7C4F7684" FromRole="Usuario" ToRole="Origen_Traspaso" />
+          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__VentaAuto__IdUsu__08B54D69" FromRole="Usuario" ToRole="VentaAuto" />
         </EntityType>
         <EntityType Name="VentaAuto">
           <Key>
@@ -926,11 +926,11 @@
           <Property Name="IdVentaAuto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdUsuario" Type="Int32" />
           <Property Name="IdCliente" Type="Int32" />
-          <NavigationProperty Name="AutoCliente" Relationship="Self.FK__AutoClien__IdVen__68487DD7" FromRole="VentaAuto" ToRole="AutoCliente" />
-          <NavigationProperty Name="Cliente" Relationship="Self.FK__VentaAuto__IdCli__6477ECF3" FromRole="VentaAuto" ToRole="Cliente" />
-          <NavigationProperty Name="Usuario" Relationship="Self.FK__VentaAuto__IdUsu__6383C8BA" FromRole="VentaAuto" ToRole="Usuario" />
+          <NavigationProperty Name="AutoCliente" Relationship="Self.FK__AutoClien__IdVen__0D7A0286" FromRole="VentaAuto" ToRole="AutoCliente" />
+          <NavigationProperty Name="Cliente" Relationship="Self.FK__VentaAuto__IdCli__09A971A2" FromRole="VentaAuto" ToRole="Cliente" />
+          <NavigationProperty Name="Usuario" Relationship="Self.FK__VentaAuto__IdUsu__08B54D69" FromRole="VentaAuto" ToRole="Usuario" />
         </EntityType>
-        <Association Name="FK__Accesorio__IdCon__46E78A0C">
+        <Association Name="FK__Accesorio__IdCon__6C190EBB">
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="0..1" />
           <End Role="Accesorio" Type="Self.Accesorio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -942,7 +942,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__AutoAcces__IdAcc__49C3F6B7">
+        <Association Name="FK__AutoAcces__IdAcc__6EF57B66">
           <End Role="Accesorio" Type="Self.Accesorio" Multiplicity="0..1" />
           <End Role="AutoAccesorio" Type="Self.AutoAccesorio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -954,7 +954,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__AutoAcces__IdAut__4AB81AF0">
+        <Association Name="FK__AutoAcces__IdAut__6FE99F9F">
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="AutoAccesorio" Type="Self.AutoAccesorio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -966,7 +966,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__AutoClien__IdAut__6754599E">
+        <Association Name="FK__AutoClien__IdAut__0C85DE4D">
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="AutoCliente" Type="Self.AutoCliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -978,7 +978,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__AutoClien__IdVen__68487DD7">
+        <Association Name="FK__AutoClien__IdVen__0D7A0286">
           <End Role="VentaAuto" Type="Self.VentaAuto" Multiplicity="0..1" />
           <End Role="AutoCliente" Type="Self.AutoCliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -990,7 +990,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Automovil__IdAut__4316F928">
+        <Association Name="FK__Automovil__IdAut__68487DD7">
           <End Role="AutoColorList" Type="Self.AutoColorList" Multiplicity="0..1" />
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1002,7 +1002,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Automovil__IdAut__440B1D61">
+        <Association Name="FK__Automovil__IdAut__693CA210">
           <End Role="AutoEstadoList" Type="Self.AutoEstadoList" Multiplicity="0..1" />
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1014,7 +1014,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__AutoModel__IdAut__3B75D760">
+        <Association Name="FK__AutoModel__IdAut__60A75C0F">
           <End Role="AutoMarca" Type="Self.AutoMarca" Multiplicity="0..1" />
           <End Role="AutoModelo" Type="Self.AutoModelo" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1026,7 +1026,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Automovil__IdAut__4222D4EF">
+        <Association Name="FK__Automovil__IdAut__6754599E">
           <End Role="AutoModelo" Type="Self.AutoModelo" Multiplicity="0..1" />
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1038,7 +1038,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Origen_Fa__IdAut__534D60F1">
+        <Association Name="FK__Origen_Fa__IdAut__787EE5A0">
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="Origen_Fabrica" Type="Self.Origen_Fabrica" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1050,7 +1050,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Origen_Tr__IdAut__59FA5E80">
+        <Association Name="FK__Origen_Tr__IdAut__7F2BE32F">
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1062,7 +1062,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Cliente__IdMunic__5DCAEF64">
+        <Association Name="FK__Cliente__IdMunic__02FC7413">
           <End Role="Municipio" Type="Self.Municipio" Multiplicity="0..1" />
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1074,7 +1074,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Referenci__IdCli__60A75C0F">
+        <Association Name="FK__Referenci__IdCli__05D8E0BE">
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
           <End Role="Referencias" Type="Self.Referencias" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1086,7 +1086,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__VentaAuto__IdCli__6477ECF3">
+        <Association Name="FK__VentaAuto__IdCli__09A971A2">
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
           <End Role="VentaAuto" Type="Self.VentaAuto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1098,7 +1098,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Concesina__IdMun__2C3393D0">
+        <Association Name="FK__Concesina__IdMun__5165187F">
           <End Role="Municipio" Type="Self.Municipio" Multiplicity="0..1" />
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1110,7 +1110,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Empleado__IdConc__33D4B598">
+        <Association Name="FK__Empleado__IdConc__59063A47">
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="0..1" />
           <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1122,7 +1122,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Origen_Tr__IdCon__59063A47">
+        <Association Name="FK__Origen_Tr__IdCon__7E37BEF6">
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1134,7 +1134,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Empleado__IdTipo__32E0915F">
+        <Association Name="FK__Empleado__IdTipo__5812160E">
           <End Role="TipoEmpleado" Type="Self.TipoEmpleado" Multiplicity="0..1" />
           <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1146,7 +1146,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Usuario__IdEmple__36B12243">
+        <Association Name="FK__Usuario__IdEmple__5BE2A6F2">
           <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1158,7 +1158,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Estado__IdPais__267ABA7A">
+        <Association Name="FK__Estado__IdPais__4BAC3F29">
           <End Role="Pais" Type="Self.Pais" Multiplicity="0..1" />
           <End Role="Estado" Type="Self.Estado" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1170,7 +1170,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Municipio__IdEst__29572725">
+        <Association Name="FK__Municipio__IdEst__4E88ABD4">
           <End Role="Estado" Type="Self.Estado" Multiplicity="0..1" />
           <End Role="Municipio" Type="Self.Municipio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1182,7 +1182,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Origen_Fa__IdFab__5165187F">
+        <Association Name="FK__Origen_Fa__IdFab__76969D2E">
           <End Role="Fabrica" Type="Self.Fabrica" Multiplicity="0..1" />
           <End Role="Origen_Fabrica" Type="Self.Origen_Fabrica" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1194,7 +1194,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Origen_Fa__IdOri__5441852A">
+        <Association Name="FK__Origen_Fa__IdOri__797309D9">
           <End Role="OrigenEstado" Type="Self.OrigenEstado" Multiplicity="0..1" />
           <End Role="Origen_Fabrica" Type="Self.Origen_Fabrica" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1206,7 +1206,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Origen_Fa__IdUsu__52593CB8">
+        <Association Name="FK__Origen_Fa__IdUsu__778AC167">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="Origen_Fabrica" Type="Self.Origen_Fabrica" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1218,7 +1218,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Origen_Tr__IdCom__5812160E">
+        <Association Name="FK__Origen_Tr__IdCom__7D439ABD">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1230,7 +1230,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Origen_Tr__IdOri__5AEE82B9">
+        <Association Name="FK__Origen_Tr__IdOri__00200768">
           <End Role="OrigenEstado" Type="Self.OrigenEstado" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1242,7 +1242,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Origen_Tr__IdVen__571DF1D5">
+        <Association Name="FK__Origen_Tr__IdVen__7C4F7684">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1254,7 +1254,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__VentaAuto__IdUsu__6383C8BA">
+        <Association Name="FK__VentaAuto__IdUsu__08B54D69">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="VentaAuto" Type="Self.VentaAuto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1289,115 +1289,115 @@
           <EntitySet Name="TipoEmpleado" EntityType="Self.TipoEmpleado" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" />
           <EntitySet Name="VentaAuto" EntityType="Self.VentaAuto" />
-          <AssociationSet Name="FK__Accesorio__IdCon__46E78A0C" Association="Self.FK__Accesorio__IdCon__46E78A0C">
+          <AssociationSet Name="FK__Accesorio__IdCon__6C190EBB" Association="Self.FK__Accesorio__IdCon__6C190EBB">
             <End Role="Concesinaria" EntitySet="Concesinaria" />
             <End Role="Accesorio" EntitySet="Accesorio" />
           </AssociationSet>
-          <AssociationSet Name="FK__AutoAcces__IdAcc__49C3F6B7" Association="Self.FK__AutoAcces__IdAcc__49C3F6B7">
+          <AssociationSet Name="FK__AutoAcces__IdAcc__6EF57B66" Association="Self.FK__AutoAcces__IdAcc__6EF57B66">
             <End Role="Accesorio" EntitySet="Accesorio" />
             <End Role="AutoAccesorio" EntitySet="AutoAccesorio" />
           </AssociationSet>
-          <AssociationSet Name="FK__AutoAcces__IdAut__4AB81AF0" Association="Self.FK__AutoAcces__IdAut__4AB81AF0">
+          <AssociationSet Name="FK__AutoAcces__IdAut__6FE99F9F" Association="Self.FK__AutoAcces__IdAut__6FE99F9F">
             <End Role="Automovil" EntitySet="Automovil" />
             <End Role="AutoAccesorio" EntitySet="AutoAccesorio" />
           </AssociationSet>
-          <AssociationSet Name="FK__AutoClien__IdAut__6754599E" Association="Self.FK__AutoClien__IdAut__6754599E">
+          <AssociationSet Name="FK__AutoClien__IdAut__0C85DE4D" Association="Self.FK__AutoClien__IdAut__0C85DE4D">
             <End Role="Automovil" EntitySet="Automovil" />
             <End Role="AutoCliente" EntitySet="AutoCliente" />
           </AssociationSet>
-          <AssociationSet Name="FK__AutoClien__IdVen__68487DD7" Association="Self.FK__AutoClien__IdVen__68487DD7">
+          <AssociationSet Name="FK__AutoClien__IdVen__0D7A0286" Association="Self.FK__AutoClien__IdVen__0D7A0286">
             <End Role="VentaAuto" EntitySet="VentaAuto" />
             <End Role="AutoCliente" EntitySet="AutoCliente" />
           </AssociationSet>
-          <AssociationSet Name="FK__Automovil__IdAut__4316F928" Association="Self.FK__Automovil__IdAut__4316F928">
+          <AssociationSet Name="FK__Automovil__IdAut__68487DD7" Association="Self.FK__Automovil__IdAut__68487DD7">
             <End Role="AutoColorList" EntitySet="AutoColorList" />
             <End Role="Automovil" EntitySet="Automovil" />
           </AssociationSet>
-          <AssociationSet Name="FK__Automovil__IdAut__440B1D61" Association="Self.FK__Automovil__IdAut__440B1D61">
+          <AssociationSet Name="FK__Automovil__IdAut__693CA210" Association="Self.FK__Automovil__IdAut__693CA210">
             <End Role="AutoEstadoList" EntitySet="AutoEstadoList" />
             <End Role="Automovil" EntitySet="Automovil" />
           </AssociationSet>
-          <AssociationSet Name="FK__AutoModel__IdAut__3B75D760" Association="Self.FK__AutoModel__IdAut__3B75D760">
+          <AssociationSet Name="FK__AutoModel__IdAut__60A75C0F" Association="Self.FK__AutoModel__IdAut__60A75C0F">
             <End Role="AutoMarca" EntitySet="AutoMarca" />
             <End Role="AutoModelo" EntitySet="AutoModelo" />
           </AssociationSet>
-          <AssociationSet Name="FK__Automovil__IdAut__4222D4EF" Association="Self.FK__Automovil__IdAut__4222D4EF">
+          <AssociationSet Name="FK__Automovil__IdAut__6754599E" Association="Self.FK__Automovil__IdAut__6754599E">
             <End Role="AutoModelo" EntitySet="AutoModelo" />
             <End Role="Automovil" EntitySet="Automovil" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdAut__534D60F1" Association="Self.FK__Origen_Fa__IdAut__534D60F1">
+          <AssociationSet Name="FK__Origen_Fa__IdAut__787EE5A0" Association="Self.FK__Origen_Fa__IdAut__787EE5A0">
             <End Role="Automovil" EntitySet="Automovil" />
             <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdAut__59FA5E80" Association="Self.FK__Origen_Tr__IdAut__59FA5E80">
+          <AssociationSet Name="FK__Origen_Tr__IdAut__7F2BE32F" Association="Self.FK__Origen_Tr__IdAut__7F2BE32F">
             <End Role="Automovil" EntitySet="Automovil" />
             <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
           </AssociationSet>
-          <AssociationSet Name="FK__Cliente__IdMunic__5DCAEF64" Association="Self.FK__Cliente__IdMunic__5DCAEF64">
+          <AssociationSet Name="FK__Cliente__IdMunic__02FC7413" Association="Self.FK__Cliente__IdMunic__02FC7413">
             <End Role="Municipio" EntitySet="Municipio" />
             <End Role="Cliente" EntitySet="Cliente" />
           </AssociationSet>
-          <AssociationSet Name="FK__Referenci__IdCli__60A75C0F" Association="Self.FK__Referenci__IdCli__60A75C0F">
+          <AssociationSet Name="FK__Referenci__IdCli__05D8E0BE" Association="Self.FK__Referenci__IdCli__05D8E0BE">
             <End Role="Cliente" EntitySet="Cliente" />
             <End Role="Referencias" EntitySet="Referencias" />
           </AssociationSet>
-          <AssociationSet Name="FK__VentaAuto__IdCli__6477ECF3" Association="Self.FK__VentaAuto__IdCli__6477ECF3">
+          <AssociationSet Name="FK__VentaAuto__IdCli__09A971A2" Association="Self.FK__VentaAuto__IdCli__09A971A2">
             <End Role="Cliente" EntitySet="Cliente" />
             <End Role="VentaAuto" EntitySet="VentaAuto" />
           </AssociationSet>
-          <AssociationSet Name="FK__Concesina__IdMun__2C3393D0" Association="Self.FK__Concesina__IdMun__2C3393D0">
+          <AssociationSet Name="FK__Concesina__IdMun__5165187F" Association="Self.FK__Concesina__IdMun__5165187F">
             <End Role="Municipio" EntitySet="Municipio" />
             <End Role="Concesinaria" EntitySet="Concesinaria" />
           </AssociationSet>
-          <AssociationSet Name="FK__Empleado__IdConc__33D4B598" Association="Self.FK__Empleado__IdConc__33D4B598">
+          <AssociationSet Name="FK__Empleado__IdConc__59063A47" Association="Self.FK__Empleado__IdConc__59063A47">
             <End Role="Concesinaria" EntitySet="Concesinaria" />
             <End Role="Empleado" EntitySet="Empleado" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdCon__59063A47" Association="Self.FK__Origen_Tr__IdCon__59063A47">
+          <AssociationSet Name="FK__Origen_Tr__IdCon__7E37BEF6" Association="Self.FK__Origen_Tr__IdCon__7E37BEF6">
             <End Role="Concesinaria" EntitySet="Concesinaria" />
             <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
           </AssociationSet>
-          <AssociationSet Name="FK__Empleado__IdTipo__32E0915F" Association="Self.FK__Empleado__IdTipo__32E0915F">
+          <AssociationSet Name="FK__Empleado__IdTipo__5812160E" Association="Self.FK__Empleado__IdTipo__5812160E">
             <End Role="TipoEmpleado" EntitySet="TipoEmpleado" />
             <End Role="Empleado" EntitySet="Empleado" />
           </AssociationSet>
-          <AssociationSet Name="FK__Usuario__IdEmple__36B12243" Association="Self.FK__Usuario__IdEmple__36B12243">
+          <AssociationSet Name="FK__Usuario__IdEmple__5BE2A6F2" Association="Self.FK__Usuario__IdEmple__5BE2A6F2">
             <End Role="Empleado" EntitySet="Empleado" />
             <End Role="Usuario" EntitySet="Usuario" />
           </AssociationSet>
-          <AssociationSet Name="FK__Estado__IdPais__267ABA7A" Association="Self.FK__Estado__IdPais__267ABA7A">
+          <AssociationSet Name="FK__Estado__IdPais__4BAC3F29" Association="Self.FK__Estado__IdPais__4BAC3F29">
             <End Role="Pais" EntitySet="Pais" />
             <End Role="Estado" EntitySet="Estado" />
           </AssociationSet>
-          <AssociationSet Name="FK__Municipio__IdEst__29572725" Association="Self.FK__Municipio__IdEst__29572725">
+          <AssociationSet Name="FK__Municipio__IdEst__4E88ABD4" Association="Self.FK__Municipio__IdEst__4E88ABD4">
             <End Role="Estado" EntitySet="Estado" />
             <End Role="Municipio" EntitySet="Municipio" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdFab__5165187F" Association="Self.FK__Origen_Fa__IdFab__5165187F">
+          <AssociationSet Name="FK__Origen_Fa__IdFab__76969D2E" Association="Self.FK__Origen_Fa__IdFab__76969D2E">
             <End Role="Fabrica" EntitySet="Fabrica" />
             <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdOri__5441852A" Association="Self.FK__Origen_Fa__IdOri__5441852A">
+          <AssociationSet Name="FK__Origen_Fa__IdOri__797309D9" Association="Self.FK__Origen_Fa__IdOri__797309D9">
             <End Role="OrigenEstado" EntitySet="OrigenEstado" />
             <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdUsu__52593CB8" Association="Self.FK__Origen_Fa__IdUsu__52593CB8">
+          <AssociationSet Name="FK__Origen_Fa__IdUsu__778AC167" Association="Self.FK__Origen_Fa__IdUsu__778AC167">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdCom__5812160E" Association="Self.FK__Origen_Tr__IdCom__5812160E">
+          <AssociationSet Name="FK__Origen_Tr__IdCom__7D439ABD" Association="Self.FK__Origen_Tr__IdCom__7D439ABD">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdOri__5AEE82B9" Association="Self.FK__Origen_Tr__IdOri__5AEE82B9">
+          <AssociationSet Name="FK__Origen_Tr__IdOri__00200768" Association="Self.FK__Origen_Tr__IdOri__00200768">
             <End Role="OrigenEstado" EntitySet="OrigenEstado" />
             <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdVen__571DF1D5" Association="Self.FK__Origen_Tr__IdVen__571DF1D5">
+          <AssociationSet Name="FK__Origen_Tr__IdVen__7C4F7684" Association="Self.FK__Origen_Tr__IdVen__7C4F7684">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
           </AssociationSet>
-          <AssociationSet Name="FK__VentaAuto__IdUsu__6383C8BA" Association="Self.FK__VentaAuto__IdUsu__6383C8BA">
+          <AssociationSet Name="FK__VentaAuto__IdUsu__08B54D69" Association="Self.FK__VentaAuto__IdUsu__08B54D69">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="VentaAuto" EntitySet="VentaAuto" />
           </AssociationSet>

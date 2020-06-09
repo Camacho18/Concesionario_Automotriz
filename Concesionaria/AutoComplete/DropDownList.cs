@@ -16,6 +16,10 @@ namespace Concesionaria.AutoComplete
         {
             return (from T in db.TipoEmpleado select new DropDownListModel { Id = T.IdTipoEmpleado, Value = T.Nombre }).ToList();
         }
+        public List<DropDownListModel> Municipio()
+        {
+            return (from M in db.Municipio select new DropDownListModel { Id = M.IdMunicipio, Value = M.Nombre }).ToList();
+        }
 
     }
 }
