@@ -397,6 +397,7 @@
     <Content Include="Views\Menu\_VistaHorizontal.cshtml" />
     <Content Include="Views\Accesorio\Index.cshtml" />
     <Content Include="Views\Accesorio\_Create.cshtml" />
+    <Content Include="Views\Accesorio\_Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

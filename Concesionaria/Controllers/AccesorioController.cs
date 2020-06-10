@@ -17,7 +17,7 @@ namespace Concesionaria.Controllers
         private readonly ConcesionariaEntities db = new ConcesionariaEntities();
         private readonly DropDownList Model = new DropDownList();
         private string JsonString = string.Empty;
-        private int IdUsuario, IdSucursal, IdEmpleado;
+        private int IdUsuario, IdSucursal, IdEmpleado, Id;
 
         // GET: Accesorio
         public ActionResult Index()
@@ -71,6 +71,57 @@ namespace Concesionaria.Controllers
                     modeladd.IdConcesinaria = Convert.ToInt32(Session["IdSucursal"]);
                     modeladd.CantidadVendido = 0;
                     db.Accesorio.Add(modeladd);
+                    db.SaveChanges();
+
+                    return Json("1", JsonRequestBehavior.AllowGet);
+                }
+                catch
+                {
+                    return Json("0", JsonRequestBehavior.AllowGet);
+                }
+            }
+        }
+
+
+
+        // GET: Empleado/Edit/5
+        public ActionResult UpdateAcce(int Id)
+        {
+            
+            AccesorioCreate model = (from E in db.Accesorio
+                                    where E.IdAccesorio == Id
+                                    select new AccesorioCreate
+                                    {
+                                        Numero = E.Numero,
+                                        Nombre = E.Nombre,
+                                        CantidadExistencia=E.CantidadExistencia,
+                                        CantidadVendido=E.CantidadVendido
+                                    }
+                                    ).FirstOrDefault();
+            Session["IdAccesorio"] = Id;
+            return PartialView("_Update", model);
+        }
+
+        [HttpPost]
+        public ActionResult UpdateAcce(AccesorioCreate model)
+        {
+            if (!ModelState.IsValid)
+            {
+                
+                return PartialView("_Update", model);
+            }
+            else
+            {
+                Id = Convert.ToInt32(Session["IdAccesorio"]);
+                try
+                {
+                    Accesorio emp = (from E in db.Accesorio
+                                    where E.IdAccesorio == Id
+                                    select E).SingleOrDefault();
+
+
+                    emp.Nombre = model.Nombre;
+                    emp.CantidadExistencia = model.CantidadExistencia;                    
                     db.SaveChanges();
 
                     return Json("1", JsonRequestBehavior.AllowGet);

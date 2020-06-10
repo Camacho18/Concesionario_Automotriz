@@ -1,0 +1,92 @@
+﻿@model Concesionaria.Models.ModelsSupport.AccesorioCreate
+
+@using (Ajax.BeginForm("UpdateAcce", "Accesorio", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "frmAcce", OnSuccess = "SuccessAcce_U" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <div class="modal-header">
+            <h5 class="modal-title">Nuevo Accesorio</h5>
+            <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.Numero, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Numero, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                    @Html.ValidationMessageFor(model => model.Numero, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.CantidadExistencia, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.CantidadExistencia, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.CantidadExistencia, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.CantidadVendido, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.CantidadVendido, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                    @Html.ValidationMessageFor(model => model.CantidadVendido, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="submit" id="btn_Aceptar" class="btn btn-success">Aceptar</button>
+        </div>
+
+    </div>
+    <script>
+        function SuccessAcce_U(data) {
+            AccesorioLoad();
+            if (data == "1") {
+                $('#AcceModal').modal("hide");
+
+                Swal.fire({
+                    position: "top",
+                    title: "Correcto",
+                    text: "Accesorio Actualizado",
+                    icon: "success",
+                    button: "Aceptar",
+                });
+            }
+            //else if (data == "2") {
+            //    $('#AcceModal').modal("hide");
+
+            //    Swal.fire({
+            //        position: "top",
+            //        title: "Atención",
+            //        text: "Numero de accesorio existente",
+            //        icon: "warning",
+            //        button: "Aceptar",
+            //    });
+            //}
+            else {
+                $('#AcceEmpModal').modal("hide");
+
+                Swal.fire({
+                    position: "top",
+                    title: "Error",
+                    text: "Error No Reconocido",
+                    icon: "warning",
+                    button: "Aceptar",
+                });
+            }
+        }
+    </script>
+}
