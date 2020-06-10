@@ -66,7 +66,7 @@ create table PromocionList(
 -- __________________________________________________________________ Automovil
 
 CREATE TABLE Anios(
-	IdAnios INT IDENTITY(1,1),
+	IdAnios INT IDENTITY(1,1) PRIMARY KEY,
 	Numero VARCHAR(4)
 )
 

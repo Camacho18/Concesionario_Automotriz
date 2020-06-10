@@ -152,6 +152,12 @@
     <Compile Include="Models\Accesorio.cs">
       <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\AccesorioList.cs">
+      <DependentUpon>Concesionaria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Anios.cs">
+      <DependentUpon>Concesionaria.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\AutoAccesorio.cs">
       <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
@@ -415,11 +421,8 @@
     <Content Include="Views\Menu\_VistaHorizontal.cshtml" />
     <Content Include="Views\Accesorio\Index.cshtml" />
     <Content Include="Views\Accesorio\_Create.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Accesorio\_Update.cshtml" />
-=======
     <Content Include="Views\AutoCliente\Index.cshtml" />
->>>>>>> 781ca9f2c4115455427749321962cc25c7e5a2a8
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

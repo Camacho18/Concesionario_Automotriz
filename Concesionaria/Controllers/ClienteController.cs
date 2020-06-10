@@ -35,8 +35,7 @@ namespace Concesionaria.Controllers
                                       {
                                           IdCliente = clte.IdCliente,
                                           Numero = clte.Numero,
-                                          Nombre = clte.Nombre,
-                                          Edad = clte.Edad,
+                                          Nombre = clte.Nombre,                                          
                                           Direccion = clte.Direccion,
                                           FechaNac = clte.FechaNac,
                                           Sexo = clte.Sexo,
@@ -75,8 +74,7 @@ namespace Concesionaria.Controllers
                 try
                 {
                     clte.Numero = model.Numero;
-                    clte.Nombre = model.Nombre;
-                    clte.Edad = model.Edad;
+                    clte.Nombre = model.Nombre;                    
                     clte.Direccion = model.Direccion;
                     clte.FechaNac = model.FechaNac;
                     clte.Sexo = model.Sexo;
@@ -108,8 +106,7 @@ namespace Concesionaria.Controllers
                                    select new ClienteCreate
                                    {
                                        Numero = C.Numero,
-                                       Nombre = C.Nombre,
-                                       Edad = C.Edad,
+                                       Nombre = C.Nombre,                                       
                                        Direccion = C.Direccion,
                                        FechaNac = C.FechaNac,
                                        Sexo = C.Sexo,
@@ -142,8 +139,7 @@ namespace Concesionaria.Controllers
                     Cliente clte = (from C in db.Cliente
                                     where C.IdCliente == IdCliente
                                     select C).SingleOrDefault();
-                    clte.Nombre = model.Nombre;
-                    clte.Edad = model.Edad;
+                    clte.Nombre = model.Nombre;                    
                     clte.Direccion = model.Direccion;
                     clte.FechaNac = model.FechaNac;
                     clte.Sexo = model.Sexo;

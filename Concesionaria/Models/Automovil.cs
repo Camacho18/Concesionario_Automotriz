@@ -25,11 +25,12 @@ namespace Concesionaria.Models
     
         public int IdAutomovil { get; set; }
         public string Numero { get; set; }
-        public Nullable<int> Anio { get; set; }
+        public Nullable<int> IdAnios { get; set; }
         public Nullable<int> IdAutoModelo { get; set; }
         public Nullable<int> IdAutoColor { get; set; }
         public Nullable<int> IdAutoEstado { get; set; }
     
+        public virtual Anios Anios { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AutoAccesorio> AutoAccesorio { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

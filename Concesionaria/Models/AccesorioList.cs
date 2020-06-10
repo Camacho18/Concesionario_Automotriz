@@ -12,18 +12,23 @@ namespace Concesionaria.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Promocion_Auto
+    public partial class AccesorioList
     {
-        public int IdPromocion_Auto { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public AccesorioList()
+        {
+            this.Accesorio = new HashSet<Accesorio>();
+        }
+    
+        public int IdAccesorioList { get; set; }
+        public string Numero { get; set; }
+        public string Nombre { get; set; }
         public Nullable<int> IdAutoModelo { get; set; }
         public Nullable<int> IdAnios { get; set; }
-        public Nullable<int> IdPromocion { get; set; }
-        public Nullable<int> IdConcesinaria { get; set; }
-        public Nullable<bool> Vigente { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Accesorio> Accesorio { get; set; }
         public virtual Anios Anios { get; set; }
         public virtual AutoModelo AutoModelo { get; set; }
-        public virtual Concesinaria Concesinaria { get; set; }
-        public virtual PromocionList PromocionList { get; set; }
     }
 }

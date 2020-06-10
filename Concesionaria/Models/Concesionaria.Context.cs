@@ -26,6 +26,8 @@ namespace Concesionaria.Models
         }
     
         public virtual DbSet<Accesorio> Accesorio { get; set; }
+        public virtual DbSet<AccesorioList> AccesorioList { get; set; }
+        public virtual DbSet<Anios> Anios { get; set; }
         public virtual DbSet<AutoAccesorio> AutoAccesorio { get; set; }
         public virtual DbSet<AutoCliente> AutoCliente { get; set; }
         public virtual DbSet<AutoColorList> AutoColorList { get; set; }

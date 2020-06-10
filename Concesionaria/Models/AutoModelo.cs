@@ -17,6 +17,7 @@ namespace Concesionaria.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public AutoModelo()
         {
+            this.AccesorioList = new HashSet<AccesorioList>();
             this.Automovil = new HashSet<Automovil>();
             this.Promocion_Auto = new HashSet<Promocion_Auto>();
         }
@@ -25,6 +26,8 @@ namespace Concesionaria.Models
         public string Nombre { get; set; }
         public Nullable<int> IdAutoMarca { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<AccesorioList> AccesorioList { get; set; }
         public virtual AutoMarca AutoMarca { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Automovil> Automovil { get; set; }

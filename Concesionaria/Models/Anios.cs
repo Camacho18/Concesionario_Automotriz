@@ -12,23 +12,24 @@ namespace Concesionaria.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Accesorio
+    public partial class Anios
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Accesorio()
+        public Anios()
         {
-            this.AutoAccesorio = new HashSet<AutoAccesorio>();
+            this.AccesorioList = new HashSet<AccesorioList>();
+            this.Automovil = new HashSet<Automovil>();
+            this.Promocion_Auto = new HashSet<Promocion_Auto>();
         }
     
-        public int IdAccesorio { get; set; }
-        public string Serie { get; set; }
-        public string Descripcion { get; set; }
-        public Nullable<int> IdAccesorioList { get; set; }
-        public Nullable<int> IdConcesinaria { get; set; }
+        public int IdAnios { get; set; }
+        public string Numero { get; set; }
     
-        public virtual AccesorioList AccesorioList { get; set; }
-        public virtual Concesinaria Concesinaria { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AutoAccesorio> AutoAccesorio { get; set; }
+        public virtual ICollection<AccesorioList> AccesorioList { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Automovil> Automovil { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Promocion_Auto> Promocion_Auto { get; set; }
     }
 }

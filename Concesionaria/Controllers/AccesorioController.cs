@@ -32,10 +32,10 @@ namespace Concesionaria.Controllers
                                        select new AccesorioJson
                                        {
                                            IdAccesorio=A.IdAccesorio,
-                                           Numero=A.Numero,
-                                           Nombre=A.Nombre,
-                                           CantidadExistencia=A.CantidadExistencia,
-                                           CantidadVendido=A.CantidadVendido                                          
+                                           //Numero=A.Numero,
+                                           //Nombre=A.Nombre,
+                                           //CantidadExistencia=A.CantidadExistencia,
+                                           //CantidadVendido=A.CantidadVendido                                          
                                        }).ToList();
             JsonString = JsonConvert.SerializeObject(json);
             return Json(JsonString, JsonRequestBehavior.AllowGet);
@@ -60,16 +60,16 @@ namespace Concesionaria.Controllers
                 Accesorio modeladd = new Accesorio();
                 try
                 {
-                    int comd = (from A in db.Accesorio where A.Numero == model.Numero select A.IdAccesorio).Count();
+                    int comd = (from A in db.Accesorio  select A.IdAccesorio).Count();
 
                     if (comd >= 1)
                         return Json("2", JsonRequestBehavior.AllowGet);
 
-                    modeladd.Numero = model.Numero.Trim();
-                    modeladd.Nombre = model.Nombre.Trim();
-                    modeladd.CantidadExistencia = model.CantidadExistencia;
-                    modeladd.IdConcesinaria = Convert.ToInt32(Session["IdSucursal"]);
-                    modeladd.CantidadVendido = 0;
+                    //modeladd.Numero = model.Numero.Trim();
+                    //modeladd.Nombre = model.Nombre.Trim();
+                    //modeladd.CantidadExistencia = model.CantidadExistencia;
+                    //modeladd.IdConcesinaria = Convert.ToInt32(Session["IdSucursal"]);
+                    //modeladd.CantidadVendido = 0;
                     db.Accesorio.Add(modeladd);
                     db.SaveChanges();
 
@@ -92,10 +92,10 @@ namespace Concesionaria.Controllers
                                     where E.IdAccesorio == Id
                                     select new AccesorioCreate
                                     {
-                                        Numero = E.Numero,
-                                        Nombre = E.Nombre,
-                                        CantidadExistencia=E.CantidadExistencia,
-                                        CantidadVendido=E.CantidadVendido
+                                        //Numero = E.Numero,
+                                        //Nombre = E.Nombre,
+                                        //CantidadExistencia=E.CantidadExistencia,
+                                        //CantidadVendido=E.CantidadVendido
                                     }
                                     ).FirstOrDefault();
             Session["IdAccesorio"] = Id;
@@ -120,8 +120,8 @@ namespace Concesionaria.Controllers
                                     select E).SingleOrDefault();
 
 
-                    emp.Nombre = model.Nombre;
-                    emp.CantidadExistencia = model.CantidadExistencia;                    
+                    //emp.Nombre = model.Nombre;
+                    //emp.CantidadExistencia = model.CantidadExistencia;                    
                     db.SaveChanges();
 
                     return Json("1", JsonRequestBehavior.AllowGet);

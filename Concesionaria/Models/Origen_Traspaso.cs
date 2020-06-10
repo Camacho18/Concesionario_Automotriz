@@ -15,7 +15,7 @@ namespace Concesionaria.Models
     public partial class Origen_Traspaso
     {
         public int IdOrigen_Traspaso { get; set; }
-        public Nullable<int> Numero { get; set; }
+        public string Numero { get; set; }
         public Nullable<int> IdVendedor { get; set; }
         public Nullable<int> IdComprador { get; set; }
         public Nullable<int> IdConcesinaria { get; set; }

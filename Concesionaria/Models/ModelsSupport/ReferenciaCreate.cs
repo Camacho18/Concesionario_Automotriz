@@ -16,7 +16,7 @@ namespace Concesionaria.Models.ModelsSupport
         public string Nombre { get; set; }
 
         [Required(ErrorMessage = "Campo obligatorio")]
-        public int? TelCel { get; set; }
+        public string TelCel { get; set; }
         public int? IdCliente { get; set; }
     }
 }
