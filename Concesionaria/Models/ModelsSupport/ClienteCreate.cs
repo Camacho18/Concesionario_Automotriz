@@ -10,6 +10,7 @@ namespace Concesionaria.Models.ModelsSupport
     public class ClienteCreate
     {
         public int IdCliente { get; set; }
+        public string Numero { get; set; }
 
         [Required(ErrorMessage = "Campo obligatorio")]
         public string Nombre { get; set; }
@@ -26,5 +27,7 @@ namespace Concesionaria.Models.ModelsSupport
         public string Correo { get; set; }
         public string RFC { get; set; }
         public Nullable<int> IdMunicipio { get; set; }
+        public int? IdEstado_Cliente { get; set; }
+
     }
 }

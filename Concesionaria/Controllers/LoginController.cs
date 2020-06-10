@@ -22,7 +22,7 @@ namespace Concesionaria.Controllers
 
         public ActionResult Acce(Login model)
         {
-            var m = (from U in db.Usuario                     
+            var m = (from U in db.Usuario
                      where U.NomUsuario == model.Usuario && U.Contrasena == model.Contras
                      select U.IdUsuario
                      ).FirstOrDefault();

@@ -21,11 +21,11 @@ namespace Concesionaria.Models
         }
     
         public int IdAccesorio { get; set; }
+        public string Numero { get; set; }
         public string Nombre { get; set; }
         public Nullable<int> CantidadExistencia { get; set; }
         public Nullable<int> CantidadVendido { get; set; }
         public Nullable<int> IdConcesinaria { get; set; }
-        public string Numero { get; set; }
     
         public virtual Concesinaria Concesinaria { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

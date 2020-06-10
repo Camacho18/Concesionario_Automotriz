@@ -10,11 +10,11 @@
             <PropertyRef Name="IdAccesorio" />
           </Key>
           <Property Name="IdAccesorio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Numero" Type="varchar" MaxLength="30" />
           <Property Name="Nombre" Type="varchar" MaxLength="50" />
           <Property Name="CantidadExistencia" Type="int" />
           <Property Name="CantidadVendido" Type="int" />
           <Property Name="IdConcesinaria" Type="int" />
-          <Property Name="Numero" Type="varchar" MaxLength="30" />
         </EntityType>
         <EntityType Name="AutoAccesorio">
           <Key>
@@ -240,11 +240,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
           <Property Name="IdPromocion" Type="int" />
           <Property Name="IdCliente" Type="int" />
         </EntityType>
-<<<<<<< HEAD
-        <Association Name="FK__Accesorio__IdCon__6C190EBB">
-=======
-        <Association Name="FK__Accesorio__IdCon__4E88ABD4">
->>>>>>> origin
+        <Association Name="FK__Accesorio__IdCon__73BA3083">
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="0..1" />
           <End Role="Accesorio" Type="Self.Accesorio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -256,11 +252,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__AutoAcces__IdAcc__6EF57B66">
-=======
-        <Association Name="FK__AutoAcces__IdAcc__5165187F">
->>>>>>> origin
+        <Association Name="FK__AutoAcces__IdAcc__76969D2E">
           <End Role="Accesorio" Type="Self.Accesorio" Multiplicity="0..1" />
           <End Role="AutoAccesorio" Type="Self.AutoAccesorio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -272,11 +264,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__AutoAcces__IdAut__6FE99F9F">
-=======
-        <Association Name="FK__AutoAcces__IdAut__52593CB8">
->>>>>>> origin
+        <Association Name="FK__AutoAcces__IdAut__778AC167">
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="AutoAccesorio" Type="Self.AutoAccesorio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -288,11 +276,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__AutoClien__IdAut__0C85DE4D">
-=======
-        <Association Name="FK__AutoClien__IdAut__72C60C4A">
->>>>>>> origin
+        <Association Name="FK__AutoClien__IdAut__17F790F9">
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="AutoCliente" Type="Self.AutoCliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -304,11 +288,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__AutoClien__IdVen__0D7A0286">
-=======
-        <Association Name="FK__AutoClien__IdVen__73BA3083">
->>>>>>> origin
+        <Association Name="FK__AutoClien__IdVen__18EBB532">
           <End Role="VentaAuto" Type="Self.VentaAuto" Multiplicity="0..1" />
           <End Role="AutoCliente" Type="Self.AutoCliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -320,11 +300,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__AutoModel__IdAut__60A75C0F">
-=======
-        <Association Name="FK__AutoModel__IdAut__3E52440B">
->>>>>>> origin
+        <Association Name="FK__AutoModel__IdAut__6383C8BA">
           <End Role="AutoMarca" Type="Self.AutoMarca" Multiplicity="0..1" />
           <End Role="AutoModelo" Type="Self.AutoModelo" Multiplicity="*" />
           <ReferentialConstraint>
@@ -336,11 +312,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__Automovil__IdAut__6754599E">
-=======
-        <Association Name="FK__Automovil__IdAut__49C3F6B7">
->>>>>>> origin
+        <Association Name="FK__Automovil__IdAut__6EF57B66">
           <End Role="AutoModelo" Type="Self.AutoModelo" Multiplicity="0..1" />
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="*" />
           <ReferentialConstraint>
@@ -352,11 +324,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__Automovil__IdAut__68487DD7">
-=======
-        <Association Name="FK__Automovil__IdAut__4AB81AF0">
->>>>>>> origin
+        <Association Name="FK__Automovil__IdAut__6FE99F9F">
           <End Role="AutoColorList" Type="Self.AutoColorList" Multiplicity="0..1" />
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="*" />
           <ReferentialConstraint>
@@ -368,11 +336,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__Automovil__IdAut__693CA210">
-=======
-        <Association Name="FK__Automovil__IdAut__4BAC3F29">
->>>>>>> origin
+        <Association Name="FK__Automovil__IdAut__70DDC3D8">
           <End Role="AutoEstadoList" Type="Self.AutoEstadoList" Multiplicity="0..1" />
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="*" />
           <ReferentialConstraint>
@@ -384,10 +348,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__Cliente__IdMunic__02FC7413">
-=======
-        <Association Name="FK__Cliente__IdEstad__68487DD7">
+        <Association Name="FK__Cliente__IdEstad__0D7A0286">
           <End Role="Estado_Cliente" Type="Self.Estado_Cliente" Multiplicity="0..1" />
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -399,8 +360,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Cliente__IdMunic__6754599E">
->>>>>>> origin
+        <Association Name="FK__Cliente__IdMunic__0C85DE4D">
           <End Role="Municipio" Type="Self.Municipio" Multiplicity="0..1" />
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -472,11 +432,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__Origen_Fa__IdAut__787EE5A0">
-=======
-        <Association Name="FK__Origen_Fa__IdAut__5AEE82B9">
->>>>>>> origin
+        <Association Name="FK__Origen_Fa__IdAut__00200768">
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="Origen_Fabrica" Type="Self.Origen_Fabrica" Multiplicity="*" />
           <ReferentialConstraint>
@@ -488,11 +444,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__Origen_Fa__IdFab__76969D2E">
-=======
-        <Association Name="FK__Origen_Fa__IdFab__59063A47">
->>>>>>> origin
+        <Association Name="FK__Origen_Fa__IdFab__7E37BEF6">
           <End Role="Fabrica" Type="Self.Fabrica" Multiplicity="0..1" />
           <End Role="Origen_Fabrica" Type="Self.Origen_Fabrica" Multiplicity="*" />
           <ReferentialConstraint>
@@ -504,11 +456,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__Origen_Fa__IdOri__797309D9">
-=======
-        <Association Name="FK__Origen_Fa__IdOri__5BE2A6F2">
->>>>>>> origin
+        <Association Name="FK__Origen_Fa__IdOri__01142BA1">
           <End Role="OrigenEstado" Type="Self.OrigenEstado" Multiplicity="0..1" />
           <End Role="Origen_Fabrica" Type="Self.Origen_Fabrica" Multiplicity="*" />
           <ReferentialConstraint>
@@ -520,11 +468,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__Origen_Fa__IdUsu__778AC167">
-=======
-        <Association Name="FK__Origen_Fa__IdUsu__59FA5E80">
->>>>>>> origin
+        <Association Name="FK__Origen_Fa__IdUsu__7F2BE32F">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="Origen_Fabrica" Type="Self.Origen_Fabrica" Multiplicity="*" />
           <ReferentialConstraint>
@@ -536,11 +480,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__Origen_Tr__IdAut__7F2BE32F">
-=======
-        <Association Name="FK__Origen_Tr__IdAut__619B8048">
->>>>>>> origin
+        <Association Name="FK__Origen_Tr__IdAut__06CD04F7">
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -552,11 +492,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__Origen_Tr__IdCom__7D439ABD">
-=======
-        <Association Name="FK__Origen_Tr__IdCom__5FB337D6">
->>>>>>> origin
+        <Association Name="FK__Origen_Tr__IdCom__04E4BC85">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -568,11 +504,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__Origen_Tr__IdCon__7E37BEF6">
-=======
-        <Association Name="FK__Origen_Tr__IdCon__60A75C0F">
->>>>>>> origin
+        <Association Name="FK__Origen_Tr__IdCon__05D8E0BE">
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -584,11 +516,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__Origen_Tr__IdOri__00200768">
-=======
-        <Association Name="FK__Origen_Tr__IdOri__628FA481">
->>>>>>> origin
+        <Association Name="FK__Origen_Tr__IdOri__07C12930">
           <End Role="OrigenEstado" Type="Self.OrigenEstado" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -600,11 +528,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__Origen_Tr__IdVen__7C4F7684">
-=======
-        <Association Name="FK__Origen_Tr__IdVen__5EBF139D">
->>>>>>> origin
+        <Association Name="FK__Origen_Tr__IdVen__03F0984C">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -616,10 +540,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__Referenci__IdCli__05D8E0BE">
-=======
-        <Association Name="FK__Promocion__IdAut__403A8C7D">
+        <Association Name="FK__Promocion__IdAut__656C112C">
           <End Role="AutoModelo" Type="Self.AutoModelo" Multiplicity="0..1" />
           <End Role="Promocion_Auto" Type="Self.Promocion_Auto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -631,7 +552,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Promocion__IdCon__4222D4EF">
+        <Association Name="FK__Promocion__IdCon__6754599E">
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="0..1" />
           <End Role="Promocion_Auto" Type="Self.Promocion_Auto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -643,7 +564,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Promocion__IdPro__412EB0B6">
+        <Association Name="FK__Promocion__IdPro__66603565">
           <End Role="PromocionList" Type="Self.PromocionList" Multiplicity="0..1" />
           <End Role="Promocion_Auto" Type="Self.Promocion_Auto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -655,8 +576,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Referenci__IdCli__6B24EA82">
->>>>>>> origin
+        <Association Name="FK__Referenci__IdCli__10566F31">
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
           <End Role="Referencias" Type="Self.Referencias" Multiplicity="*" />
           <ReferentialConstraint>
@@ -668,11 +588,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__Usuario__IdEmple__5BE2A6F2">
-=======
-        <Association Name="FK__Usuario__IdEmple__37A5467C">
->>>>>>> origin
+        <Association Name="FK__Usuario__IdEmple__5CD6CB2B">
           <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
           <ReferentialConstraint>
@@ -684,11 +600,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__VentaAuto__IdCli__09A971A2">
-=======
-        <Association Name="FK__VentaAuto__IdCli__6FE99F9F">
->>>>>>> origin
+        <Association Name="FK__VentaAuto__IdCli__151B244E">
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
           <End Role="VentaAuto" Type="Self.VentaAuto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -700,10 +612,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__VentaAuto__IdUsu__08B54D69">
-=======
-        <Association Name="FK__VentaAuto__IdPro__6EF57B66">
+        <Association Name="FK__VentaAuto__IdPro__14270015">
           <End Role="PromocionList" Type="Self.PromocionList" Multiplicity="0..1" />
           <End Role="VentaAuto" Type="Self.VentaAuto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -715,8 +624,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__VentaAuto__IdUsu__6E01572D">
->>>>>>> origin
+        <Association Name="FK__VentaAuto__IdUsu__1332DBDC">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="VentaAuto" Type="Self.VentaAuto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -753,45 +661,6 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
           <EntitySet Name="TipoEmpleado" EntityType="Self.TipoEmpleado" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VentaAuto" EntityType="Self.VentaAuto" Schema="dbo" store:Type="Tables" />
-<<<<<<< HEAD
-          <AssociationSet Name="FK__Accesorio__IdCon__6C190EBB" Association="Self.FK__Accesorio__IdCon__6C190EBB">
-            <End Role="Concesinaria" EntitySet="Concesinaria" />
-            <End Role="Accesorio" EntitySet="Accesorio" />
-          </AssociationSet>
-          <AssociationSet Name="FK__AutoAcces__IdAcc__6EF57B66" Association="Self.FK__AutoAcces__IdAcc__6EF57B66">
-            <End Role="Accesorio" EntitySet="Accesorio" />
-            <End Role="AutoAccesorio" EntitySet="AutoAccesorio" />
-          </AssociationSet>
-          <AssociationSet Name="FK__AutoAcces__IdAut__6FE99F9F" Association="Self.FK__AutoAcces__IdAut__6FE99F9F">
-            <End Role="Automovil" EntitySet="Automovil" />
-            <End Role="AutoAccesorio" EntitySet="AutoAccesorio" />
-          </AssociationSet>
-          <AssociationSet Name="FK__AutoClien__IdAut__0C85DE4D" Association="Self.FK__AutoClien__IdAut__0C85DE4D">
-            <End Role="Automovil" EntitySet="Automovil" />
-            <End Role="AutoCliente" EntitySet="AutoCliente" />
-          </AssociationSet>
-          <AssociationSet Name="FK__AutoClien__IdVen__0D7A0286" Association="Self.FK__AutoClien__IdVen__0D7A0286">
-            <End Role="VentaAuto" EntitySet="VentaAuto" />
-            <End Role="AutoCliente" EntitySet="AutoCliente" />
-          </AssociationSet>
-          <AssociationSet Name="FK__AutoModel__IdAut__60A75C0F" Association="Self.FK__AutoModel__IdAut__60A75C0F">
-            <End Role="AutoMarca" EntitySet="AutoMarca" />
-            <End Role="AutoModelo" EntitySet="AutoModelo" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Automovil__IdAut__6754599E" Association="Self.FK__Automovil__IdAut__6754599E">
-            <End Role="AutoModelo" EntitySet="AutoModelo" />
-            <End Role="Automovil" EntitySet="Automovil" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Automovil__IdAut__68487DD7" Association="Self.FK__Automovil__IdAut__68487DD7">
-            <End Role="AutoColorList" EntitySet="AutoColorList" />
-            <End Role="Automovil" EntitySet="Automovil" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Automovil__IdAut__693CA210" Association="Self.FK__Automovil__IdAut__693CA210">
-            <End Role="AutoEstadoList" EntitySet="AutoEstadoList" />
-            <End Role="Automovil" EntitySet="Automovil" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Cliente__IdMunic__02FC7413" Association="Self.FK__Cliente__IdMunic__02FC7413">
-=======
           <EntitySet Name="Promocion_Auto" EntityType="Self.Promocion_Auto" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [Promocion_Auto].[IdPromocion_Auto] AS [IdPromocion_Auto], 
@@ -801,48 +670,47 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
     [Promocion_Auto].[Vigente] AS [Vigente]
     FROM [dbo].[Promocion_Auto] AS [Promocion_Auto]</DefiningQuery>
           </EntitySet>
-          <AssociationSet Name="FK__Accesorio__IdCon__4E88ABD4" Association="Self.FK__Accesorio__IdCon__4E88ABD4">
+          <AssociationSet Name="FK__Accesorio__IdCon__73BA3083" Association="Self.FK__Accesorio__IdCon__73BA3083">
             <End Role="Concesinaria" EntitySet="Concesinaria" />
             <End Role="Accesorio" EntitySet="Accesorio" />
           </AssociationSet>
-          <AssociationSet Name="FK__AutoAcces__IdAcc__5165187F" Association="Self.FK__AutoAcces__IdAcc__5165187F">
+          <AssociationSet Name="FK__AutoAcces__IdAcc__76969D2E" Association="Self.FK__AutoAcces__IdAcc__76969D2E">
             <End Role="Accesorio" EntitySet="Accesorio" />
             <End Role="AutoAccesorio" EntitySet="AutoAccesorio" />
           </AssociationSet>
-          <AssociationSet Name="FK__AutoAcces__IdAut__52593CB8" Association="Self.FK__AutoAcces__IdAut__52593CB8">
+          <AssociationSet Name="FK__AutoAcces__IdAut__778AC167" Association="Self.FK__AutoAcces__IdAut__778AC167">
             <End Role="Automovil" EntitySet="Automovil" />
             <End Role="AutoAccesorio" EntitySet="AutoAccesorio" />
           </AssociationSet>
-          <AssociationSet Name="FK__AutoClien__IdAut__72C60C4A" Association="Self.FK__AutoClien__IdAut__72C60C4A">
+          <AssociationSet Name="FK__AutoClien__IdAut__17F790F9" Association="Self.FK__AutoClien__IdAut__17F790F9">
             <End Role="Automovil" EntitySet="Automovil" />
             <End Role="AutoCliente" EntitySet="AutoCliente" />
           </AssociationSet>
-          <AssociationSet Name="FK__AutoClien__IdVen__73BA3083" Association="Self.FK__AutoClien__IdVen__73BA3083">
+          <AssociationSet Name="FK__AutoClien__IdVen__18EBB532" Association="Self.FK__AutoClien__IdVen__18EBB532">
             <End Role="VentaAuto" EntitySet="VentaAuto" />
             <End Role="AutoCliente" EntitySet="AutoCliente" />
           </AssociationSet>
-          <AssociationSet Name="FK__AutoModel__IdAut__3E52440B" Association="Self.FK__AutoModel__IdAut__3E52440B">
+          <AssociationSet Name="FK__AutoModel__IdAut__6383C8BA" Association="Self.FK__AutoModel__IdAut__6383C8BA">
             <End Role="AutoMarca" EntitySet="AutoMarca" />
             <End Role="AutoModelo" EntitySet="AutoModelo" />
           </AssociationSet>
-          <AssociationSet Name="FK__Automovil__IdAut__49C3F6B7" Association="Self.FK__Automovil__IdAut__49C3F6B7">
+          <AssociationSet Name="FK__Automovil__IdAut__6EF57B66" Association="Self.FK__Automovil__IdAut__6EF57B66">
             <End Role="AutoModelo" EntitySet="AutoModelo" />
             <End Role="Automovil" EntitySet="Automovil" />
           </AssociationSet>
-          <AssociationSet Name="FK__Automovil__IdAut__4AB81AF0" Association="Self.FK__Automovil__IdAut__4AB81AF0">
+          <AssociationSet Name="FK__Automovil__IdAut__6FE99F9F" Association="Self.FK__Automovil__IdAut__6FE99F9F">
             <End Role="AutoColorList" EntitySet="AutoColorList" />
             <End Role="Automovil" EntitySet="Automovil" />
           </AssociationSet>
-          <AssociationSet Name="FK__Automovil__IdAut__4BAC3F29" Association="Self.FK__Automovil__IdAut__4BAC3F29">
+          <AssociationSet Name="FK__Automovil__IdAut__70DDC3D8" Association="Self.FK__Automovil__IdAut__70DDC3D8">
             <End Role="AutoEstadoList" EntitySet="AutoEstadoList" />
             <End Role="Automovil" EntitySet="Automovil" />
           </AssociationSet>
-          <AssociationSet Name="FK__Cliente__IdEstad__68487DD7" Association="Self.FK__Cliente__IdEstad__68487DD7">
+          <AssociationSet Name="FK__Cliente__IdEstad__0D7A0286" Association="Self.FK__Cliente__IdEstad__0D7A0286">
             <End Role="Estado_Cliente" EntitySet="Estado_Cliente" />
             <End Role="Cliente" EntitySet="Cliente" />
           </AssociationSet>
-          <AssociationSet Name="FK__Cliente__IdMunic__6754599E" Association="Self.FK__Cliente__IdMunic__6754599E">
->>>>>>> origin
+          <AssociationSet Name="FK__Cliente__IdMunic__0C85DE4D" Association="Self.FK__Cliente__IdMunic__0C85DE4D">
             <End Role="Municipio" EntitySet="Municipio" />
             <End Role="Cliente" EntitySet="Cliente" />
           </AssociationSet>
@@ -866,123 +734,71 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             <End Role="Estado" EntitySet="Estado" />
             <End Role="Municipio" EntitySet="Municipio" />
           </AssociationSet>
-<<<<<<< HEAD
-          <AssociationSet Name="FK__Origen_Fa__IdAut__787EE5A0" Association="Self.FK__Origen_Fa__IdAut__787EE5A0">
+          <AssociationSet Name="FK__Origen_Fa__IdAut__00200768" Association="Self.FK__Origen_Fa__IdAut__00200768">
             <End Role="Automovil" EntitySet="Automovil" />
             <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdFab__76969D2E" Association="Self.FK__Origen_Fa__IdFab__76969D2E">
+          <AssociationSet Name="FK__Origen_Fa__IdFab__7E37BEF6" Association="Self.FK__Origen_Fa__IdFab__7E37BEF6">
             <End Role="Fabrica" EntitySet="Fabrica" />
             <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdOri__797309D9" Association="Self.FK__Origen_Fa__IdOri__797309D9">
+          <AssociationSet Name="FK__Origen_Fa__IdOri__01142BA1" Association="Self.FK__Origen_Fa__IdOri__01142BA1">
             <End Role="OrigenEstado" EntitySet="OrigenEstado" />
             <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdUsu__778AC167" Association="Self.FK__Origen_Fa__IdUsu__778AC167">
+          <AssociationSet Name="FK__Origen_Fa__IdUsu__7F2BE32F" Association="Self.FK__Origen_Fa__IdUsu__7F2BE32F">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdAut__7F2BE32F" Association="Self.FK__Origen_Tr__IdAut__7F2BE32F">
+          <AssociationSet Name="FK__Origen_Tr__IdAut__06CD04F7" Association="Self.FK__Origen_Tr__IdAut__06CD04F7">
             <End Role="Automovil" EntitySet="Automovil" />
             <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdCom__7D439ABD" Association="Self.FK__Origen_Tr__IdCom__7D439ABD">
+          <AssociationSet Name="FK__Origen_Tr__IdCom__04E4BC85" Association="Self.FK__Origen_Tr__IdCom__04E4BC85">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdCon__7E37BEF6" Association="Self.FK__Origen_Tr__IdCon__7E37BEF6">
+          <AssociationSet Name="FK__Origen_Tr__IdCon__05D8E0BE" Association="Self.FK__Origen_Tr__IdCon__05D8E0BE">
             <End Role="Concesinaria" EntitySet="Concesinaria" />
             <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdOri__00200768" Association="Self.FK__Origen_Tr__IdOri__00200768">
+          <AssociationSet Name="FK__Origen_Tr__IdOri__07C12930" Association="Self.FK__Origen_Tr__IdOri__07C12930">
             <End Role="OrigenEstado" EntitySet="OrigenEstado" />
             <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdVen__7C4F7684" Association="Self.FK__Origen_Tr__IdVen__7C4F7684">
+          <AssociationSet Name="FK__Origen_Tr__IdVen__03F0984C" Association="Self.FK__Origen_Tr__IdVen__03F0984C">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
           </AssociationSet>
-          <AssociationSet Name="FK__Referenci__IdCli__05D8E0BE" Association="Self.FK__Referenci__IdCli__05D8E0BE">
-            <End Role="Cliente" EntitySet="Cliente" />
-            <End Role="Referencias" EntitySet="Referencias" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Usuario__IdEmple__5BE2A6F2" Association="Self.FK__Usuario__IdEmple__5BE2A6F2">
-            <End Role="Empleado" EntitySet="Empleado" />
-            <End Role="Usuario" EntitySet="Usuario" />
-          </AssociationSet>
-          <AssociationSet Name="FK__VentaAuto__IdCli__09A971A2" Association="Self.FK__VentaAuto__IdCli__09A971A2">
-            <End Role="Cliente" EntitySet="Cliente" />
-            <End Role="VentaAuto" EntitySet="VentaAuto" />
-          </AssociationSet>
-          <AssociationSet Name="FK__VentaAuto__IdUsu__08B54D69" Association="Self.FK__VentaAuto__IdUsu__08B54D69">
-=======
-          <AssociationSet Name="FK__Origen_Fa__IdAut__5AEE82B9" Association="Self.FK__Origen_Fa__IdAut__5AEE82B9">
-            <End Role="Automovil" EntitySet="Automovil" />
-            <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdFab__59063A47" Association="Self.FK__Origen_Fa__IdFab__59063A47">
-            <End Role="Fabrica" EntitySet="Fabrica" />
-            <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdOri__5BE2A6F2" Association="Self.FK__Origen_Fa__IdOri__5BE2A6F2">
-            <End Role="OrigenEstado" EntitySet="OrigenEstado" />
-            <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdUsu__59FA5E80" Association="Self.FK__Origen_Fa__IdUsu__59FA5E80">
-            <End Role="Usuario" EntitySet="Usuario" />
-            <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdAut__619B8048" Association="Self.FK__Origen_Tr__IdAut__619B8048">
-            <End Role="Automovil" EntitySet="Automovil" />
-            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdCom__5FB337D6" Association="Self.FK__Origen_Tr__IdCom__5FB337D6">
-            <End Role="Usuario" EntitySet="Usuario" />
-            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdCon__60A75C0F" Association="Self.FK__Origen_Tr__IdCon__60A75C0F">
-            <End Role="Concesinaria" EntitySet="Concesinaria" />
-            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdOri__628FA481" Association="Self.FK__Origen_Tr__IdOri__628FA481">
-            <End Role="OrigenEstado" EntitySet="OrigenEstado" />
-            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdVen__5EBF139D" Association="Self.FK__Origen_Tr__IdVen__5EBF139D">
-            <End Role="Usuario" EntitySet="Usuario" />
-            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Promocion__IdAut__403A8C7D" Association="Self.FK__Promocion__IdAut__403A8C7D">
+          <AssociationSet Name="FK__Promocion__IdAut__656C112C" Association="Self.FK__Promocion__IdAut__656C112C">
             <End Role="AutoModelo" EntitySet="AutoModelo" />
             <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
           </AssociationSet>
-          <AssociationSet Name="FK__Promocion__IdCon__4222D4EF" Association="Self.FK__Promocion__IdCon__4222D4EF">
+          <AssociationSet Name="FK__Promocion__IdCon__6754599E" Association="Self.FK__Promocion__IdCon__6754599E">
             <End Role="Concesinaria" EntitySet="Concesinaria" />
             <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
           </AssociationSet>
-          <AssociationSet Name="FK__Promocion__IdPro__412EB0B6" Association="Self.FK__Promocion__IdPro__412EB0B6">
+          <AssociationSet Name="FK__Promocion__IdPro__66603565" Association="Self.FK__Promocion__IdPro__66603565">
             <End Role="PromocionList" EntitySet="PromocionList" />
             <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
           </AssociationSet>
-          <AssociationSet Name="FK__Referenci__IdCli__6B24EA82" Association="Self.FK__Referenci__IdCli__6B24EA82">
+          <AssociationSet Name="FK__Referenci__IdCli__10566F31" Association="Self.FK__Referenci__IdCli__10566F31">
             <End Role="Cliente" EntitySet="Cliente" />
             <End Role="Referencias" EntitySet="Referencias" />
           </AssociationSet>
-          <AssociationSet Name="FK__Usuario__IdEmple__37A5467C" Association="Self.FK__Usuario__IdEmple__37A5467C">
+          <AssociationSet Name="FK__Usuario__IdEmple__5CD6CB2B" Association="Self.FK__Usuario__IdEmple__5CD6CB2B">
             <End Role="Empleado" EntitySet="Empleado" />
             <End Role="Usuario" EntitySet="Usuario" />
           </AssociationSet>
-          <AssociationSet Name="FK__VentaAuto__IdCli__6FE99F9F" Association="Self.FK__VentaAuto__IdCli__6FE99F9F">
+          <AssociationSet Name="FK__VentaAuto__IdCli__151B244E" Association="Self.FK__VentaAuto__IdCli__151B244E">
             <End Role="Cliente" EntitySet="Cliente" />
             <End Role="VentaAuto" EntitySet="VentaAuto" />
           </AssociationSet>
-          <AssociationSet Name="FK__VentaAuto__IdPro__6EF57B66" Association="Self.FK__VentaAuto__IdPro__6EF57B66">
+          <AssociationSet Name="FK__VentaAuto__IdPro__14270015" Association="Self.FK__VentaAuto__IdPro__14270015">
             <End Role="PromocionList" EntitySet="PromocionList" />
             <End Role="VentaAuto" EntitySet="VentaAuto" />
           </AssociationSet>
-          <AssociationSet Name="FK__VentaAuto__IdUsu__6E01572D" Association="Self.FK__VentaAuto__IdUsu__6E01572D">
->>>>>>> origin
+          <AssociationSet Name="FK__VentaAuto__IdUsu__1332DBDC" Association="Self.FK__VentaAuto__IdUsu__1332DBDC">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="VentaAuto" EntitySet="VentaAuto" />
           </AssociationSet>
@@ -997,18 +813,13 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             <PropertyRef Name="IdAccesorio" />
           </Key>
           <Property Name="IdAccesorio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Numero" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="CantidadExistencia" Type="Int32" />
           <Property Name="CantidadVendido" Type="Int32" />
           <Property Name="IdConcesinaria" Type="Int32" />
-<<<<<<< HEAD
-          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Accesorio__IdCon__6C190EBB" FromRole="Accesorio" ToRole="Concesinaria" />
-          <NavigationProperty Name="AutoAccesorio" Relationship="Self.FK__AutoAcces__IdAcc__6EF57B66" FromRole="Accesorio" ToRole="AutoAccesorio" />
-=======
-          <Property Name="Numero" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Accesorio__IdCon__4E88ABD4" FromRole="Accesorio" ToRole="Concesinaria" />
-          <NavigationProperty Name="AutoAccesorio" Relationship="Self.FK__AutoAcces__IdAcc__5165187F" FromRole="Accesorio" ToRole="AutoAccesorio" />
->>>>>>> origin
+          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Accesorio__IdCon__73BA3083" FromRole="Accesorio" ToRole="Concesinaria" />
+          <NavigationProperty Name="AutoAccesorio" Relationship="Self.FK__AutoAcces__IdAcc__76969D2E" FromRole="Accesorio" ToRole="AutoAccesorio" />
         </EntityType>
         <EntityType Name="AutoAccesorio">
           <Key>
@@ -1017,13 +828,8 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
           <Property Name="IdAutoAccesorio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdAccesorio" Type="Int32" />
           <Property Name="IdAutomovil" Type="Int32" />
-<<<<<<< HEAD
-          <NavigationProperty Name="Accesorio" Relationship="Self.FK__AutoAcces__IdAcc__6EF57B66" FromRole="AutoAccesorio" ToRole="Accesorio" />
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__AutoAcces__IdAut__6FE99F9F" FromRole="AutoAccesorio" ToRole="Automovil" />
-=======
-          <NavigationProperty Name="Accesorio" Relationship="Self.FK__AutoAcces__IdAcc__5165187F" FromRole="AutoAccesorio" ToRole="Accesorio" />
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__AutoAcces__IdAut__52593CB8" FromRole="AutoAccesorio" ToRole="Automovil" />
->>>>>>> origin
+          <NavigationProperty Name="Accesorio" Relationship="Self.FK__AutoAcces__IdAcc__76969D2E" FromRole="AutoAccesorio" ToRole="Accesorio" />
+          <NavigationProperty Name="Automovil" Relationship="Self.FK__AutoAcces__IdAut__778AC167" FromRole="AutoAccesorio" ToRole="Automovil" />
         </EntityType>
         <EntityType Name="AutoCliente">
           <Key>
@@ -1032,13 +838,8 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
           <Property Name="IdAutoCliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdAutomovil" Type="Int32" />
           <Property Name="IdVentaAuto" Type="Int32" />
-<<<<<<< HEAD
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__AutoClien__IdAut__0C85DE4D" FromRole="AutoCliente" ToRole="Automovil" />
-          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__AutoClien__IdVen__0D7A0286" FromRole="AutoCliente" ToRole="VentaAuto" />
-=======
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__AutoClien__IdAut__72C60C4A" FromRole="AutoCliente" ToRole="Automovil" />
-          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__AutoClien__IdVen__73BA3083" FromRole="AutoCliente" ToRole="VentaAuto" />
->>>>>>> origin
+          <NavigationProperty Name="Automovil" Relationship="Self.FK__AutoClien__IdAut__17F790F9" FromRole="AutoCliente" ToRole="Automovil" />
+          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__AutoClien__IdVen__18EBB532" FromRole="AutoCliente" ToRole="VentaAuto" />
         </EntityType>
         <EntityType Name="AutoColorList">
           <Key>
@@ -1047,11 +848,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
           <Property Name="IdAutoColor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Numero" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="Nombre" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
-<<<<<<< HEAD
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAut__68487DD7" FromRole="AutoColorList" ToRole="Automovil" />
-=======
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAut__4AB81AF0" FromRole="AutoColorList" ToRole="Automovil" />
->>>>>>> origin
+          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAut__6FE99F9F" FromRole="AutoColorList" ToRole="Automovil" />
         </EntityType>
         <EntityType Name="AutoEstadoList">
           <Key>
@@ -1060,11 +857,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
           <Property Name="IdAutoEstado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Numero" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="Nombre" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
-<<<<<<< HEAD
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAut__693CA210" FromRole="AutoEstadoList" ToRole="Automovil" />
-=======
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAut__4BAC3F29" FromRole="AutoEstadoList" ToRole="Automovil" />
->>>>>>> origin
+          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAut__70DDC3D8" FromRole="AutoEstadoList" ToRole="Automovil" />
         </EntityType>
         <EntityType Name="AutoMarca">
           <Key>
@@ -1072,11 +865,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
           </Key>
           <Property Name="IdAutoMarca" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
-<<<<<<< HEAD
-          <NavigationProperty Name="AutoModelo" Relationship="Self.FK__AutoModel__IdAut__60A75C0F" FromRole="AutoMarca" ToRole="AutoModelo" />
-=======
-          <NavigationProperty Name="AutoModelo" Relationship="Self.FK__AutoModel__IdAut__3E52440B" FromRole="AutoMarca" ToRole="AutoModelo" />
->>>>>>> origin
+          <NavigationProperty Name="AutoModelo" Relationship="Self.FK__AutoModel__IdAut__6383C8BA" FromRole="AutoMarca" ToRole="AutoModelo" />
         </EntityType>
         <EntityType Name="AutoModelo">
           <Key>
@@ -1085,14 +874,9 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
           <Property Name="IdAutoModelo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
           <Property Name="IdAutoMarca" Type="Int32" />
-<<<<<<< HEAD
-          <NavigationProperty Name="AutoMarca" Relationship="Self.FK__AutoModel__IdAut__60A75C0F" FromRole="AutoModelo" ToRole="AutoMarca" />
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAut__6754599E" FromRole="AutoModelo" ToRole="Automovil" />
-=======
-          <NavigationProperty Name="AutoMarca" Relationship="Self.FK__AutoModel__IdAut__3E52440B" FromRole="AutoModelo" ToRole="AutoMarca" />
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAut__49C3F6B7" FromRole="AutoModelo" ToRole="Automovil" />
-          <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__Promocion__IdAut__403A8C7D" FromRole="AutoModelo" ToRole="Promocion_Auto" />
->>>>>>> origin
+          <NavigationProperty Name="AutoMarca" Relationship="Self.FK__AutoModel__IdAut__6383C8BA" FromRole="AutoModelo" ToRole="AutoMarca" />
+          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAut__6EF57B66" FromRole="AutoModelo" ToRole="Automovil" />
+          <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__Promocion__IdAut__656C112C" FromRole="AutoModelo" ToRole="Promocion_Auto" />
         </EntityType>
         <EntityType Name="Automovil">
           <Key>
@@ -1104,23 +888,13 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
           <Property Name="IdAutoModelo" Type="Int32" />
           <Property Name="IdAutoColor" Type="Int32" />
           <Property Name="IdAutoEstado" Type="Int32" />
-<<<<<<< HEAD
-          <NavigationProperty Name="AutoAccesorio" Relationship="Self.FK__AutoAcces__IdAut__6FE99F9F" FromRole="Automovil" ToRole="AutoAccesorio" />
-          <NavigationProperty Name="AutoCliente" Relationship="Self.FK__AutoClien__IdAut__0C85DE4D" FromRole="Automovil" ToRole="AutoCliente" />
-          <NavigationProperty Name="AutoColorList" Relationship="Self.FK__Automovil__IdAut__68487DD7" FromRole="Automovil" ToRole="AutoColorList" />
-          <NavigationProperty Name="AutoEstadoList" Relationship="Self.FK__Automovil__IdAut__693CA210" FromRole="Automovil" ToRole="AutoEstadoList" />
-          <NavigationProperty Name="AutoModelo" Relationship="Self.FK__Automovil__IdAut__6754599E" FromRole="Automovil" ToRole="AutoModelo" />
-          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdAut__787EE5A0" FromRole="Automovil" ToRole="Origen_Fabrica" />
-          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdAut__7F2BE32F" FromRole="Automovil" ToRole="Origen_Traspaso" />
-=======
-          <NavigationProperty Name="AutoAccesorio" Relationship="Self.FK__AutoAcces__IdAut__52593CB8" FromRole="Automovil" ToRole="AutoAccesorio" />
-          <NavigationProperty Name="AutoCliente" Relationship="Self.FK__AutoClien__IdAut__72C60C4A" FromRole="Automovil" ToRole="AutoCliente" />
-          <NavigationProperty Name="AutoColorList" Relationship="Self.FK__Automovil__IdAut__4AB81AF0" FromRole="Automovil" ToRole="AutoColorList" />
-          <NavigationProperty Name="AutoEstadoList" Relationship="Self.FK__Automovil__IdAut__4BAC3F29" FromRole="Automovil" ToRole="AutoEstadoList" />
-          <NavigationProperty Name="AutoModelo" Relationship="Self.FK__Automovil__IdAut__49C3F6B7" FromRole="Automovil" ToRole="AutoModelo" />
-          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdAut__5AEE82B9" FromRole="Automovil" ToRole="Origen_Fabrica" />
-          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdAut__619B8048" FromRole="Automovil" ToRole="Origen_Traspaso" />
->>>>>>> origin
+          <NavigationProperty Name="AutoAccesorio" Relationship="Self.FK__AutoAcces__IdAut__778AC167" FromRole="Automovil" ToRole="AutoAccesorio" />
+          <NavigationProperty Name="AutoCliente" Relationship="Self.FK__AutoClien__IdAut__17F790F9" FromRole="Automovil" ToRole="AutoCliente" />
+          <NavigationProperty Name="AutoColorList" Relationship="Self.FK__Automovil__IdAut__6FE99F9F" FromRole="Automovil" ToRole="AutoColorList" />
+          <NavigationProperty Name="AutoEstadoList" Relationship="Self.FK__Automovil__IdAut__70DDC3D8" FromRole="Automovil" ToRole="AutoEstadoList" />
+          <NavigationProperty Name="AutoModelo" Relationship="Self.FK__Automovil__IdAut__6EF57B66" FromRole="Automovil" ToRole="AutoModelo" />
+          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdAut__00200768" FromRole="Automovil" ToRole="Origen_Fabrica" />
+          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdAut__06CD04F7" FromRole="Automovil" ToRole="Origen_Traspaso" />
         </EntityType>
         <EntityType Name="Cliente">
           <Key>
@@ -1138,17 +912,11 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
           <Property Name="Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="RFC" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
           <Property Name="IdMunicipio" Type="Int32" />
-<<<<<<< HEAD
-          <NavigationProperty Name="Municipio" Relationship="Self.FK__Cliente__IdMunic__02FC7413" FromRole="Cliente" ToRole="Municipio" />
-          <NavigationProperty Name="Referencias" Relationship="Self.FK__Referenci__IdCli__05D8E0BE" FromRole="Cliente" ToRole="Referencias" />
-          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__VentaAuto__IdCli__09A971A2" FromRole="Cliente" ToRole="VentaAuto" />
-=======
           <Property Name="IdEstado_Cliente" Type="Int32" />
-          <NavigationProperty Name="Estado_Cliente" Relationship="Self.FK__Cliente__IdEstad__68487DD7" FromRole="Cliente" ToRole="Estado_Cliente" />
-          <NavigationProperty Name="Municipio" Relationship="Self.FK__Cliente__IdMunic__6754599E" FromRole="Cliente" ToRole="Municipio" />
-          <NavigationProperty Name="Referencias" Relationship="Self.FK__Referenci__IdCli__6B24EA82" FromRole="Cliente" ToRole="Referencias" />
-          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__VentaAuto__IdCli__6FE99F9F" FromRole="Cliente" ToRole="VentaAuto" />
->>>>>>> origin
+          <NavigationProperty Name="Estado_Cliente" Relationship="Self.FK__Cliente__IdEstad__0D7A0286" FromRole="Cliente" ToRole="Estado_Cliente" />
+          <NavigationProperty Name="Municipio" Relationship="Self.FK__Cliente__IdMunic__0C85DE4D" FromRole="Cliente" ToRole="Municipio" />
+          <NavigationProperty Name="Referencias" Relationship="Self.FK__Referenci__IdCli__10566F31" FromRole="Cliente" ToRole="Referencias" />
+          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__VentaAuto__IdCli__151B244E" FromRole="Cliente" ToRole="VentaAuto" />
         </EntityType>
         <EntityType Name="Concesinaria">
           <Key>
@@ -1159,18 +927,11 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
           <Property Name="Clave" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="IdMunicipio" Type="Int32" />
-<<<<<<< HEAD
-          <NavigationProperty Name="Accesorio" Relationship="Self.FK__Accesorio__IdCon__6C190EBB" FromRole="Concesinaria" ToRole="Accesorio" />
+          <NavigationProperty Name="Accesorio" Relationship="Self.FK__Accesorio__IdCon__73BA3083" FromRole="Concesinaria" ToRole="Accesorio" />
           <NavigationProperty Name="Municipio" Relationship="Self.FK__Concesina__IdMun__5165187F" FromRole="Concesinaria" ToRole="Municipio" />
           <NavigationProperty Name="Empleado" Relationship="Self.FK__Empleado__IdConc__59063A47" FromRole="Concesinaria" ToRole="Empleado" />
-          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdCon__7E37BEF6" FromRole="Concesinaria" ToRole="Origen_Traspaso" />
-=======
-          <NavigationProperty Name="Accesorio" Relationship="Self.FK__Accesorio__IdCon__4E88ABD4" FromRole="Concesinaria" ToRole="Accesorio" />
-          <NavigationProperty Name="Municipio" Relationship="Self.FK__Concesina__IdMun__2C3393D0" FromRole="Concesinaria" ToRole="Municipio" />
-          <NavigationProperty Name="Empleado" Relationship="Self.FK__Empleado__IdConc__33D4B598" FromRole="Concesinaria" ToRole="Empleado" />
-          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdCon__60A75C0F" FromRole="Concesinaria" ToRole="Origen_Traspaso" />
-          <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__Promocion__IdCon__4222D4EF" FromRole="Concesinaria" ToRole="Promocion_Auto" />
->>>>>>> origin
+          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdCon__05D8E0BE" FromRole="Concesinaria" ToRole="Origen_Traspaso" />
+          <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__Promocion__IdCon__6754599E" FromRole="Concesinaria" ToRole="Promocion_Auto" />
         </EntityType>
         <EntityType Name="Empleado">
           <Key>
@@ -1183,15 +944,9 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
           <Property Name="C_Estado" Type="Boolean" />
           <Property Name="IdTipoEmpleado" Type="Int32" />
           <Property Name="IdConcesinaria" Type="Int32" />
-<<<<<<< HEAD
           <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Empleado__IdConc__59063A47" FromRole="Empleado" ToRole="Concesinaria" />
           <NavigationProperty Name="TipoEmpleado" Relationship="Self.FK__Empleado__IdTipo__5812160E" FromRole="Empleado" ToRole="TipoEmpleado" />
-          <NavigationProperty Name="Usuario" Relationship="Self.FK__Usuario__IdEmple__5BE2A6F2" FromRole="Empleado" ToRole="Usuario" />
-=======
-          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Empleado__IdConc__33D4B598" FromRole="Empleado" ToRole="Concesinaria" />
-          <NavigationProperty Name="TipoEmpleado" Relationship="Self.FK__Empleado__IdTipo__32E0915F" FromRole="Empleado" ToRole="TipoEmpleado" />
-          <NavigationProperty Name="Usuario" Relationship="Self.FK__Usuario__IdEmple__37A5467C" FromRole="Empleado" ToRole="Usuario" />
->>>>>>> origin
+          <NavigationProperty Name="Usuario" Relationship="Self.FK__Usuario__IdEmple__5CD6CB2B" FromRole="Empleado" ToRole="Usuario" />
         </EntityType>
         <EntityType Name="Estado">
           <Key>
@@ -1209,7 +964,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
           </Key>
           <Property Name="IdEstado_Cliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Cliente" Relationship="Self.FK__Cliente__IdEstad__68487DD7" FromRole="Estado_Cliente" ToRole="Cliente" />
+          <NavigationProperty Name="Cliente" Relationship="Self.FK__Cliente__IdEstad__0D7A0286" FromRole="Estado_Cliente" ToRole="Cliente" />
         </EntityType>
         <EntityType Name="Fabrica">
           <Key>
@@ -1218,11 +973,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
           <Property Name="IdFabrica" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Numero" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-<<<<<<< HEAD
-          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdFab__76969D2E" FromRole="Fabrica" ToRole="Origen_Fabrica" />
-=======
-          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdFab__59063A47" FromRole="Fabrica" ToRole="Origen_Fabrica" />
->>>>>>> origin
+          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdFab__7E37BEF6" FromRole="Fabrica" ToRole="Origen_Fabrica" />
         </EntityType>
         <EntityType Name="Municipio">
           <Key>
@@ -1231,15 +982,9 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
           <Property Name="IdMunicipio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="IdEstado" Type="Int32" />
-<<<<<<< HEAD
-          <NavigationProperty Name="Cliente" Relationship="Self.FK__Cliente__IdMunic__02FC7413" FromRole="Municipio" ToRole="Cliente" />
+          <NavigationProperty Name="Cliente" Relationship="Self.FK__Cliente__IdMunic__0C85DE4D" FromRole="Municipio" ToRole="Cliente" />
           <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Concesina__IdMun__5165187F" FromRole="Municipio" ToRole="Concesinaria" />
           <NavigationProperty Name="Estado" Relationship="Self.FK__Municipio__IdEst__4E88ABD4" FromRole="Municipio" ToRole="Estado" />
-=======
-          <NavigationProperty Name="Cliente" Relationship="Self.FK__Cliente__IdMunic__6754599E" FromRole="Municipio" ToRole="Cliente" />
-          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Concesina__IdMun__2C3393D0" FromRole="Municipio" ToRole="Concesinaria" />
-          <NavigationProperty Name="Estado" Relationship="Self.FK__Municipio__IdEst__29572725" FromRole="Municipio" ToRole="Estado" />
->>>>>>> origin
         </EntityType>
         <EntityType Name="Origen_Fabrica">
           <Key>
@@ -1251,17 +996,10 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
           <Property Name="IdUsuario" Type="Int32" />
           <Property Name="IdAutomovil" Type="Int32" />
           <Property Name="IdOrigenEstado" Type="Int32" />
-<<<<<<< HEAD
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__Origen_Fa__IdAut__787EE5A0" FromRole="Origen_Fabrica" ToRole="Automovil" />
-          <NavigationProperty Name="Fabrica" Relationship="Self.FK__Origen_Fa__IdFab__76969D2E" FromRole="Origen_Fabrica" ToRole="Fabrica" />
-          <NavigationProperty Name="OrigenEstado" Relationship="Self.FK__Origen_Fa__IdOri__797309D9" FromRole="Origen_Fabrica" ToRole="OrigenEstado" />
-          <NavigationProperty Name="Usuario" Relationship="Self.FK__Origen_Fa__IdUsu__778AC167" FromRole="Origen_Fabrica" ToRole="Usuario" />
-=======
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__Origen_Fa__IdAut__5AEE82B9" FromRole="Origen_Fabrica" ToRole="Automovil" />
-          <NavigationProperty Name="Fabrica" Relationship="Self.FK__Origen_Fa__IdFab__59063A47" FromRole="Origen_Fabrica" ToRole="Fabrica" />
-          <NavigationProperty Name="OrigenEstado" Relationship="Self.FK__Origen_Fa__IdOri__5BE2A6F2" FromRole="Origen_Fabrica" ToRole="OrigenEstado" />
-          <NavigationProperty Name="Usuario" Relationship="Self.FK__Origen_Fa__IdUsu__59FA5E80" FromRole="Origen_Fabrica" ToRole="Usuario" />
->>>>>>> origin
+          <NavigationProperty Name="Automovil" Relationship="Self.FK__Origen_Fa__IdAut__00200768" FromRole="Origen_Fabrica" ToRole="Automovil" />
+          <NavigationProperty Name="Fabrica" Relationship="Self.FK__Origen_Fa__IdFab__7E37BEF6" FromRole="Origen_Fabrica" ToRole="Fabrica" />
+          <NavigationProperty Name="OrigenEstado" Relationship="Self.FK__Origen_Fa__IdOri__01142BA1" FromRole="Origen_Fabrica" ToRole="OrigenEstado" />
+          <NavigationProperty Name="Usuario" Relationship="Self.FK__Origen_Fa__IdUsu__7F2BE32F" FromRole="Origen_Fabrica" ToRole="Usuario" />
         </EntityType>
         <EntityType Name="Origen_Traspaso">
           <Key>
@@ -1274,19 +1012,11 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
           <Property Name="IdConcesinaria" Type="Int32" />
           <Property Name="IdAutomovil" Type="Int32" />
           <Property Name="IdOrigenEstado" Type="Int32" />
-<<<<<<< HEAD
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__Origen_Tr__IdAut__7F2BE32F" FromRole="Origen_Traspaso" ToRole="Automovil" />
-          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Origen_Tr__IdCon__7E37BEF6" FromRole="Origen_Traspaso" ToRole="Concesinaria" />
-          <NavigationProperty Name="Usuario" Relationship="Self.FK__Origen_Tr__IdCom__7D439ABD" FromRole="Origen_Traspaso" ToRole="Usuario" />
-          <NavigationProperty Name="OrigenEstado" Relationship="Self.FK__Origen_Tr__IdOri__00200768" FromRole="Origen_Traspaso" ToRole="OrigenEstado" />
-          <NavigationProperty Name="Usuario1" Relationship="Self.FK__Origen_Tr__IdVen__7C4F7684" FromRole="Origen_Traspaso" ToRole="Usuario" />
-=======
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__Origen_Tr__IdAut__619B8048" FromRole="Origen_Traspaso" ToRole="Automovil" />
-          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Origen_Tr__IdCon__60A75C0F" FromRole="Origen_Traspaso" ToRole="Concesinaria" />
-          <NavigationProperty Name="Usuario" Relationship="Self.FK__Origen_Tr__IdCom__5FB337D6" FromRole="Origen_Traspaso" ToRole="Usuario" />
-          <NavigationProperty Name="OrigenEstado" Relationship="Self.FK__Origen_Tr__IdOri__628FA481" FromRole="Origen_Traspaso" ToRole="OrigenEstado" />
-          <NavigationProperty Name="Usuario1" Relationship="Self.FK__Origen_Tr__IdVen__5EBF139D" FromRole="Origen_Traspaso" ToRole="Usuario" />
->>>>>>> origin
+          <NavigationProperty Name="Automovil" Relationship="Self.FK__Origen_Tr__IdAut__06CD04F7" FromRole="Origen_Traspaso" ToRole="Automovil" />
+          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Origen_Tr__IdCon__05D8E0BE" FromRole="Origen_Traspaso" ToRole="Concesinaria" />
+          <NavigationProperty Name="Usuario" Relationship="Self.FK__Origen_Tr__IdCom__04E4BC85" FromRole="Origen_Traspaso" ToRole="Usuario" />
+          <NavigationProperty Name="OrigenEstado" Relationship="Self.FK__Origen_Tr__IdOri__07C12930" FromRole="Origen_Traspaso" ToRole="OrigenEstado" />
+          <NavigationProperty Name="Usuario1" Relationship="Self.FK__Origen_Tr__IdVen__03F0984C" FromRole="Origen_Traspaso" ToRole="Usuario" />
         </EntityType>
         <EntityType Name="OrigenEstado">
           <Key>
@@ -1294,13 +1024,8 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
           </Key>
           <Property Name="IdOrigenEstado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-<<<<<<< HEAD
-          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdOri__797309D9" FromRole="OrigenEstado" ToRole="Origen_Fabrica" />
-          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdOri__00200768" FromRole="OrigenEstado" ToRole="Origen_Traspaso" />
-=======
-          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdOri__5BE2A6F2" FromRole="OrigenEstado" ToRole="Origen_Fabrica" />
-          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdOri__628FA481" FromRole="OrigenEstado" ToRole="Origen_Traspaso" />
->>>>>>> origin
+          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdOri__01142BA1" FromRole="OrigenEstado" ToRole="Origen_Fabrica" />
+          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdOri__07C12930" FromRole="OrigenEstado" ToRole="Origen_Traspaso" />
         </EntityType>
         <EntityType Name="Pais">
           <Key>
@@ -1318,8 +1043,8 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
           <Property Name="Numero" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="Cantidad_Auto" Type="Int32" />
           <Property Name="Descuento" Type="Int32" />
-          <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__Promocion__IdPro__412EB0B6" FromRole="PromocionList" ToRole="Promocion_Auto" />
-          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__VentaAuto__IdPro__6EF57B66" FromRole="PromocionList" ToRole="VentaAuto" />
+          <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__Promocion__IdPro__66603565" FromRole="PromocionList" ToRole="Promocion_Auto" />
+          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__VentaAuto__IdPro__14270015" FromRole="PromocionList" ToRole="VentaAuto" />
         </EntityType>
         <EntityType Name="Referencias">
           <Key>
@@ -1330,11 +1055,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="TelCel" Type="Int32" />
           <Property Name="IdCliente" Type="Int32" />
-<<<<<<< HEAD
-          <NavigationProperty Name="Cliente" Relationship="Self.FK__Referenci__IdCli__05D8E0BE" FromRole="Referencias" ToRole="Cliente" />
-=======
-          <NavigationProperty Name="Cliente" Relationship="Self.FK__Referenci__IdCli__6B24EA82" FromRole="Referencias" ToRole="Cliente" />
->>>>>>> origin
+          <NavigationProperty Name="Cliente" Relationship="Self.FK__Referenci__IdCli__10566F31" FromRole="Referencias" ToRole="Cliente" />
         </EntityType>
         <EntityType Name="TipoEmpleado">
           <Key>
@@ -1354,19 +1075,11 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
           <Property Name="Contrasena" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Acceso" Type="Boolean" />
           <Property Name="IdEmpleado" Type="Int32" />
-<<<<<<< HEAD
-          <NavigationProperty Name="Empleado" Relationship="Self.FK__Usuario__IdEmple__5BE2A6F2" FromRole="Usuario" ToRole="Empleado" />
-          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdUsu__778AC167" FromRole="Usuario" ToRole="Origen_Fabrica" />
-          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdCom__7D439ABD" FromRole="Usuario" ToRole="Origen_Traspaso" />
-          <NavigationProperty Name="Origen_Traspaso1" Relationship="Self.FK__Origen_Tr__IdVen__7C4F7684" FromRole="Usuario" ToRole="Origen_Traspaso" />
-          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__VentaAuto__IdUsu__08B54D69" FromRole="Usuario" ToRole="VentaAuto" />
-=======
-          <NavigationProperty Name="Empleado" Relationship="Self.FK__Usuario__IdEmple__37A5467C" FromRole="Usuario" ToRole="Empleado" />
-          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdUsu__59FA5E80" FromRole="Usuario" ToRole="Origen_Fabrica" />
-          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdCom__5FB337D6" FromRole="Usuario" ToRole="Origen_Traspaso" />
-          <NavigationProperty Name="Origen_Traspaso1" Relationship="Self.FK__Origen_Tr__IdVen__5EBF139D" FromRole="Usuario" ToRole="Origen_Traspaso" />
-          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__VentaAuto__IdUsu__6E01572D" FromRole="Usuario" ToRole="VentaAuto" />
->>>>>>> origin
+          <NavigationProperty Name="Empleado" Relationship="Self.FK__Usuario__IdEmple__5CD6CB2B" FromRole="Usuario" ToRole="Empleado" />
+          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdUsu__7F2BE32F" FromRole="Usuario" ToRole="Origen_Fabrica" />
+          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdCom__04E4BC85" FromRole="Usuario" ToRole="Origen_Traspaso" />
+          <NavigationProperty Name="Origen_Traspaso1" Relationship="Self.FK__Origen_Tr__IdVen__03F0984C" FromRole="Usuario" ToRole="Origen_Traspaso" />
+          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__VentaAuto__IdUsu__1332DBDC" FromRole="Usuario" ToRole="VentaAuto" />
         </EntityType>
         <EntityType Name="VentaAuto">
           <Key>
@@ -1376,17 +1089,10 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
           <Property Name="IdUsuario" Type="Int32" />
           <Property Name="IdPromocion" Type="Int32" />
           <Property Name="IdCliente" Type="Int32" />
-<<<<<<< HEAD
-          <NavigationProperty Name="AutoCliente" Relationship="Self.FK__AutoClien__IdVen__0D7A0286" FromRole="VentaAuto" ToRole="AutoCliente" />
-          <NavigationProperty Name="Cliente" Relationship="Self.FK__VentaAuto__IdCli__09A971A2" FromRole="VentaAuto" ToRole="Cliente" />
-          <NavigationProperty Name="Usuario" Relationship="Self.FK__VentaAuto__IdUsu__08B54D69" FromRole="VentaAuto" ToRole="Usuario" />
-        </EntityType>
-        <Association Name="FK__Accesorio__IdCon__6C190EBB">
-=======
-          <NavigationProperty Name="AutoCliente" Relationship="Self.FK__AutoClien__IdVen__73BA3083" FromRole="VentaAuto" ToRole="AutoCliente" />
-          <NavigationProperty Name="Cliente" Relationship="Self.FK__VentaAuto__IdCli__6FE99F9F" FromRole="VentaAuto" ToRole="Cliente" />
-          <NavigationProperty Name="PromocionList" Relationship="Self.FK__VentaAuto__IdPro__6EF57B66" FromRole="VentaAuto" ToRole="PromocionList" />
-          <NavigationProperty Name="Usuario" Relationship="Self.FK__VentaAuto__IdUsu__6E01572D" FromRole="VentaAuto" ToRole="Usuario" />
+          <NavigationProperty Name="AutoCliente" Relationship="Self.FK__AutoClien__IdVen__18EBB532" FromRole="VentaAuto" ToRole="AutoCliente" />
+          <NavigationProperty Name="Cliente" Relationship="Self.FK__VentaAuto__IdCli__151B244E" FromRole="VentaAuto" ToRole="Cliente" />
+          <NavigationProperty Name="PromocionList" Relationship="Self.FK__VentaAuto__IdPro__14270015" FromRole="VentaAuto" ToRole="PromocionList" />
+          <NavigationProperty Name="Usuario" Relationship="Self.FK__VentaAuto__IdUsu__1332DBDC" FromRole="VentaAuto" ToRole="Usuario" />
         </EntityType>
         <EntityType Name="Promocion_Auto">
           <Key>
@@ -1397,12 +1103,11 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
           <Property Name="IdPromocion" Type="Int32" />
           <Property Name="IdConcesinaria" Type="Int32" />
           <Property Name="Vigente" Type="Boolean" />
-          <NavigationProperty Name="AutoModelo" Relationship="Self.FK__Promocion__IdAut__403A8C7D" FromRole="Promocion_Auto" ToRole="AutoModelo" />
-          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Promocion__IdCon__4222D4EF" FromRole="Promocion_Auto" ToRole="Concesinaria" />
-          <NavigationProperty Name="PromocionList" Relationship="Self.FK__Promocion__IdPro__412EB0B6" FromRole="Promocion_Auto" ToRole="PromocionList" />
+          <NavigationProperty Name="AutoModelo" Relationship="Self.FK__Promocion__IdAut__656C112C" FromRole="Promocion_Auto" ToRole="AutoModelo" />
+          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Promocion__IdCon__6754599E" FromRole="Promocion_Auto" ToRole="Concesinaria" />
+          <NavigationProperty Name="PromocionList" Relationship="Self.FK__Promocion__IdPro__66603565" FromRole="Promocion_Auto" ToRole="PromocionList" />
         </EntityType>
-        <Association Name="FK__Accesorio__IdCon__4E88ABD4">
->>>>>>> origin
+        <Association Name="FK__Accesorio__IdCon__73BA3083">
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="0..1" />
           <End Role="Accesorio" Type="Self.Accesorio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1414,11 +1119,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__AutoAcces__IdAcc__6EF57B66">
-=======
-        <Association Name="FK__AutoAcces__IdAcc__5165187F">
->>>>>>> origin
+        <Association Name="FK__AutoAcces__IdAcc__76969D2E">
           <End Role="Accesorio" Type="Self.Accesorio" Multiplicity="0..1" />
           <End Role="AutoAccesorio" Type="Self.AutoAccesorio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1430,11 +1131,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__AutoAcces__IdAut__6FE99F9F">
-=======
-        <Association Name="FK__AutoAcces__IdAut__52593CB8">
->>>>>>> origin
+        <Association Name="FK__AutoAcces__IdAut__778AC167">
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="AutoAccesorio" Type="Self.AutoAccesorio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1446,11 +1143,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__AutoClien__IdAut__0C85DE4D">
-=======
-        <Association Name="FK__AutoClien__IdAut__72C60C4A">
->>>>>>> origin
+        <Association Name="FK__AutoClien__IdAut__17F790F9">
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="AutoCliente" Type="Self.AutoCliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1462,11 +1155,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__AutoClien__IdVen__0D7A0286">
-=======
-        <Association Name="FK__AutoClien__IdVen__73BA3083">
->>>>>>> origin
+        <Association Name="FK__AutoClien__IdVen__18EBB532">
           <End Role="VentaAuto" Type="Self.VentaAuto" Multiplicity="0..1" />
           <End Role="AutoCliente" Type="Self.AutoCliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1478,11 +1167,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__Automovil__IdAut__68487DD7">
-=======
-        <Association Name="FK__Automovil__IdAut__4AB81AF0">
->>>>>>> origin
+        <Association Name="FK__Automovil__IdAut__6FE99F9F">
           <End Role="AutoColorList" Type="Self.AutoColorList" Multiplicity="0..1" />
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1494,11 +1179,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__Automovil__IdAut__693CA210">
-=======
-        <Association Name="FK__Automovil__IdAut__4BAC3F29">
->>>>>>> origin
+        <Association Name="FK__Automovil__IdAut__70DDC3D8">
           <End Role="AutoEstadoList" Type="Self.AutoEstadoList" Multiplicity="0..1" />
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1510,11 +1191,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__AutoModel__IdAut__60A75C0F">
-=======
-        <Association Name="FK__AutoModel__IdAut__3E52440B">
->>>>>>> origin
+        <Association Name="FK__AutoModel__IdAut__6383C8BA">
           <End Role="AutoMarca" Type="Self.AutoMarca" Multiplicity="0..1" />
           <End Role="AutoModelo" Type="Self.AutoModelo" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1526,11 +1203,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__Automovil__IdAut__6754599E">
-=======
-        <Association Name="FK__Automovil__IdAut__49C3F6B7">
->>>>>>> origin
+        <Association Name="FK__Automovil__IdAut__6EF57B66">
           <End Role="AutoModelo" Type="Self.AutoModelo" Multiplicity="0..1" />
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1542,10 +1215,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__Origen_Fa__IdAut__787EE5A0">
-=======
-        <Association Name="FK__Promocion__IdAut__403A8C7D">
+        <Association Name="FK__Promocion__IdAut__656C112C">
           <End Role="AutoModelo" Type="Self.AutoModelo" Multiplicity="0..1" />
           <End Role="Promocion_Auto" Type="Self.Promocion_Auto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1557,8 +1227,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Origen_Fa__IdAut__5AEE82B9">
->>>>>>> origin
+        <Association Name="FK__Origen_Fa__IdAut__00200768">
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="Origen_Fabrica" Type="Self.Origen_Fabrica" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1570,11 +1239,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__Origen_Tr__IdAut__7F2BE32F">
-=======
-        <Association Name="FK__Origen_Tr__IdAut__619B8048">
->>>>>>> origin
+        <Association Name="FK__Origen_Tr__IdAut__06CD04F7">
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1586,10 +1251,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__Cliente__IdMunic__02FC7413">
-=======
-        <Association Name="FK__Cliente__IdEstad__68487DD7">
+        <Association Name="FK__Cliente__IdEstad__0D7A0286">
           <End Role="Estado_Cliente" Type="Self.Estado_Cliente" Multiplicity="0..1" />
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1601,8 +1263,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Cliente__IdMunic__6754599E">
->>>>>>> origin
+        <Association Name="FK__Cliente__IdMunic__0C85DE4D">
           <End Role="Municipio" Type="Self.Municipio" Multiplicity="0..1" />
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1614,11 +1275,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__Referenci__IdCli__05D8E0BE">
-=======
-        <Association Name="FK__Referenci__IdCli__6B24EA82">
->>>>>>> origin
+        <Association Name="FK__Referenci__IdCli__10566F31">
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
           <End Role="Referencias" Type="Self.Referencias" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1630,11 +1287,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__VentaAuto__IdCli__09A971A2">
-=======
-        <Association Name="FK__VentaAuto__IdCli__6FE99F9F">
->>>>>>> origin
+        <Association Name="FK__VentaAuto__IdCli__151B244E">
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
           <End Role="VentaAuto" Type="Self.VentaAuto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1670,11 +1323,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__Origen_Tr__IdCon__7E37BEF6">
-=======
-        <Association Name="FK__Origen_Tr__IdCon__60A75C0F">
->>>>>>> origin
+        <Association Name="FK__Origen_Tr__IdCon__05D8E0BE">
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1686,10 +1335,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__Empleado__IdTipo__5812160E">
-=======
-        <Association Name="FK__Promocion__IdCon__4222D4EF">
+        <Association Name="FK__Promocion__IdCon__6754599E">
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="0..1" />
           <End Role="Promocion_Auto" Type="Self.Promocion_Auto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1701,8 +1347,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Empleado__IdTipo__32E0915F">
->>>>>>> origin
+        <Association Name="FK__Empleado__IdTipo__5812160E">
           <End Role="TipoEmpleado" Type="Self.TipoEmpleado" Multiplicity="0..1" />
           <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1714,11 +1359,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__Usuario__IdEmple__5BE2A6F2">
-=======
-        <Association Name="FK__Usuario__IdEmple__37A5467C">
->>>>>>> origin
+        <Association Name="FK__Usuario__IdEmple__5CD6CB2B">
           <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1754,11 +1395,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__Origen_Fa__IdFab__76969D2E">
-=======
-        <Association Name="FK__Origen_Fa__IdFab__59063A47">
->>>>>>> origin
+        <Association Name="FK__Origen_Fa__IdFab__7E37BEF6">
           <End Role="Fabrica" Type="Self.Fabrica" Multiplicity="0..1" />
           <End Role="Origen_Fabrica" Type="Self.Origen_Fabrica" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1770,11 +1407,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__Origen_Fa__IdOri__797309D9">
-=======
-        <Association Name="FK__Origen_Fa__IdOri__5BE2A6F2">
->>>>>>> origin
+        <Association Name="FK__Origen_Fa__IdOri__01142BA1">
           <End Role="OrigenEstado" Type="Self.OrigenEstado" Multiplicity="0..1" />
           <End Role="Origen_Fabrica" Type="Self.Origen_Fabrica" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1786,11 +1419,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__Origen_Fa__IdUsu__778AC167">
-=======
-        <Association Name="FK__Origen_Fa__IdUsu__59FA5E80">
->>>>>>> origin
+        <Association Name="FK__Origen_Fa__IdUsu__7F2BE32F">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="Origen_Fabrica" Type="Self.Origen_Fabrica" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1802,11 +1431,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__Origen_Tr__IdCom__7D439ABD">
-=======
-        <Association Name="FK__Origen_Tr__IdCom__5FB337D6">
->>>>>>> origin
+        <Association Name="FK__Origen_Tr__IdCom__04E4BC85">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1818,11 +1443,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__Origen_Tr__IdOri__00200768">
-=======
-        <Association Name="FK__Origen_Tr__IdOri__628FA481">
->>>>>>> origin
+        <Association Name="FK__Origen_Tr__IdOri__07C12930">
           <End Role="OrigenEstado" Type="Self.OrigenEstado" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1834,11 +1455,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__Origen_Tr__IdVen__7C4F7684">
-=======
-        <Association Name="FK__Origen_Tr__IdVen__5EBF139D">
->>>>>>> origin
+        <Association Name="FK__Origen_Tr__IdVen__03F0984C">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1850,10 +1467,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        <Association Name="FK__VentaAuto__IdUsu__08B54D69">
-=======
-        <Association Name="FK__Promocion__IdPro__412EB0B6">
+        <Association Name="FK__Promocion__IdPro__66603565">
           <End Role="PromocionList" Type="Self.PromocionList" Multiplicity="0..1" />
           <End Role="Promocion_Auto" Type="Self.Promocion_Auto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1865,7 +1479,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__VentaAuto__IdPro__6EF57B66">
+        <Association Name="FK__VentaAuto__IdPro__14270015">
           <End Role="PromocionList" Type="Self.PromocionList" Multiplicity="0..1" />
           <End Role="VentaAuto" Type="Self.VentaAuto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1877,8 +1491,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__VentaAuto__IdUsu__6E01572D">
->>>>>>> origin
+        <Association Name="FK__VentaAuto__IdUsu__1332DBDC">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="VentaAuto" Type="Self.VentaAuto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1915,124 +1528,68 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
           <EntitySet Name="TipoEmpleado" EntityType="Self.TipoEmpleado" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" />
           <EntitySet Name="VentaAuto" EntityType="Self.VentaAuto" />
-<<<<<<< HEAD
-          <AssociationSet Name="FK__Accesorio__IdCon__6C190EBB" Association="Self.FK__Accesorio__IdCon__6C190EBB">
-            <End Role="Concesinaria" EntitySet="Concesinaria" />
-            <End Role="Accesorio" EntitySet="Accesorio" />
-          </AssociationSet>
-          <AssociationSet Name="FK__AutoAcces__IdAcc__6EF57B66" Association="Self.FK__AutoAcces__IdAcc__6EF57B66">
-            <End Role="Accesorio" EntitySet="Accesorio" />
-            <End Role="AutoAccesorio" EntitySet="AutoAccesorio" />
-          </AssociationSet>
-          <AssociationSet Name="FK__AutoAcces__IdAut__6FE99F9F" Association="Self.FK__AutoAcces__IdAut__6FE99F9F">
-            <End Role="Automovil" EntitySet="Automovil" />
-            <End Role="AutoAccesorio" EntitySet="AutoAccesorio" />
-          </AssociationSet>
-          <AssociationSet Name="FK__AutoClien__IdAut__0C85DE4D" Association="Self.FK__AutoClien__IdAut__0C85DE4D">
-            <End Role="Automovil" EntitySet="Automovil" />
-            <End Role="AutoCliente" EntitySet="AutoCliente" />
-          </AssociationSet>
-          <AssociationSet Name="FK__AutoClien__IdVen__0D7A0286" Association="Self.FK__AutoClien__IdVen__0D7A0286">
-            <End Role="VentaAuto" EntitySet="VentaAuto" />
-            <End Role="AutoCliente" EntitySet="AutoCliente" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Automovil__IdAut__68487DD7" Association="Self.FK__Automovil__IdAut__68487DD7">
-            <End Role="AutoColorList" EntitySet="AutoColorList" />
-            <End Role="Automovil" EntitySet="Automovil" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Automovil__IdAut__693CA210" Association="Self.FK__Automovil__IdAut__693CA210">
-            <End Role="AutoEstadoList" EntitySet="AutoEstadoList" />
-            <End Role="Automovil" EntitySet="Automovil" />
-          </AssociationSet>
-          <AssociationSet Name="FK__AutoModel__IdAut__60A75C0F" Association="Self.FK__AutoModel__IdAut__60A75C0F">
-            <End Role="AutoMarca" EntitySet="AutoMarca" />
-            <End Role="AutoModelo" EntitySet="AutoModelo" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Automovil__IdAut__6754599E" Association="Self.FK__Automovil__IdAut__6754599E">
-            <End Role="AutoModelo" EntitySet="AutoModelo" />
-            <End Role="Automovil" EntitySet="Automovil" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdAut__787EE5A0" Association="Self.FK__Origen_Fa__IdAut__787EE5A0">
-            <End Role="Automovil" EntitySet="Automovil" />
-            <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdAut__7F2BE32F" Association="Self.FK__Origen_Tr__IdAut__7F2BE32F">
-            <End Role="Automovil" EntitySet="Automovil" />
-            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Cliente__IdMunic__02FC7413" Association="Self.FK__Cliente__IdMunic__02FC7413">
-            <End Role="Municipio" EntitySet="Municipio" />
-            <End Role="Cliente" EntitySet="Cliente" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Referenci__IdCli__05D8E0BE" Association="Self.FK__Referenci__IdCli__05D8E0BE">
-            <End Role="Cliente" EntitySet="Cliente" />
-            <End Role="Referencias" EntitySet="Referencias" />
-          </AssociationSet>
-          <AssociationSet Name="FK__VentaAuto__IdCli__09A971A2" Association="Self.FK__VentaAuto__IdCli__09A971A2">
-=======
           <EntitySet Name="Promocion_Auto" EntityType="Self.Promocion_Auto" />
-          <AssociationSet Name="FK__Accesorio__IdCon__4E88ABD4" Association="Self.FK__Accesorio__IdCon__4E88ABD4">
+          <AssociationSet Name="FK__Accesorio__IdCon__73BA3083" Association="Self.FK__Accesorio__IdCon__73BA3083">
             <End Role="Concesinaria" EntitySet="Concesinaria" />
             <End Role="Accesorio" EntitySet="Accesorio" />
           </AssociationSet>
-          <AssociationSet Name="FK__AutoAcces__IdAcc__5165187F" Association="Self.FK__AutoAcces__IdAcc__5165187F">
+          <AssociationSet Name="FK__AutoAcces__IdAcc__76969D2E" Association="Self.FK__AutoAcces__IdAcc__76969D2E">
             <End Role="Accesorio" EntitySet="Accesorio" />
             <End Role="AutoAccesorio" EntitySet="AutoAccesorio" />
           </AssociationSet>
-          <AssociationSet Name="FK__AutoAcces__IdAut__52593CB8" Association="Self.FK__AutoAcces__IdAut__52593CB8">
+          <AssociationSet Name="FK__AutoAcces__IdAut__778AC167" Association="Self.FK__AutoAcces__IdAut__778AC167">
             <End Role="Automovil" EntitySet="Automovil" />
             <End Role="AutoAccesorio" EntitySet="AutoAccesorio" />
           </AssociationSet>
-          <AssociationSet Name="FK__AutoClien__IdAut__72C60C4A" Association="Self.FK__AutoClien__IdAut__72C60C4A">
+          <AssociationSet Name="FK__AutoClien__IdAut__17F790F9" Association="Self.FK__AutoClien__IdAut__17F790F9">
             <End Role="Automovil" EntitySet="Automovil" />
             <End Role="AutoCliente" EntitySet="AutoCliente" />
           </AssociationSet>
-          <AssociationSet Name="FK__AutoClien__IdVen__73BA3083" Association="Self.FK__AutoClien__IdVen__73BA3083">
+          <AssociationSet Name="FK__AutoClien__IdVen__18EBB532" Association="Self.FK__AutoClien__IdVen__18EBB532">
             <End Role="VentaAuto" EntitySet="VentaAuto" />
             <End Role="AutoCliente" EntitySet="AutoCliente" />
           </AssociationSet>
-          <AssociationSet Name="FK__Automovil__IdAut__4AB81AF0" Association="Self.FK__Automovil__IdAut__4AB81AF0">
+          <AssociationSet Name="FK__Automovil__IdAut__6FE99F9F" Association="Self.FK__Automovil__IdAut__6FE99F9F">
             <End Role="AutoColorList" EntitySet="AutoColorList" />
             <End Role="Automovil" EntitySet="Automovil" />
           </AssociationSet>
-          <AssociationSet Name="FK__Automovil__IdAut__4BAC3F29" Association="Self.FK__Automovil__IdAut__4BAC3F29">
+          <AssociationSet Name="FK__Automovil__IdAut__70DDC3D8" Association="Self.FK__Automovil__IdAut__70DDC3D8">
             <End Role="AutoEstadoList" EntitySet="AutoEstadoList" />
             <End Role="Automovil" EntitySet="Automovil" />
           </AssociationSet>
-          <AssociationSet Name="FK__AutoModel__IdAut__3E52440B" Association="Self.FK__AutoModel__IdAut__3E52440B">
+          <AssociationSet Name="FK__AutoModel__IdAut__6383C8BA" Association="Self.FK__AutoModel__IdAut__6383C8BA">
             <End Role="AutoMarca" EntitySet="AutoMarca" />
             <End Role="AutoModelo" EntitySet="AutoModelo" />
           </AssociationSet>
-          <AssociationSet Name="FK__Automovil__IdAut__49C3F6B7" Association="Self.FK__Automovil__IdAut__49C3F6B7">
+          <AssociationSet Name="FK__Automovil__IdAut__6EF57B66" Association="Self.FK__Automovil__IdAut__6EF57B66">
             <End Role="AutoModelo" EntitySet="AutoModelo" />
             <End Role="Automovil" EntitySet="Automovil" />
           </AssociationSet>
-          <AssociationSet Name="FK__Promocion__IdAut__403A8C7D" Association="Self.FK__Promocion__IdAut__403A8C7D">
+          <AssociationSet Name="FK__Promocion__IdAut__656C112C" Association="Self.FK__Promocion__IdAut__656C112C">
             <End Role="AutoModelo" EntitySet="AutoModelo" />
             <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdAut__5AEE82B9" Association="Self.FK__Origen_Fa__IdAut__5AEE82B9">
+          <AssociationSet Name="FK__Origen_Fa__IdAut__00200768" Association="Self.FK__Origen_Fa__IdAut__00200768">
             <End Role="Automovil" EntitySet="Automovil" />
             <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdAut__619B8048" Association="Self.FK__Origen_Tr__IdAut__619B8048">
+          <AssociationSet Name="FK__Origen_Tr__IdAut__06CD04F7" Association="Self.FK__Origen_Tr__IdAut__06CD04F7">
             <End Role="Automovil" EntitySet="Automovil" />
             <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
           </AssociationSet>
-          <AssociationSet Name="FK__Cliente__IdEstad__68487DD7" Association="Self.FK__Cliente__IdEstad__68487DD7">
+          <AssociationSet Name="FK__Cliente__IdEstad__0D7A0286" Association="Self.FK__Cliente__IdEstad__0D7A0286">
             <End Role="Estado_Cliente" EntitySet="Estado_Cliente" />
             <End Role="Cliente" EntitySet="Cliente" />
           </AssociationSet>
-          <AssociationSet Name="FK__Cliente__IdMunic__6754599E" Association="Self.FK__Cliente__IdMunic__6754599E">
+          <AssociationSet Name="FK__Cliente__IdMunic__0C85DE4D" Association="Self.FK__Cliente__IdMunic__0C85DE4D">
             <End Role="Municipio" EntitySet="Municipio" />
             <End Role="Cliente" EntitySet="Cliente" />
           </AssociationSet>
-          <AssociationSet Name="FK__Referenci__IdCli__6B24EA82" Association="Self.FK__Referenci__IdCli__6B24EA82">
+          <AssociationSet Name="FK__Referenci__IdCli__10566F31" Association="Self.FK__Referenci__IdCli__10566F31">
             <End Role="Cliente" EntitySet="Cliente" />
             <End Role="Referencias" EntitySet="Referencias" />
           </AssociationSet>
-          <AssociationSet Name="FK__VentaAuto__IdCli__6FE99F9F" Association="Self.FK__VentaAuto__IdCli__6FE99F9F">
->>>>>>> origin
+          <AssociationSet Name="FK__VentaAuto__IdCli__151B244E" Association="Self.FK__VentaAuto__IdCli__151B244E">
             <End Role="Cliente" EntitySet="Cliente" />
             <End Role="VentaAuto" EntitySet="VentaAuto" />
           </AssociationSet>
@@ -2044,31 +1601,19 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             <End Role="Concesinaria" EntitySet="Concesinaria" />
             <End Role="Empleado" EntitySet="Empleado" />
           </AssociationSet>
-<<<<<<< HEAD
-          <AssociationSet Name="FK__Origen_Tr__IdCon__7E37BEF6" Association="Self.FK__Origen_Tr__IdCon__7E37BEF6">
+          <AssociationSet Name="FK__Origen_Tr__IdCon__05D8E0BE" Association="Self.FK__Origen_Tr__IdCon__05D8E0BE">
             <End Role="Concesinaria" EntitySet="Concesinaria" />
             <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Promocion__IdCon__6754599E" Association="Self.FK__Promocion__IdCon__6754599E">
+            <End Role="Concesinaria" EntitySet="Concesinaria" />
+            <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
           </AssociationSet>
           <AssociationSet Name="FK__Empleado__IdTipo__5812160E" Association="Self.FK__Empleado__IdTipo__5812160E">
             <End Role="TipoEmpleado" EntitySet="TipoEmpleado" />
             <End Role="Empleado" EntitySet="Empleado" />
           </AssociationSet>
-          <AssociationSet Name="FK__Usuario__IdEmple__5BE2A6F2" Association="Self.FK__Usuario__IdEmple__5BE2A6F2">
-=======
-          <AssociationSet Name="FK__Origen_Tr__IdCon__60A75C0F" Association="Self.FK__Origen_Tr__IdCon__60A75C0F">
-            <End Role="Concesinaria" EntitySet="Concesinaria" />
-            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Promocion__IdCon__4222D4EF" Association="Self.FK__Promocion__IdCon__4222D4EF">
-            <End Role="Concesinaria" EntitySet="Concesinaria" />
-            <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Empleado__IdTipo__32E0915F" Association="Self.FK__Empleado__IdTipo__32E0915F">
-            <End Role="TipoEmpleado" EntitySet="TipoEmpleado" />
-            <End Role="Empleado" EntitySet="Empleado" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Usuario__IdEmple__37A5467C" Association="Self.FK__Usuario__IdEmple__37A5467C">
->>>>>>> origin
+          <AssociationSet Name="FK__Usuario__IdEmple__5CD6CB2B" Association="Self.FK__Usuario__IdEmple__5CD6CB2B">
             <End Role="Empleado" EntitySet="Empleado" />
             <End Role="Usuario" EntitySet="Usuario" />
           </AssociationSet>
@@ -2080,67 +1625,39 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             <End Role="Estado" EntitySet="Estado" />
             <End Role="Municipio" EntitySet="Municipio" />
           </AssociationSet>
-<<<<<<< HEAD
-          <AssociationSet Name="FK__Origen_Fa__IdFab__76969D2E" Association="Self.FK__Origen_Fa__IdFab__76969D2E">
+          <AssociationSet Name="FK__Origen_Fa__IdFab__7E37BEF6" Association="Self.FK__Origen_Fa__IdFab__7E37BEF6">
             <End Role="Fabrica" EntitySet="Fabrica" />
             <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdOri__797309D9" Association="Self.FK__Origen_Fa__IdOri__797309D9">
+          <AssociationSet Name="FK__Origen_Fa__IdOri__01142BA1" Association="Self.FK__Origen_Fa__IdOri__01142BA1">
             <End Role="OrigenEstado" EntitySet="OrigenEstado" />
             <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdUsu__778AC167" Association="Self.FK__Origen_Fa__IdUsu__778AC167">
+          <AssociationSet Name="FK__Origen_Fa__IdUsu__7F2BE32F" Association="Self.FK__Origen_Fa__IdUsu__7F2BE32F">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdCom__7D439ABD" Association="Self.FK__Origen_Tr__IdCom__7D439ABD">
+          <AssociationSet Name="FK__Origen_Tr__IdCom__04E4BC85" Association="Self.FK__Origen_Tr__IdCom__04E4BC85">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdOri__00200768" Association="Self.FK__Origen_Tr__IdOri__00200768">
+          <AssociationSet Name="FK__Origen_Tr__IdOri__07C12930" Association="Self.FK__Origen_Tr__IdOri__07C12930">
             <End Role="OrigenEstado" EntitySet="OrigenEstado" />
             <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdVen__7C4F7684" Association="Self.FK__Origen_Tr__IdVen__7C4F7684">
+          <AssociationSet Name="FK__Origen_Tr__IdVen__03F0984C" Association="Self.FK__Origen_Tr__IdVen__03F0984C">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
           </AssociationSet>
-          <AssociationSet Name="FK__VentaAuto__IdUsu__08B54D69" Association="Self.FK__VentaAuto__IdUsu__08B54D69">
-=======
-          <AssociationSet Name="FK__Origen_Fa__IdFab__59063A47" Association="Self.FK__Origen_Fa__IdFab__59063A47">
-            <End Role="Fabrica" EntitySet="Fabrica" />
-            <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdOri__5BE2A6F2" Association="Self.FK__Origen_Fa__IdOri__5BE2A6F2">
-            <End Role="OrigenEstado" EntitySet="OrigenEstado" />
-            <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdUsu__59FA5E80" Association="Self.FK__Origen_Fa__IdUsu__59FA5E80">
-            <End Role="Usuario" EntitySet="Usuario" />
-            <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdCom__5FB337D6" Association="Self.FK__Origen_Tr__IdCom__5FB337D6">
-            <End Role="Usuario" EntitySet="Usuario" />
-            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdOri__628FA481" Association="Self.FK__Origen_Tr__IdOri__628FA481">
-            <End Role="OrigenEstado" EntitySet="OrigenEstado" />
-            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdVen__5EBF139D" Association="Self.FK__Origen_Tr__IdVen__5EBF139D">
-            <End Role="Usuario" EntitySet="Usuario" />
-            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Promocion__IdPro__412EB0B6" Association="Self.FK__Promocion__IdPro__412EB0B6">
+          <AssociationSet Name="FK__Promocion__IdPro__66603565" Association="Self.FK__Promocion__IdPro__66603565">
             <End Role="PromocionList" EntitySet="PromocionList" />
             <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
           </AssociationSet>
-          <AssociationSet Name="FK__VentaAuto__IdPro__6EF57B66" Association="Self.FK__VentaAuto__IdPro__6EF57B66">
+          <AssociationSet Name="FK__VentaAuto__IdPro__14270015" Association="Self.FK__VentaAuto__IdPro__14270015">
             <End Role="PromocionList" EntitySet="PromocionList" />
             <End Role="VentaAuto" EntitySet="VentaAuto" />
           </AssociationSet>
-          <AssociationSet Name="FK__VentaAuto__IdUsu__6E01572D" Association="Self.FK__VentaAuto__IdUsu__6E01572D">
->>>>>>> origin
+          <AssociationSet Name="FK__VentaAuto__IdUsu__1332DBDC" Association="Self.FK__VentaAuto__IdUsu__1332DBDC">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="VentaAuto" EntitySet="VentaAuto" />
           </AssociationSet>
@@ -2155,11 +1672,11 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             <EntityTypeMapping TypeName="ConcesionariaModel.Accesorio">
               <MappingFragment StoreEntitySet="Accesorio">
                 <ScalarProperty Name="IdAccesorio" ColumnName="IdAccesorio" />
+                <ScalarProperty Name="Numero" ColumnName="Numero" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
                 <ScalarProperty Name="CantidadExistencia" ColumnName="CantidadExistencia" />
                 <ScalarProperty Name="CantidadVendido" ColumnName="CantidadVendido" />
                 <ScalarProperty Name="IdConcesinaria" ColumnName="IdConcesinaria" />
-                <ScalarProperty Name="Numero" ColumnName="Numero" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

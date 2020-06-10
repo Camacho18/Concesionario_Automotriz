@@ -3,25 +3,24 @@
 }
 <div class="row">
     <div class="col-md-12">
-        <div class="card">
-            <div class="card-header">
-                <h5 class="card-title text-center">Cliente: </h5><h5></h5>
-                <div class="card-body">
-                    <div class="row">
+        <div class="">                    
+                <div class="">
+                    <div class="">
                         <button class="btn btn-primary col-2" id="Btn_NewRef">Nuevo +</button>
                     </div>
                     <br />
-                    <div class="row">
+                    <div class="">
                         @Html.EJS().Grid("Grid_Referencias").RowSelected("SelectRef").AllowResizing(true).AllowSorting().AllowFiltering().Columns(col =>
                    {
                        col.Field("IdReferencia").HeaderText("Referencia").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Visible(false).Add();
+                       col.Field("Numero").HeaderText("Número").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
                        col.Field("Nombre").HeaderText("Nombre").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
                        col.Field("TelCel").HeaderText("Tel. Celular").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
                        col.HeaderText("Opciones").Template("#templateRef").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
-                   }).AllowPaging().SelectionSettings(select => select.Type(Syncfusion.EJ2.Grids.SelectionType.Single)).PageSettings(page => page.PageCount(3)).Render()
+                   }).AllowPaging().SelectionSettings(select => select.Type(Syncfusion.EJ2.Grids.SelectionType.Single)).PageSettings(page => page.PageCount(4)).Render()
                     </div>
                 </div>
-            </div>
+            
         </div>
     </div>
 </div>
@@ -30,7 +29,7 @@
         <div class="col-md-12 ">
             <div class="">
                 <a class="text-succcess" href="javascript:void(0)" onclick="SelectRef(${IdReferencia})" data-toggle="tooltip" data-placement="top" title="Editar">
-                    <i class="ti-slice"></i>
+                    <i class="fa fa-edit"></i>
                 </a>
                 <a class="text-danger" style="padding:0px,5px,0px,5px; margin-left:10px; margin-right:10px" href="javascript:void(0)" onclick="DeleteRef(${IdReferencia})" data-toggle="tooltip" data-placement="top" title="Eliminar">
                     <i class="fa fa-remove"></i>
@@ -80,21 +79,29 @@
     }
 
      function DeleteRef(IdReferencia) {
-        alert("Entro para eliminar");
-        swal({
-            title: "Eliminar",
-            text: "¿Desea eliminar la referencia?",
-            icon: "warning",
-            buttons: ["Cancelar", "Aceptar"],
-            dangerMode: true,
-        })
-        .then((willDelete) => {
-            if (willDelete) {
+         swal.fire({
+            position: "top",
+            title: 'Eliminar',
+            text: "Desea eliminar la referencia!",
+            icon: 'warning',
+            showCancelButton: true,
+            showConfirmButton: true,
+            cancelButtonColor: '#d33',
+            confirmButtonColor: '#3085d6',
+            cancelButtonText: 'Cancelar',
+            confirmButtonText: 'Eliminar',
+            reverseButtons: true
+        }).then((result) => {
+            if (result.value) {
                 $.get('@Url.Action("DeleteRef","Referencias", new { IdReferencia = "_id_"})'.replace('_id_', IdReferencia), function (data) {
                     ReferenciasLoad();
-                    swal("Referencia Eliminada", {
-                        icon: "success",
-                    });
+                    Swal.fire({
+                            position: "top",
+                            title: "Correcto",
+                            text: "Referencia Eliminada",
+                            icon: "success",
+                            button: "Aceptar",
+                        });
                 });
             }
         });

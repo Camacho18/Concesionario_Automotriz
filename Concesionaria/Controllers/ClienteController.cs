@@ -30,10 +30,11 @@ namespace Concesionaria.Controllers
 
         public ActionResult ClienteJson()
         {
-            List<ClienteJson> json = (from clte in db.Cliente /*join m in db.Municipio on clte.IdMunicipio equals m.IdMunicipio*/
+            List<ClienteJson> json = (from clte in db.Cliente
                                       select new ClienteJson
                                       {
                                           IdCliente = clte.IdCliente,
+                                          Numero = clte.Numero,
                                           Nombre = clte.Nombre,
                                           Edad = clte.Edad,
                                           Direccion = clte.Direccion,
@@ -42,7 +43,9 @@ namespace Concesionaria.Controllers
                                           TelCasa = clte.TelCasa,
                                           TelCel = clte.TelCel,
                                           Correo = clte.Correo,
-                                          RFC = clte.RFC
+                                          RFC = clte.RFC,
+                                          Municipio = (from M in db.Municipio where M.IdMunicipio == clte.IdMunicipio select M.Nombre).FirstOrDefault(),
+                                          Estado = (from E in db.Estado_Cliente where E.IdEstado_Cliente == clte.IdEstado_Cliente select E.Nombre).FirstOrDefault()
                                       }).ToList();
             JsonString = JsonConvert.SerializeObject(json);
             return Json(JsonString, JsonRequestBehavior.AllowGet);
@@ -51,6 +54,7 @@ namespace Concesionaria.Controllers
         public ActionResult CreateClte()
         {
             ViewBag.Municipio = Model.Municipio();
+            ViewBag.EstadoCliente = Model.EstadoCliente();
             return PartialView("_CreateCliente");
         }
 
@@ -62,6 +66,7 @@ namespace Concesionaria.Controllers
             {
 
                 ViewBag.Municipio = Model.Municipio();
+                ViewBag.EstadoCliente = Model.EstadoCliente();
                 return PartialView("_CreateCliente", model);
             }
             else
@@ -69,7 +74,7 @@ namespace Concesionaria.Controllers
                 Cliente clte = new Cliente();
                 try
                 {
-                    clte.IdCliente = model.IdCliente;
+                    clte.Numero = model.Numero;
                     clte.Nombre = model.Nombre;
                     clte.Edad = model.Edad;
                     clte.Direccion = model.Direccion;
@@ -80,6 +85,7 @@ namespace Concesionaria.Controllers
                     clte.Correo = model.Correo;
                     clte.RFC = model.RFC;
                     clte.IdMunicipio = model.IdMunicipio;
+                    clte.IdEstado_Cliente = model.IdEstado_Cliente;
                     db.Cliente.Add(clte);
                     db.SaveChanges();
 
@@ -96,10 +102,12 @@ namespace Concesionaria.Controllers
         public ActionResult UpdateClte(int IdCliente)
         {
             ViewBag.Municipio = Model.Municipio();
+            ViewBag.EstadoCliente = Model.EstadoCliente();
             ClienteCreate model = (from C in db.Cliente
                                    where C.IdCliente == IdCliente
                                    select new ClienteCreate
                                    {
+                                       Numero = C.Numero,
                                        Nombre = C.Nombre,
                                        Edad = C.Edad,
                                        Direccion = C.Direccion,
@@ -109,7 +117,8 @@ namespace Concesionaria.Controllers
                                        TelCel = C.TelCel,
                                        Correo = C.Correo,
                                        RFC = C.RFC,
-                                       IdMunicipio = C.IdMunicipio
+                                       IdMunicipio = C.IdMunicipio,
+                                       IdEstado_Cliente = C.IdEstado_Cliente
                                    }).FirstOrDefault();
             Session["IdCliente"] = IdCliente;
             return PartialView("_UpdateCliente", model);
@@ -122,6 +131,7 @@ namespace Concesionaria.Controllers
             {
 
                 ViewBag.Municipio = Model.Municipio();
+                ViewBag.EstadoCliente = Model.EstadoCliente();
                 return PartialView("_UpdateCliente", model);
             }
             else
@@ -142,6 +152,7 @@ namespace Concesionaria.Controllers
                     clte.Correo = model.Correo;
                     clte.RFC = model.RFC;
                     clte.IdMunicipio = model.IdMunicipio;
+                    clte.IdEstado_Cliente = model.IdEstado_Cliente;
                     db.SaveChanges();
 
                     return Json("1", JsonRequestBehavior.AllowGet);
@@ -153,18 +164,28 @@ namespace Concesionaria.Controllers
             }
         }
 
-        [HttpGet]
-        public ActionResult DeleteClte(int Id)
+        public ActionResult DeleteClte(int IdCliente)
         {
-            Cliente c = db.Cliente.Where(x => x.IdCliente == Id).FirstOrDefault();
-            db.Cliente.Remove(c);
+            Cliente c = db.Cliente.Where(x => x.IdCliente == IdCliente).FirstOrDefault();
+            c.IdEstado_Cliente = 4;
+            db.Entry(c).State = System.Data.Entity.EntityState.Modified;
             db.SaveChanges();
-            return Content("Correcto");
+            return Json("1", JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult ActivarClte(int IdCliente)
+        {
+            Cliente c = db.Cliente.Where(x => x.IdCliente == IdCliente).FirstOrDefault();
+            c.IdEstado_Cliente = 1;
+            db.Entry(c).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+            return Json("1", JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult Options(int Id)
         {
             Session["IdCliente"] = Id;
+            ViewBag.Nombre = (from C in db.Cliente where C.IdCliente == Id select C.Nombre).FirstOrDefault();
             return View();
         }
 

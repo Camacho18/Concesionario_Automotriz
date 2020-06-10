@@ -137,21 +137,15 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="AutoComplete\DropDownList.cs" />
-<<<<<<< HEAD
     <Compile Include="Controllers\AutoClienteController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\EmpleadoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ReferenciasController.cs" />
-=======
     <Compile Include="Controllers\AccesorioController.cs" />
-    <Compile Include="Controllers\EmpleadoController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
->>>>>>> origin
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -212,25 +206,21 @@
     <Compile Include="Models\Fabrica.cs">
       <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="Models\ModelsSupport\AutoClienteCreate.cs" />
     <Compile Include="Models\ModelsSupport\AutoClienteJson.cs" />
+    <Compile Include="Models\ModelsSupport\AutomovilCreate.cs" />
+    <Compile Include="Models\ModelsSupport\AutomovilJson.cs" />
     <Compile Include="Models\ModelsSupport\ClienteCreate.cs" />
     <Compile Include="Models\ModelsSupport\ClienteJson.cs" />
-=======
     <Compile Include="Models\ModelsSupport\AccesorioCreate.cs" />
     <Compile Include="Models\ModelsSupport\AccesorioJson.cs" />
->>>>>>> origin
     <Compile Include="Models\ModelsSupport\DropDownListModel.cs" />
     <Compile Include="Models\ModelsSupport\EmpleadoCreate.cs" />
     <Compile Include="Models\ModelsSupport\EmpleadoJson.cs" />
     <Compile Include="Models\ModelsSupport\Login.cs" />
-<<<<<<< HEAD
     <Compile Include="Models\ModelsSupport\ReferenciaCreate.cs" />
     <Compile Include="Models\ModelsSupport\ReferenciaJson.cs" />
-=======
     <Compile Include="Models\ModelsSupport\UsuarioModel.cs" />
->>>>>>> origin
     <Compile Include="Models\Municipio.cs">
       <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
@@ -412,23 +402,20 @@
     <Content Include="Views\Empleado\_Create.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Empleado\_Update.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Cliente\_CreateCliente.cshtml" />
     <Content Include="Views\Cliente\Index.cshtml" />
     <Content Include="Views\Cliente\_UpdateCliente.cshtml" />
     <Content Include="Views\Cliente\Options.cshtml" />
     <Content Include="Views\Referencias\Index.cshtml" />
     <Content Include="Views\Referencias\_CreateReferencia.cshtml" />
-    <Content Include="Views\AutoCliente\Index.cshtml" />
     <Content Include="Views\Referencias\_UpdateRef.cshtml" />
-=======
     <Content Include="Views\Usuario\_Create.cshtml" />
     <Content Include="Views\Usuario\_Update.cshtml" />
     <Content Include="Views\Menu\_MenuHorizontal.cshtml" />
     <Content Include="Views\Menu\_VistaHorizontal.cshtml" />
     <Content Include="Views\Accesorio\Index.cshtml" />
     <Content Include="Views\Accesorio\_Create.cshtml" />
->>>>>>> origin
+    <Content Include="Views\AutoCliente\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

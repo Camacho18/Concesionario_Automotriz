@@ -199,8 +199,6 @@ CREATE TABLE AutoCliente(
 	IdAutomovil int foreign key(IdAutomovil) references Automovil(IdAutomovil),
 	IdVentaAuto int foreign key(IdVentaAuto) references VentaAuto(IdVentaAuto)
 )
-<<<<<<< HEAD
-=======
 
 
 -- __________________________________________________________________ Mantenimiento
@@ -225,4 +223,4 @@ create table Mantenimiento(
 	IdVentaAuto int foreign key(IdVentaAuto) references VentaAuto(IdVentaAuto)
 	)
 	*/
->>>>>>> origin
+

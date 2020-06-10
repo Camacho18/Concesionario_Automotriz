@@ -1,5 +1,13 @@
 ﻿@model Concesionaria.Models.ModelsSupport.ClienteCreate
 
+<script type="text/javascript">
+    @if (Model.IdEstado_Cliente == 4)
+    {
+            <text>
+        $("#btn_Aceptar").prop("disabled",true);
+            </text>
+    }
+</script>
 @using (Ajax.BeginForm("UpdateClte", "Cliente", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "frmClte", OnSuccess = "SuccessClte_U" }))
 {
     @Html.AntiForgeryToken()
@@ -11,6 +19,13 @@
         </div>
         <div class="modal-body">
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.Numero, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Numero, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                    @Html.ValidationMessageFor(model => model.Numero, "", new { @class = "text-danger" })
+                </div>
+            </div>
             <div class="form-group">
                 @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
@@ -90,23 +105,38 @@
                     @Html.ValidationMessageFor(model => model.IdMunicipio, "", new { @class = "text-danger" })
                 </div>
             </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.IdEstado_Cliente, "IdEstado_Cliente", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.IdEstado_Cliente, new SelectList(ViewBag.EstadoCliente, "Id", "Value"), htmlAttributes: new { @class = "custom-select custom-select-md", @data_style = "btn btn-primary btn-round" })
+                    @Html.ValidationMessageFor(model => model.IdEstado_Cliente, "", new { @class = "text-danger" })
+                </div>
+            </div>
         </div>
 
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                <button type="submit" class="btn btn-success">Aceptar</button>
+                <button type="submit" id="btn_Aceptar" class="btn btn-success">Aceptar</button>
             </div>
 
         </div>
 
 <script>
-    function SuccessClte_U(data) {
-        if (data == "1") {
-            $('#CreateClteModal').modal("hide");
-            ClienteLoad();
-            alert("Correcto");
+     function SuccessClte_U(data) {
+            if (data == "1") {
+                $('#CreateClteModal').modal("hide");
+                ClienteLoad();
+                $('#ModalClte').modal("hide");
+                Swal.fire({
+                    position: "top",
+                    title: "Correcto",
+                    text: "Cliente Actualizado",
+                    icon: "success",
+                    button: "Aceptar",
+                });
+            }
         }
-    }
 </script>
 }
 

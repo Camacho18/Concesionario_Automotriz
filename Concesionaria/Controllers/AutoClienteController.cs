@@ -25,18 +25,22 @@ namespace Concesionaria.Controllers
             return RedirectToAction("Deslog", "Login");
         }
 
-        public ActionResult RefJson()
+        public ActionResult AutomovilClteJson()
         {
             IdCliente = Convert.ToInt32(Session["IdCliente"]);
-            List<AutoClienteJson> json = (from V in db.VentaAuto
-                                          join A in db.AutoCliente on V.IdVentaAuto equals A.IdVentaAuto
-                                          join M in db.Automovil on A.IdAutoCliente equals M.IdAutomovil
-                                          join AM in db.AutoModelo on M.IdAutoModelo equals AM.IdAutoModelo
-                                          join C in db.AutoColorList on M.IdAutoColor equals C.IdAutoColor
-                                          join MA in db.AutoMarca on AM.IdAutoMarca equals MA.IdAutoMarca
-                                          where V.IdCliente == IdCliente
-                                         select new AutoClienteJson
+            List<AutomovilJson> json = (from V in db.VentaAuto 
+                                          join AC in db.AutoCliente on V.IdVentaAuto equals AC.IdVentaAuto
+                                          join A in db.Automovil on AC.IdAutomovil equals A.IdAutomovil
+                                          join AM in db.AutoModelo on A.IdAutoModelo equals AM.IdAutoModelo
+                                          join AE in db.AutoEstadoList on A.IdAutoEstado equals AE.IdAutoEstado
+                                          join AMA in db.AutoMarca on AM.IdAutoMarca equals AMA.IdAutoMarca
+                                        where V.IdCliente == IdCliente
+                                         select new AutomovilJson
                                          {
+                                             Numero = A.Numero,
+                                             Marca = AMA.Nombre,
+                                             Modelo = AM.Nombre,
+                                             Estado = AE.Nombre
                                          }).ToList();
             JsonString = JsonConvert.SerializeObject(json);
             return Json(JsonString, JsonRequestBehavior.AllowGet);

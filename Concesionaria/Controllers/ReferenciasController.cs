@@ -29,11 +29,13 @@ namespace Concesionaria.Controllers
         public ActionResult RefJson()
         {
             IdCliente = Convert.ToInt32(Session["IdCliente"]);
+            //ViewBag.Estado = (from c in db.Cliente where c.IdCliente == IdCliente select c.IdEstado_Cliente);
             List<ReferenciaJson> json = (from R in db.Referencias
                                          where R.IdCliente == IdCliente
                                          select new ReferenciaJson
                                          {
                                              IdReferencia = R.IdReferencia,
+                                             Numero = R.Numero,
                                              Nombre = R.Nombre,
                                              TelCel = R.TelCel,
                                              IdCliente = R.IdCliente
@@ -60,7 +62,7 @@ namespace Concesionaria.Controllers
                 Referencias r = new Referencias();
                 try
                 {
-                    r.IdReferencia = model.IdReferencia;
+                    r.Numero = model.Numero;
                     r.Nombre = model.Nombre;
                     r.TelCel = model.TelCel;
                     r.IdCliente = Convert.ToInt32(Session["IdCliente"]);
@@ -79,10 +81,12 @@ namespace Concesionaria.Controllers
         // GET: Referencias/Edit/5
         public ActionResult UpdateRef(int IdReferencia)
         {
+           
             ReferenciaCreate model = (from R in db.Referencias
                                    where R.IdReferencia == IdReferencia
                                    select new ReferenciaCreate
                                    {
+                                       Numero = R.Numero,
                                        Nombre = R.Nombre,                                      
                                        TelCel = R.TelCel,                                      
                                        IdCliente = R.IdCliente
@@ -95,6 +99,7 @@ namespace Concesionaria.Controllers
         [HttpPost]
         public ActionResult UpdateRef(ReferenciaCreate model)
         {
+            
             if (!ModelState.IsValid)
             {
                 return PartialView("_UpdateRef", model);
@@ -107,6 +112,7 @@ namespace Concesionaria.Controllers
                     Referencias refe = (from R in db.Referencias
                                     where R.IdReferencia == IdReferencia
                                     select R).SingleOrDefault();
+                    refe.Numero = model.Numero;
                     refe.Nombre = model.Nombre;
                     refe.TelCel = model.TelCel;
                     refe.IdCliente = Convert.ToInt32(Session["IdCliente"]);
