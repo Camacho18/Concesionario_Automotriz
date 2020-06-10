@@ -235,3 +235,4 @@ create table Mantenimiento(
 	IdVentaAuto int foreign key(IdVentaAuto) references VentaAuto(IdVentaAuto)
 	)
 	*/
+

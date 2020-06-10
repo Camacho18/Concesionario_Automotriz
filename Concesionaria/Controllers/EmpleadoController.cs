@@ -26,20 +26,23 @@ namespace Concesionaria.Controllers
             IdSucursal = Convert.ToInt32(Session["IdSucursal"]);
             if (/*System.Web.HttpContext.Current.User.Identity.IsAuthenticated &&*/ IdUsuario != 0 && IdSucursal != 0)
                 return View();
-            return RedirectToAction("Deslog", "Login");            
+            return RedirectToAction("Deslog", "Login");
         }
 
         // GET: Empleado/Details/5
         public ActionResult EmpleadoJson()
         {
-            List<EmpleadoJson> json = (from emp in db.Empleado orderby emp.IdEmpleado descending select new EmpleadoJson{
-            Numero=emp.Numero,
-            IdEmpleado=emp.IdEmpleado,
-            Nombre=emp.Nombre,
-            Telefono=emp.Telefono,
-            Tipo = (from TipoEmp in db.TipoEmpleado where TipoEmp.IdTipoEmpleado==emp.IdTipoEmpleado select TipoEmp.Nombre ).FirstOrDefault(),
-            Estado = (emp.C_Estado==true ? "Activo" : "Eliminado")
-            }).ToList();
+            List<EmpleadoJson> json = (from emp in db.Empleado
+                                       orderby emp.IdEmpleado descending
+                                       select new EmpleadoJson
+                                       {
+                                           Numero = emp.Numero,
+                                           IdEmpleado = emp.IdEmpleado,
+                                           Nombre = emp.Nombre,
+                                           Telefono = emp.Telefono,
+                                           Tipo = (from TipoEmp in db.TipoEmpleado where TipoEmp.IdTipoEmpleado == emp.IdTipoEmpleado select TipoEmp.Nombre).FirstOrDefault(),
+                                           Estado = (emp.C_Estado == true ? "Activo" : "Eliminado")
+                                       }).ToList();
             JsonString = JsonConvert.SerializeObject(json);
             return Json(JsonString, JsonRequestBehavior.AllowGet);
         }
@@ -47,7 +50,7 @@ namespace Concesionaria.Controllers
         // GET: Empleado/Create
         public ActionResult CreateEmp()
         {
-            ViewBag.TipoEmp = Model.TipoEmpleado();            
+            ViewBag.TipoEmp = Model.TipoEmpleado();
             return PartialView("_Create");
         }
 
@@ -57,10 +60,10 @@ namespace Concesionaria.Controllers
         {
             if (!ModelState.IsValid)
             {
-                
+
                 ViewBag.TipoEmp = Model.TipoEmpleado();
-                return PartialView("_Create",model);
-                    }
+                return PartialView("_Create", model);
+            }
             else
             {
                 Empleado emp = new Empleado();
@@ -93,19 +96,20 @@ namespace Concesionaria.Controllers
         public ActionResult UpdateEmp(int IdEmpleado)
         {
             ViewBag.TipoEmp = Model.TipoEmpleado();
-            EmpleadoCreate model = (from E in db.Empleado where E.IdEmpleado == IdEmpleado
+            EmpleadoCreate model = (from E in db.Empleado
+                                    where E.IdEmpleado == IdEmpleado
                                     select new EmpleadoCreate
-                                    {                     
+                                    {
                                         Numero = E.Numero,
-                                        Nombre=E.Nombre,
-                                        Telefono=E.Telefono,
-                                        IdTipoEmpleado=E.IdTipoEmpleado,
-                                        C_Estado=E.C_Estado
+                                        Nombre = E.Nombre,
+                                        Telefono = E.Telefono,
+                                        IdTipoEmpleado = E.IdTipoEmpleado,
+                                        C_Estado = E.C_Estado
 
                                     }
                                     ).FirstOrDefault();
             Session["IdEmpleado"] = IdEmpleado;
-            return PartialView("_Update", model);            
+            return PartialView("_Update", model);
         }
 
         [HttpPost]
@@ -123,12 +127,12 @@ namespace Concesionaria.Controllers
                 try
                 {
                     Empleado emp = (from E in db.Empleado
-                                     where E.IdEmpleado==IdEmpleado
-                                     select E).SingleOrDefault();
-                    
+                                    where E.IdEmpleado == IdEmpleado
+                                    select E).SingleOrDefault();
+
                     emp.Nombre = model.Nombre;
                     emp.Telefono = model.Telefono;
-                    emp.IdTipoEmpleado = model.IdTipoEmpleado;                                        
+                    emp.IdTipoEmpleado = model.IdTipoEmpleado;
                     db.SaveChanges();
 
                     return Json("1", JsonRequestBehavior.AllowGet);
@@ -155,7 +159,7 @@ namespace Concesionaria.Controllers
                 db.SaveChanges();
             }
 
-            return Json("1",JsonRequestBehavior.AllowGet);
+            return Json("1", JsonRequestBehavior.AllowGet);
         }
         public ActionResult ActiveEmp(int Id)
         {

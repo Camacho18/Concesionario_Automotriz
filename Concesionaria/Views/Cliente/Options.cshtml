@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">            
+            <div class="card-body">
+                <div class="card-title text-center">
+                    <h5>Cliente: @ViewBag.Nombre</h5>  
+                </div>
+                <br />
+                <div class="">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active show" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Referencias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Automoviles</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content mt-3" id="myTabContent">
+                        <div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            @Html.Action("Index", "Referencias")
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            @Html.Action("Index", "AutoCliente")
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+    </div>
+</div>

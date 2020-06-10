@@ -1,0 +1,64 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="">
+            <div class="">
+                <div class="">
+                    <button class="btn btn-primary col-2" id="Btn_NewRef">Nuevo +</button>
+                </div>
+                <br />
+                <div class="">
+                    @Html.EJS().Grid("Grid_AutoMovilClte").RowSelected("SelectAutoClte").AllowResizing(true).AllowSorting().AllowFiltering().Columns(col =>
+               {
+                   col.Field("IdAutomovil").HeaderText("Automovil").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Visible(false).Add();
+                   col.Field("Numero").HeaderText("Número").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("Marca").HeaderText("Marca").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("Modelo").HeaderText("Modelo").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("Nombre").HeaderText("Estado").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("Opciones").Template("#templateAutoClte").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+               }).AllowPaging().SelectionSettings(select => select.Type(Syncfusion.EJ2.Grids.SelectionType.Single)).PageSettings(page => page.PageCount(5)).Render()
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script id="templateAutoClte" type="text/x-template">
+    <div class="row text-center">
+        <div class="col-md-12 ">
+            <div class="">
+                <a class="text-succcess" href="javascript:void(0)" onclick="SelectAutoClte(${IdAutomovil})" data-toggle="tooltip" data-placement="top" title="Ver Auto">
+                    <i class="fa fa-edit"></i>
+                </a>
+                <a class="text-succcess" style="padding:0px,5px,0px,5px; margin-left:10px; margin-right:10px" href="javascript:void(0)" onclick="Contrato(${IdAutomovil})" data-toggle="tooltip" data-placement="top" title="Contrato">
+                    <i class="fa fa-ellipsis-h"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script>
+    $(function () { AutomovilClienteLoad(); })
+
+    function AutomovilClienteLoad() {
+        $.get('@Url.Action("AutomovilClteJson","Automovil")', function (data) {
+            var grid = document.getElementById('Grid_AutoMovilClte').ej2_instances[0]; // Grid instance
+            grid.dataSource = JSON.parse(data);
+        });
+    }
+
+    function SelectAutoClte() {
+        var grid = document.getElementById("Grid_AutoMovilClte").ej2_instances[0];
+        var selectedrecords = grid.getSelectedRecords()[0].IdReferencia;
+        @*$.get('@Url.Action("UpdateRef", "Referencias", new { Id = "_id_" })'.replace('_id_', selectedrecords), function (data) {
+            $("#frmRef").html(data);
+            $("#CreateRefModal").modal("show");
+        });*@
+    }
+</script>
+
+
