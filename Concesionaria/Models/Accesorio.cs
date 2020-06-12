@@ -25,6 +25,7 @@ namespace Concesionaria.Models
         public string Descripcion { get; set; }
         public Nullable<int> IdAccesorioList { get; set; }
         public Nullable<int> IdConcesinaria { get; set; }
+        public Nullable<bool> Estado { get; set; }
     
         public virtual AccesorioList AccesorioList { get; set; }
         public virtual Concesinaria Concesinaria { get; set; }

@@ -125,6 +125,7 @@ create table AccesorioList(
 	IdAccesorio int identity(1,1) primary key,
 	Serie VARCHAR(30),
 	Descripcion VARCHAR(300),
+	Estado BIT,
 	IdAccesorioList int foreign key(IdAccesorioList) references AccesorioList(IdAccesorioList),
 	IdConcesinaria int foreign key(IdConcesinaria) references Concesinaria(IdConcesinaria)
 	)

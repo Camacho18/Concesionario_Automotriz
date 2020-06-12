@@ -15,61 +15,133 @@ namespace Concesionaria.Controllers
     public class AccesorioController : Controller
     {
         private readonly ConcesionariaEntities db = new ConcesionariaEntities();
-        private readonly DropDownList Model = new DropDownList();
-        private string JsonString = string.Empty;
-        private int IdUsuario, IdSucursal, IdEmpleado, Id;
+        private readonly DropDownList DropDownLisObject = new DropDownList();
+        private readonly RemoveEspace Remove = new RemoveEspace();
 
-        // GET: Accesorio
+        private string JsonString = string.Empty;
+        private int IdUsuario, IdSucursal, IdEmpleado, IdCom;
+
+        // [I] AccesorioList
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult AccesorioJson()
+        public ActionResult AccesorioListJson()
         {
-            List<AccesorioJson> json = (from A in db.Accesorio
-                                       orderby A.IdAccesorio descending
-                                       select new AccesorioJson
+            List<AccesorioListJson> json = (from A in db.AccesorioList
+                                       orderby A.IdAccesorioList descending
+                                       select new AccesorioListJson
                                        {
-                                           IdAccesorio=A.IdAccesorio,
-                                           //Numero=A.Numero,
-                                           //Nombre=A.Nombre,
-                                           //CantidadExistencia=A.CantidadExistencia,
-                                           //CantidadVendido=A.CantidadVendido                                          
+                                           IdAccesorioList=A.IdAccesorioList,
+                                           Numero=A.Numero,
+                                           Nombre=A.Nombre,
+                                           IdAutoModelo = (from m in db.AutoModelo where m.IdAutoModelo==A.IdAutoModelo select m.Nombre).FirstOrDefault(),
+                                           IdAnios = (from m in db.Anios where m.IdAnios == A.IdAnios select m.Numero).FirstOrDefault()
                                        }).ToList();
             JsonString = JsonConvert.SerializeObject(json);
             return Json(JsonString, JsonRequestBehavior.AllowGet);
         }
 
-        public ActionResult CreateAcce()
-        {            
-            return PartialView("_Create");
+        public ActionResult CreateAcceList()
+        {
+            
+            ViewBag.AutoModel = DropDownLisObject.AutoModelo();
+            ViewBag.Anios = DropDownLisObject.Anios();
+            return PartialView("_CreateAcceList");
         }
 
         // POST: Empleado/Create
+        [HttpPost]
+        public ActionResult CreateAcceList(AccesorioListCreate model)
+        {
+            if (!ModelState.IsValid)
+            {
+                
+                return PartialView("_CreateAcceList", model);
+            }
+            else
+            {
+                AccesorioList modeladd = new AccesorioList();
+                try
+                {
+                    model.Numero = Remove.RemoveAllWhitespace(model.Numero);
+                    int comd = (from A in db.AccesorioList where A.Numero==model.Numero  select A.IdAccesorioList).Count();
+
+                    if (comd >= 1)
+                        return Json("2", JsonRequestBehavior.AllowGet);
+
+                    modeladd.Numero = model.Numero;
+                    modeladd.Nombre = model.Nombre.Trim();
+                    modeladd.IdAutoModelo = model.IdAutoModelo;
+                    modeladd.IdAnios = model.IdAnios;
+                    db.AccesorioList.Add(modeladd);
+                    db.SaveChanges();
+
+                    return Json("1", JsonRequestBehavior.AllowGet);
+                }
+                catch
+                {
+                    return Json("0", JsonRequestBehavior.AllowGet);
+                }
+            }
+        }
+
+        // [F] AccesorioList
+
+        // GET: Empleado/Edit/5
+
+      
+        public ActionResult AccesorioJson(int? Id)
+        {
+            if (Id == null)
+                Id = Convert.ToInt32(Session["IdAccesorioList"]);
+            else
+            Session["IdAccesorioList"] = Id;
+
+            List<AccesorioJson> json = (from A in db.Accesorio where A.IdAccesorioList == Id
+                                        orderby A.IdAccesorio descending
+                                        select new AccesorioJson
+                                        {
+                                            IdAccesorio = A.IdAccesorio,
+                                            Serie = A.Serie,
+                                            Descripcion = A.Descripcion,
+                                            Estado= ( A.Estado == true ? "Disponible" : "Vendido")                                            
+                                        }).ToList();
+            JsonString = JsonConvert.SerializeObject(json);
+
+            var num = (from A in db.AccesorioList where A.IdAccesorioList == Id select A.Numero).FirstOrDefault();
+            return Json(new { JsonString, num }, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult CreateAcce()
+        {            
+            return PartialView("_CreateAcce");
+        }
         [HttpPost]
         public ActionResult CreateAcce(AccesorioCreate model)
         {
             if (!ModelState.IsValid)
             {
-                
-                return PartialView("_Create", model);
+
+                return PartialView("_CreateAcce", model);
             }
             else
             {
                 Accesorio modeladd = new Accesorio();
                 try
                 {
-                    int comd = (from A in db.Accesorio  select A.IdAccesorio).Count();
+                    model.Serie = Remove.RemoveAllWhitespace(model.Serie);
+                    int comd = (from A in db.Accesorio where A.Serie == model.Serie select A.IdAccesorio).Count();
 
                     if (comd >= 1)
                         return Json("2", JsonRequestBehavior.AllowGet);
 
-                    //modeladd.Numero = model.Numero.Trim();
-                    //modeladd.Nombre = model.Nombre.Trim();
-                    //modeladd.CantidadExistencia = model.CantidadExistencia;
-                    //modeladd.IdConcesinaria = Convert.ToInt32(Session["IdSucursal"]);
-                    //modeladd.CantidadVendido = 0;
+                    modeladd.Serie = model.Serie;
+                    modeladd.Descripcion = model.Descripcion.Trim();
+                    modeladd.IdAccesorioList = Convert.ToInt32(Session["IdAccesorioList"]);
+                    modeladd.IdConcesinaria = Convert.ToInt32(Session["IdSucursal"]);
+                    modeladd.Estado = true;
                     db.Accesorio.Add(modeladd);
                     db.SaveChanges();
 
@@ -82,46 +154,41 @@ namespace Concesionaria.Controllers
             }
         }
 
-
-
-        // GET: Empleado/Edit/5
         public ActionResult UpdateAcce(int Id)
         {
             
-            AccesorioCreate model = (from E in db.Accesorio
+            AccesorioUpdate model = (from E in db.Accesorio
                                     where E.IdAccesorio == Id
-                                    select new AccesorioCreate
+                                    select new AccesorioUpdate
                                     {
-                                        //Numero = E.Numero,
-                                        //Nombre = E.Nombre,
-                                        //CantidadExistencia=E.CantidadExistencia,
-                                        //CantidadVendido=E.CantidadVendido
+                                        Serie=E.Serie,
+                                        Descripcion=E.Descripcion
                                     }
                                     ).FirstOrDefault();
             Session["IdAccesorio"] = Id;
-            return PartialView("_Update", model);
+            return PartialView("_UpdateAcce", model);
         }
 
         [HttpPost]
-        public ActionResult UpdateAcce(AccesorioCreate model)
+        public ActionResult UpdateAcce(AccesorioUpdate model)
         {
             if (!ModelState.IsValid)
             {
-                
-                return PartialView("_Update", model);
+
+                return PartialView("_UpdateAcce", model);
             }
             else
             {
-                Id = Convert.ToInt32(Session["IdAccesorio"]);
+                IdCom = Convert.ToInt32(Session["IdAccesorio"]);
                 try
                 {
-                    Accesorio emp = (from E in db.Accesorio
-                                    where E.IdAccesorio == Id
+                    Accesorio acc = (from E in db.Accesorio
+                                    where E.IdAccesorio == IdCom
                                     select E).SingleOrDefault();
 
 
-                    //emp.Nombre = model.Nombre;
-                    //emp.CantidadExistencia = model.CantidadExistencia;                    
+                    acc.Descripcion = model.Descripcion;
+                    
                     db.SaveChanges();
 
                     return Json("1", JsonRequestBehavior.AllowGet);
@@ -131,6 +198,27 @@ namespace Concesionaria.Controllers
                     return Json("0", JsonRequestBehavior.AllowGet);
                 }
             }
+        }
+
+        public ActionResult DeleteAcce(int Id)
+        {            
+                try
+                {
+                var m = (from A in db.Accesorio where A.IdAccesorio == Id select A).FirstOrDefault();
+                if (m.Estado == false)
+                    return Json("2", JsonRequestBehavior.AllowGet);
+                else
+                {
+                    db.Accesorio.Remove(m);
+                    db.SaveChanges();
+                    return Json("1", JsonRequestBehavior.AllowGet);
+                }
+            }
+                catch
+                {
+                    return Json("0", JsonRequestBehavior.AllowGet);
+                }
+            
         }
     }
 }
