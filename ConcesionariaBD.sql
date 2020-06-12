@@ -1,4 +1,4 @@
-DROP DATABASE CONCESIONARIA
+drop database Concesionaria
 CREATE DATABASE Concesionaria	
 USE Concesionaria
 
@@ -91,14 +91,12 @@ CREATE TABLE Promocion_Auto(
 )
 
 CREATE TABLE AutoEstadoList(
-	IdAutoEstado INT IDENTITY(1,1) PRIMARY KEY,
-	Numero VARCHAR(30),
+	IdAutoEstado INT IDENTITY(1,1) PRIMARY KEY,	
 	Nombre VARCHAR(40)
 	)
 
 CREATE TABLE AutoColorList(
-	IdAutoColor INT IDENTITY(1,1) PRIMARY KEY,
-	Numero VARCHAR(30),
+	IdAutoColor INT IDENTITY(1,1) PRIMARY KEY,	
 	Nombre VARCHAR(40)
 )
 
