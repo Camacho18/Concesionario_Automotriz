@@ -1,3 +1,4 @@
+USE Concesionaria
 SELECT * FROM dbo.Concesinaria
 select * from Empleado
 SELECT * FROM TipoEmpleado
