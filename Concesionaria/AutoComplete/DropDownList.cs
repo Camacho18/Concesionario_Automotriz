@@ -40,6 +40,10 @@ namespace Concesionaria.AutoComplete
         {
             return (from AC in db.AutoColorList select new DropDownListModel { Id = AC.IdAutoColor, Value = AC.Nombre }).ToList();
         }
+        public List<DropDownListModel> Anios()
+        {
+            return (from AC in db.Anios select new DropDownListModel { Id = AC.IdAnios, Value = AC.Numero }).ToList();
+        }
 
     }
 }

@@ -16,6 +16,7 @@ namespace Concesionaria.Controllers
     {
         private readonly ConcesionariaEntities db = new ConcesionariaEntities();
         private readonly DropDownList Model = new DropDownList();
+        private readonly RemoveEspace RemovesEspecesrr = new RemoveEspace();
         private string JsonString = string.Empty;
         private int IdUsuario, IdSucursal, IdEmpleado;
 
@@ -73,8 +74,8 @@ namespace Concesionaria.Controllers
 
                     if (comd >= 1)
                         return Json("2", JsonRequestBehavior.AllowGet);
-
-                    emp.Numero = model.Numero.Trim();
+                    
+                    emp.Numero = RemovesEspecesrr.RemoveAllWhitespace(model.Numero);
                     emp.Nombre = model.Nombre.Trim();
                     emp.Telefono = model.Telefono.Trim();
                     emp.IdTipoEmpleado = model.IdTipoEmpleado;

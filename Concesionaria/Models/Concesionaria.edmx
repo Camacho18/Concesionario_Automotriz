@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ConcesionariaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ConcesionariaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Accesorio">
           <Key>
             <PropertyRef Name="IdAccesorio" />
@@ -14,6 +14,7 @@
           <Property Name="Descripcion" Type="varchar" MaxLength="300" />
           <Property Name="IdAccesorioList" Type="int" />
           <Property Name="IdConcesinaria" Type="int" />
+          <Property Name="Estado" Type="bit" />
         </EntityType>
         <EntityType Name="AccesorioList">
           <Key>
@@ -902,8 +903,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
             <End Role="VentaAuto" EntitySet="VentaAuto" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ConcesionariaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -919,6 +919,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
           <NavigationProperty Name="AccesorioList" Relationship="Self.FK__Accesorio__IdAcc__5629CD9C" FromRole="Accesorio" ToRole="AccesorioList" />
           <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Accesorio__IdCon__571DF1D5" FromRole="Accesorio" ToRole="Concesinaria" />
           <NavigationProperty Name="AutoAccesorio" Relationship="Self.FK__AutoAcces__IdAcc__59FA5E80" FromRole="Accesorio" ToRole="AutoAccesorio" />
+          <Property Name="Estado" Type="Boolean" />
         </EntityType>
         <EntityType Name="AccesorioList">
           <Key>
@@ -1878,6 +1879,7 @@ advertencia 6002: La tabla o vista 'Concesionaria.dbo.Promocion_Auto' no tiene d
           <EntitySetMapping Name="Accesorio">
             <EntityTypeMapping TypeName="ConcesionariaModel.Accesorio">
               <MappingFragment StoreEntitySet="Accesorio">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
                 <ScalarProperty Name="IdAccesorio" ColumnName="IdAccesorio" />
                 <ScalarProperty Name="Serie" ColumnName="Serie" />
                 <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />

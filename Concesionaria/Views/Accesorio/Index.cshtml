@@ -4,26 +4,87 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<!--[I] AccesorioList-->
 <br />
 <div class="row">
     <div class="col-12">
         <div class="card">
+            <div class="card-body">               
+                <div class="row col-12">
+                    <button class="btn btn-primary col-2" id="Btn_NewAcce">Nuevo +</button>
+
+                    <h5 class="col-8 text-center">Tipos de Accesorios</h5>
+                    <div class="col-2"></div>
+                </div>
+                <br />
+                <div class="">
+                    @Html.EJS().Grid("Grid_AccesorioList").RowSelected("RowClearSelect").RowDeselected("RowClearSelect").AllowResizing(true).AllowSorting().AllowFiltering().Columns(col =>
+               {
+                   col.Field("IdAccesorioList").HeaderText("Usuario").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Visible(false).Add();
+                   col.Field("Numero").HeaderText("Número").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("Nombre").HeaderText("Nombre").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("IdAutoModelo").HeaderText("Modelo").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("IdAnios").HeaderText("Año").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.HeaderText("Opciones").Template("#templateAcceList").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+               }).AllowPaging().SelectionSettings(select => select.Type(Syncfusion.EJ2.Grids.SelectionType.Single)).PageSettings(page => page.PageCount(2).PageSize(4)).Render()
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .e-grid .e-headercell {
+        background-color: #eeeeee;
+        
+        
+    }
+    .e-grid .e-gridheader {
+        color: black;
+       
+    }
+</style>
+
+<script id="templateAcceList" type="text/x-template">
+    <div class="row text-center">
+        <div class="col-md-12 ">
+            <div class="">
+                <a class="text-succcess" href="javascript:void(0)" onclick="RowSelectAcceList(${IdAccesorioList})" data-toggle="tooltip" data-placement="top" title="Editar">
+                    <i class="fa fa-edit"></i>
+                </a>                
+            </div>
+        </div>
+    </div>
+</script>
+
+<!--[F] AccesorioList-->
+<!--[I] Accesorio-->
+<br />
+<div id="viewAcce" class="row" hidden>
+    <div class="col-12">
+        <div class="card">
             <div class="card-body">
 
-                <div class="">
-                    <button class="btn btn-primary col-2" id="Btn_NewAcce">Nuevo +</button>
+                <div class="row col-12">
+                    <h5 class="col-12 text-center">Inventario de Accesorios</h5>
+                </div>
+                <br />
+                    <div class="row col-12">
+                    <button class="btn btn-primary col-2" id="Btn_NewAccesorio">Nuevo +</button>
+                    <div class="col-8 text-center"><h6 id="num"></h6></div>
+                    <div class="col-2"></div>
                 </div>
                 <br />
                 <div class="">
                     @Html.EJS().Grid("Grid_Accesorio").AllowResizing(true).AllowSorting().AllowFiltering().Columns(col =>
                {
-                   col.Field("IdAccesorio").HeaderText("Usuario").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Visible(false).Add();
-                   col.Field("Numero").HeaderText("Número").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
-                   col.Field("Nombre").HeaderText("Nombre").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
-                   col.Field("CantidadExistencia").HeaderText("Existencia").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
-                   col.Field("CantidadVendido").HeaderText("Vendido").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();                   
-                   col.HeaderText("Opciones").Template("#templateAcce").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
-               }).AllowPaging().SelectionSettings(select => select.Type(Syncfusion.EJ2.Grids.SelectionType.Single)).PageSettings(page => page.PageCount(2)).Render()
+                   col.Field("IdAccesorio").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Visible(false).Add();
+                   col.Field("Serie").HeaderText("No. Serie").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Width("50").Add();
+                   col.Field("Descripcion").HeaderText("Descripción").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("Estado").HeaderText("Estado").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Width("50").Add();
+                   //col.Field("IdAnios").HeaderText("Año").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.HeaderText("Opciones").Template("#templateAcce").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Width("50").Add();
+               }).AllowPaging().SelectionSettings(select => select.Type(Syncfusion.EJ2.Grids.SelectionType.Single)).PageSettings(page => page.PageCount(2).PageSize(5)).Render()
                 </div>
 
             </div>
@@ -35,25 +96,17 @@
     <div class="row text-center">
         <div class="col-md-12 ">
             <div class="">
-                <a class="text-succcess" href="javascript:void(0)" onclick="RowSelectAcce(${IdAccesorio})" data-toggle="tooltip" data-placement="top" title="Editar">
+                <a class="text-succcess" href="javascript:void(0)" onclick="UpdateAcce(${IdAccesorio})" data-toggle="tooltip" data-placement="top" title="Editar">
                     <i class="fa fa-edit"></i>
                 </a>
-                @*<a class="text-secondary " style="padding:0px,5px,0px,5px; margin-left:10px; margin-right:10px" href="javascript:void(0)" onclick="Usuario(${IdAccesorio})" data-toggle="tooltip" data-placement="top" title="Ver Autos">
-                    <i class="fa fa-user"> </i>
-                </a>
-                ${if(Estado==="Eliminado")}
-                <a class="text-danger" href="javascript:void(0)" onclick="ActivateEmp(${ IdAccesorio })" data-toggle="tooltip" data-placement="top" title="Activar">
-                    <i class="fa fa-check"></i>
-                </a>
-                ${else}
-                <a class="text-danger" href="javascript:void(0)" onclick="DeleteEmp(${ IdAccesorio })" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                <a class="text-danger" style="padding:0px,5px,0px,5px; margin-left:10px; margin-right:10px" href="javascript:void(0)" onclick="DeleteAcce(${ IdAccesorio })" data-toggle="tooltip" data-placement="top" title="Eliminar">
                     <i class="fa fa-remove"></i>
                 </a>
-                ${/if}*@
             </div>
         </div>
     </div>
 </script>
+<!--[I] Accesorio-->
 
 <div class="modal fade" id="AcceModal">
     <div class="modal-dialog">
@@ -68,106 +121,117 @@
 
 <script>
 
-        $(function () { AccesorioLoad(); })
+    //[I] AccesorioList
+    $(function () { AccesorioListLoad(); })
 
-    function AccesorioLoad() {
-
-            $.get('@Url.Action("AccesorioJson","Accesorio")', function (data) {
-                var grid = document.getElementById('Grid_Accesorio').ej2_instances[0]; // Grid instance
+    function AccesorioListLoad() {
+            $.get('@Url.Action("AccesorioListJson","Accesorio")', function (data) {
+                var grid = document.getElementById('Grid_AccesorioList').ej2_instances[0]; // Grid instance
                 grid.dataSource = JSON.parse(data);
             });
         }
 
-    $('#Btn_NewAcce').click(function(){
+    $('#Btn_NewAcce').click(function () {
+        RowClearSelect();
+             $.get('@Url.Action("CreateAcceList","Accesorio")', function (data) {
+                 $('#frmAcce').html(data);
+                 $('#AcceModal').modal("show");
+                });
+        });
+
+    function RowSelectAcceList(Id) {
+        //var grid = document.getElementById("Grid_AccesorioList").ej2_instances[0];
+        //var selectedRecords = grid.getSelectedRecords();
+        //if (selectedRecords.length) {
+            $.get('@Url.Action("AccesorioJson","Accesorio", new { Id = "_id_" })'.replace('_id_', Id), function (data) {
+                $("#viewAcce").removeAttr("hidden");
+                var grid = document.getElementById('Grid_Accesorio').ej2_instances[0]; // Grid instance
+                grid.dataSource = JSON.parse(data.JsonString);
+                var text ="Número de Accesorio:" +" "+ data.num;
+                $('#num').text(text);
+            });
+        //}
+    }
+
+    //[F] AccesorioList
+
+    //[I] Accesorio
+
+    function AccesorioLoad() {
+
+            $.get('@Url.Action("AccesorioJson","Accesorio")', function (data) {
+                $("#viewAcce").removeAttr("hidden");
+                var grid = document.getElementById('Grid_Accesorio').ej2_instances[0]; // Grid instance
+                grid.dataSource = JSON.parse(data.JsonString);
+                var text = "Número de Accesorio:" + " " + data.num;
+                $('#num').text(text);
+            });
+        }
+    function RowClearSelect() { $("#viewAcce").attr("hidden", true); }
+
+    $('#Btn_NewAccesorio').click(function () {
              $.get('@Url.Action("CreateAcce","Accesorio")', function (data) {
                  $('#frmAcce').html(data);
                  $('#AcceModal').modal("show");
                 });
         });
 
-        // [I] Row Select Grid
-        function RowSelectAcce(Id) {
+    function UpdateAcce(Id) {
             $.get('@Url.Action("UpdateAcce", "Accesorio", new { Id = "_id_" })'.replace('_id_', Id), function (data) {
-                $("#frmAcce").html(data);
-                $("#AcceModal").modal("show");
+                $('#frmAcce').html(data);
+                $('#AcceModal').modal("show");
             });
-
-        }
-
-        @*function Usuario(id) {
-         $.get('@Url.Action("Create","Usuario", new { Id = "_ID_"})'.replace('_ID_', id), function (data) {
-             $('#frmEmp').html(data);
-             $('#CreateEmpModal').modal("show");
-                    });
     }
 
-        function DeleteEmp(id) {
+    function DeleteAcce(id) {
 
-
-            Swal.fire({
-                position: "top",
-                title: 'Eliminar',
-                text: "Desea eliminar empleado!",
-                icon: 'warning',
-                showCancelButton: true,
-                showConfirmButton: true,
-                cancelButtonColor: '#d33',
-                confirmButtonColor: '#3085d6',
-                cancelButtonText: 'Cancelar',
-                confirmButtonText: 'Eliminar',
-                reverseButtons: true
-            }).then((result) => {
-                if (result.value) {
-                    $.get('@Url.Action("DeleteEmp","Empleado", new { Id = "_ID_"})'.replace('_ID_', id), function (data) {
-                        EmpleadoLoad();
+        
+       Swal.fire({
+            position: "top",
+            title: 'Eliminar',
+            text: "Desea eliminar accesorio!",
+            icon: 'warning',
+            showCancelButton: true,
+            showConfirmButton: true,
+            cancelButtonColor: '#d33',
+            confirmButtonColor: '#3085d6',
+            cancelButtonText: 'Cancelar',
+            confirmButtonText: 'Eliminar',
+            reverseButtons: true
+        }).then((result) => {
+            if (result.value) {
+                $.get('@Url.Action("DeleteAcce","Accesorio", new { Id = "_ID_"})'.replace('_ID_', id), function (data) {
+                    AccesorioLoad();
+                    if (data == 2) {
+                        Swal.fire({
+                            position: "top",
+                            title: "Accesorio Vendido",
+                            text: "No puede eliminarse",
+                            icon: "warning",
+                            button: "Aceptar",
+                        });
+                    } else if (data == 1) {
                         Swal.fire({
                             position: "top",
                             title: "Correcto",
-                            text: "Empleado Eliminado",
+                            text: "Accesorio Eliminado",
                             icon: "success",
                             button: "Aceptar",
                         });
-                    });
-                }
-            })
-
-
-
-
-
-        };
-        function ActivateEmp(id) {
-
-            Swal.fire({
-                position: "top",
-                title: 'Activar',
-                text: "Desea activar empleado!",
-                icon: 'warning',
-                showCancelButton: true,
-                showConfirmButton: true,
-                cancelButtonColor: '#d33',
-                confirmButtonColor: '#3085d6',
-                cancelButtonText: 'Cancelar',
-                confirmButtonText: 'Activar',
-                reverseButtons: true
-            }).then((result) => {
-                if (result.value) {
-                    $.get('@Url.Action("ActiveEmp","Empleado", new { Id = "_ID_"})'.replace('_ID_', id), function (data) {
-                        EmpleadoLoad();
+                    } else {
                         Swal.fire({
                             position: "top",
-                            title: "Correcto",
-                            text: "Empleado Activado",
-                            icon: "success",
-                            button: "Aceptar"
+                            title: "Error",
+                            text: "Error No Reconocido",
+                            icon: "warning",
+                            button: "Aceptar",
                         });
-                    })
-                }
-            })
-            
-        };*@
-        // [F] Row Select Grid
+                    }
+                });
+            }
+        })
+    };
 
-
+    //[F] Accesorio
 </script>
 

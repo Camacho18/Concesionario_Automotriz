@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Concesionaria.Models.ModelsSupport
 {
-    public class AccesorioCreate
+    public class AccesorioUpdate
     {
         public int IdAccesorio { get; set; }
         public string Serie { get; set; }

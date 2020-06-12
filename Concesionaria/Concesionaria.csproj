@@ -137,6 +137,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="AutoComplete\DropDownList.cs" />
+    <Compile Include="AutoComplete\RemoveEspace.cs" />
     <Compile Include="Controllers\AutoClienteController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\EmpleadoController.cs" />
@@ -212,14 +213,17 @@
     <Compile Include="Models\Fabrica.cs">
       <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ModelsSupport\AccesorioCreate.cs" />
+    <Compile Include="Models\ModelsSupport\AccesorioJson.cs" />
+    <Compile Include="Models\ModelsSupport\AccesorioUpdate.cs" />
     <Compile Include="Models\ModelsSupport\AutoClienteCreate.cs" />
     <Compile Include="Models\ModelsSupport\AutoClienteJson.cs" />
     <Compile Include="Models\ModelsSupport\AutomovilCreate.cs" />
     <Compile Include="Models\ModelsSupport\AutomovilJson.cs" />
     <Compile Include="Models\ModelsSupport\ClienteCreate.cs" />
     <Compile Include="Models\ModelsSupport\ClienteJson.cs" />
-    <Compile Include="Models\ModelsSupport\AccesorioCreate.cs" />
-    <Compile Include="Models\ModelsSupport\AccesorioJson.cs" />
+    <Compile Include="Models\ModelsSupport\AccesorioListCreate.cs" />
+    <Compile Include="Models\ModelsSupport\AccesorioListJson.cs" />
     <Compile Include="Models\ModelsSupport\DropDownListModel.cs" />
     <Compile Include="Models\ModelsSupport\EmpleadoCreate.cs" />
     <Compile Include="Models\ModelsSupport\EmpleadoJson.cs" />
@@ -423,6 +427,9 @@
     <Content Include="Views\Accesorio\_Create.cshtml" />
     <Content Include="Views\Accesorio\_Update.cshtml" />
     <Content Include="Views\AutoCliente\Index.cshtml" />
+    <Content Include="Views\Accesorio\_CreateAcceList.cshtml" />
+    <Content Include="Views\Accesorio\_CreateAcce.cshtml" />
+    <Content Include="Views\Accesorio\_UpdateAcce.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
