@@ -15,6 +15,7 @@ namespace Concesionaria.Controllers
     {
         private readonly ConcesionariaEntities db = new ConcesionariaEntities();
         private string JsonString = string.Empty;
+        private readonly RemoveEspace Remove = new RemoveEspace();
         private int IdSucursal, IdCliente, IdReferencia;
         // GET: Referencias
         public ActionResult Index()
@@ -62,6 +63,12 @@ namespace Concesionaria.Controllers
                 Referencias r = new Referencias();
                 try
                 {
+                    model.Numero = Remove.RemoveAllWhitespace(model.Numero);
+                    int comd = (from R in db.Referencias where R.Numero == model.Numero select R.Numero).Count();
+
+                    if (comd >= 1)
+                        return Json("2", JsonRequestBehavior.AllowGet);
+
                     r.Numero = model.Numero;
                     r.Nombre = model.Nombre;
                     r.TelCel = model.TelCel;
@@ -112,7 +119,6 @@ namespace Concesionaria.Controllers
                     Referencias refe = (from R in db.Referencias
                                     where R.IdReferencia == IdReferencia
                                     select R).SingleOrDefault();
-                    refe.Numero = model.Numero;
                     refe.Nombre = model.Nombre;
                     refe.TelCel = model.TelCel;
                     refe.IdCliente = Convert.ToInt32(Session["IdCliente"]);

@@ -1,0 +1,224 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--[I] PromocionList-->
+<br />
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row col-12">
+                    <button class="btn btn-primary col-2" id="Btn_NewProm">Nuevo +</button>
+                    <h5 class="col-8 text-center">Tipos de Promociones</h5>
+                    <div class="col-2"></div>
+                </div>
+                <br />
+                <div class="">
+                    @Html.EJS().Grid("Grid_PromocionList").RowSelected("RowClearSelect").RowDeselected("RowClearSelect").AllowResizing(true).AllowSorting().AllowFiltering().Columns(col =>
+               {
+                   col.Field("IdPromocion").HeaderText("Promoción").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Visible(false).Add();
+                   col.Field("Numero").HeaderText("Número").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("Cantidad_Auto").HeaderText("Cantidad de autos").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("Descuento").HeaderText("Descuento").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.HeaderText("Opciones").Template("#templatePromList").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+               }).AllowPaging().SelectionSettings(select => select.Type(Syncfusion.EJ2.Grids.SelectionType.Single)).PageSettings(page => page.PageCount(5).PageSize(4)).Render()
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .e-grid .e-headercell {
+        background-color: #eeeeee;
+    }
+
+    .e-grid .e-gridheader {
+        color: black;
+    }
+</style>
+
+<script id="templatePromList" type="text/x-template">
+    <div class="row text-center">
+        <div class="col-md-12 ">
+            <div class="">
+                <a class="text-succcess" href="javascript:void(0)" onclick="RowSelectPromList(${IdPromocion})" data-toggle="tooltip" data-placement="top" title="Ver Promoción">
+                    <i class="fa fa-eye"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</script>
+
+<!--[F] PromocionList-->
+<!--[I] PromocionAuto-->
+<br />
+<div id="viewProm" class="row" hidden>
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+                <div class="row col-12">
+                    <h5 class="col-12 text-center">Inventario de Promociones</h5>
+                </div>
+                <br />
+                <div class="row col-12">
+                    <button class="btn btn-primary col-2" id="Btn_NewPromocion">Nuevo +</button>
+                    <div class="col-8 text-center"><h6 id="num"></h6></div>
+                    <div class="col-2"></div>
+                </div>
+                <br />
+                <div class="">
+                    @Html.EJS().Grid("Grid_PromocionAuto").AllowResizing(true).AllowSorting().AllowFiltering().Columns(col =>
+               {
+                   col.Field("IdPromocion_Auto").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Visible(false).Add();
+                   col.Field("AutoModelo").HeaderText("Modelo de Auto").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("Anios").HeaderText("Año").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("Vigente").HeaderText("Estado").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.HeaderText("Opciones").Template("#templateProm").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+               }).AllowPaging().SelectionSettings(select => select.Type(Syncfusion.EJ2.Grids.SelectionType.Single)).PageSettings(page => page.PageCount(5).PageSize(4)).Render()
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script id="templateProm" type="text/x-template">
+    <div class="row text-center">
+        <div class="col-md-12 ">
+            <div class="">
+                <a class="text-succcess" href="javascript:void(0)" onclick="UpdateProm(${IdPromocion_Auto})" data-toggle="tooltip" data-placement="top" title="Editar">
+                    <i class="fa fa-edit"></i>
+                </a>
+                <a class="text-danger" style="padding:0px,5px,0px,5px; margin-left:10px; margin-right:10px" href="javascript:void(0)" onclick="DeleteProm(${ IdPromocion_Auto })" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                    <i class="fa fa-remove"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</script>
+<!--[I] PromocionAuto-->
+
+<div class="modal fade" id="PromModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div id="frmProm">
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+
+    //[I] PromocionList
+    $(function () { PromocionListLoad(); })
+
+    function PromocionListLoad() {
+            $.get('@Url.Action("PromocionListJson","Promocion")', function (data) {
+                var grid = document.getElementById('Grid_PromocionList').ej2_instances[0]; // Grid instance
+                grid.dataSource = JSON.parse(data);
+            });
+        }
+
+    $('#Btn_NewProm').click(function () {
+        RowClearSelect();
+             $.get('@Url.Action("CreatePromList","Promocion")', function (data) {
+                 $('#frmProm').html(data);
+                 $('#PromModal').modal("show");
+                });
+    });
+
+    function RowSelectPromList(Id) {
+        $.get('@Url.Action("PromocionAutoJson","Promocion", new { Id = "_id_" })'.replace('_id_', Id), function (data) {
+            $("#viewProm").removeAttr("hidden");
+            var grid = document.getElementById('Grid_PromocionAuto').ej2_instances[0]; // Grid instance
+            grid.dataSource = JSON.parse(data.JsonString);
+            var text ="Número de Promoción:" +" "+ data.num;
+            $('#num').text(text);
+        });
+    }
+
+    //[F] PromocionList
+
+    //[I] Accesorio
+
+    function PromocionAutoLoad() {
+
+            $.get('@Url.Action("PromocionAutoJson","Promocion")', function (data) {
+                $("#viewProm").removeAttr("hidden");
+                var grid = document.getElementById('Grid_PromocionAuto').ej2_instances[0]; // Grid instance
+                grid.dataSource = JSON.parse(data.JsonString);
+                var text = "Número de Accesorio:" + " " + data.num;
+                $('#num').text(text);
+            });
+        }
+    function RowClearSelect() { $("#viewProm").attr("hidden", true); }
+
+    $('#Btn_NewPromocion').click(function () {
+             $.get('@Url.Action("CreatePromocionAuto","Promocion")', function (data) {
+                 $('#frmProm').html(data);
+                 $('#PromModal').modal("show");
+                });
+        });
+
+    function UpdateProm(Id) {
+            $.get('@Url.Action("UpdatePromocion", "Promocion", new { Id = "_id_" })'.replace('_id_', Id), function (data) {
+                $('#frmProm').html(data);
+                $('#PromModal').modal("show");
+            });
+    }
+
+    function DeleteProm(id) {
+       Swal.fire({
+            position: "top",
+            title: 'Eliminar',
+            text: "Desea eliminar la promoción!",
+            icon: 'warning',
+            showCancelButton: true,
+            showConfirmButton: true,
+            cancelButtonColor: '#d33',
+            confirmButtonColor: '#3085d6',
+            cancelButtonText: 'Cancelar',
+            confirmButtonText: 'Eliminar',
+            reverseButtons: true
+        }).then((result) => {
+            if (result.value) {
+                $.get('@Url.Action("DeletePromocion","Promocion", new { Id = "_ID_"})'.replace('_ID_', id), function (data) {
+                    PromocionAutoLoad();
+                    if (data == 2) {
+                        Swal.fire({
+                            position: "top",
+                            title: "Promoción Aplicada",
+                            text: "No puede eliminarse",
+                            icon: "warning",
+                            button: "Aceptar",
+                        });
+                    } else if (data == 1) {
+                        Swal.fire({
+                            position: "top",
+                            title: "Correcto",
+                            text: "Promoción Eliminada",
+                            icon: "success",
+                            button: "Aceptar",
+                        });
+                    } else {
+                        Swal.fire({
+                            position: "top",
+                            title: "Error",
+                            text: "Error No Reconocido",
+                            icon: "warning",
+                            button: "Aceptar",
+                        });
+                    }
+                });
+            }
+        })
+    };
+
+    //[F] Accesorio
+</script>
+

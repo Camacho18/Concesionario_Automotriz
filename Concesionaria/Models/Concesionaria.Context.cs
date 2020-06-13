@@ -46,11 +46,11 @@ namespace Concesionaria.Models
         public virtual DbSet<Origen_Traspaso> Origen_Traspaso { get; set; }
         public virtual DbSet<OrigenEstado> OrigenEstado { get; set; }
         public virtual DbSet<Pais> Pais { get; set; }
+        public virtual DbSet<Promocion_Auto> Promocion_Auto { get; set; }
         public virtual DbSet<PromocionList> PromocionList { get; set; }
         public virtual DbSet<Referencias> Referencias { get; set; }
         public virtual DbSet<TipoEmpleado> TipoEmpleado { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<VentaAuto> VentaAuto { get; set; }
-        public virtual DbSet<Promocion_Auto> Promocion_Auto { get; set; }
     }
 }

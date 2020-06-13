@@ -28,7 +28,7 @@
                    col.Field("Correo").HeaderText("Correo").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
                    col.Field("RFC").HeaderText("RFC").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
                    col.Field("Estado").HeaderText("Estado").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
-                   col.HeaderText("Acción").Template("#templateClte").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.HeaderText("Opciones").Template("#templateClte").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
                }).AllowPaging().SelectionSettings(select => select.Type(Syncfusion.EJ2.Grids.SelectionType.Single)).PageSettings(page => page.PageCount(11)).Render()
 
                 </div>
@@ -36,6 +36,15 @@
         </div>
     </div>
 </div>
+<style>
+    .e-grid .e-headercell {
+        background-color: #eeeeee;
+    }
+
+    .e-grid .e-gridheader {
+        color: black;
+    }
+</style>
 
 <script id="templateClte" type="text/x-template">
     <div class="row text-center">
@@ -56,7 +65,7 @@
                 ${if(Estado=="Inactivo")}
                 ${else}
                 <a class="text-succcess"  href="javascript:void(0)" onclick="Options(${IdCliente})" data-toggle="tooltip" data-placement="top" title="Detalles">
-                    <i class="fa fa-ellipsis-h"></i>
+                    <i class="fa fa-eye"></i>
                 </a>
                 ${/if}
             </div>

@@ -1,12 +1,15 @@
-﻿@model Concesionaria.Models.ModelsSupport.ReferenciaCreate
+﻿@model Concesionaria.Models.ModelsSupport.PromocionListCreate
+@{
+    Layout = null;
+}
 
-@using (Ajax.BeginForm("CreateRef", "Referencias", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "frmRef", OnSuccess = "SuccessRef_C" }))
+@using (Ajax.BeginForm("CreatePromList", "Promocion", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "frmProm", OnSuccess = "SuccessProm_C" }))
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
         <div class="modal-header">
-            <h5 class="modal-title">Nueva Referencias</h5>
+            <h5 class="modal-title">Nuevo Accesorio</h5>
             <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
         </div>
         <div class="modal-body">
@@ -18,29 +21,22 @@
                     @Html.ValidationMessageFor(model => model.Numero, "", new { @class = "text-danger" })
                 </div>
             </div>
+
             <div class="form-group">
-                @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.LabelFor(model => model.Cantidad_Auto, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+                    @Html.EditorFor(model => model.Cantidad_Auto, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Cantidad_Auto, "", new { @class = "text-danger" })
                 </div>
             </div>
 
             <div class="form-group">
-                @Html.LabelFor(model => model.TelCel, htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.LabelFor(model => model.Descuento, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.TelCel, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.TelCel, "", new { @class = "text-danger" })
+                    @Html.EditorFor(model => model.Descuento, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Descuento, "", new { @class = "text-danger" })
                 </div>
             </div>
-
-            @*<div class="form-group">
-            @Html.LabelFor(model => model.IdCliente, "IdCliente", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("IdCliente", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.IdCliente, "", new { @class = "text-danger" })
-            </div>
-        </div>*@
 
         </div>
         <div class="modal-footer">
@@ -51,31 +47,32 @@
 }
 
 <script>
-    function SuccessRef_C(data) {
+    function SuccessProm_C(data) {
+        PromocionListLoad();
         if (data == "1") {
-            $('#CreateRefModal').modal("hide");
-            ReferenciasLoad();
+            $('#PromModal').modal("hide");
+
             Swal.fire({
                 position: "top",
                 title: "Correcto",
-                text: "Referencia Creada",
+                text: "Promoción Creada",
                 icon: "success",
                 button: "Aceptar",
             });
         }
         else if (data == "2") {
-            $('#CreateRefModal').modal("hide");
+            $('#PromModal').modal("hide");
 
             Swal.fire({
                 position: "top",
                 title: "Atención",
-                text: "Numero de referencia ya existente",
+                text: "Numero de promoción existente",
                 icon: "warning",
                 button: "Aceptar",
             });
         }
         else {
-            $('#CreateRefErrorModal').modal("hide");
+            $('#PromEmpModal').modal("hide");
 
             Swal.fire({
                 position: "top",
@@ -85,5 +82,7 @@
                 button: "Aceptar",
             });
         }
+
     }
 </script>
+

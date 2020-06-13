@@ -1,0 +1,65 @@
+﻿@model Concesionaria.Models.ModelsSupport.PromocionAutoCreate
+@{
+    Layout = null;
+}
+@using (Ajax.BeginForm("CreatePromocionAuto", "Promocion", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "frmProm", OnSuccess = "SuccessPromAuto_C" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <div class="modal-header">
+            <h5 class="modal-title">Nueva Promoción</h5>
+            <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.IdAutoModelo, "IdAutoModelo", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.IdAutoModelo, new SelectList(ViewBag.AutoModelo, "Id", "Value"), htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.IdAutoModelo, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.IdAnios, "IdAnios", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.IdAnios, new SelectList(ViewBag.Anios, "Id", "Value"), htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.IdAnios, "", new { @class = "text-danger" })
+                </div>
+            </div>
+           
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-success">Aceptar</button>
+        </div>
+    </div>
+}
+<script>
+    function SuccessPromAuto_C(data) {
+        PromocionAutoLoad();
+        if (data == "1") {
+            $('#PromModal').modal("hide");
+            Swal.fire({
+                position: "top",
+                title: "Correcto",
+                text: "Promoción Creada",
+                icon: "success",
+                button: "Aceptar",
+            });
+        }
+        else {
+            $('#PromEmpModal').modal("hide");
+
+            Swal.fire({
+                position: "top",
+                title: "Error",
+                text: "Error No Reconocido",
+                icon: "warning",
+                button: "Aceptar",
+            });
+        }
+
+    }
+</script>
