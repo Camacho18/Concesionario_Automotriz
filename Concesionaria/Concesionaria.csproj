@@ -139,6 +139,7 @@
     <Compile Include="AutoComplete\DropDownList.cs" />
     <Compile Include="AutoComplete\RemoveEspace.cs" />
     <Compile Include="Controllers\AutoClienteController.cs" />
+    <Compile Include="Controllers\AutoController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\EmpleadoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -433,6 +434,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Auto\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
