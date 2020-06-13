@@ -152,67 +152,67 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Accesorio.cs">
-      <DependentUpon>Concesinaria.tt</DependentUpon>
+      <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AccesorioList.cs">
-      <DependentUpon>Concesinaria.tt</DependentUpon>
+      <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Anios.cs">
-      <DependentUpon>Concesinaria.tt</DependentUpon>
+      <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AutoAccesorio.cs">
-      <DependentUpon>Concesinaria.tt</DependentUpon>
+      <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AutoCliente.cs">
-      <DependentUpon>Concesinaria.tt</DependentUpon>
+      <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AutoColorList.cs">
-      <DependentUpon>Concesinaria.tt</DependentUpon>
+      <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AutoEstadoList.cs">
-      <DependentUpon>Concesinaria.tt</DependentUpon>
+      <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AutoMarca.cs">
-      <DependentUpon>Concesinaria.tt</DependentUpon>
+      <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AutoModelo.cs">
-      <DependentUpon>Concesinaria.tt</DependentUpon>
+      <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Automovil.cs">
-      <DependentUpon>Concesinaria.tt</DependentUpon>
+      <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Cliente.cs">
-      <DependentUpon>Concesinaria.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Concesinaria.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Concesinaria.Context.tt</DependentUpon>
+      <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Concesinaria.cs">
-      <DependentUpon>Concesinaria.tt</DependentUpon>
+      <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Concesinaria.Designer.cs">
+    <Compile Include="Models\Concesionaria.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Concesinaria.edmx</DependentUpon>
+      <DependentUpon>Concesionaria.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Concesinaria1.cs">
+    <Compile Include="Models\Concesionaria.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Concesinaria.tt</DependentUpon>
+      <DependentUpon>Concesionaria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Concesionaria.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Concesionaria.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Empleado.cs">
-      <DependentUpon>Concesinaria.tt</DependentUpon>
+      <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Estado.cs">
-      <DependentUpon>Concesinaria.tt</DependentUpon>
+      <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Estado_Cliente.cs">
-      <DependentUpon>Concesinaria.tt</DependentUpon>
+      <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Fabrica.cs">
-      <DependentUpon>Concesinaria.tt</DependentUpon>
+      <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ModelsSupport\AccesorioCreate.cs" />
     <Compile Include="Models\ModelsSupport\AccesorioJson.cs" />
@@ -237,37 +237,37 @@
     <Compile Include="Models\ModelsSupport\ReferenciaJson.cs" />
     <Compile Include="Models\ModelsSupport\UsuarioModel.cs" />
     <Compile Include="Models\Municipio.cs">
-      <DependentUpon>Concesinaria.tt</DependentUpon>
+      <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\OrigenEstado.cs">
-      <DependentUpon>Concesinaria.tt</DependentUpon>
+      <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Origen_Fabrica.cs">
-      <DependentUpon>Concesinaria.tt</DependentUpon>
+      <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Origen_Traspaso.cs">
-      <DependentUpon>Concesinaria.tt</DependentUpon>
+      <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Pais.cs">
-      <DependentUpon>Concesinaria.tt</DependentUpon>
+      <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PromocionList.cs">
-      <DependentUpon>Concesinaria.tt</DependentUpon>
+      <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Promocion_Auto.cs">
-      <DependentUpon>Concesinaria.tt</DependentUpon>
+      <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Referencias.cs">
-      <DependentUpon>Concesinaria.tt</DependentUpon>
+      <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TipoEmpleado.cs">
-      <DependentUpon>Concesinaria.tt</DependentUpon>
+      <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Usuario.cs">
-      <DependentUpon>Concesinaria.tt</DependentUpon>
+      <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\VentaAuto.cs">
-      <DependentUpon>Concesinaria.tt</DependentUpon>
+      <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -352,15 +352,15 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\Concesinaria.Context.tt">
+    <Content Include="Models\Concesionaria.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Concesinaria.edmx</DependentUpon>
-      <LastGenOutput>Concesinaria.Context.cs</LastGenOutput>
+      <DependentUpon>Concesionaria.edmx</DependentUpon>
+      <LastGenOutput>Concesionaria.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Concesinaria.tt">
+    <Content Include="Models\Concesionaria.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Concesinaria.edmx</DependentUpon>
-      <LastGenOutput>Concesinaria1.cs</LastGenOutput>
+      <DependentUpon>Concesionaria.edmx</DependentUpon>
+      <LastGenOutput>Concesionaria.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -376,12 +376,12 @@
     <Content Include="Assets\images\icon\Thumbs.db" />
     <Content Include="Scripts\ej2\ej2.min.js" />
     <Content Include="Scripts\ej2\ej2.min.js.map" />
-    <EntityDeploy Include="Models\Concesinaria.edmx">
+    <EntityDeploy Include="Models\Concesionaria.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Concesinaria.Designer.cs</LastGenOutput>
+      <LastGenOutput>Concesionaria.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\Concesinaria.edmx.diagram">
-      <DependentUpon>Concesinaria.edmx</DependentUpon>
+    <Content Include="Models\Concesionaria.edmx.diagram">
+      <DependentUpon>Concesionaria.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
