@@ -97,14 +97,6 @@
                     @Html.ValidationMessageFor(model => model.IdMunicipio, "", new { @class = "text-danger" })
                 </div>
             </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.IdEstado_Cliente, "IdEstado_Cliente", htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.DropDownListFor(model => model.IdEstado_Cliente, new SelectList(ViewBag.EstadoCliente, "Id", "Value"), htmlAttributes: new { @class = "custom-select custom-select-md", @data_style = "btn btn-primary btn-round" })
-                    @Html.ValidationMessageFor(model => model.IdEstado_Cliente, "", new { @class = "text-danger" })
-                </div>
-            </div>
         </div>
 
             <div class="modal-footer">
@@ -127,7 +119,29 @@
                     icon: "success",
                     button: "Aceptar",
                 });
-            }
+         }
+         else if (data == "2") {
+            $('#CreateClteModal').modal("hide");
+            Swal.fire({
+                position: "top",
+                title: "Atención",
+                text: "Numero de cliente ya existente",
+                icon: "warning",
+                button: "Aceptar",
+            });
+        }
+        else {
+            $('#CreateErrorModal').modal("hide");
+
+            Swal.fire({
+                position: "top",
+                title: "Error",
+                text: "Error No Reconocido",
+                icon: "warning",
+                button: "Aceptar",
+            });
+        }
+
         }
 </script>
 }

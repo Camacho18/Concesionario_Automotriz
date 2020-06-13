@@ -144,6 +144,7 @@
     <Compile Include="Controllers\EmpleadoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\PromocionController.cs" />
     <Compile Include="Controllers\ReferenciasController.cs" />
     <Compile Include="Controllers\AccesorioController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
@@ -229,6 +230,10 @@
     <Compile Include="Models\ModelsSupport\EmpleadoCreate.cs" />
     <Compile Include="Models\ModelsSupport\EmpleadoJson.cs" />
     <Compile Include="Models\ModelsSupport\Login.cs" />
+    <Compile Include="Models\ModelsSupport\PromocionAutoCreate.cs" />
+    <Compile Include="Models\ModelsSupport\PromocionAutoJson.cs" />
+    <Compile Include="Models\ModelsSupport\PromocionListCreate.cs" />
+    <Compile Include="Models\ModelsSupport\PromocionListJson.cs" />
     <Compile Include="Models\ModelsSupport\ReferenciaCreate.cs" />
     <Compile Include="Models\ModelsSupport\ReferenciaJson.cs" />
     <Compile Include="Models\ModelsSupport\UsuarioModel.cs" />
@@ -431,6 +436,9 @@
     <Content Include="Views\Accesorio\_CreateAcceList.cshtml" />
     <Content Include="Views\Accesorio\_CreateAcce.cshtml" />
     <Content Include="Views\Accesorio\_UpdateAcce.cshtml" />
+    <Content Include="Views\Promocion\Index.cshtml" />
+    <Content Include="Views\Promocion\_CreatePromList.cshtml" />
+    <Content Include="Views\Promocion\_CreatePromAuto.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

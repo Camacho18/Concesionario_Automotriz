@@ -17,6 +17,7 @@ namespace Concesionaria.Controllers
         private readonly ConcesionariaEntities db = new ConcesionariaEntities();
         private readonly DropDownList Model = new DropDownList();
         private string JsonString = string.Empty;
+        private readonly RemoveEspace Remove = new RemoveEspace();
         private int IdUsuario, IdSucursal, IdCliente;
         // GET: Cliente
         public ActionResult Index()
@@ -53,7 +54,6 @@ namespace Concesionaria.Controllers
         public ActionResult CreateClte()
         {
             ViewBag.Municipio = Model.Municipio();
-            ViewBag.EstadoCliente = Model.EstadoCliente();
             return PartialView("_CreateCliente");
         }
 
@@ -65,7 +65,6 @@ namespace Concesionaria.Controllers
             {
 
                 ViewBag.Municipio = Model.Municipio();
-                ViewBag.EstadoCliente = Model.EstadoCliente();
                 return PartialView("_CreateCliente", model);
             }
             else
@@ -73,6 +72,12 @@ namespace Concesionaria.Controllers
                 Cliente clte = new Cliente();
                 try
                 {
+                    model.Numero = Remove.RemoveAllWhitespace(model.Numero);
+                    int comd = (from C in db.Cliente where C.Numero == model.Numero select C.IdEstado_Cliente).Count();
+
+                    if (comd >= 1)
+                        return Json("2", JsonRequestBehavior.AllowGet);
+
                     clte.Numero = model.Numero;
                     clte.Nombre = model.Nombre;                    
                     clte.Direccion = model.Direccion;
@@ -83,7 +88,7 @@ namespace Concesionaria.Controllers
                     clte.Correo = model.Correo;
                     clte.RFC = model.RFC;
                     clte.IdMunicipio = model.IdMunicipio;
-                    clte.IdEstado_Cliente = model.IdEstado_Cliente;
+                    clte.IdEstado_Cliente = 1;
                     db.Cliente.Add(clte);
                     db.SaveChanges();
 
@@ -128,7 +133,6 @@ namespace Concesionaria.Controllers
             {
 
                 ViewBag.Municipio = Model.Municipio();
-                ViewBag.EstadoCliente = Model.EstadoCliente();
                 return PartialView("_UpdateCliente", model);
             }
             else
@@ -148,7 +152,7 @@ namespace Concesionaria.Controllers
                     clte.Correo = model.Correo;
                     clte.RFC = model.RFC;
                     clte.IdMunicipio = model.IdMunicipio;
-                    clte.IdEstado_Cliente = model.IdEstado_Cliente;
+                    clte.IdEstado_Cliente = 1;
                     db.SaveChanges();
 
                     return Json("1", JsonRequestBehavior.AllowGet);

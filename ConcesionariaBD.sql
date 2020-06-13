@@ -82,7 +82,7 @@ create table AutoModelo(
 	)
 
 CREATE TABLE Promocion_Auto(
-	IdPromocion_Auto INT IDENTITY(1,1),
+	IdPromocion_Auto INT IDENTITY(1,1) PRIMARY KEY,
 	IdAutoModelo int foreign key (IdAutoModelo) references AutoModelo(IdAutoModelo),
 	IdAnios int foreign key (IdAnios) references Anios(IdAnios),
 	IdPromocion int foreign key (IdPromocion) references PromocionList(IdPromocion),
