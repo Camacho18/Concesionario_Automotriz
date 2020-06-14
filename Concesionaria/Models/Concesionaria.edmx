@@ -215,6 +215,7 @@
           <Property Name="Numero" Type="varchar" MaxLength="30" />
           <Property Name="Cantidad_Auto" Type="int" />
           <Property Name="Descuento" Type="int" />
+          <Property Name="FechaVigencia" Type="date" />
         </EntityType>
         <EntityType Name="Referencias">
           <Key>
@@ -1188,8 +1189,14 @@
           <Property Name="Numero" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="Cantidad_Auto" Type="Int32" />
           <Property Name="Descuento" Type="Int32" />
+<<<<<<< HEAD
           <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__Promocion__IdPro__44FF419A" FromRole="PromocionList" ToRole="Promocion_Auto" />
           <NavigationProperty Name="VentaAuto" Relationship="Self.FK__VentaAuto__IdPro__787EE5A0" FromRole="PromocionList" ToRole="VentaAuto" />
+=======
+          <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__Promocion__IdPro__6A30C649" FromRole="PromocionList" ToRole="Promocion_Auto" />
+          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__VentaAuto__IdPro__1DB06A4F" FromRole="PromocionList" ToRole="VentaAuto" />
+          <Property Name="FechaVigencia" Type="DateTime" Precision="0" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="Referencias">
           <Key>
@@ -2130,6 +2137,7 @@
           <EntitySetMapping Name="PromocionList">
             <EntityTypeMapping TypeName="ConcesionariaModel.PromocionList">
               <MappingFragment StoreEntitySet="PromocionList">
+                <ScalarProperty Name="FechaVigencia" ColumnName="FechaVigencia" />
                 <ScalarProperty Name="IdPromocion" ColumnName="IdPromocion" />
                 <ScalarProperty Name="Numero" ColumnName="Numero" />
                 <ScalarProperty Name="Cantidad_Auto" ColumnName="Cantidad_Auto" />
