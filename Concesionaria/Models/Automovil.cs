@@ -19,6 +19,7 @@ namespace Concesionaria.Models
         {
             this.AutoAccesorio = new HashSet<AutoAccesorio>();
             this.AutoCliente = new HashSet<AutoCliente>();
+            this.Mantenimiento = new HashSet<Mantenimiento>();
             this.Origen_Fabrica = new HashSet<Origen_Fabrica>();
             this.Origen_Traspaso = new HashSet<Origen_Traspaso>();
         }
@@ -38,6 +39,8 @@ namespace Concesionaria.Models
         public virtual AutoColorList AutoColorList { get; set; }
         public virtual AutoEstadoList AutoEstadoList { get; set; }
         public virtual AutoModelo AutoModelo { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Mantenimiento> Mantenimiento { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Origen_Fabrica> Origen_Fabrica { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

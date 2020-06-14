@@ -12,12 +12,14 @@ namespace Concesionaria.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdiagrams
+    public partial class Manten_Autopar
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public int IdManten_Autopar { get; set; }
+        public Nullable<decimal> Precio { get; set; }
+        public Nullable<int> IdMantenimiento { get; set; }
+        public Nullable<int> IdAutopartes { get; set; }
+    
+        public virtual Autopartes Autopartes { get; set; }
+        public virtual Mantenimiento Mantenimiento { get; set; }
     }
 }

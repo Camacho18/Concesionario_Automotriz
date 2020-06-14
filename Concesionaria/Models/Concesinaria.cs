@@ -18,6 +18,7 @@ namespace Concesionaria.Models
         public Concesinaria()
         {
             this.Accesorio = new HashSet<Accesorio>();
+            this.Autopartes = new HashSet<Autopartes>();
             this.Empleado = new HashSet<Empleado>();
             this.Origen_Traspaso = new HashSet<Origen_Traspaso>();
             this.Promocion_Auto = new HashSet<Promocion_Auto>();
@@ -31,6 +32,8 @@ namespace Concesionaria.Models
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Accesorio> Accesorio { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Autopartes> Autopartes { get; set; }
         public virtual Municipio Municipio { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Empleado> Empleado { get; set; }

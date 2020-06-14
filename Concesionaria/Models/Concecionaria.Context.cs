@@ -12,8 +12,6 @@ namespace Concesionaria.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    using System.Data.Entity.Core.Objects;
-    using System.Linq;
     
     public partial class ConcesionariaEntities : DbContext
     {
@@ -37,12 +35,17 @@ namespace Concesionaria.Models
         public virtual DbSet<AutoMarca> AutoMarca { get; set; }
         public virtual DbSet<AutoModelo> AutoModelo { get; set; }
         public virtual DbSet<Automovil> Automovil { get; set; }
+        public virtual DbSet<Autopartes> Autopartes { get; set; }
+        public virtual DbSet<CategoriaAutoparte> CategoriaAutoparte { get; set; }
         public virtual DbSet<Cliente> Cliente { get; set; }
         public virtual DbSet<Concesinaria> Concesinaria { get; set; }
         public virtual DbSet<Empleado> Empleado { get; set; }
         public virtual DbSet<Estado> Estado { get; set; }
         public virtual DbSet<Estado_Cliente> Estado_Cliente { get; set; }
         public virtual DbSet<Fabrica> Fabrica { get; set; }
+        public virtual DbSet<Manten_Autopar> Manten_Autopar { get; set; }
+        public virtual DbSet<MantenEstado> MantenEstado { get; set; }
+        public virtual DbSet<Mantenimiento> Mantenimiento { get; set; }
         public virtual DbSet<Municipio> Municipio { get; set; }
         public virtual DbSet<Origen_Fabrica> Origen_Fabrica { get; set; }
         public virtual DbSet<Origen_Traspaso> Origen_Traspaso { get; set; }
@@ -51,42 +54,8 @@ namespace Concesionaria.Models
         public virtual DbSet<Promocion_Auto> Promocion_Auto { get; set; }
         public virtual DbSet<PromocionList> PromocionList { get; set; }
         public virtual DbSet<Referencias> Referencias { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<TipoEmpleado> TipoEmpleado { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<VentaAuto> VentaAuto { get; set; }
-    
-        public virtual int SP_Automovil_Create_Fabrica(Nullable<int> idFabrica, string numeroF, Nullable<int> idUsuario, string numeroA, Nullable<int> idAnio, Nullable<int> idAutoModelo, Nullable<int> idAutoColor, ObjectParameter bandera)
-        {
-            var idFabricaParameter = idFabrica.HasValue ?
-                new ObjectParameter("IdFabrica", idFabrica) :
-                new ObjectParameter("IdFabrica", typeof(int));
-    
-            var numeroFParameter = numeroF != null ?
-                new ObjectParameter("NumeroF", numeroF) :
-                new ObjectParameter("NumeroF", typeof(string));
-    
-            var idUsuarioParameter = idUsuario.HasValue ?
-                new ObjectParameter("IdUsuario", idUsuario) :
-                new ObjectParameter("IdUsuario", typeof(int));
-    
-            var numeroAParameter = numeroA != null ?
-                new ObjectParameter("NumeroA", numeroA) :
-                new ObjectParameter("NumeroA", typeof(string));
-    
-            var idAnioParameter = idAnio.HasValue ?
-                new ObjectParameter("IdAnio", idAnio) :
-                new ObjectParameter("IdAnio", typeof(int));
-    
-            var idAutoModeloParameter = idAutoModelo.HasValue ?
-                new ObjectParameter("IdAutoModelo", idAutoModelo) :
-                new ObjectParameter("IdAutoModelo", typeof(int));
-    
-            var idAutoColorParameter = idAutoColor.HasValue ?
-                new ObjectParameter("IdAutoColor", idAutoColor) :
-                new ObjectParameter("IdAutoColor", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_Automovil_Create_Fabrica", idFabricaParameter, numeroFParameter, idUsuarioParameter, numeroAParameter, idAnioParameter, idAutoModeloParameter, idAutoColorParameter, bandera);
-        }
     }
 }

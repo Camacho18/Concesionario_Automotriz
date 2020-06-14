@@ -17,6 +17,7 @@ namespace Concesionaria.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Usuario()
         {
+            this.Mantenimiento = new HashSet<Mantenimiento>();
             this.Origen_Fabrica = new HashSet<Origen_Fabrica>();
             this.Origen_Traspaso = new HashSet<Origen_Traspaso>();
             this.Origen_Traspaso1 = new HashSet<Origen_Traspaso>();
@@ -30,6 +31,8 @@ namespace Concesionaria.Models
         public Nullable<int> IdEmpleado { get; set; }
     
         public virtual Empleado Empleado { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Mantenimiento> Mantenimiento { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Origen_Fabrica> Origen_Fabrica { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

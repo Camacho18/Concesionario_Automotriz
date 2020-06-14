@@ -60,7 +60,8 @@ create table PromocionList(
 	IdPromocion int identity(1,1) primary key,
 	Numero VARCHAR(30),
 	Cantidad_Auto INT,
-	Descuento INT
+	Descuento INT,
+	FechaVigencia date
 )
 
 -- __________________________________________________________________ Automovil
