@@ -147,7 +147,27 @@ namespace Concesionaria.Controllers
             }
         }
 
-        // GET: Promocion/Delete/5      
+        // GET: Promocion/Delete/5   
+        public ActionResult DeletePromocion(int Id)
+        {
+            try
+            {
+                var m = (from PA in db.Promocion_Auto where PA.IdPromocion_Auto == Id select PA).FirstOrDefault();
+                if (m.Vigente == true)
+                    return Json("2", JsonRequestBehavior.AllowGet);
+                else
+                {
+                    db.Promocion_Auto.Remove(m);
+                    db.SaveChanges();
+                    return Json("1", JsonRequestBehavior.AllowGet);
+                }
+            }
+            catch
+            {
+                return Json("0", JsonRequestBehavior.AllowGet);
+            }
+
+        }
 
     }
 }
