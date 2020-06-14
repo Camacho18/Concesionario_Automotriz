@@ -89,9 +89,6 @@
     <div class="row text-center">
         <div class="col-md-12 ">
             <div class="">
-                <a class="text-succcess" href="javascript:void(0)" onclick="UpdateProm(${IdPromocion_Auto})" data-toggle="tooltip" data-placement="top" title="Editar">
-                    <i class="fa fa-edit"></i>
-                </a>
                 <a class="text-danger" style="padding:0px,5px,0px,5px; margin-left:10px; margin-right:10px" href="javascript:void(0)" onclick="DeleteProm(${ IdPromocion_Auto })" data-toggle="tooltip" data-placement="top" title="Eliminar">
                     <i class="fa fa-remove"></i>
                 </a>
@@ -165,13 +162,6 @@
                 });
         });
 
-    function UpdateProm(Id) {
-            $.get('@Url.Action("UpdatePromocion", "Promocion", new { Id = "_id_" })'.replace('_id_', Id), function (data) {
-                $('#frmProm').html(data);
-                $('#PromModal').modal("show");
-            });
-    }
-
     function DeleteProm(id) {
        Swal.fire({
             position: "top",
@@ -192,8 +182,8 @@
                     if (data == 2) {
                         Swal.fire({
                             position: "top",
-                            title: "Promoción Aplicada",
-                            text: "No puede eliminarse",
+                            title: "Promoción Vigente",
+                            text: "No se puede eliminar",
                             icon: "warning",
                             button: "Aceptar",
                         });
