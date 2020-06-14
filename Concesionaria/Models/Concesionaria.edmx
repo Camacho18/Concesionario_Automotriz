@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ConcesionariaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ConcesionariaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Accesorio">
           <Key>
             <PropertyRef Name="IdAccesorio" />
@@ -215,6 +215,7 @@
           <Property Name="Numero" Type="varchar" MaxLength="30" />
           <Property Name="Cantidad_Auto" Type="int" />
           <Property Name="Descuento" Type="int" />
+          <Property Name="FechaVigencia" Type="date" />
         </EntityType>
         <EntityType Name="Referencias">
           <Key>
@@ -890,8 +891,7 @@
             <End Role="VentaAuto" EntitySet="VentaAuto" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ConcesionariaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -1170,6 +1170,7 @@
           <Property Name="Descuento" Type="Int32" />
           <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__Promocion__IdPro__6A30C649" FromRole="PromocionList" ToRole="Promocion_Auto" />
           <NavigationProperty Name="VentaAuto" Relationship="Self.FK__VentaAuto__IdPro__1DB06A4F" FromRole="PromocionList" ToRole="VentaAuto" />
+          <Property Name="FechaVigencia" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="Referencias">
           <Key>
@@ -2089,6 +2090,7 @@
           <EntitySetMapping Name="PromocionList">
             <EntityTypeMapping TypeName="ConcesionariaModel.PromocionList">
               <MappingFragment StoreEntitySet="PromocionList">
+                <ScalarProperty Name="FechaVigencia" ColumnName="FechaVigencia" />
                 <ScalarProperty Name="IdPromocion" ColumnName="IdPromocion" />
                 <ScalarProperty Name="Numero" ColumnName="Numero" />
                 <ScalarProperty Name="Cantidad_Auto" ColumnName="Cantidad_Auto" />

@@ -39,7 +39,8 @@ namespace Concesionaria.Controllers
                                                 IdPromocion = P.IdPromocion,
                                                 Numero = P.Numero,
                                                 Cantidad_Auto = P.Cantidad_Auto,
-                                                Descuento = P.Descuento
+                                                Descuento = P.Descuento,
+                                                FechaVigencia = P.FechaVigencia                                                
                                             }).ToList();
             JsonString = JsonConvert.SerializeObject(json);
             return Json(JsonString, JsonRequestBehavior.AllowGet);
@@ -71,9 +72,17 @@ namespace Concesionaria.Controllers
                     if (comd >= 1)
                         return Json("2", JsonRequestBehavior.AllowGet);
 
+                    DateTime actual = DateTime.Now.Date;
+                    DateTime date = Convert.ToDateTime(model.FechaVigencia).Date;
+                    int comp = DateTime.Compare(actual, date);
+
+                    if (comp >= 0)
+                        return Json("3", JsonRequestBehavior.AllowGet);                    
+
                     modeladd.Numero = model.Numero;
                     modeladd.Cantidad_Auto = model.Cantidad_Auto;
                     modeladd.Descuento = model.Descuento;
+                    modeladd.FechaVigencia = model.FechaVigencia;
                     db.PromocionList.Add(modeladd);
                     db.SaveChanges();
 
@@ -129,6 +138,7 @@ namespace Concesionaria.Controllers
             else
             {
                 Promocion_Auto pa = new Promocion_Auto();
+                
                 try
                 {
                     pa.IdAutoModelo = model.IdAutoModelo;

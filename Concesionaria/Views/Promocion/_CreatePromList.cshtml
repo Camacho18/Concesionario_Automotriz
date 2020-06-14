@@ -37,6 +37,13 @@
                     @Html.ValidationMessageFor(model => model.Descuento, "", new { @class = "text-danger" })
                 </div>
             </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.FechaVigencia, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.FechaVigencia, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.FechaVigencia, "", new { @class = "text-danger" })
+                </div>
+            </div>
 
         </div>
         <div class="modal-footer">
@@ -67,6 +74,17 @@
                 position: "top",
                 title: "Atención",
                 text: "Numero de promoción existente",
+                icon: "warning",
+                button: "Aceptar",
+            });
+        }
+        else if (data == "3") {
+            $('#PromModal').modal("hide");
+
+            Swal.fire({
+                position: "top",
+                title: "Atención",
+                text: "La fecha de vigencia no es valida",
                 icon: "warning",
                 button: "Aceptar",
             });

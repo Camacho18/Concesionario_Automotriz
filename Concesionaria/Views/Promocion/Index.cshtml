@@ -22,6 +22,7 @@
                    col.Field("Numero").HeaderText("Número").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
                    col.Field("Cantidad_Auto").HeaderText("Cantidad de autos").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
                    col.Field("Descuento").HeaderText("Descuento").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("FechaVigencia").HeaderText("Fecha de vigencia").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Type("date").Format("yMd").Add();
                    col.HeaderText("Opciones").Template("#templatePromList").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
                }).AllowPaging().SelectionSettings(select => select.Type(Syncfusion.EJ2.Grids.SelectionType.Single)).PageSettings(page => page.PageCount(5).PageSize(4)).Render()
                 </div>

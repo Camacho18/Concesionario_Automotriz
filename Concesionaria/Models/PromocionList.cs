@@ -25,6 +25,7 @@ namespace Concesionaria.Models
         public string Numero { get; set; }
         public Nullable<int> Cantidad_Auto { get; set; }
         public Nullable<int> Descuento { get; set; }
+        public Nullable<System.DateTime> FechaVigencia { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Promocion_Auto> Promocion_Auto { get; set; }
