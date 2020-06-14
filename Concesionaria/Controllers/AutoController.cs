@@ -15,9 +15,9 @@ namespace Concesionaria.Controllers
         }
 
         // GET: Auto/Details/5
-        public ActionResult Details(int id)
+        public ActionResult CreateAuto()
         {
-            return View();
+            return View("_Create");
         }
 
         // GET: Auto/Create

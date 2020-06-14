@@ -253,15 +253,7 @@
           <Property Name="IdPromocion" Type="int" />
           <Property Name="IdCliente" Type="int" />
         </EntityType>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Accesorio__IdAcc__7C4F7684">
-=======
-        <Association Name="FK__Accesorio__IdAcc__5629CD9C">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Accesorio__IdAcc__5629CD9C">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Accesorio__IdAcc__571DF1D5">
           <End Role="AccesorioList" Type="Self.AccesorioList" Multiplicity="0..1" />
           <End Role="Accesorio" Type="Self.Accesorio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -273,15 +265,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Accesorio__IdAni__797309D9">
-=======
-        <Association Name="FK__Accesorio__IdAni__534D60F1">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Accesorio__IdAni__534D60F1">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Accesorio__IdAni__5441852A">
           <End Role="Anios" Type="Self.Anios" Multiplicity="0..1" />
           <End Role="AccesorioList" Type="Self.AccesorioList" Multiplicity="*" />
           <ReferentialConstraint>
@@ -293,15 +277,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Accesorio__IdAut__787EE5A0">
-=======
-        <Association Name="FK__Accesorio__IdAut__52593CB8">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Accesorio__IdAut__52593CB8">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Accesorio__IdAut__534D60F1">
           <End Role="AutoModelo" Type="Self.AutoModelo" Multiplicity="0..1" />
           <End Role="AccesorioList" Type="Self.AccesorioList" Multiplicity="*" />
           <ReferentialConstraint>
@@ -313,15 +289,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Accesorio__IdCon__7D439ABD">
-=======
-        <Association Name="FK__Accesorio__IdCon__571DF1D5">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Accesorio__IdCon__571DF1D5">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Accesorio__IdCon__5812160E">
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="0..1" />
           <End Role="Accesorio" Type="Self.Accesorio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -333,15 +301,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__AutoAcces__IdAcc__00200768">
-=======
-        <Association Name="FK__AutoAcces__IdAcc__59FA5E80">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__AutoAcces__IdAcc__59FA5E80">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__AutoAcces__IdAcc__5AEE82B9">
           <End Role="Accesorio" Type="Self.Accesorio" Multiplicity="0..1" />
           <End Role="AutoAccesorio" Type="Self.AutoAccesorio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -353,15 +313,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__AutoAcces__IdAut__01142BA1">
-=======
-        <Association Name="FK__AutoAcces__IdAut__5AEE82B9">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__AutoAcces__IdAut__5AEE82B9">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__AutoAcces__IdAut__5BE2A6F2">
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="AutoAccesorio" Type="Self.AutoAccesorio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -373,15 +325,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__AutoClien__IdAut__2180FB33">
-=======
-        <Association Name="FK__AutoClien__IdAut__7B5B524B">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__AutoClien__IdAut__7B5B524B">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__AutoClien__IdAut__7C4F7684">
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="AutoCliente" Type="Self.AutoCliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -393,15 +337,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__AutoClien__IdVen__22751F6C">
-=======
-        <Association Name="FK__AutoClien__IdVen__7C4F7684">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__AutoClien__IdVen__7C4F7684">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__AutoClien__IdVen__7D439ABD">
           <End Role="VentaAuto" Type="Self.VentaAuto" Multiplicity="0..1" />
           <End Role="AutoCliente" Type="Self.AutoCliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -425,15 +361,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Automovil__IdAni__72C60C4A">
-=======
-        <Association Name="FK__Automovil__IdAni__4CA06362">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Automovil__IdAni__4CA06362">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Automovil__IdAni__4D94879B">
           <End Role="Anios" Type="Self.Anios" Multiplicity="0..1" />
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="*" />
           <ReferentialConstraint>
@@ -445,15 +373,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Automovil__IdAut__73BA3083">
-=======
-        <Association Name="FK__Automovil__IdAut__4D94879B">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Automovil__IdAut__4D94879B">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Automovil__IdAut__4E88ABD4">
           <End Role="AutoModelo" Type="Self.AutoModelo" Multiplicity="0..1" />
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="*" />
           <ReferentialConstraint>
@@ -465,15 +385,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Automovil__IdAut__74AE54BC">
-=======
-        <Association Name="FK__Automovil__IdAut__4E88ABD4">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Automovil__IdAut__4E88ABD4">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Automovil__IdAut__4F7CD00D">
           <End Role="AutoColorList" Type="Self.AutoColorList" Multiplicity="0..1" />
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="*" />
           <ReferentialConstraint>
@@ -485,15 +397,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Automovil__IdAut__75A278F5">
-=======
-        <Association Name="FK__Automovil__IdAut__4F7CD00D">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Automovil__IdAut__4F7CD00D">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Automovil__IdAut__5070F446">
           <End Role="AutoEstadoList" Type="Self.AutoEstadoList" Multiplicity="0..1" />
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="*" />
           <ReferentialConstraint>
@@ -505,15 +409,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Cliente__IdEstad__17036CC0">
-=======
-        <Association Name="FK__Cliente__IdEstad__70DDC3D8">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Cliente__IdEstad__70DDC3D8">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Cliente__IdEstad__71D1E811">
           <End Role="Estado_Cliente" Type="Self.Estado_Cliente" Multiplicity="0..1" />
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -525,15 +421,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Cliente__IdMunic__160F4887">
-=======
-        <Association Name="FK__Cliente__IdMunic__6FE99F9F">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Cliente__IdMunic__6FE99F9F">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Cliente__IdMunic__70DDC3D8">
           <End Role="Municipio" Type="Self.Municipio" Multiplicity="0..1" />
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -605,15 +493,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Origen_Fa__IdAut__09A971A2">
-=======
-        <Association Name="FK__Origen_Fa__IdAut__6383C8BA">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Origen_Fa__IdAut__6383C8BA">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Origen_Fa__IdAut__6477ECF3">
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="Origen_Fabrica" Type="Self.Origen_Fabrica" Multiplicity="*" />
           <ReferentialConstraint>
@@ -625,15 +505,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Origen_Fa__IdFab__07C12930">
-=======
-        <Association Name="FK__Origen_Fa__IdFab__619B8048">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Origen_Fa__IdFab__619B8048">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Origen_Fa__IdFab__628FA481">
           <End Role="Fabrica" Type="Self.Fabrica" Multiplicity="0..1" />
           <End Role="Origen_Fabrica" Type="Self.Origen_Fabrica" Multiplicity="*" />
           <ReferentialConstraint>
@@ -645,15 +517,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Origen_Fa__IdOri__0A9D95DB">
-=======
-        <Association Name="FK__Origen_Fa__IdOri__6477ECF3">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Origen_Fa__IdOri__6477ECF3">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Origen_Fa__IdOri__656C112C">
           <End Role="OrigenEstado" Type="Self.OrigenEstado" Multiplicity="0..1" />
           <End Role="Origen_Fabrica" Type="Self.Origen_Fabrica" Multiplicity="*" />
           <ReferentialConstraint>
@@ -665,15 +529,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Origen_Fa__IdUsu__08B54D69">
-=======
-        <Association Name="FK__Origen_Fa__IdUsu__628FA481">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Origen_Fa__IdUsu__628FA481">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Origen_Fa__IdUsu__6383C8BA">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="Origen_Fabrica" Type="Self.Origen_Fabrica" Multiplicity="*" />
           <ReferentialConstraint>
@@ -685,15 +541,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Origen_Tr__IdAut__10566F31">
-=======
-        <Association Name="FK__Origen_Tr__IdAut__6A30C649">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Origen_Tr__IdAut__6A30C649">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Origen_Tr__IdAut__6B24EA82">
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -705,15 +553,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Origen_Tr__IdCom__0E6E26BF">
-=======
-        <Association Name="FK__Origen_Tr__IdCom__68487DD7">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Origen_Tr__IdCom__68487DD7">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Origen_Tr__IdCom__693CA210">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -725,15 +565,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Origen_Tr__IdCon__0F624AF8">
-=======
-        <Association Name="FK__Origen_Tr__IdCon__693CA210">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Origen_Tr__IdCon__693CA210">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Origen_Tr__IdCon__6A30C649">
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -745,15 +577,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Origen_Tr__IdOri__114A936A">
-=======
-        <Association Name="FK__Origen_Tr__IdOri__6B24EA82">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Origen_Tr__IdOri__6B24EA82">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Origen_Tr__IdOri__6C190EBB">
           <End Role="OrigenEstado" Type="Self.OrigenEstado" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -765,15 +589,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Origen_Tr__IdVen__0D7A0286">
-=======
-        <Association Name="FK__Origen_Tr__IdVen__6754599E">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Origen_Tr__IdVen__6754599E">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Origen_Tr__IdVen__68487DD7">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -785,15 +601,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Promocion__IdAni__693CA210">
-=======
-        <Association Name="FK__Promocion__IdAni__4316F928">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Promocion__IdAni__4316F928">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Promocion__IdAni__440B1D61">
           <End Role="Anios" Type="Self.Anios" Multiplicity="0..1" />
           <End Role="Promocion_Auto" Type="Self.Promocion_Auto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -805,15 +613,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Promocion__IdAut__68487DD7">
-=======
-        <Association Name="FK__Promocion__IdAut__4222D4EF">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Promocion__IdAut__4222D4EF">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Promocion__IdAut__4316F928">
           <End Role="AutoModelo" Type="Self.AutoModelo" Multiplicity="0..1" />
           <End Role="Promocion_Auto" Type="Self.Promocion_Auto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -825,15 +625,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Promocion__IdCon__6B24EA82">
-=======
-        <Association Name="FK__Promocion__IdCon__44FF419A">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Promocion__IdCon__44FF419A">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Promocion__IdCon__45F365D3">
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="0..1" />
           <End Role="Promocion_Auto" Type="Self.Promocion_Auto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -845,15 +637,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Promocion__IdPro__6A30C649">
-=======
-        <Association Name="FK__Promocion__IdPro__440B1D61">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Promocion__IdPro__440B1D61">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Promocion__IdPro__44FF419A">
           <End Role="PromocionList" Type="Self.PromocionList" Multiplicity="0..1" />
           <End Role="Promocion_Auto" Type="Self.Promocion_Auto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -865,15 +649,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Referenci__IdCli__19DFD96B">
-=======
-        <Association Name="FK__Referenci__IdCli__73BA3083">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Referenci__IdCli__73BA3083">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Referenci__IdCli__74AE54BC">
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
           <End Role="Referencias" Type="Self.Referencias" Multiplicity="*" />
           <ReferentialConstraint>
@@ -897,15 +673,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__VentaAuto__IdCli__1EA48E88">
-=======
-        <Association Name="FK__VentaAuto__IdCli__787EE5A0">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__VentaAuto__IdCli__787EE5A0">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__VentaAuto__IdCli__797309D9">
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
           <End Role="VentaAuto" Type="Self.VentaAuto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -917,15 +685,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__VentaAuto__IdPro__1DB06A4F">
-=======
-        <Association Name="FK__VentaAuto__IdPro__778AC167">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__VentaAuto__IdPro__778AC167">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__VentaAuto__IdPro__787EE5A0">
           <End Role="PromocionList" Type="Self.PromocionList" Multiplicity="0..1" />
           <End Role="VentaAuto" Type="Self.VentaAuto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -937,15 +697,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__VentaAuto__IdUsu__1CBC4616">
-=======
-        <Association Name="FK__VentaAuto__IdUsu__76969D2E">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__VentaAuto__IdUsu__76969D2E">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__VentaAuto__IdUsu__778AC167">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="VentaAuto" Type="Self.VentaAuto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -985,80 +737,35 @@
           <EntitySet Name="TipoEmpleado" EntityType="Self.TipoEmpleado" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VentaAuto" EntityType="Self.VentaAuto" Schema="dbo" store:Type="Tables" />
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-          <AssociationSet Name="FK__Accesorio__IdAcc__7C4F7684" Association="Self.FK__Accesorio__IdAcc__7C4F7684">
+          <AssociationSet Name="FK__Accesorio__IdAcc__571DF1D5" Association="Self.FK__Accesorio__IdAcc__571DF1D5">
             <End Role="AccesorioList" EntitySet="AccesorioList" />
             <End Role="Accesorio" EntitySet="Accesorio" />
           </AssociationSet>
-          <AssociationSet Name="FK__Accesorio__IdAni__797309D9" Association="Self.FK__Accesorio__IdAni__797309D9">
+          <AssociationSet Name="FK__Accesorio__IdAni__5441852A" Association="Self.FK__Accesorio__IdAni__5441852A">
             <End Role="Anios" EntitySet="Anios" />
             <End Role="AccesorioList" EntitySet="AccesorioList" />
           </AssociationSet>
-          <AssociationSet Name="FK__Accesorio__IdAut__787EE5A0" Association="Self.FK__Accesorio__IdAut__787EE5A0">
+          <AssociationSet Name="FK__Accesorio__IdAut__534D60F1" Association="Self.FK__Accesorio__IdAut__534D60F1">
             <End Role="AutoModelo" EntitySet="AutoModelo" />
             <End Role="AccesorioList" EntitySet="AccesorioList" />
           </AssociationSet>
-          <AssociationSet Name="FK__Accesorio__IdCon__7D439ABD" Association="Self.FK__Accesorio__IdCon__7D439ABD">
+          <AssociationSet Name="FK__Accesorio__IdCon__5812160E" Association="Self.FK__Accesorio__IdCon__5812160E">
             <End Role="Concesinaria" EntitySet="Concesinaria" />
             <End Role="Accesorio" EntitySet="Accesorio" />
           </AssociationSet>
-          <AssociationSet Name="FK__AutoAcces__IdAcc__00200768" Association="Self.FK__AutoAcces__IdAcc__00200768">
+          <AssociationSet Name="FK__AutoAcces__IdAcc__5AEE82B9" Association="Self.FK__AutoAcces__IdAcc__5AEE82B9">
             <End Role="Accesorio" EntitySet="Accesorio" />
             <End Role="AutoAccesorio" EntitySet="AutoAccesorio" />
           </AssociationSet>
-          <AssociationSet Name="FK__AutoAcces__IdAut__01142BA1" Association="Self.FK__AutoAcces__IdAut__01142BA1">
+          <AssociationSet Name="FK__AutoAcces__IdAut__5BE2A6F2" Association="Self.FK__AutoAcces__IdAut__5BE2A6F2">
             <End Role="Automovil" EntitySet="Automovil" />
             <End Role="AutoAccesorio" EntitySet="AutoAccesorio" />
           </AssociationSet>
-          <AssociationSet Name="FK__AutoClien__IdAut__2180FB33" Association="Self.FK__AutoClien__IdAut__2180FB33">
-            <End Role="Automovil" EntitySet="Automovil" />
-            <End Role="AutoCliente" EntitySet="AutoCliente" />
-          </AssociationSet>
-          <AssociationSet Name="FK__AutoClien__IdVen__22751F6C" Association="Self.FK__AutoClien__IdVen__22751F6C">
-=======
-          <EntitySet Name="Promocion_Auto" EntityType="Self.Promocion_Auto" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Promocion_Auto].[IdPromocion_Auto] AS [IdPromocion_Auto], 
-    [Promocion_Auto].[IdAutoModelo] AS [IdAutoModelo], 
-    [Promocion_Auto].[IdAnios] AS [IdAnios], 
-    [Promocion_Auto].[IdPromocion] AS [IdPromocion], 
-    [Promocion_Auto].[IdConcesinaria] AS [IdConcesinaria], 
-    [Promocion_Auto].[Vigente] AS [Vigente]
-    FROM [dbo].[Promocion_Auto] AS [Promocion_Auto]</DefiningQuery>
-          </EntitySet>
-          <AssociationSet Name="FK__Accesorio__IdAcc__5629CD9C" Association="Self.FK__Accesorio__IdAcc__5629CD9C">
-            <End Role="AccesorioList" EntitySet="AccesorioList" />
-            <End Role="Accesorio" EntitySet="Accesorio" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Accesorio__IdAni__534D60F1" Association="Self.FK__Accesorio__IdAni__534D60F1">
-            <End Role="Anios" EntitySet="Anios" />
-            <End Role="AccesorioList" EntitySet="AccesorioList" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Accesorio__IdAut__52593CB8" Association="Self.FK__Accesorio__IdAut__52593CB8">
-            <End Role="AutoModelo" EntitySet="AutoModelo" />
-            <End Role="AccesorioList" EntitySet="AccesorioList" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Accesorio__IdCon__571DF1D5" Association="Self.FK__Accesorio__IdCon__571DF1D5">
-            <End Role="Concesinaria" EntitySet="Concesinaria" />
-            <End Role="Accesorio" EntitySet="Accesorio" />
-          </AssociationSet>
-          <AssociationSet Name="FK__AutoAcces__IdAcc__59FA5E80" Association="Self.FK__AutoAcces__IdAcc__59FA5E80">
-            <End Role="Accesorio" EntitySet="Accesorio" />
-            <End Role="AutoAccesorio" EntitySet="AutoAccesorio" />
-          </AssociationSet>
-          <AssociationSet Name="FK__AutoAcces__IdAut__5AEE82B9" Association="Self.FK__AutoAcces__IdAut__5AEE82B9">
-            <End Role="Automovil" EntitySet="Automovil" />
-            <End Role="AutoAccesorio" EntitySet="AutoAccesorio" />
-          </AssociationSet>
-          <AssociationSet Name="FK__AutoClien__IdAut__7B5B524B" Association="Self.FK__AutoClien__IdAut__7B5B524B">
+          <AssociationSet Name="FK__AutoClien__IdAut__7C4F7684" Association="Self.FK__AutoClien__IdAut__7C4F7684">
             <End Role="Automovil" EntitySet="Automovil" />
             <End Role="AutoCliente" EntitySet="AutoCliente" />
           </AssociationSet>
-          <AssociationSet Name="FK__AutoClien__IdVen__7C4F7684" Association="Self.FK__AutoClien__IdVen__7C4F7684">
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+          <AssociationSet Name="FK__AutoClien__IdVen__7D439ABD" Association="Self.FK__AutoClien__IdVen__7D439ABD">
             <End Role="VentaAuto" EntitySet="VentaAuto" />
             <End Role="AutoCliente" EntitySet="AutoCliente" />
           </AssociationSet>
@@ -1066,75 +773,27 @@
             <End Role="AutoMarca" EntitySet="AutoMarca" />
             <End Role="AutoModelo" EntitySet="AutoModelo" />
           </AssociationSet>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-          <AssociationSet Name="FK__Automovil__IdAni__72C60C4A" Association="Self.FK__Automovil__IdAni__72C60C4A">
+          <AssociationSet Name="FK__Automovil__IdAni__4D94879B" Association="Self.FK__Automovil__IdAni__4D94879B">
             <End Role="Anios" EntitySet="Anios" />
-            <End Role="Automovil" EntitySet="Automovil" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Automovil__IdAut__73BA3083" Association="Self.FK__Automovil__IdAut__73BA3083">
-            <End Role="AutoModelo" EntitySet="AutoModelo" />
-            <End Role="Automovil" EntitySet="Automovil" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Automovil__IdAut__74AE54BC" Association="Self.FK__Automovil__IdAut__74AE54BC">
-            <End Role="AutoColorList" EntitySet="AutoColorList" />
-            <End Role="Automovil" EntitySet="Automovil" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Automovil__IdAut__75A278F5" Association="Self.FK__Automovil__IdAut__75A278F5">
-            <End Role="AutoEstadoList" EntitySet="AutoEstadoList" />
-            <End Role="Automovil" EntitySet="Automovil" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Cliente__IdEstad__17036CC0" Association="Self.FK__Cliente__IdEstad__17036CC0">
-            <End Role="Estado_Cliente" EntitySet="Estado_Cliente" />
-            <End Role="Cliente" EntitySet="Cliente" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Cliente__IdMunic__160F4887" Association="Self.FK__Cliente__IdMunic__160F4887">
-=======
-          <AssociationSet Name="FK__Automovil__IdAni__4CA06362" Association="Self.FK__Automovil__IdAni__4CA06362">
-            <End Role="Anios" EntitySet="Anios" />
-            <End Role="Automovil" EntitySet="Automovil" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Automovil__IdAut__4D94879B" Association="Self.FK__Automovil__IdAut__4D94879B">
-            <End Role="AutoModelo" EntitySet="AutoModelo" />
             <End Role="Automovil" EntitySet="Automovil" />
           </AssociationSet>
           <AssociationSet Name="FK__Automovil__IdAut__4E88ABD4" Association="Self.FK__Automovil__IdAut__4E88ABD4">
-            <End Role="AutoColorList" EntitySet="AutoColorList" />
-            <End Role="Automovil" EntitySet="Automovil" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Automovil__IdAut__4F7CD00D" Association="Self.FK__Automovil__IdAut__4F7CD00D">
-            <End Role="AutoEstadoList" EntitySet="AutoEstadoList" />
-            <End Role="Automovil" EntitySet="Automovil" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Cliente__IdEstad__70DDC3D8" Association="Self.FK__Cliente__IdEstad__70DDC3D8">
-            <End Role="Estado_Cliente" EntitySet="Estado_Cliente" />
-            <End Role="Cliente" EntitySet="Cliente" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Cliente__IdMunic__6FE99F9F" Association="Self.FK__Cliente__IdMunic__6FE99F9F">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-          <AssociationSet Name="FK__Automovil__IdAni__4CA06362" Association="Self.FK__Automovil__IdAni__4CA06362">
-            <End Role="Anios" EntitySet="Anios" />
-            <End Role="Automovil" EntitySet="Automovil" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Automovil__IdAut__4D94879B" Association="Self.FK__Automovil__IdAut__4D94879B">
             <End Role="AutoModelo" EntitySet="AutoModelo" />
             <End Role="Automovil" EntitySet="Automovil" />
           </AssociationSet>
-          <AssociationSet Name="FK__Automovil__IdAut__4E88ABD4" Association="Self.FK__Automovil__IdAut__4E88ABD4">
+          <AssociationSet Name="FK__Automovil__IdAut__4F7CD00D" Association="Self.FK__Automovil__IdAut__4F7CD00D">
             <End Role="AutoColorList" EntitySet="AutoColorList" />
             <End Role="Automovil" EntitySet="Automovil" />
           </AssociationSet>
-          <AssociationSet Name="FK__Automovil__IdAut__4F7CD00D" Association="Self.FK__Automovil__IdAut__4F7CD00D">
+          <AssociationSet Name="FK__Automovil__IdAut__5070F446" Association="Self.FK__Automovil__IdAut__5070F446">
             <End Role="AutoEstadoList" EntitySet="AutoEstadoList" />
             <End Role="Automovil" EntitySet="Automovil" />
           </AssociationSet>
-          <AssociationSet Name="FK__Cliente__IdEstad__70DDC3D8" Association="Self.FK__Cliente__IdEstad__70DDC3D8">
+          <AssociationSet Name="FK__Cliente__IdEstad__71D1E811" Association="Self.FK__Cliente__IdEstad__71D1E811">
             <End Role="Estado_Cliente" EntitySet="Estado_Cliente" />
             <End Role="Cliente" EntitySet="Cliente" />
           </AssociationSet>
-          <AssociationSet Name="FK__Cliente__IdMunic__6FE99F9F" Association="Self.FK__Cliente__IdMunic__6FE99F9F">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+          <AssociationSet Name="FK__Cliente__IdMunic__70DDC3D8" Association="Self.FK__Cliente__IdMunic__70DDC3D8">
             <End Role="Municipio" EntitySet="Municipio" />
             <End Role="Cliente" EntitySet="Cliente" />
           </AssociationSet>
@@ -1158,171 +817,59 @@
             <End Role="Estado" EntitySet="Estado" />
             <End Role="Municipio" EntitySet="Municipio" />
           </AssociationSet>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-          <AssociationSet Name="FK__Origen_Fa__IdAut__09A971A2" Association="Self.FK__Origen_Fa__IdAut__09A971A2">
+          <AssociationSet Name="FK__Origen_Fa__IdAut__6477ECF3" Association="Self.FK__Origen_Fa__IdAut__6477ECF3">
             <End Role="Automovil" EntitySet="Automovil" />
             <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdFab__07C12930" Association="Self.FK__Origen_Fa__IdFab__07C12930">
+          <AssociationSet Name="FK__Origen_Fa__IdFab__628FA481" Association="Self.FK__Origen_Fa__IdFab__628FA481">
             <End Role="Fabrica" EntitySet="Fabrica" />
             <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdOri__0A9D95DB" Association="Self.FK__Origen_Fa__IdOri__0A9D95DB">
+          <AssociationSet Name="FK__Origen_Fa__IdOri__656C112C" Association="Self.FK__Origen_Fa__IdOri__656C112C">
             <End Role="OrigenEstado" EntitySet="OrigenEstado" />
             <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdUsu__08B54D69" Association="Self.FK__Origen_Fa__IdUsu__08B54D69">
+          <AssociationSet Name="FK__Origen_Fa__IdUsu__6383C8BA" Association="Self.FK__Origen_Fa__IdUsu__6383C8BA">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdAut__10566F31" Association="Self.FK__Origen_Tr__IdAut__10566F31">
+          <AssociationSet Name="FK__Origen_Tr__IdAut__6B24EA82" Association="Self.FK__Origen_Tr__IdAut__6B24EA82">
             <End Role="Automovil" EntitySet="Automovil" />
             <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdCom__0E6E26BF" Association="Self.FK__Origen_Tr__IdCom__0E6E26BF">
+          <AssociationSet Name="FK__Origen_Tr__IdCom__693CA210" Association="Self.FK__Origen_Tr__IdCom__693CA210">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdCon__0F624AF8" Association="Self.FK__Origen_Tr__IdCon__0F624AF8">
+          <AssociationSet Name="FK__Origen_Tr__IdCon__6A30C649" Association="Self.FK__Origen_Tr__IdCon__6A30C649">
             <End Role="Concesinaria" EntitySet="Concesinaria" />
             <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdOri__114A936A" Association="Self.FK__Origen_Tr__IdOri__114A936A">
+          <AssociationSet Name="FK__Origen_Tr__IdOri__6C190EBB" Association="Self.FK__Origen_Tr__IdOri__6C190EBB">
             <End Role="OrigenEstado" EntitySet="OrigenEstado" />
             <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdVen__0D7A0286" Association="Self.FK__Origen_Tr__IdVen__0D7A0286">
+          <AssociationSet Name="FK__Origen_Tr__IdVen__68487DD7" Association="Self.FK__Origen_Tr__IdVen__68487DD7">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
           </AssociationSet>
-          <AssociationSet Name="FK__Promocion__IdAni__693CA210" Association="Self.FK__Promocion__IdAni__693CA210">
+          <AssociationSet Name="FK__Promocion__IdAni__440B1D61" Association="Self.FK__Promocion__IdAni__440B1D61">
             <End Role="Anios" EntitySet="Anios" />
             <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
           </AssociationSet>
-          <AssociationSet Name="FK__Promocion__IdAut__68487DD7" Association="Self.FK__Promocion__IdAut__68487DD7">
+          <AssociationSet Name="FK__Promocion__IdAut__4316F928" Association="Self.FK__Promocion__IdAut__4316F928">
             <End Role="AutoModelo" EntitySet="AutoModelo" />
             <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
           </AssociationSet>
-          <AssociationSet Name="FK__Promocion__IdCon__6B24EA82" Association="Self.FK__Promocion__IdCon__6B24EA82">
+          <AssociationSet Name="FK__Promocion__IdCon__45F365D3" Association="Self.FK__Promocion__IdCon__45F365D3">
             <End Role="Concesinaria" EntitySet="Concesinaria" />
             <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
           </AssociationSet>
-          <AssociationSet Name="FK__Promocion__IdPro__6A30C649" Association="Self.FK__Promocion__IdPro__6A30C649">
+          <AssociationSet Name="FK__Promocion__IdPro__44FF419A" Association="Self.FK__Promocion__IdPro__44FF419A">
             <End Role="PromocionList" EntitySet="PromocionList" />
             <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
           </AssociationSet>
-          <AssociationSet Name="FK__Referenci__IdCli__19DFD96B" Association="Self.FK__Referenci__IdCli__19DFD96B">
-=======
-          <AssociationSet Name="FK__Origen_Fa__IdAut__6383C8BA" Association="Self.FK__Origen_Fa__IdAut__6383C8BA">
-            <End Role="Automovil" EntitySet="Automovil" />
-            <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdFab__619B8048" Association="Self.FK__Origen_Fa__IdFab__619B8048">
-            <End Role="Fabrica" EntitySet="Fabrica" />
-            <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdOri__6477ECF3" Association="Self.FK__Origen_Fa__IdOri__6477ECF3">
-            <End Role="OrigenEstado" EntitySet="OrigenEstado" />
-            <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdUsu__628FA481" Association="Self.FK__Origen_Fa__IdUsu__628FA481">
-            <End Role="Usuario" EntitySet="Usuario" />
-            <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdAut__6A30C649" Association="Self.FK__Origen_Tr__IdAut__6A30C649">
-            <End Role="Automovil" EntitySet="Automovil" />
-            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdCom__68487DD7" Association="Self.FK__Origen_Tr__IdCom__68487DD7">
-            <End Role="Usuario" EntitySet="Usuario" />
-            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdCon__693CA210" Association="Self.FK__Origen_Tr__IdCon__693CA210">
-            <End Role="Concesinaria" EntitySet="Concesinaria" />
-            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdOri__6B24EA82" Association="Self.FK__Origen_Tr__IdOri__6B24EA82">
-            <End Role="OrigenEstado" EntitySet="OrigenEstado" />
-            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdVen__6754599E" Association="Self.FK__Origen_Tr__IdVen__6754599E">
-            <End Role="Usuario" EntitySet="Usuario" />
-            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Promocion__IdAni__4316F928" Association="Self.FK__Promocion__IdAni__4316F928">
-            <End Role="Anios" EntitySet="Anios" />
-            <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Promocion__IdAut__4222D4EF" Association="Self.FK__Promocion__IdAut__4222D4EF">
-            <End Role="AutoModelo" EntitySet="AutoModelo" />
-            <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Promocion__IdCon__44FF419A" Association="Self.FK__Promocion__IdCon__44FF419A">
-            <End Role="Concesinaria" EntitySet="Concesinaria" />
-            <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Promocion__IdPro__440B1D61" Association="Self.FK__Promocion__IdPro__440B1D61">
-            <End Role="PromocionList" EntitySet="PromocionList" />
-            <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Referenci__IdCli__73BA3083" Association="Self.FK__Referenci__IdCli__73BA3083">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-          <AssociationSet Name="FK__Origen_Fa__IdAut__6383C8BA" Association="Self.FK__Origen_Fa__IdAut__6383C8BA">
-            <End Role="Automovil" EntitySet="Automovil" />
-            <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdFab__619B8048" Association="Self.FK__Origen_Fa__IdFab__619B8048">
-            <End Role="Fabrica" EntitySet="Fabrica" />
-            <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdOri__6477ECF3" Association="Self.FK__Origen_Fa__IdOri__6477ECF3">
-            <End Role="OrigenEstado" EntitySet="OrigenEstado" />
-            <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdUsu__628FA481" Association="Self.FK__Origen_Fa__IdUsu__628FA481">
-            <End Role="Usuario" EntitySet="Usuario" />
-            <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdAut__6A30C649" Association="Self.FK__Origen_Tr__IdAut__6A30C649">
-            <End Role="Automovil" EntitySet="Automovil" />
-            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdCom__68487DD7" Association="Self.FK__Origen_Tr__IdCom__68487DD7">
-            <End Role="Usuario" EntitySet="Usuario" />
-            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdCon__693CA210" Association="Self.FK__Origen_Tr__IdCon__693CA210">
-            <End Role="Concesinaria" EntitySet="Concesinaria" />
-            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdOri__6B24EA82" Association="Self.FK__Origen_Tr__IdOri__6B24EA82">
-            <End Role="OrigenEstado" EntitySet="OrigenEstado" />
-            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdVen__6754599E" Association="Self.FK__Origen_Tr__IdVen__6754599E">
-            <End Role="Usuario" EntitySet="Usuario" />
-            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Promocion__IdAni__4316F928" Association="Self.FK__Promocion__IdAni__4316F928">
-            <End Role="Anios" EntitySet="Anios" />
-            <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Promocion__IdAut__4222D4EF" Association="Self.FK__Promocion__IdAut__4222D4EF">
-            <End Role="AutoModelo" EntitySet="AutoModelo" />
-            <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Promocion__IdCon__44FF419A" Association="Self.FK__Promocion__IdCon__44FF419A">
-            <End Role="Concesinaria" EntitySet="Concesinaria" />
-            <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Promocion__IdPro__440B1D61" Association="Self.FK__Promocion__IdPro__440B1D61">
-            <End Role="PromocionList" EntitySet="PromocionList" />
-            <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Referenci__IdCli__73BA3083" Association="Self.FK__Referenci__IdCli__73BA3083">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+          <AssociationSet Name="FK__Referenci__IdCli__74AE54BC" Association="Self.FK__Referenci__IdCli__74AE54BC">
             <End Role="Cliente" EntitySet="Cliente" />
             <End Role="Referencias" EntitySet="Referencias" />
           </AssociationSet>
@@ -1330,33 +877,15 @@
             <End Role="Empleado" EntitySet="Empleado" />
             <End Role="Usuario" EntitySet="Usuario" />
           </AssociationSet>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-          <AssociationSet Name="FK__VentaAuto__IdCli__1EA48E88" Association="Self.FK__VentaAuto__IdCli__1EA48E88">
+          <AssociationSet Name="FK__VentaAuto__IdCli__797309D9" Association="Self.FK__VentaAuto__IdCli__797309D9">
             <End Role="Cliente" EntitySet="Cliente" />
             <End Role="VentaAuto" EntitySet="VentaAuto" />
           </AssociationSet>
-          <AssociationSet Name="FK__VentaAuto__IdPro__1DB06A4F" Association="Self.FK__VentaAuto__IdPro__1DB06A4F">
+          <AssociationSet Name="FK__VentaAuto__IdPro__787EE5A0" Association="Self.FK__VentaAuto__IdPro__787EE5A0">
             <End Role="PromocionList" EntitySet="PromocionList" />
             <End Role="VentaAuto" EntitySet="VentaAuto" />
           </AssociationSet>
-          <AssociationSet Name="FK__VentaAuto__IdUsu__1CBC4616" Association="Self.FK__VentaAuto__IdUsu__1CBC4616">
-=======
-=======
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
-          <AssociationSet Name="FK__VentaAuto__IdCli__787EE5A0" Association="Self.FK__VentaAuto__IdCli__787EE5A0">
-            <End Role="Cliente" EntitySet="Cliente" />
-            <End Role="VentaAuto" EntitySet="VentaAuto" />
-          </AssociationSet>
-          <AssociationSet Name="FK__VentaAuto__IdPro__778AC167" Association="Self.FK__VentaAuto__IdPro__778AC167">
-            <End Role="PromocionList" EntitySet="PromocionList" />
-            <End Role="VentaAuto" EntitySet="VentaAuto" />
-          </AssociationSet>
-          <AssociationSet Name="FK__VentaAuto__IdUsu__76969D2E" Association="Self.FK__VentaAuto__IdUsu__76969D2E">
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+          <AssociationSet Name="FK__VentaAuto__IdUsu__778AC167" Association="Self.FK__VentaAuto__IdUsu__778AC167">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="VentaAuto" EntitySet="VentaAuto" />
           </AssociationSet>
@@ -1376,21 +905,9 @@
           <Property Name="Estado" Type="Boolean" />
           <Property Name="IdAccesorioList" Type="Int32" />
           <Property Name="IdConcesinaria" Type="Int32" />
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-          <NavigationProperty Name="AccesorioList" Relationship="Self.FK__Accesorio__IdAcc__7C4F7684" FromRole="Accesorio" ToRole="AccesorioList" />
-          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Accesorio__IdCon__7D439ABD" FromRole="Accesorio" ToRole="Concesinaria" />
-          <NavigationProperty Name="AutoAccesorio" Relationship="Self.FK__AutoAcces__IdAcc__00200768" FromRole="Accesorio" ToRole="AutoAccesorio" />
-=======
-          <NavigationProperty Name="AccesorioList" Relationship="Self.FK__Accesorio__IdAcc__5629CD9C" FromRole="Accesorio" ToRole="AccesorioList" />
-          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Accesorio__IdCon__571DF1D5" FromRole="Accesorio" ToRole="Concesinaria" />
-          <NavigationProperty Name="AutoAccesorio" Relationship="Self.FK__AutoAcces__IdAcc__59FA5E80" FromRole="Accesorio" ToRole="AutoAccesorio" />
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-          <NavigationProperty Name="AccesorioList" Relationship="Self.FK__Accesorio__IdAcc__5629CD9C" FromRole="Accesorio" ToRole="AccesorioList" />
-          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Accesorio__IdCon__571DF1D5" FromRole="Accesorio" ToRole="Concesinaria" />
-          <NavigationProperty Name="AutoAccesorio" Relationship="Self.FK__AutoAcces__IdAcc__59FA5E80" FromRole="Accesorio" ToRole="AutoAccesorio" />
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+          <NavigationProperty Name="AccesorioList" Relationship="Self.FK__Accesorio__IdAcc__571DF1D5" FromRole="Accesorio" ToRole="AccesorioList" />
+          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Accesorio__IdCon__5812160E" FromRole="Accesorio" ToRole="Concesinaria" />
+          <NavigationProperty Name="AutoAccesorio" Relationship="Self.FK__AutoAcces__IdAcc__5AEE82B9" FromRole="Accesorio" ToRole="AutoAccesorio" />
         </EntityType>
         <EntityType Name="AccesorioList">
           <Key>
@@ -1401,21 +918,9 @@
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="IdAutoModelo" Type="Int32" />
           <Property Name="IdAnios" Type="Int32" />
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-          <NavigationProperty Name="Accesorio" Relationship="Self.FK__Accesorio__IdAcc__7C4F7684" FromRole="AccesorioList" ToRole="Accesorio" />
-          <NavigationProperty Name="Anios" Relationship="Self.FK__Accesorio__IdAni__797309D9" FromRole="AccesorioList" ToRole="Anios" />
-          <NavigationProperty Name="AutoModelo" Relationship="Self.FK__Accesorio__IdAut__787EE5A0" FromRole="AccesorioList" ToRole="AutoModelo" />
-=======
-          <NavigationProperty Name="Accesorio" Relationship="Self.FK__Accesorio__IdAcc__5629CD9C" FromRole="AccesorioList" ToRole="Accesorio" />
-          <NavigationProperty Name="Anios" Relationship="Self.FK__Accesorio__IdAni__534D60F1" FromRole="AccesorioList" ToRole="Anios" />
-          <NavigationProperty Name="AutoModelo" Relationship="Self.FK__Accesorio__IdAut__52593CB8" FromRole="AccesorioList" ToRole="AutoModelo" />
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-          <NavigationProperty Name="Accesorio" Relationship="Self.FK__Accesorio__IdAcc__5629CD9C" FromRole="AccesorioList" ToRole="Accesorio" />
-          <NavigationProperty Name="Anios" Relationship="Self.FK__Accesorio__IdAni__534D60F1" FromRole="AccesorioList" ToRole="Anios" />
-          <NavigationProperty Name="AutoModelo" Relationship="Self.FK__Accesorio__IdAut__52593CB8" FromRole="AccesorioList" ToRole="AutoModelo" />
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+          <NavigationProperty Name="Accesorio" Relationship="Self.FK__Accesorio__IdAcc__571DF1D5" FromRole="AccesorioList" ToRole="Accesorio" />
+          <NavigationProperty Name="Anios" Relationship="Self.FK__Accesorio__IdAni__5441852A" FromRole="AccesorioList" ToRole="Anios" />
+          <NavigationProperty Name="AutoModelo" Relationship="Self.FK__Accesorio__IdAut__534D60F1" FromRole="AccesorioList" ToRole="AutoModelo" />
         </EntityType>
         <EntityType Name="Anios">
           <Key>
@@ -1423,21 +928,9 @@
           </Key>
           <Property Name="IdAnios" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Numero" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-          <NavigationProperty Name="AccesorioList" Relationship="Self.FK__Accesorio__IdAni__797309D9" FromRole="Anios" ToRole="AccesorioList" />
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAni__72C60C4A" FromRole="Anios" ToRole="Automovil" />
-          <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__Promocion__IdAni__693CA210" FromRole="Anios" ToRole="Promocion_Auto" />
-=======
-          <NavigationProperty Name="AccesorioList" Relationship="Self.FK__Accesorio__IdAni__534D60F1" FromRole="Anios" ToRole="AccesorioList" />
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAni__4CA06362" FromRole="Anios" ToRole="Automovil" />
-          <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__Promocion__IdAni__4316F928" FromRole="Anios" ToRole="Promocion_Auto" />
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-          <NavigationProperty Name="AccesorioList" Relationship="Self.FK__Accesorio__IdAni__534D60F1" FromRole="Anios" ToRole="AccesorioList" />
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAni__4CA06362" FromRole="Anios" ToRole="Automovil" />
-          <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__Promocion__IdAni__4316F928" FromRole="Anios" ToRole="Promocion_Auto" />
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+          <NavigationProperty Name="AccesorioList" Relationship="Self.FK__Accesorio__IdAni__5441852A" FromRole="Anios" ToRole="AccesorioList" />
+          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAni__4D94879B" FromRole="Anios" ToRole="Automovil" />
+          <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__Promocion__IdAni__440B1D61" FromRole="Anios" ToRole="Promocion_Auto" />
         </EntityType>
         <EntityType Name="AutoAccesorio">
           <Key>
@@ -1446,18 +939,8 @@
           <Property Name="IdAutoAccesorio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdAccesorio" Type="Int32" />
           <Property Name="IdAutomovil" Type="Int32" />
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-          <NavigationProperty Name="Accesorio" Relationship="Self.FK__AutoAcces__IdAcc__00200768" FromRole="AutoAccesorio" ToRole="Accesorio" />
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__AutoAcces__IdAut__01142BA1" FromRole="AutoAccesorio" ToRole="Automovil" />
-=======
-          <NavigationProperty Name="Accesorio" Relationship="Self.FK__AutoAcces__IdAcc__59FA5E80" FromRole="AutoAccesorio" ToRole="Accesorio" />
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__AutoAcces__IdAut__5AEE82B9" FromRole="AutoAccesorio" ToRole="Automovil" />
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-          <NavigationProperty Name="Accesorio" Relationship="Self.FK__AutoAcces__IdAcc__59FA5E80" FromRole="AutoAccesorio" ToRole="Accesorio" />
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__AutoAcces__IdAut__5AEE82B9" FromRole="AutoAccesorio" ToRole="Automovil" />
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+          <NavigationProperty Name="Accesorio" Relationship="Self.FK__AutoAcces__IdAcc__5AEE82B9" FromRole="AutoAccesorio" ToRole="Accesorio" />
+          <NavigationProperty Name="Automovil" Relationship="Self.FK__AutoAcces__IdAut__5BE2A6F2" FromRole="AutoAccesorio" ToRole="Automovil" />
         </EntityType>
         <EntityType Name="AutoCliente">
           <Key>
@@ -1466,18 +949,8 @@
           <Property Name="IdAutoCliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdAutomovil" Type="Int32" />
           <Property Name="IdVentaAuto" Type="Int32" />
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__AutoClien__IdAut__2180FB33" FromRole="AutoCliente" ToRole="Automovil" />
-          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__AutoClien__IdVen__22751F6C" FromRole="AutoCliente" ToRole="VentaAuto" />
-=======
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__AutoClien__IdAut__7B5B524B" FromRole="AutoCliente" ToRole="Automovil" />
-          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__AutoClien__IdVen__7C4F7684" FromRole="AutoCliente" ToRole="VentaAuto" />
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__AutoClien__IdAut__7B5B524B" FromRole="AutoCliente" ToRole="Automovil" />
-          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__AutoClien__IdVen__7C4F7684" FromRole="AutoCliente" ToRole="VentaAuto" />
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+          <NavigationProperty Name="Automovil" Relationship="Self.FK__AutoClien__IdAut__7C4F7684" FromRole="AutoCliente" ToRole="Automovil" />
+          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__AutoClien__IdVen__7D439ABD" FromRole="AutoCliente" ToRole="VentaAuto" />
         </EntityType>
         <EntityType Name="AutoColorList">
           <Key>
@@ -1485,15 +958,7 @@
           </Key>
           <Property Name="IdAutoColor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAut__74AE54BC" FromRole="AutoColorList" ToRole="Automovil" />
-=======
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAut__4E88ABD4" FromRole="AutoColorList" ToRole="Automovil" />
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAut__4E88ABD4" FromRole="AutoColorList" ToRole="Automovil" />
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAut__4F7CD00D" FromRole="AutoColorList" ToRole="Automovil" />
         </EntityType>
         <EntityType Name="AutoEstadoList">
           <Key>
@@ -1501,15 +966,7 @@
           </Key>
           <Property Name="IdAutoEstado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAut__75A278F5" FromRole="AutoEstadoList" ToRole="Automovil" />
-=======
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAut__4F7CD00D" FromRole="AutoEstadoList" ToRole="Automovil" />
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAut__4F7CD00D" FromRole="AutoEstadoList" ToRole="Automovil" />
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAut__5070F446" FromRole="AutoEstadoList" ToRole="Automovil" />
         </EntityType>
         <EntityType Name="AutoMarca">
           <Key>
@@ -1526,23 +983,10 @@
           <Property Name="IdAutoModelo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
           <Property Name="IdAutoMarca" Type="Int32" />
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-          <NavigationProperty Name="AccesorioList" Relationship="Self.FK__Accesorio__IdAut__787EE5A0" FromRole="AutoModelo" ToRole="AccesorioList" />
-          <NavigationProperty Name="AutoMarca" Relationship="Self.FK__AutoModel__IdAut__656C112C" FromRole="AutoModelo" ToRole="AutoMarca" />
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAut__73BA3083" FromRole="AutoModelo" ToRole="Automovil" />
-          <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__Promocion__IdAut__68487DD7" FromRole="AutoModelo" ToRole="Promocion_Auto" />
-=======
-=======
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
-          <NavigationProperty Name="AccesorioList" Relationship="Self.FK__Accesorio__IdAut__52593CB8" FromRole="AutoModelo" ToRole="AccesorioList" />
+          <NavigationProperty Name="AccesorioList" Relationship="Self.FK__Accesorio__IdAut__534D60F1" FromRole="AutoModelo" ToRole="AccesorioList" />
           <NavigationProperty Name="AutoMarca" Relationship="Self.FK__AutoModel__IdAut__403A8C7D" FromRole="AutoModelo" ToRole="AutoMarca" />
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAut__4D94879B" FromRole="AutoModelo" ToRole="Automovil" />
-          <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__Promocion__IdAut__4222D4EF" FromRole="AutoModelo" ToRole="Promocion_Auto" />
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAut__4E88ABD4" FromRole="AutoModelo" ToRole="Automovil" />
+          <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__Promocion__IdAut__4316F928" FromRole="AutoModelo" ToRole="Promocion_Auto" />
         </EntityType>
         <EntityType Name="Automovil">
           <Key>
@@ -1554,31 +998,14 @@
           <Property Name="IdAutoModelo" Type="Int32" />
           <Property Name="IdAutoColor" Type="Int32" />
           <Property Name="IdAutoEstado" Type="Int32" />
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-          <NavigationProperty Name="Anios" Relationship="Self.FK__Automovil__IdAni__72C60C4A" FromRole="Automovil" ToRole="Anios" />
-          <NavigationProperty Name="AutoAccesorio" Relationship="Self.FK__AutoAcces__IdAut__01142BA1" FromRole="Automovil" ToRole="AutoAccesorio" />
-          <NavigationProperty Name="AutoCliente" Relationship="Self.FK__AutoClien__IdAut__2180FB33" FromRole="Automovil" ToRole="AutoCliente" />
-          <NavigationProperty Name="AutoColorList" Relationship="Self.FK__Automovil__IdAut__74AE54BC" FromRole="Automovil" ToRole="AutoColorList" />
-          <NavigationProperty Name="AutoEstadoList" Relationship="Self.FK__Automovil__IdAut__75A278F5" FromRole="Automovil" ToRole="AutoEstadoList" />
-          <NavigationProperty Name="AutoModelo" Relationship="Self.FK__Automovil__IdAut__73BA3083" FromRole="Automovil" ToRole="AutoModelo" />
-          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdAut__09A971A2" FromRole="Automovil" ToRole="Origen_Fabrica" />
-          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdAut__10566F31" FromRole="Automovil" ToRole="Origen_Traspaso" />
-=======
-=======
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
-          <NavigationProperty Name="Anios" Relationship="Self.FK__Automovil__IdAni__4CA06362" FromRole="Automovil" ToRole="Anios" />
-          <NavigationProperty Name="AutoAccesorio" Relationship="Self.FK__AutoAcces__IdAut__5AEE82B9" FromRole="Automovil" ToRole="AutoAccesorio" />
-          <NavigationProperty Name="AutoCliente" Relationship="Self.FK__AutoClien__IdAut__7B5B524B" FromRole="Automovil" ToRole="AutoCliente" />
-          <NavigationProperty Name="AutoColorList" Relationship="Self.FK__Automovil__IdAut__4E88ABD4" FromRole="Automovil" ToRole="AutoColorList" />
-          <NavigationProperty Name="AutoEstadoList" Relationship="Self.FK__Automovil__IdAut__4F7CD00D" FromRole="Automovil" ToRole="AutoEstadoList" />
-          <NavigationProperty Name="AutoModelo" Relationship="Self.FK__Automovil__IdAut__4D94879B" FromRole="Automovil" ToRole="AutoModelo" />
-          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdAut__6383C8BA" FromRole="Automovil" ToRole="Origen_Fabrica" />
-          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdAut__6A30C649" FromRole="Automovil" ToRole="Origen_Traspaso" />
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+          <NavigationProperty Name="Anios" Relationship="Self.FK__Automovil__IdAni__4D94879B" FromRole="Automovil" ToRole="Anios" />
+          <NavigationProperty Name="AutoAccesorio" Relationship="Self.FK__AutoAcces__IdAut__5BE2A6F2" FromRole="Automovil" ToRole="AutoAccesorio" />
+          <NavigationProperty Name="AutoCliente" Relationship="Self.FK__AutoClien__IdAut__7C4F7684" FromRole="Automovil" ToRole="AutoCliente" />
+          <NavigationProperty Name="AutoColorList" Relationship="Self.FK__Automovil__IdAut__4F7CD00D" FromRole="Automovil" ToRole="AutoColorList" />
+          <NavigationProperty Name="AutoEstadoList" Relationship="Self.FK__Automovil__IdAut__5070F446" FromRole="Automovil" ToRole="AutoEstadoList" />
+          <NavigationProperty Name="AutoModelo" Relationship="Self.FK__Automovil__IdAut__4E88ABD4" FromRole="Automovil" ToRole="AutoModelo" />
+          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdAut__6477ECF3" FromRole="Automovil" ToRole="Origen_Fabrica" />
+          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdAut__6B24EA82" FromRole="Automovil" ToRole="Origen_Traspaso" />
         </EntityType>
         <EntityType Name="Cliente">
           <Key>
@@ -1596,23 +1023,10 @@
           <Property Name="RFC" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
           <Property Name="IdMunicipio" Type="Int32" />
           <Property Name="IdEstado_Cliente" Type="Int32" />
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-          <NavigationProperty Name="Estado_Cliente" Relationship="Self.FK__Cliente__IdEstad__17036CC0" FromRole="Cliente" ToRole="Estado_Cliente" />
-          <NavigationProperty Name="Municipio" Relationship="Self.FK__Cliente__IdMunic__160F4887" FromRole="Cliente" ToRole="Municipio" />
-          <NavigationProperty Name="Referencias" Relationship="Self.FK__Referenci__IdCli__19DFD96B" FromRole="Cliente" ToRole="Referencias" />
-          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__VentaAuto__IdCli__1EA48E88" FromRole="Cliente" ToRole="VentaAuto" />
-=======
-=======
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
-          <NavigationProperty Name="Estado_Cliente" Relationship="Self.FK__Cliente__IdEstad__70DDC3D8" FromRole="Cliente" ToRole="Estado_Cliente" />
-          <NavigationProperty Name="Municipio" Relationship="Self.FK__Cliente__IdMunic__6FE99F9F" FromRole="Cliente" ToRole="Municipio" />
-          <NavigationProperty Name="Referencias" Relationship="Self.FK__Referenci__IdCli__73BA3083" FromRole="Cliente" ToRole="Referencias" />
-          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__VentaAuto__IdCli__787EE5A0" FromRole="Cliente" ToRole="VentaAuto" />
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+          <NavigationProperty Name="Estado_Cliente" Relationship="Self.FK__Cliente__IdEstad__71D1E811" FromRole="Cliente" ToRole="Estado_Cliente" />
+          <NavigationProperty Name="Municipio" Relationship="Self.FK__Cliente__IdMunic__70DDC3D8" FromRole="Cliente" ToRole="Municipio" />
+          <NavigationProperty Name="Referencias" Relationship="Self.FK__Referenci__IdCli__74AE54BC" FromRole="Cliente" ToRole="Referencias" />
+          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__VentaAuto__IdCli__797309D9" FromRole="Cliente" ToRole="VentaAuto" />
         </EntityType>
         <EntityType Name="Concesinaria">
           <Key>
@@ -1623,25 +1037,11 @@
           <Property Name="Clave" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="IdMunicipio" Type="Int32" />
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-          <NavigationProperty Name="Accesorio" Relationship="Self.FK__Accesorio__IdCon__7D439ABD" FromRole="Concesinaria" ToRole="Accesorio" />
-          <NavigationProperty Name="Municipio" Relationship="Self.FK__Concesina__IdMun__5165187F" FromRole="Concesinaria" ToRole="Municipio" />
-          <NavigationProperty Name="Empleado" Relationship="Self.FK__Empleado__IdConc__59063A47" FromRole="Concesinaria" ToRole="Empleado" />
-          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdCon__0F624AF8" FromRole="Concesinaria" ToRole="Origen_Traspaso" />
-          <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__Promocion__IdCon__6B24EA82" FromRole="Concesinaria" ToRole="Promocion_Auto" />
-=======
-=======
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
-          <NavigationProperty Name="Accesorio" Relationship="Self.FK__Accesorio__IdCon__571DF1D5" FromRole="Concesinaria" ToRole="Accesorio" />
+          <NavigationProperty Name="Accesorio" Relationship="Self.FK__Accesorio__IdCon__5812160E" FromRole="Concesinaria" ToRole="Accesorio" />
           <NavigationProperty Name="Municipio" Relationship="Self.FK__Concesina__IdMun__2C3393D0" FromRole="Concesinaria" ToRole="Municipio" />
           <NavigationProperty Name="Empleado" Relationship="Self.FK__Empleado__IdConc__33D4B598" FromRole="Concesinaria" ToRole="Empleado" />
-          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdCon__693CA210" FromRole="Concesinaria" ToRole="Origen_Traspaso" />
-          <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__Promocion__IdCon__44FF419A" FromRole="Concesinaria" ToRole="Promocion_Auto" />
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdCon__6A30C649" FromRole="Concesinaria" ToRole="Origen_Traspaso" />
+          <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__Promocion__IdCon__45F365D3" FromRole="Concesinaria" ToRole="Promocion_Auto" />
         </EntityType>
         <EntityType Name="Empleado">
           <Key>
@@ -1674,15 +1074,7 @@
           </Key>
           <Property Name="IdEstado_Cliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-          <NavigationProperty Name="Cliente" Relationship="Self.FK__Cliente__IdEstad__17036CC0" FromRole="Estado_Cliente" ToRole="Cliente" />
-=======
-          <NavigationProperty Name="Cliente" Relationship="Self.FK__Cliente__IdEstad__70DDC3D8" FromRole="Estado_Cliente" ToRole="Cliente" />
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-          <NavigationProperty Name="Cliente" Relationship="Self.FK__Cliente__IdEstad__70DDC3D8" FromRole="Estado_Cliente" ToRole="Cliente" />
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+          <NavigationProperty Name="Cliente" Relationship="Self.FK__Cliente__IdEstad__71D1E811" FromRole="Estado_Cliente" ToRole="Cliente" />
         </EntityType>
         <EntityType Name="Fabrica">
           <Key>
@@ -1691,15 +1083,7 @@
           <Property Name="IdFabrica" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Numero" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdFab__07C12930" FromRole="Fabrica" ToRole="Origen_Fabrica" />
-=======
-          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdFab__619B8048" FromRole="Fabrica" ToRole="Origen_Fabrica" />
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdFab__619B8048" FromRole="Fabrica" ToRole="Origen_Fabrica" />
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdFab__628FA481" FromRole="Fabrica" ToRole="Origen_Fabrica" />
         </EntityType>
         <EntityType Name="Municipio">
           <Key>
@@ -1708,21 +1092,9 @@
           <Property Name="IdMunicipio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="IdEstado" Type="Int32" />
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-          <NavigationProperty Name="Cliente" Relationship="Self.FK__Cliente__IdMunic__160F4887" FromRole="Municipio" ToRole="Cliente" />
-          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Concesina__IdMun__5165187F" FromRole="Municipio" ToRole="Concesinaria" />
-          <NavigationProperty Name="Estado" Relationship="Self.FK__Municipio__IdEst__4E88ABD4" FromRole="Municipio" ToRole="Estado" />
-=======
-          <NavigationProperty Name="Cliente" Relationship="Self.FK__Cliente__IdMunic__6FE99F9F" FromRole="Municipio" ToRole="Cliente" />
+          <NavigationProperty Name="Cliente" Relationship="Self.FK__Cliente__IdMunic__70DDC3D8" FromRole="Municipio" ToRole="Cliente" />
           <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Concesina__IdMun__2C3393D0" FromRole="Municipio" ToRole="Concesinaria" />
           <NavigationProperty Name="Estado" Relationship="Self.FK__Municipio__IdEst__29572725" FromRole="Municipio" ToRole="Estado" />
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-          <NavigationProperty Name="Cliente" Relationship="Self.FK__Cliente__IdMunic__6FE99F9F" FromRole="Municipio" ToRole="Cliente" />
-          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Concesina__IdMun__2C3393D0" FromRole="Municipio" ToRole="Concesinaria" />
-          <NavigationProperty Name="Estado" Relationship="Self.FK__Municipio__IdEst__29572725" FromRole="Municipio" ToRole="Estado" />
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
         </EntityType>
         <EntityType Name="Origen_Fabrica">
           <Key>
@@ -1734,23 +1106,10 @@
           <Property Name="IdUsuario" Type="Int32" />
           <Property Name="IdAutomovil" Type="Int32" />
           <Property Name="IdOrigenEstado" Type="Int32" />
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__Origen_Fa__IdAut__09A971A2" FromRole="Origen_Fabrica" ToRole="Automovil" />
-          <NavigationProperty Name="Fabrica" Relationship="Self.FK__Origen_Fa__IdFab__07C12930" FromRole="Origen_Fabrica" ToRole="Fabrica" />
-          <NavigationProperty Name="OrigenEstado" Relationship="Self.FK__Origen_Fa__IdOri__0A9D95DB" FromRole="Origen_Fabrica" ToRole="OrigenEstado" />
-          <NavigationProperty Name="Usuario" Relationship="Self.FK__Origen_Fa__IdUsu__08B54D69" FromRole="Origen_Fabrica" ToRole="Usuario" />
-=======
-=======
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__Origen_Fa__IdAut__6383C8BA" FromRole="Origen_Fabrica" ToRole="Automovil" />
-          <NavigationProperty Name="Fabrica" Relationship="Self.FK__Origen_Fa__IdFab__619B8048" FromRole="Origen_Fabrica" ToRole="Fabrica" />
-          <NavigationProperty Name="OrigenEstado" Relationship="Self.FK__Origen_Fa__IdOri__6477ECF3" FromRole="Origen_Fabrica" ToRole="OrigenEstado" />
-          <NavigationProperty Name="Usuario" Relationship="Self.FK__Origen_Fa__IdUsu__628FA481" FromRole="Origen_Fabrica" ToRole="Usuario" />
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+          <NavigationProperty Name="Automovil" Relationship="Self.FK__Origen_Fa__IdAut__6477ECF3" FromRole="Origen_Fabrica" ToRole="Automovil" />
+          <NavigationProperty Name="Fabrica" Relationship="Self.FK__Origen_Fa__IdFab__628FA481" FromRole="Origen_Fabrica" ToRole="Fabrica" />
+          <NavigationProperty Name="OrigenEstado" Relationship="Self.FK__Origen_Fa__IdOri__656C112C" FromRole="Origen_Fabrica" ToRole="OrigenEstado" />
+          <NavigationProperty Name="Usuario" Relationship="Self.FK__Origen_Fa__IdUsu__6383C8BA" FromRole="Origen_Fabrica" ToRole="Usuario" />
         </EntityType>
         <EntityType Name="Origen_Traspaso">
           <Key>
@@ -1763,25 +1122,11 @@
           <Property Name="IdConcesinaria" Type="Int32" />
           <Property Name="IdAutomovil" Type="Int32" />
           <Property Name="IdOrigenEstado" Type="Int32" />
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__Origen_Tr__IdAut__10566F31" FromRole="Origen_Traspaso" ToRole="Automovil" />
-          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Origen_Tr__IdCon__0F624AF8" FromRole="Origen_Traspaso" ToRole="Concesinaria" />
-          <NavigationProperty Name="Usuario" Relationship="Self.FK__Origen_Tr__IdCom__0E6E26BF" FromRole="Origen_Traspaso" ToRole="Usuario" />
-          <NavigationProperty Name="OrigenEstado" Relationship="Self.FK__Origen_Tr__IdOri__114A936A" FromRole="Origen_Traspaso" ToRole="OrigenEstado" />
-          <NavigationProperty Name="Usuario1" Relationship="Self.FK__Origen_Tr__IdVen__0D7A0286" FromRole="Origen_Traspaso" ToRole="Usuario" />
-=======
-=======
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
-          <NavigationProperty Name="Automovil" Relationship="Self.FK__Origen_Tr__IdAut__6A30C649" FromRole="Origen_Traspaso" ToRole="Automovil" />
-          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Origen_Tr__IdCon__693CA210" FromRole="Origen_Traspaso" ToRole="Concesinaria" />
-          <NavigationProperty Name="Usuario" Relationship="Self.FK__Origen_Tr__IdCom__68487DD7" FromRole="Origen_Traspaso" ToRole="Usuario" />
-          <NavigationProperty Name="OrigenEstado" Relationship="Self.FK__Origen_Tr__IdOri__6B24EA82" FromRole="Origen_Traspaso" ToRole="OrigenEstado" />
-          <NavigationProperty Name="Usuario1" Relationship="Self.FK__Origen_Tr__IdVen__6754599E" FromRole="Origen_Traspaso" ToRole="Usuario" />
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+          <NavigationProperty Name="Automovil" Relationship="Self.FK__Origen_Tr__IdAut__6B24EA82" FromRole="Origen_Traspaso" ToRole="Automovil" />
+          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Origen_Tr__IdCon__6A30C649" FromRole="Origen_Traspaso" ToRole="Concesinaria" />
+          <NavigationProperty Name="Usuario" Relationship="Self.FK__Origen_Tr__IdCom__693CA210" FromRole="Origen_Traspaso" ToRole="Usuario" />
+          <NavigationProperty Name="OrigenEstado" Relationship="Self.FK__Origen_Tr__IdOri__6C190EBB" FromRole="Origen_Traspaso" ToRole="OrigenEstado" />
+          <NavigationProperty Name="Usuario1" Relationship="Self.FK__Origen_Tr__IdVen__68487DD7" FromRole="Origen_Traspaso" ToRole="Usuario" />
         </EntityType>
         <EntityType Name="OrigenEstado">
           <Key>
@@ -1789,18 +1134,8 @@
           </Key>
           <Property Name="IdOrigenEstado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdOri__0A9D95DB" FromRole="OrigenEstado" ToRole="Origen_Fabrica" />
-          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdOri__114A936A" FromRole="OrigenEstado" ToRole="Origen_Traspaso" />
-=======
-          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdOri__6477ECF3" FromRole="OrigenEstado" ToRole="Origen_Fabrica" />
-          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdOri__6B24EA82" FromRole="OrigenEstado" ToRole="Origen_Traspaso" />
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdOri__6477ECF3" FromRole="OrigenEstado" ToRole="Origen_Fabrica" />
-          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdOri__6B24EA82" FromRole="OrigenEstado" ToRole="Origen_Traspaso" />
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdOri__656C112C" FromRole="OrigenEstado" ToRole="Origen_Fabrica" />
+          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdOri__6C190EBB" FromRole="OrigenEstado" ToRole="Origen_Traspaso" />
         </EntityType>
         <EntityType Name="Pais">
           <Key>
@@ -1809,7 +1144,6 @@
           <Property Name="IdPais" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Estado" Relationship="Self.FK__Estado__IdPais__267ABA7A" FromRole="Pais" ToRole="Estado" />
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
         </EntityType>
         <EntityType Name="Promocion_Auto">
           <Key>
@@ -1821,12 +1155,10 @@
           <Property Name="IdPromocion" Type="Int32" />
           <Property Name="IdConcesinaria" Type="Int32" />
           <Property Name="Vigente" Type="Boolean" />
-          <NavigationProperty Name="Anios" Relationship="Self.FK__Promocion__IdAni__693CA210" FromRole="Promocion_Auto" ToRole="Anios" />
-          <NavigationProperty Name="AutoModelo" Relationship="Self.FK__Promocion__IdAut__68487DD7" FromRole="Promocion_Auto" ToRole="AutoModelo" />
-          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Promocion__IdCon__6B24EA82" FromRole="Promocion_Auto" ToRole="Concesinaria" />
-          <NavigationProperty Name="PromocionList" Relationship="Self.FK__Promocion__IdPro__6A30C649" FromRole="Promocion_Auto" ToRole="PromocionList" />
-=======
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+          <NavigationProperty Name="Anios" Relationship="Self.FK__Promocion__IdAni__440B1D61" FromRole="Promocion_Auto" ToRole="Anios" />
+          <NavigationProperty Name="AutoModelo" Relationship="Self.FK__Promocion__IdAut__4316F928" FromRole="Promocion_Auto" ToRole="AutoModelo" />
+          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Promocion__IdCon__45F365D3" FromRole="Promocion_Auto" ToRole="Concesinaria" />
+          <NavigationProperty Name="PromocionList" Relationship="Self.FK__Promocion__IdPro__44FF419A" FromRole="Promocion_Auto" ToRole="PromocionList" />
         </EntityType>
         <EntityType Name="PromocionList">
           <Key>
@@ -1836,18 +1168,8 @@
           <Property Name="Numero" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="Cantidad_Auto" Type="Int32" />
           <Property Name="Descuento" Type="Int32" />
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-          <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__Promocion__IdPro__6A30C649" FromRole="PromocionList" ToRole="Promocion_Auto" />
-          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__VentaAuto__IdPro__1DB06A4F" FromRole="PromocionList" ToRole="VentaAuto" />
-=======
-          <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__Promocion__IdPro__440B1D61" FromRole="PromocionList" ToRole="Promocion_Auto" />
-          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__VentaAuto__IdPro__778AC167" FromRole="PromocionList" ToRole="VentaAuto" />
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-          <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__Promocion__IdPro__440B1D61" FromRole="PromocionList" ToRole="Promocion_Auto" />
-          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__VentaAuto__IdPro__778AC167" FromRole="PromocionList" ToRole="VentaAuto" />
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+          <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__Promocion__IdPro__44FF419A" FromRole="PromocionList" ToRole="Promocion_Auto" />
+          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__VentaAuto__IdPro__787EE5A0" FromRole="PromocionList" ToRole="VentaAuto" />
         </EntityType>
         <EntityType Name="Referencias">
           <Key>
@@ -1858,15 +1180,7 @@
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="TelCel" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="IdCliente" Type="Int32" />
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-          <NavigationProperty Name="Cliente" Relationship="Self.FK__Referenci__IdCli__19DFD96B" FromRole="Referencias" ToRole="Cliente" />
-=======
-          <NavigationProperty Name="Cliente" Relationship="Self.FK__Referenci__IdCli__73BA3083" FromRole="Referencias" ToRole="Cliente" />
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-          <NavigationProperty Name="Cliente" Relationship="Self.FK__Referenci__IdCli__73BA3083" FromRole="Referencias" ToRole="Cliente" />
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+          <NavigationProperty Name="Cliente" Relationship="Self.FK__Referenci__IdCli__74AE54BC" FromRole="Referencias" ToRole="Cliente" />
         </EntityType>
         <EntityType Name="TipoEmpleado">
           <Key>
@@ -1886,25 +1200,11 @@
           <Property Name="Contrasena" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Acceso" Type="Boolean" />
           <Property Name="IdEmpleado" Type="Int32" />
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-          <NavigationProperty Name="Empleado" Relationship="Self.FK__Usuario__IdEmple__5CD6CB2B" FromRole="Usuario" ToRole="Empleado" />
-          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdUsu__08B54D69" FromRole="Usuario" ToRole="Origen_Fabrica" />
-          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdCom__0E6E26BF" FromRole="Usuario" ToRole="Origen_Traspaso" />
-          <NavigationProperty Name="Origen_Traspaso1" Relationship="Self.FK__Origen_Tr__IdVen__0D7A0286" FromRole="Usuario" ToRole="Origen_Traspaso" />
-          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__VentaAuto__IdUsu__1CBC4616" FromRole="Usuario" ToRole="VentaAuto" />
-=======
-=======
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
           <NavigationProperty Name="Empleado" Relationship="Self.FK__Usuario__IdEmple__37A5467C" FromRole="Usuario" ToRole="Empleado" />
-          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdUsu__628FA481" FromRole="Usuario" ToRole="Origen_Fabrica" />
-          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdCom__68487DD7" FromRole="Usuario" ToRole="Origen_Traspaso" />
-          <NavigationProperty Name="Origen_Traspaso1" Relationship="Self.FK__Origen_Tr__IdVen__6754599E" FromRole="Usuario" ToRole="Origen_Traspaso" />
-          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__VentaAuto__IdUsu__76969D2E" FromRole="Usuario" ToRole="VentaAuto" />
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdUsu__6383C8BA" FromRole="Usuario" ToRole="Origen_Fabrica" />
+          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdCom__693CA210" FromRole="Usuario" ToRole="Origen_Traspaso" />
+          <NavigationProperty Name="Origen_Traspaso1" Relationship="Self.FK__Origen_Tr__IdVen__68487DD7" FromRole="Usuario" ToRole="Origen_Traspaso" />
+          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__VentaAuto__IdUsu__778AC167" FromRole="Usuario" ToRole="VentaAuto" />
         </EntityType>
         <EntityType Name="VentaAuto">
           <Key>
@@ -1914,42 +1214,12 @@
           <Property Name="IdUsuario" Type="Int32" />
           <Property Name="IdPromocion" Type="Int32" />
           <Property Name="IdCliente" Type="Int32" />
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-          <NavigationProperty Name="AutoCliente" Relationship="Self.FK__AutoClien__IdVen__22751F6C" FromRole="VentaAuto" ToRole="AutoCliente" />
-          <NavigationProperty Name="Cliente" Relationship="Self.FK__VentaAuto__IdCli__1EA48E88" FromRole="VentaAuto" ToRole="Cliente" />
-          <NavigationProperty Name="PromocionList" Relationship="Self.FK__VentaAuto__IdPro__1DB06A4F" FromRole="VentaAuto" ToRole="PromocionList" />
-          <NavigationProperty Name="Usuario" Relationship="Self.FK__VentaAuto__IdUsu__1CBC4616" FromRole="VentaAuto" ToRole="Usuario" />
+          <NavigationProperty Name="AutoCliente" Relationship="Self.FK__AutoClien__IdVen__7D439ABD" FromRole="VentaAuto" ToRole="AutoCliente" />
+          <NavigationProperty Name="Cliente" Relationship="Self.FK__VentaAuto__IdCli__797309D9" FromRole="VentaAuto" ToRole="Cliente" />
+          <NavigationProperty Name="PromocionList" Relationship="Self.FK__VentaAuto__IdPro__787EE5A0" FromRole="VentaAuto" ToRole="PromocionList" />
+          <NavigationProperty Name="Usuario" Relationship="Self.FK__VentaAuto__IdUsu__778AC167" FromRole="VentaAuto" ToRole="Usuario" />
         </EntityType>
-        <Association Name="FK__Accesorio__IdAcc__7C4F7684">
-=======
-=======
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
-          <NavigationProperty Name="AutoCliente" Relationship="Self.FK__AutoClien__IdVen__7C4F7684" FromRole="VentaAuto" ToRole="AutoCliente" />
-          <NavigationProperty Name="Cliente" Relationship="Self.FK__VentaAuto__IdCli__787EE5A0" FromRole="VentaAuto" ToRole="Cliente" />
-          <NavigationProperty Name="PromocionList" Relationship="Self.FK__VentaAuto__IdPro__778AC167" FromRole="VentaAuto" ToRole="PromocionList" />
-          <NavigationProperty Name="Usuario" Relationship="Self.FK__VentaAuto__IdUsu__76969D2E" FromRole="VentaAuto" ToRole="Usuario" />
-        </EntityType>
-        <EntityType Name="Promocion_Auto">
-          <Key>
-            <PropertyRef Name="IdPromocion_Auto" />
-          </Key>
-          <Property Name="IdPromocion_Auto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="IdAutoModelo" Type="Int32" />
-          <Property Name="IdAnios" Type="Int32" />
-          <Property Name="IdPromocion" Type="Int32" />
-          <Property Name="IdConcesinaria" Type="Int32" />
-          <Property Name="Vigente" Type="Boolean" />
-          <NavigationProperty Name="Anios" Relationship="Self.FK__Promocion__IdAni__4316F928" FromRole="Promocion_Auto" ToRole="Anios" />
-          <NavigationProperty Name="AutoModelo" Relationship="Self.FK__Promocion__IdAut__4222D4EF" FromRole="Promocion_Auto" ToRole="AutoModelo" />
-          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Promocion__IdCon__44FF419A" FromRole="Promocion_Auto" ToRole="Concesinaria" />
-          <NavigationProperty Name="PromocionList" Relationship="Self.FK__Promocion__IdPro__440B1D61" FromRole="Promocion_Auto" ToRole="PromocionList" />
-        </EntityType>
-        <Association Name="FK__Accesorio__IdAcc__5629CD9C">
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Accesorio__IdAcc__571DF1D5">
           <End Role="AccesorioList" Type="Self.AccesorioList" Multiplicity="0..1" />
           <End Role="Accesorio" Type="Self.Accesorio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1961,15 +1231,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Accesorio__IdCon__7D439ABD">
-=======
-        <Association Name="FK__Accesorio__IdCon__571DF1D5">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Accesorio__IdCon__571DF1D5">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Accesorio__IdCon__5812160E">
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="0..1" />
           <End Role="Accesorio" Type="Self.Accesorio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1981,15 +1243,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__AutoAcces__IdAcc__00200768">
-=======
-        <Association Name="FK__AutoAcces__IdAcc__59FA5E80">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__AutoAcces__IdAcc__59FA5E80">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__AutoAcces__IdAcc__5AEE82B9">
           <End Role="Accesorio" Type="Self.Accesorio" Multiplicity="0..1" />
           <End Role="AutoAccesorio" Type="Self.AutoAccesorio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2001,15 +1255,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Accesorio__IdAni__797309D9">
-=======
-        <Association Name="FK__Accesorio__IdAni__534D60F1">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Accesorio__IdAni__534D60F1">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Accesorio__IdAni__5441852A">
           <End Role="Anios" Type="Self.Anios" Multiplicity="0..1" />
           <End Role="AccesorioList" Type="Self.AccesorioList" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2021,15 +1267,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Accesorio__IdAut__787EE5A0">
-=======
-        <Association Name="FK__Accesorio__IdAut__52593CB8">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Accesorio__IdAut__52593CB8">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Accesorio__IdAut__534D60F1">
           <End Role="AutoModelo" Type="Self.AutoModelo" Multiplicity="0..1" />
           <End Role="AccesorioList" Type="Self.AccesorioList" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2041,15 +1279,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Automovil__IdAni__72C60C4A">
-=======
-        <Association Name="FK__Automovil__IdAni__4CA06362">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Automovil__IdAni__4CA06362">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Automovil__IdAni__4D94879B">
           <End Role="Anios" Type="Self.Anios" Multiplicity="0..1" />
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2061,15 +1291,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Promocion__IdAni__693CA210">
-=======
-        <Association Name="FK__Promocion__IdAni__4316F928">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Promocion__IdAni__4316F928">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Promocion__IdAni__440B1D61">
           <End Role="Anios" Type="Self.Anios" Multiplicity="0..1" />
           <End Role="Promocion_Auto" Type="Self.Promocion_Auto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2081,15 +1303,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__AutoAcces__IdAut__01142BA1">
-=======
-        <Association Name="FK__AutoAcces__IdAut__5AEE82B9">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__AutoAcces__IdAut__5AEE82B9">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__AutoAcces__IdAut__5BE2A6F2">
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="AutoAccesorio" Type="Self.AutoAccesorio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2101,15 +1315,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__AutoClien__IdAut__2180FB33">
-=======
-        <Association Name="FK__AutoClien__IdAut__7B5B524B">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__AutoClien__IdAut__7B5B524B">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__AutoClien__IdAut__7C4F7684">
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="AutoCliente" Type="Self.AutoCliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2121,15 +1327,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__AutoClien__IdVen__22751F6C">
-=======
-        <Association Name="FK__AutoClien__IdVen__7C4F7684">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__AutoClien__IdVen__7C4F7684">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__AutoClien__IdVen__7D439ABD">
           <End Role="VentaAuto" Type="Self.VentaAuto" Multiplicity="0..1" />
           <End Role="AutoCliente" Type="Self.AutoCliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2141,15 +1339,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Automovil__IdAut__74AE54BC">
-=======
-        <Association Name="FK__Automovil__IdAut__4E88ABD4">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Automovil__IdAut__4E88ABD4">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Automovil__IdAut__4F7CD00D">
           <End Role="AutoColorList" Type="Self.AutoColorList" Multiplicity="0..1" />
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2161,15 +1351,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Automovil__IdAut__75A278F5">
-=======
-        <Association Name="FK__Automovil__IdAut__4F7CD00D">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Automovil__IdAut__4F7CD00D">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Automovil__IdAut__5070F446">
           <End Role="AutoEstadoList" Type="Self.AutoEstadoList" Multiplicity="0..1" />
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2193,15 +1375,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Automovil__IdAut__73BA3083">
-=======
-        <Association Name="FK__Automovil__IdAut__4D94879B">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Automovil__IdAut__4D94879B">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Automovil__IdAut__4E88ABD4">
           <End Role="AutoModelo" Type="Self.AutoModelo" Multiplicity="0..1" />
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2213,15 +1387,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Promocion__IdAut__68487DD7">
-=======
-        <Association Name="FK__Promocion__IdAut__4222D4EF">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Promocion__IdAut__4222D4EF">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Promocion__IdAut__4316F928">
           <End Role="AutoModelo" Type="Self.AutoModelo" Multiplicity="0..1" />
           <End Role="Promocion_Auto" Type="Self.Promocion_Auto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2233,15 +1399,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Origen_Fa__IdAut__09A971A2">
-=======
-        <Association Name="FK__Origen_Fa__IdAut__6383C8BA">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Origen_Fa__IdAut__6383C8BA">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Origen_Fa__IdAut__6477ECF3">
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="Origen_Fabrica" Type="Self.Origen_Fabrica" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2253,15 +1411,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Origen_Tr__IdAut__10566F31">
-=======
-        <Association Name="FK__Origen_Tr__IdAut__6A30C649">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Origen_Tr__IdAut__6A30C649">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Origen_Tr__IdAut__6B24EA82">
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2273,15 +1423,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Cliente__IdEstad__17036CC0">
-=======
-        <Association Name="FK__Cliente__IdEstad__70DDC3D8">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Cliente__IdEstad__70DDC3D8">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Cliente__IdEstad__71D1E811">
           <End Role="Estado_Cliente" Type="Self.Estado_Cliente" Multiplicity="0..1" />
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2293,15 +1435,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Cliente__IdMunic__160F4887">
-=======
-        <Association Name="FK__Cliente__IdMunic__6FE99F9F">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Cliente__IdMunic__6FE99F9F">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Cliente__IdMunic__70DDC3D8">
           <End Role="Municipio" Type="Self.Municipio" Multiplicity="0..1" />
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2313,15 +1447,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Referenci__IdCli__19DFD96B">
-=======
-        <Association Name="FK__Referenci__IdCli__73BA3083">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Referenci__IdCli__73BA3083">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Referenci__IdCli__74AE54BC">
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
           <End Role="Referencias" Type="Self.Referencias" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2333,15 +1459,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__VentaAuto__IdCli__1EA48E88">
-=======
-        <Association Name="FK__VentaAuto__IdCli__787EE5A0">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__VentaAuto__IdCli__787EE5A0">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__VentaAuto__IdCli__797309D9">
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
           <End Role="VentaAuto" Type="Self.VentaAuto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2377,15 +1495,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Origen_Tr__IdCon__0F624AF8">
-=======
-        <Association Name="FK__Origen_Tr__IdCon__693CA210">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Origen_Tr__IdCon__693CA210">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Origen_Tr__IdCon__6A30C649">
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2397,15 +1507,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Promocion__IdCon__6B24EA82">
-=======
-        <Association Name="FK__Promocion__IdCon__44FF419A">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Promocion__IdCon__44FF419A">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Promocion__IdCon__45F365D3">
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="0..1" />
           <End Role="Promocion_Auto" Type="Self.Promocion_Auto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2465,15 +1567,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Origen_Fa__IdFab__07C12930">
-=======
-        <Association Name="FK__Origen_Fa__IdFab__619B8048">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Origen_Fa__IdFab__619B8048">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Origen_Fa__IdFab__628FA481">
           <End Role="Fabrica" Type="Self.Fabrica" Multiplicity="0..1" />
           <End Role="Origen_Fabrica" Type="Self.Origen_Fabrica" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2485,15 +1579,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Origen_Fa__IdOri__0A9D95DB">
-=======
-        <Association Name="FK__Origen_Fa__IdOri__6477ECF3">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Origen_Fa__IdOri__6477ECF3">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Origen_Fa__IdOri__656C112C">
           <End Role="OrigenEstado" Type="Self.OrigenEstado" Multiplicity="0..1" />
           <End Role="Origen_Fabrica" Type="Self.Origen_Fabrica" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2505,15 +1591,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Origen_Fa__IdUsu__08B54D69">
-=======
-        <Association Name="FK__Origen_Fa__IdUsu__628FA481">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Origen_Fa__IdUsu__628FA481">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Origen_Fa__IdUsu__6383C8BA">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="Origen_Fabrica" Type="Self.Origen_Fabrica" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2525,15 +1603,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Origen_Tr__IdCom__0E6E26BF">
-=======
-        <Association Name="FK__Origen_Tr__IdCom__68487DD7">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Origen_Tr__IdCom__68487DD7">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Origen_Tr__IdCom__693CA210">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2545,15 +1615,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Origen_Tr__IdOri__114A936A">
-=======
-        <Association Name="FK__Origen_Tr__IdOri__6B24EA82">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Origen_Tr__IdOri__6B24EA82">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Origen_Tr__IdOri__6C190EBB">
           <End Role="OrigenEstado" Type="Self.OrigenEstado" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2565,15 +1627,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Origen_Tr__IdVen__0D7A0286">
-=======
-        <Association Name="FK__Origen_Tr__IdVen__6754599E">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Origen_Tr__IdVen__6754599E">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Origen_Tr__IdVen__68487DD7">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2585,15 +1639,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__Promocion__IdPro__6A30C649">
-=======
-        <Association Name="FK__Promocion__IdPro__440B1D61">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__Promocion__IdPro__440B1D61">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__Promocion__IdPro__44FF419A">
           <End Role="PromocionList" Type="Self.PromocionList" Multiplicity="0..1" />
           <End Role="Promocion_Auto" Type="Self.Promocion_Auto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2605,15 +1651,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__VentaAuto__IdPro__1DB06A4F">
-=======
-        <Association Name="FK__VentaAuto__IdPro__778AC167">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__VentaAuto__IdPro__778AC167">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__VentaAuto__IdPro__787EE5A0">
           <End Role="PromocionList" Type="Self.PromocionList" Multiplicity="0..1" />
           <End Role="VentaAuto" Type="Self.VentaAuto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2625,15 +1663,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-        <Association Name="FK__VentaAuto__IdUsu__1CBC4616">
-=======
-        <Association Name="FK__VentaAuto__IdUsu__76969D2E">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-        <Association Name="FK__VentaAuto__IdUsu__76969D2E">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+        <Association Name="FK__VentaAuto__IdUsu__778AC167">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="VentaAuto" Type="Self.VentaAuto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2673,103 +1703,51 @@
           <EntitySet Name="TipoEmpleado" EntityType="Self.TipoEmpleado" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" />
           <EntitySet Name="VentaAuto" EntityType="Self.VentaAuto" />
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-          <AssociationSet Name="FK__Accesorio__IdAcc__7C4F7684" Association="Self.FK__Accesorio__IdAcc__7C4F7684">
+          <AssociationSet Name="FK__Accesorio__IdAcc__571DF1D5" Association="Self.FK__Accesorio__IdAcc__571DF1D5">
             <End Role="AccesorioList" EntitySet="AccesorioList" />
             <End Role="Accesorio" EntitySet="Accesorio" />
           </AssociationSet>
-          <AssociationSet Name="FK__Accesorio__IdCon__7D439ABD" Association="Self.FK__Accesorio__IdCon__7D439ABD">
+          <AssociationSet Name="FK__Accesorio__IdCon__5812160E" Association="Self.FK__Accesorio__IdCon__5812160E">
             <End Role="Concesinaria" EntitySet="Concesinaria" />
             <End Role="Accesorio" EntitySet="Accesorio" />
           </AssociationSet>
-          <AssociationSet Name="FK__AutoAcces__IdAcc__00200768" Association="Self.FK__AutoAcces__IdAcc__00200768">
+          <AssociationSet Name="FK__AutoAcces__IdAcc__5AEE82B9" Association="Self.FK__AutoAcces__IdAcc__5AEE82B9">
             <End Role="Accesorio" EntitySet="Accesorio" />
             <End Role="AutoAccesorio" EntitySet="AutoAccesorio" />
           </AssociationSet>
-          <AssociationSet Name="FK__Accesorio__IdAni__797309D9" Association="Self.FK__Accesorio__IdAni__797309D9">
+          <AssociationSet Name="FK__Accesorio__IdAni__5441852A" Association="Self.FK__Accesorio__IdAni__5441852A">
             <End Role="Anios" EntitySet="Anios" />
             <End Role="AccesorioList" EntitySet="AccesorioList" />
           </AssociationSet>
-          <AssociationSet Name="FK__Accesorio__IdAut__787EE5A0" Association="Self.FK__Accesorio__IdAut__787EE5A0">
+          <AssociationSet Name="FK__Accesorio__IdAut__534D60F1" Association="Self.FK__Accesorio__IdAut__534D60F1">
             <End Role="AutoModelo" EntitySet="AutoModelo" />
             <End Role="AccesorioList" EntitySet="AccesorioList" />
           </AssociationSet>
-          <AssociationSet Name="FK__Automovil__IdAni__72C60C4A" Association="Self.FK__Automovil__IdAni__72C60C4A">
+          <AssociationSet Name="FK__Automovil__IdAni__4D94879B" Association="Self.FK__Automovil__IdAni__4D94879B">
             <End Role="Anios" EntitySet="Anios" />
             <End Role="Automovil" EntitySet="Automovil" />
           </AssociationSet>
-          <AssociationSet Name="FK__Promocion__IdAni__693CA210" Association="Self.FK__Promocion__IdAni__693CA210">
-            <End Role="Anios" EntitySet="Anios" />
-            <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
-          </AssociationSet>
-          <AssociationSet Name="FK__AutoAcces__IdAut__01142BA1" Association="Self.FK__AutoAcces__IdAut__01142BA1">
-            <End Role="Automovil" EntitySet="Automovil" />
-            <End Role="AutoAccesorio" EntitySet="AutoAccesorio" />
-          </AssociationSet>
-          <AssociationSet Name="FK__AutoClien__IdAut__2180FB33" Association="Self.FK__AutoClien__IdAut__2180FB33">
-            <End Role="Automovil" EntitySet="Automovil" />
-            <End Role="AutoCliente" EntitySet="AutoCliente" />
-          </AssociationSet>
-          <AssociationSet Name="FK__AutoClien__IdVen__22751F6C" Association="Self.FK__AutoClien__IdVen__22751F6C">
-            <End Role="VentaAuto" EntitySet="VentaAuto" />
-            <End Role="AutoCliente" EntitySet="AutoCliente" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Automovil__IdAut__74AE54BC" Association="Self.FK__Automovil__IdAut__74AE54BC">
-            <End Role="AutoColorList" EntitySet="AutoColorList" />
-            <End Role="Automovil" EntitySet="Automovil" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Automovil__IdAut__75A278F5" Association="Self.FK__Automovil__IdAut__75A278F5">
-=======
-          <EntitySet Name="Promocion_Auto" EntityType="Self.Promocion_Auto" />
-          <AssociationSet Name="FK__Accesorio__IdAcc__5629CD9C" Association="Self.FK__Accesorio__IdAcc__5629CD9C">
-            <End Role="AccesorioList" EntitySet="AccesorioList" />
-            <End Role="Accesorio" EntitySet="Accesorio" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Accesorio__IdCon__571DF1D5" Association="Self.FK__Accesorio__IdCon__571DF1D5">
-            <End Role="Concesinaria" EntitySet="Concesinaria" />
-            <End Role="Accesorio" EntitySet="Accesorio" />
-          </AssociationSet>
-          <AssociationSet Name="FK__AutoAcces__IdAcc__59FA5E80" Association="Self.FK__AutoAcces__IdAcc__59FA5E80">
-            <End Role="Accesorio" EntitySet="Accesorio" />
-            <End Role="AutoAccesorio" EntitySet="AutoAccesorio" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Accesorio__IdAni__534D60F1" Association="Self.FK__Accesorio__IdAni__534D60F1">
-            <End Role="Anios" EntitySet="Anios" />
-            <End Role="AccesorioList" EntitySet="AccesorioList" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Accesorio__IdAut__52593CB8" Association="Self.FK__Accesorio__IdAut__52593CB8">
-            <End Role="AutoModelo" EntitySet="AutoModelo" />
-            <End Role="AccesorioList" EntitySet="AccesorioList" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Automovil__IdAni__4CA06362" Association="Self.FK__Automovil__IdAni__4CA06362">
-            <End Role="Anios" EntitySet="Anios" />
-            <End Role="Automovil" EntitySet="Automovil" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Promocion__IdAni__4316F928" Association="Self.FK__Promocion__IdAni__4316F928">
+          <AssociationSet Name="FK__Promocion__IdAni__440B1D61" Association="Self.FK__Promocion__IdAni__440B1D61">
             <End Role="Anios" EntitySet="Anios" />
             <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
           </AssociationSet>
-          <AssociationSet Name="FK__AutoAcces__IdAut__5AEE82B9" Association="Self.FK__AutoAcces__IdAut__5AEE82B9">
+          <AssociationSet Name="FK__AutoAcces__IdAut__5BE2A6F2" Association="Self.FK__AutoAcces__IdAut__5BE2A6F2">
             <End Role="Automovil" EntitySet="Automovil" />
             <End Role="AutoAccesorio" EntitySet="AutoAccesorio" />
           </AssociationSet>
-          <AssociationSet Name="FK__AutoClien__IdAut__7B5B524B" Association="Self.FK__AutoClien__IdAut__7B5B524B">
+          <AssociationSet Name="FK__AutoClien__IdAut__7C4F7684" Association="Self.FK__AutoClien__IdAut__7C4F7684">
             <End Role="Automovil" EntitySet="Automovil" />
             <End Role="AutoCliente" EntitySet="AutoCliente" />
           </AssociationSet>
-          <AssociationSet Name="FK__AutoClien__IdVen__7C4F7684" Association="Self.FK__AutoClien__IdVen__7C4F7684">
+          <AssociationSet Name="FK__AutoClien__IdVen__7D439ABD" Association="Self.FK__AutoClien__IdVen__7D439ABD">
             <End Role="VentaAuto" EntitySet="VentaAuto" />
             <End Role="AutoCliente" EntitySet="AutoCliente" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Automovil__IdAut__4E88ABD4" Association="Self.FK__Automovil__IdAut__4E88ABD4">
-            <End Role="AutoColorList" EntitySet="AutoColorList" />
-            <End Role="Automovil" EntitySet="Automovil" />
           </AssociationSet>
           <AssociationSet Name="FK__Automovil__IdAut__4F7CD00D" Association="Self.FK__Automovil__IdAut__4F7CD00D">
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+            <End Role="AutoColorList" EntitySet="AutoColorList" />
+            <End Role="Automovil" EntitySet="Automovil" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Automovil__IdAut__5070F446" Association="Self.FK__Automovil__IdAut__5070F446">
             <End Role="AutoEstadoList" EntitySet="AutoEstadoList" />
             <End Role="Automovil" EntitySet="Automovil" />
           </AssociationSet>
@@ -2777,73 +1755,35 @@
             <End Role="AutoMarca" EntitySet="AutoMarca" />
             <End Role="AutoModelo" EntitySet="AutoModelo" />
           </AssociationSet>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-          <AssociationSet Name="FK__Automovil__IdAut__73BA3083" Association="Self.FK__Automovil__IdAut__73BA3083">
+          <AssociationSet Name="FK__Automovil__IdAut__4E88ABD4" Association="Self.FK__Automovil__IdAut__4E88ABD4">
             <End Role="AutoModelo" EntitySet="AutoModelo" />
             <End Role="Automovil" EntitySet="Automovil" />
           </AssociationSet>
-          <AssociationSet Name="FK__Promocion__IdAut__68487DD7" Association="Self.FK__Promocion__IdAut__68487DD7">
+          <AssociationSet Name="FK__Promocion__IdAut__4316F928" Association="Self.FK__Promocion__IdAut__4316F928">
             <End Role="AutoModelo" EntitySet="AutoModelo" />
             <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdAut__09A971A2" Association="Self.FK__Origen_Fa__IdAut__09A971A2">
+          <AssociationSet Name="FK__Origen_Fa__IdAut__6477ECF3" Association="Self.FK__Origen_Fa__IdAut__6477ECF3">
             <End Role="Automovil" EntitySet="Automovil" />
             <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdAut__10566F31" Association="Self.FK__Origen_Tr__IdAut__10566F31">
+          <AssociationSet Name="FK__Origen_Tr__IdAut__6B24EA82" Association="Self.FK__Origen_Tr__IdAut__6B24EA82">
             <End Role="Automovil" EntitySet="Automovil" />
             <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
           </AssociationSet>
-          <AssociationSet Name="FK__Cliente__IdEstad__17036CC0" Association="Self.FK__Cliente__IdEstad__17036CC0">
+          <AssociationSet Name="FK__Cliente__IdEstad__71D1E811" Association="Self.FK__Cliente__IdEstad__71D1E811">
             <End Role="Estado_Cliente" EntitySet="Estado_Cliente" />
             <End Role="Cliente" EntitySet="Cliente" />
           </AssociationSet>
-          <AssociationSet Name="FK__Cliente__IdMunic__160F4887" Association="Self.FK__Cliente__IdMunic__160F4887">
+          <AssociationSet Name="FK__Cliente__IdMunic__70DDC3D8" Association="Self.FK__Cliente__IdMunic__70DDC3D8">
             <End Role="Municipio" EntitySet="Municipio" />
             <End Role="Cliente" EntitySet="Cliente" />
           </AssociationSet>
-          <AssociationSet Name="FK__Referenci__IdCli__19DFD96B" Association="Self.FK__Referenci__IdCli__19DFD96B">
+          <AssociationSet Name="FK__Referenci__IdCli__74AE54BC" Association="Self.FK__Referenci__IdCli__74AE54BC">
             <End Role="Cliente" EntitySet="Cliente" />
             <End Role="Referencias" EntitySet="Referencias" />
           </AssociationSet>
-          <AssociationSet Name="FK__VentaAuto__IdCli__1EA48E88" Association="Self.FK__VentaAuto__IdCli__1EA48E88">
-=======
-=======
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
-          <AssociationSet Name="FK__Automovil__IdAut__4D94879B" Association="Self.FK__Automovil__IdAut__4D94879B">
-            <End Role="AutoModelo" EntitySet="AutoModelo" />
-            <End Role="Automovil" EntitySet="Automovil" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Promocion__IdAut__4222D4EF" Association="Self.FK__Promocion__IdAut__4222D4EF">
-            <End Role="AutoModelo" EntitySet="AutoModelo" />
-            <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdAut__6383C8BA" Association="Self.FK__Origen_Fa__IdAut__6383C8BA">
-            <End Role="Automovil" EntitySet="Automovil" />
-            <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdAut__6A30C649" Association="Self.FK__Origen_Tr__IdAut__6A30C649">
-            <End Role="Automovil" EntitySet="Automovil" />
-            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Cliente__IdEstad__70DDC3D8" Association="Self.FK__Cliente__IdEstad__70DDC3D8">
-            <End Role="Estado_Cliente" EntitySet="Estado_Cliente" />
-            <End Role="Cliente" EntitySet="Cliente" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Cliente__IdMunic__6FE99F9F" Association="Self.FK__Cliente__IdMunic__6FE99F9F">
-            <End Role="Municipio" EntitySet="Municipio" />
-            <End Role="Cliente" EntitySet="Cliente" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Referenci__IdCli__73BA3083" Association="Self.FK__Referenci__IdCli__73BA3083">
-            <End Role="Cliente" EntitySet="Cliente" />
-            <End Role="Referencias" EntitySet="Referencias" />
-          </AssociationSet>
-          <AssociationSet Name="FK__VentaAuto__IdCli__787EE5A0" Association="Self.FK__VentaAuto__IdCli__787EE5A0">
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+          <AssociationSet Name="FK__VentaAuto__IdCli__797309D9" Association="Self.FK__VentaAuto__IdCli__797309D9">
             <End Role="Cliente" EntitySet="Cliente" />
             <End Role="VentaAuto" EntitySet="VentaAuto" />
           </AssociationSet>
@@ -2855,25 +1795,11 @@
             <End Role="Concesinaria" EntitySet="Concesinaria" />
             <End Role="Empleado" EntitySet="Empleado" />
           </AssociationSet>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-          <AssociationSet Name="FK__Origen_Tr__IdCon__0F624AF8" Association="Self.FK__Origen_Tr__IdCon__0F624AF8">
+          <AssociationSet Name="FK__Origen_Tr__IdCon__6A30C649" Association="Self.FK__Origen_Tr__IdCon__6A30C649">
             <End Role="Concesinaria" EntitySet="Concesinaria" />
             <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
           </AssociationSet>
-          <AssociationSet Name="FK__Promocion__IdCon__6B24EA82" Association="Self.FK__Promocion__IdCon__6B24EA82">
-=======
-=======
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
-          <AssociationSet Name="FK__Origen_Tr__IdCon__693CA210" Association="Self.FK__Origen_Tr__IdCon__693CA210">
-            <End Role="Concesinaria" EntitySet="Concesinaria" />
-            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Promocion__IdCon__44FF419A" Association="Self.FK__Promocion__IdCon__44FF419A">
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+          <AssociationSet Name="FK__Promocion__IdCon__45F365D3" Association="Self.FK__Promocion__IdCon__45F365D3">
             <End Role="Concesinaria" EntitySet="Concesinaria" />
             <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
           </AssociationSet>
@@ -2893,111 +1819,39 @@
             <End Role="Estado" EntitySet="Estado" />
             <End Role="Municipio" EntitySet="Municipio" />
           </AssociationSet>
-<<<<<<< HEAD:Concesionaria/Models/Concesinaria.edmx
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
-          <AssociationSet Name="FK__Origen_Fa__IdFab__07C12930" Association="Self.FK__Origen_Fa__IdFab__07C12930">
+          <AssociationSet Name="FK__Origen_Fa__IdFab__628FA481" Association="Self.FK__Origen_Fa__IdFab__628FA481">
             <End Role="Fabrica" EntitySet="Fabrica" />
             <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdOri__0A9D95DB" Association="Self.FK__Origen_Fa__IdOri__0A9D95DB">
+          <AssociationSet Name="FK__Origen_Fa__IdOri__656C112C" Association="Self.FK__Origen_Fa__IdOri__656C112C">
             <End Role="OrigenEstado" EntitySet="OrigenEstado" />
             <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdUsu__08B54D69" Association="Self.FK__Origen_Fa__IdUsu__08B54D69">
+          <AssociationSet Name="FK__Origen_Fa__IdUsu__6383C8BA" Association="Self.FK__Origen_Fa__IdUsu__6383C8BA">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdCom__0E6E26BF" Association="Self.FK__Origen_Tr__IdCom__0E6E26BF">
+          <AssociationSet Name="FK__Origen_Tr__IdCom__693CA210" Association="Self.FK__Origen_Tr__IdCom__693CA210">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdOri__114A936A" Association="Self.FK__Origen_Tr__IdOri__114A936A">
+          <AssociationSet Name="FK__Origen_Tr__IdOri__6C190EBB" Association="Self.FK__Origen_Tr__IdOri__6C190EBB">
             <End Role="OrigenEstado" EntitySet="OrigenEstado" />
             <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
           </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdVen__0D7A0286" Association="Self.FK__Origen_Tr__IdVen__0D7A0286">
+          <AssociationSet Name="FK__Origen_Tr__IdVen__68487DD7" Association="Self.FK__Origen_Tr__IdVen__68487DD7">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
           </AssociationSet>
-          <AssociationSet Name="FK__Promocion__IdPro__6A30C649" Association="Self.FK__Promocion__IdPro__6A30C649">
+          <AssociationSet Name="FK__Promocion__IdPro__44FF419A" Association="Self.FK__Promocion__IdPro__44FF419A">
             <End Role="PromocionList" EntitySet="PromocionList" />
             <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
           </AssociationSet>
-          <AssociationSet Name="FK__VentaAuto__IdPro__1DB06A4F" Association="Self.FK__VentaAuto__IdPro__1DB06A4F">
+          <AssociationSet Name="FK__VentaAuto__IdPro__787EE5A0" Association="Self.FK__VentaAuto__IdPro__787EE5A0">
             <End Role="PromocionList" EntitySet="PromocionList" />
             <End Role="VentaAuto" EntitySet="VentaAuto" />
           </AssociationSet>
-          <AssociationSet Name="FK__VentaAuto__IdUsu__1CBC4616" Association="Self.FK__VentaAuto__IdUsu__1CBC4616">
-=======
-          <AssociationSet Name="FK__Origen_Fa__IdFab__619B8048" Association="Self.FK__Origen_Fa__IdFab__619B8048">
-            <End Role="Fabrica" EntitySet="Fabrica" />
-            <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdOri__6477ECF3" Association="Self.FK__Origen_Fa__IdOri__6477ECF3">
-            <End Role="OrigenEstado" EntitySet="OrigenEstado" />
-            <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdUsu__628FA481" Association="Self.FK__Origen_Fa__IdUsu__628FA481">
-            <End Role="Usuario" EntitySet="Usuario" />
-            <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdCom__68487DD7" Association="Self.FK__Origen_Tr__IdCom__68487DD7">
-            <End Role="Usuario" EntitySet="Usuario" />
-            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdOri__6B24EA82" Association="Self.FK__Origen_Tr__IdOri__6B24EA82">
-            <End Role="OrigenEstado" EntitySet="OrigenEstado" />
-            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdVen__6754599E" Association="Self.FK__Origen_Tr__IdVen__6754599E">
-            <End Role="Usuario" EntitySet="Usuario" />
-            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Promocion__IdPro__440B1D61" Association="Self.FK__Promocion__IdPro__440B1D61">
-            <End Role="PromocionList" EntitySet="PromocionList" />
-            <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
-          </AssociationSet>
-          <AssociationSet Name="FK__VentaAuto__IdPro__778AC167" Association="Self.FK__VentaAuto__IdPro__778AC167">
-            <End Role="PromocionList" EntitySet="PromocionList" />
-            <End Role="VentaAuto" EntitySet="VentaAuto" />
-          </AssociationSet>
-          <AssociationSet Name="FK__VentaAuto__IdUsu__76969D2E" Association="Self.FK__VentaAuto__IdUsu__76969D2E">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesinaria.edmx
-=======
-          <AssociationSet Name="FK__Origen_Fa__IdFab__619B8048" Association="Self.FK__Origen_Fa__IdFab__619B8048">
-            <End Role="Fabrica" EntitySet="Fabrica" />
-            <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdOri__6477ECF3" Association="Self.FK__Origen_Fa__IdOri__6477ECF3">
-            <End Role="OrigenEstado" EntitySet="OrigenEstado" />
-            <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Fa__IdUsu__628FA481" Association="Self.FK__Origen_Fa__IdUsu__628FA481">
-            <End Role="Usuario" EntitySet="Usuario" />
-            <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdCom__68487DD7" Association="Self.FK__Origen_Tr__IdCom__68487DD7">
-            <End Role="Usuario" EntitySet="Usuario" />
-            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdOri__6B24EA82" Association="Self.FK__Origen_Tr__IdOri__6B24EA82">
-            <End Role="OrigenEstado" EntitySet="OrigenEstado" />
-            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Origen_Tr__IdVen__6754599E" Association="Self.FK__Origen_Tr__IdVen__6754599E">
-            <End Role="Usuario" EntitySet="Usuario" />
-            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Promocion__IdPro__440B1D61" Association="Self.FK__Promocion__IdPro__440B1D61">
-            <End Role="PromocionList" EntitySet="PromocionList" />
-            <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
-          </AssociationSet>
-          <AssociationSet Name="FK__VentaAuto__IdPro__778AC167" Association="Self.FK__VentaAuto__IdPro__778AC167">
-            <End Role="PromocionList" EntitySet="PromocionList" />
-            <End Role="VentaAuto" EntitySet="VentaAuto" />
-          </AssociationSet>
-          <AssociationSet Name="FK__VentaAuto__IdUsu__76969D2E" Association="Self.FK__VentaAuto__IdUsu__76969D2E">
->>>>>>> 1072537caa5ffdf645c4ebeed92d9389c36f4b6b:Concesionaria/Models/Concesionaria.edmx
+          <AssociationSet Name="FK__VentaAuto__IdUsu__778AC167" Association="Self.FK__VentaAuto__IdUsu__778AC167">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="VentaAuto" EntitySet="VentaAuto" />
           </AssociationSet>
