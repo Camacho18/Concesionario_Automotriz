@@ -214,7 +214,6 @@ CREATE TABLE AutoCliente(
 
 -- __________________________________________________________________ Mantenimiento
 
-/*
 create table CategoriaAutoparte(
 	IdCategoriaAutoparte int identity(1,1) primary key,
 	Categoria varchar(70)
@@ -223,15 +222,30 @@ create table CategoriaAutoparte(
 create table Autopartes(
 	IdAutopartes int identity(1,1) primary key,
 	Nombre varchar(50),
+	Descripcion VARCHAR(250),
 	IdCategoriaAutoparte int foreign key(IdCategoriaAutoparte) references CategoriaAutoparte(IdCategoriaAutoparte),
 	IdConcesinaria int foreign key(IdConcesinaria) references Concesinaria(IdConcesinaria)
 	)
 
+CREATE TABLE MantenEstado(
+	IdMantenEstado INT IDENTITY(1,1) PRIMARY KEY,
+	Nombre VARCHAR(40)
+)
+
 create table Mantenimiento(
 	IdMantenimiento int identity(1,1) primary key,
-	Descripcion varchar(70),	
-	IdAutopartes int foreign key(IdAutopartes) references Autopartes(IdAutopartes),
-	IdVentaAuto int foreign key(IdVentaAuto) references VentaAuto(IdVentaAuto)
+	Fecha datetime,	
+	IdUsuario int foreign key(IdUsuario) references Usuario(IdUsuario),
+	IdAutomovil int foreign key(IdAutomovil) references Automovil(IdAutomovil),
+	IdMantenEstado int foreign key(IdMantenEstado) references MantenEstado(IdMantenEstado)
 	)
-	*/
+
+
+CREATE TABLE Manten_Autopar(
+	IdManten_Autopar INT IDENTITY(1,1) PRIMARY KEY,
+	Precio MONEY,
+	IdMantenimiento int foreign key(IdMantenimiento) references Mantenimiento(IdMantenimiento),
+	IdAutopartes int foreign key(IdAutopartes) references Autopartes(IdAutopartes)
+)
+	
 

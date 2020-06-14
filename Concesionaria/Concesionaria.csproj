@@ -261,6 +261,9 @@
     <Compile Include="Models\Referencias.cs">
       <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>Concesionaria.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\TipoEmpleado.cs">
       <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>

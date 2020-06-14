@@ -2747,3 +2747,6 @@ insert into AccesorioList values
 ('SpoilerF011','Spoiler frontal',11,21),('SpoilerF012','Spoiler frontal',12,21),('SpoilerF013','Spoiler frontal',13,21),('SpoilerF014','Spoiler frontal',14,21),('SpoilerF015','Spoiler frontal',15,21),
 ('SpoilerF016','Spoiler frontal',16,21),('SpoilerF017','Spoiler frontal',17,21),('SpoilerF018','Spoiler frontal',18,21),('SpoilerF019','Spoiler frontal',19,21),('SpoilerF020','Spoiler frontal',20,21),
 ('SpoilerF021','Spoiler frontal',21,21),('SpoilerF022','Spoiler frontal',22,21),('SpoilerF023','Spoiler frontal',23,21)
+INSERT INTO Fabrica VALUES
+('001','Audi Tijuana'),
+('002','Audi Europe')

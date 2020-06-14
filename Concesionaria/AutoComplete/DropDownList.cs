@@ -44,6 +44,10 @@ namespace Concesionaria.AutoComplete
         {
             return (from AC in db.Anios select new DropDownListModel { Id = AC.IdAnios, Value = AC.Numero }).ToList();
         }
+        public List<DropDownListModel> Fabrica()
+        {
+            return (from AC in db.Fabrica select new DropDownListModel { Id = AC.IdFabrica, Value = AC.Numero+" "+ AC.Nombre }).ToList();
+        }
         
 
     }

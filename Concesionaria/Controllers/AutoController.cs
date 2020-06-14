@@ -3,11 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+//User 
+using Concesionaria.Models;
+using Concesionaria.Models.ModelsSupport;
+using Microsoft.SqlServer.Server;
+using Newtonsoft.Json;
+using Concesionaria.AutoComplete;
 
 namespace Concesionaria.Controllers
 {
     public class AutoController : Controller
     {
+        private readonly ConcesionariaEntities db = new ConcesionariaEntities();
+        private readonly DropDownList DropDownLisObject = new DropDownList();
+        private readonly RemoveEspace RemovesEspecesrr = new RemoveEspace();
+        private string JsonString = string.Empty;
+        private int IdUsuario, IdSucursal, IdEmpleado;
         // GET: Auto
         public ActionResult Index()
         {
@@ -17,6 +28,10 @@ namespace Concesionaria.Controllers
         // GET: Auto/Details/5
         public ActionResult CreateAuto()
         {
+            ViewBag.IdFabrica = DropDownLisObject.Fabrica();
+            ViewBag.IdModelo = DropDownLisObject.AutoModelo();
+            ViewBag.IdColor = DropDownLisObject.AutoColor();
+            ViewBag.IdAnio = DropDownLisObject.Anios();
             return View("_Create");
         }
 
