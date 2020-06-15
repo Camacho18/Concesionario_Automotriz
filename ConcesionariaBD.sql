@@ -227,6 +227,7 @@ create table Autopartes(
 	IdAutopartes int identity(1,1) primary key,
 	Nombre varchar(50),
 	Descripcion VARCHAR(250),
+	Cantidad_Total int,
 	IdCategoriaAutoparte int foreign key(IdCategoriaAutoparte) references CategoriaAutoparte(IdCategoriaAutoparte),
 	IdConcesinaria int foreign key(IdConcesinaria) references Concesinaria(IdConcesinaria)
 	)
@@ -249,7 +250,8 @@ CREATE TABLE Manten_Autopar(
 	IdManten_Autopar INT IDENTITY(1,1) PRIMARY KEY,
 	Precio MONEY,
 	IdMantenimiento int foreign key(IdMantenimiento) references Mantenimiento(IdMantenimiento),
-	IdAutopartes int foreign key(IdAutopartes) references Autopartes(IdAutopartes)
+	IdAutopartes int foreign key(IdAutopartes) references Autopartes(IdAutopartes),
+	Cantidad_Autopartes int
 )
 	
 

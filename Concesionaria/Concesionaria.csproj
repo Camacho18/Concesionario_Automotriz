@@ -50,6 +50,9 @@
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework.Extended, Version=6.0.0.0, Culture=neutral, PublicKeyToken=05b7e29bdd433584, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.Extended.6.1.0.168\lib\net45\EntityFramework.Extended.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
@@ -141,10 +144,12 @@
     <Compile Include="AutoComplete\ValidatinRangeDate.cs" />
     <Compile Include="Controllers\AutoClienteController.cs" />
     <Compile Include="Controllers\AutoController.cs" />
+    <Compile Include="Controllers\AutoPartesController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\EmpleadoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MantenimientoController.cs" />
     <Compile Include="Controllers\PromocionController.cs" />
     <Compile Include="Controllers\ReferenciasController.cs" />
     <Compile Include="Controllers\AccesorioController.cs" />
@@ -191,10 +196,17 @@
     </Compile>
     <Compile Include="Models\Cliente.cs">
       <DependentUpon>Concesionaria.tt</DependentUpon>
+<<<<<<< HEAD
     </Compile>
     <Compile Include="Models\Concesinaria.cs">
       <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
+=======
+    </Compile>
+    <Compile Include="Models\Concesinaria.cs">
+      <DependentUpon>Concesionaria.tt</DependentUpon>
+    </Compile>
+>>>>>>> master
     <Compile Include="Models\Concesionaria.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -240,7 +252,12 @@
     <Compile Include="Models\ModelsSupport\AutoJson.cs" />
     <Compile Include="Models\ModelsSupport\AutomovilCreate.cs" />
     <Compile Include="Models\ModelsSupport\AutomovilJson.cs" />
+<<<<<<< HEAD
     <Compile Include="Models\ModelsSupport\AutoUpdate.cs" />
+=======
+    <Compile Include="Models\ModelsSupport\AutopartesCreate.cs" />
+    <Compile Include="Models\ModelsSupport\AutopartesJson.cs" />
+>>>>>>> master
     <Compile Include="Models\ModelsSupport\ClienteCreate.cs" />
     <Compile Include="Models\ModelsSupport\ClienteJson.cs" />
     <Compile Include="Models\ModelsSupport\AccesorioListCreate.cs" />
@@ -250,6 +267,10 @@
     <Compile Include="Models\ModelsSupport\EmpleadoCreate.cs" />
     <Compile Include="Models\ModelsSupport\EmpleadoJson.cs" />
     <Compile Include="Models\ModelsSupport\Login.cs" />
+    <Compile Include="Models\ModelsSupport\ManteAutoCreate.cs" />
+    <Compile Include="Models\ModelsSupport\ManteAutoJson.cs" />
+    <Compile Include="Models\ModelsSupport\MantenimientoCreate.cs" />
+    <Compile Include="Models\ModelsSupport\MantenimientoJson.cs" />
     <Compile Include="Models\ModelsSupport\PromocionAutoCreate.cs" />
     <Compile Include="Models\ModelsSupport\PromocionAutoJson.cs" />
     <Compile Include="Models\ModelsSupport\PromocionListCreate.cs" />
@@ -461,10 +482,19 @@
     <Content Include="Views\Promocion\_CreatePromAuto.cshtml" />
     <Content Include="Views\Auto\Index.cshtml" />
     <Content Include="Views\Auto\_Create.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Auto\Edit.cshtml" />
     <Content Include="Views\Auto\_Update.cshtml" />
     <Content Include="Views\Accesorio\_AutoAcceIndex.cshtml" />
     <Content Include="Views\Accesorio\_CreateAcceAuto.cshtml" />
+=======
+    <Content Include="Views\AutoPartes\Index.cshtml" />
+    <Content Include="Views\AutoPartes\_CreateAutoparte.cshtml" />
+    <Content Include="Views\AutoPartes\_UpdateAutoparte.cshtml" />
+    <Content Include="Views\Mantenimiento\Index.cshtml" />
+    <Content Include="Views\Mantenimiento\_CreateMantenimiento.cshtml" />
+    <Content Include="Views\Mantenimiento\_CreateManteAuto.cshtml" />
+>>>>>>> master
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

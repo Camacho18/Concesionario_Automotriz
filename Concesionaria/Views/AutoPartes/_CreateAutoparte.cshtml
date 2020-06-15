@@ -1,0 +1,82 @@
+﻿@model Concesionaria.Models.ModelsSupport.AutopartesCreate
+
+@{
+    Layout = null;
+}
+
+@using (Ajax.BeginForm("CreateAutop", "Autopartes", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "frmAutop", OnSuccess = "SuccessAutop_C" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <div class="modal-header">
+            <h5 class="modal-title">Nuevo Accesorio</h5>
+            <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Descripcion, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextAreaFor(model => model.Descripcion, new { @class = "form-control", rows = "5" })
+                    @Html.ValidationMessageFor(model => model.Descripcion, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.IdCategoriaAutoparte, "Autopartes", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.IdCategoriaAutoparte, new SelectList(ViewBag.CategoriaAutopartes, "Id", "Value"), htmlAttributes: new { @class = "custom-select custom-select-md", @data_style = "btn btn-primary btn-round" })
+                    @Html.ValidationMessageFor(model => model.IdCategoriaAutoparte, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Cantidad, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Cantidad, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Cantidad, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-success">Aceptar</button>
+        </div>
+    </div>
+}
+
+<script>
+    function SuccessAutop_C(data) {
+        AutopartesLoad();
+        if (data == "1") {
+            $('#AutopModal').modal("hide");
+            Swal.fire({
+                position: "top",
+                title: "Correcto",
+                text: "Autoparte Creada",
+                icon: "success",
+                button: "Aceptar",
+            });
+        }
+        else {
+            $('#AutopEmpModal').modal("hide");
+            Swal.fire({
+                position: "top",
+                title: "Error",
+                text: "Error No Reconocido",
+                icon: "warning",
+                button: "Aceptar",
+            });
+        }
+
+    }
+</script>
+

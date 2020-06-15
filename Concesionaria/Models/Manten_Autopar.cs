@@ -18,6 +18,7 @@ namespace Concesionaria.Models
         public Nullable<decimal> Precio { get; set; }
         public Nullable<int> IdMantenimiento { get; set; }
         public Nullable<int> IdAutopartes { get; set; }
+        public Nullable<int> Cantidad_Autopartes { get; set; }
     
         public virtual Autopartes Autopartes { get; set; }
         public virtual Mantenimiento Mantenimiento { get; set; }

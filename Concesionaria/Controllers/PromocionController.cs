@@ -6,7 +6,7 @@ using Concesionaria.AutoComplete;
 using Concesionaria.Models;
 using Concesionaria.Models.ModelsSupport;
 using Newtonsoft.Json;
-
+using EntityFramework.Extensions;
 
 
 namespace Concesionaria.Controllers
@@ -18,7 +18,7 @@ namespace Concesionaria.Controllers
         private readonly RemoveEspace Remove = new RemoveEspace();
 
         private string JsonString = string.Empty;
-        private int IdUsuario, IdSucursal, IdPromocion, IdCom;
+        private int IdUsuario, IdSucursal;
         // GET: Promocion
 
         // [I] PromociónList
@@ -99,20 +99,43 @@ namespace Concesionaria.Controllers
 
         // GET: Empleado/Edit/5   
         public ActionResult PromocionAutoJson(int? Id)
-        { 
+        {
             if (Id == null)
                 Id = Convert.ToInt32(Session["IdPromocion"]);
             else
                 Session["IdPromocion"] = Id;
 
+            // -------
+            DateTime actual = DateTime.Now;
+
+            List<PromocionList> PromoModel= (from P in db.PromocionList select P).ToList();
+
+            foreach (var Pro in PromoModel)
+            {
+                if (Pro.FechaVigencia < actual)
+                {
+                    List<Promocion_Auto> PromoAuto = (from P in db.Promocion_Auto where P.IdPromocion == Pro.IdPromocion select P).ToList();
+
+                    foreach (var ProAuto in PromoAuto)
+                    {
+                        if (ProAuto.Vigente != false)
+                        {
+                            ProAuto.Vigente = false;
+                            db.SaveChanges();
+                        }
+                    }
+                }
+            }
+           
+            // -------
             List<PromocionAutoJson> json = (from PA in db.Promocion_Auto
-                                        where PA.IdPromocion_Auto == Id
+                                        where PA.IdPromocion == Id
                                         select new PromocionAutoJson
                                         {
                                             IdPromocion_Auto = PA.IdPromocion_Auto,
                                             AutoModelo = (from M in db.AutoModelo where M.IdAutoModelo == PA.IdAutoModelo select M.Nombre).FirstOrDefault(),
                                             Anios = (from A in db.Anios where A.IdAnios == PA.IdAnios select A.Numero).FirstOrDefault(),
-                                            Vigente = (PA.Vigente == true ? "Vigente" : "Caduco")                             
+                                            Vigente = (PA.Vigente == false ? "Caduco" : "Vigente")                             
                                         }).ToList();
             JsonString = JsonConvert.SerializeObject(json);
             var num = (from P in db.PromocionList where P.IdPromocion == Id select P.Numero).FirstOrDefault();

@@ -23,6 +23,7 @@ namespace Concesionaria.Models
         public int IdAutopartes { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
+        public Nullable<int> Cantidad_Total { get; set; }
         public Nullable<int> IdCategoriaAutoparte { get; set; }
         public Nullable<int> IdConcesinaria { get; set; }
     

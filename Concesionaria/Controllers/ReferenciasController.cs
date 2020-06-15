@@ -87,8 +87,7 @@ namespace Concesionaria.Controllers
        
         // GET: Referencias/Edit/5
         public ActionResult UpdateRef(int IdReferencia)
-        {
-           
+        {          
             ReferenciaCreate model = (from R in db.Referencias
                                    where R.IdReferencia == IdReferencia
                                    select new ReferenciaCreate
