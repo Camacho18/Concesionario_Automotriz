@@ -17,10 +17,10 @@
                     @Html.EJS().Grid("Grid_Auto").AllowResizing(true).AllowSorting().AllowFiltering().Columns(col =>
                {
                    col.Field("IdAutomovil").HeaderText("Usuario").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Visible(false).Add();
-                   col.Field("Numero").HeaderText("Número").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
-                   col.Field("Nombre").HeaderText("Nombre").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
-                   col.Field("Telefono").HeaderText("Teléfono").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
-                   col.Field("Tipo").HeaderText("Tipo").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("Numero").HeaderText("Número de Automovil").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("Modelo").HeaderText("Modelo").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("Adquisicion").HeaderText("Adquisición").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("Precio").HeaderText("Precio").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
                    col.Field("Estado").HeaderText("Estado").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
                    col.HeaderText("Opciones").Template("#templateAuto").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
                }).AllowPaging().SelectionSettings(select => select.Type(Syncfusion.EJ2.Grids.SelectionType.Single)).PageSettings(page => page.PageCount(2)).Render()
@@ -35,7 +35,7 @@
     <div class="row text-center">
         <div class="col-md-12 ">
             <div class="">
-                <a class="text-succcess" href="javascript:void(0)" onclick="RowSelectEmp(${IdEmpleado})" data-toggle="tooltip" data-placement="top" title="Editar">
+                <a class="text-succcess" href="javascript:void(0)" onclick="RowSelectAuto(${IdAutomovil})" data-toggle="tooltip" data-placement="top" title="Editar">
                     <i class="ti-user"></i>
                 </a>
                 <a class="text-secondary " style="padding:0px,5px,0px,5px; margin-left:10px; margin-right:10px" href="javascript:void(0)" onclick="Usuario(${IdEmpleado})" data-toggle="tooltip" data-placement="top" title="Ver Autos">
@@ -46,7 +46,7 @@
                     <i class="fa fa-check"></i>
                 </a>
                 ${else}
-                <a class="text-danger" href="javascript:void(0)" onclick="DeleteEmp(${ IdEmpleado })" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                <a class="text-danger" href="javascript:void(0)" onclick="DeleteAuto(${ IdEmpleado })" data-toggle="tooltip" data-placement="top" title="Eliminar">
                     <i class="fa fa-remove"></i>
                 </a>
                 ${/if}
@@ -68,12 +68,12 @@
 
 <script>
 
-        $(function () { /*EmpleadoLoad();*/ })
+        $(function () { AutoLoad(); })
 
-        function EmpleadoLoad() {
+    function AutoLoad() {
 
-            $.get('@Url.Action("EmpleadoJson","Empleado")', function (data) {
-                var grid = document.getElementById('Grid_Empleado').ej2_instances[0]; // Grid instance
+            $.get('@Url.Action("AutoJson", "Auto")', function (data) {
+                var grid = document.getElementById('Grid_Auto').ej2_instances[0]; // Grid instance
                 grid.dataSource = JSON.parse(data);
             });
         }
@@ -86,11 +86,8 @@
         });
 
         // [I] Row Select Grid
-        function RowSelectEmp(Id) {
-            $.get('@Url.Action("UpdateEmp", "Empleado", new { IdEmpleado = "_id_" })'.replace('_id_', Id), function (data) {
-                $("#frmEmp").html(data);
-                $("#CreateEmpModal").modal("show");
-            });
+        function RowSelectAuto(Id) {
+             $(location).attr('href', '/Auto/Options' + '?Id=' + Id);
 
         }
 

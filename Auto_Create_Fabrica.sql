@@ -11,13 +11,16 @@ CREATE PROCEDURE SP_Automovil_Create_Fabrica
 	@IdAnio INT,
 	@IdAutoModelo INT,
 	@IdAutoColor INT,
+	@PrecioCompra MONEY,
+	@PrecionVenta MONEY,
+	@Fecha date,
 	@Bandera INT OUTPUT
 AS
 BEGIN
 	BEGIN TRAN
 		BEGIN TRY
-			INSERT INTO Automovil (Numero,IdAnios,IdAutoModelo,IdAutoColor,IdAutoEstado) VALUES 
-								  (@NumeroA,@IdAnio,@IdAutoModelo,@IdAutoColor,1)
+			INSERT INTO Automovil (Numero,IdAnios,IdAutoModelo,IdAutoColor,IdAutoEstado,PrecioCompra,PrecioVenta,FechaIngreso) VALUES 
+								  (@NumeroA,@IdAnio,@IdAutoModelo,@IdAutoColor,1,@PrecioCompra,@PrecionVenta,@Fecha)
 			DECLARE @IdAuto INT
 			SET @IdAuto = SCOPE_IDENTITY()
 
