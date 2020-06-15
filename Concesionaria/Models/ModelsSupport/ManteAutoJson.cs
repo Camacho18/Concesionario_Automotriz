@@ -11,6 +11,6 @@ namespace Concesionaria.Models.ModelsSupport
         public decimal? Precio { get; set; }
         public int? IdMantenimiento { get; set; }
         public string Autopartes { get; set; }
-        public int? Cantidad_Autopartes { get; set; }
+        public int? CantidadAutopartes { get; set; }
     }
 }

@@ -2,7 +2,7 @@
 @{
     Layout = null;
 }
-@using (Ajax.BeginForm("CreateMantenimiento", "Mantenimiento", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "frmMant", OnSuccess = "SuccessMant_C" }))
+@using (Ajax.BeginForm("CreateMantenimiento", "Mantenimiento", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "frmMantenimiento", OnSuccess = "SuccessMant_C" }))
 {
     @Html.AntiForgeryToken()
 
@@ -32,17 +32,17 @@
     function SuccessMant_C(data) {
         MantenimientoLoad();
         if (data == "1") {
-            $('#MantModal').modal("hide");
+            $('#MantenimientoModal').modal("hide");
             Swal.fire({
                 position: "top",
                 title: "Correcto",
-                text: "Mantenimiento Creada",
+                text: "Mantenimiento Creado",
                 icon: "success",
                 button: "Aceptar",
             });
         }
         else {
-            $('#MantModal').modal("hide");
+            $('#MantenimientoModal').modal("hide");
 
             Swal.fire({
                 position: "top",

@@ -1,12 +1,12 @@
 ﻿@model Concesionaria.Models.ModelsSupport.ManteAutoCreate
 
-@using (Ajax.BeginForm("CreateMantenimientoAutopartes", "Mantenimiento", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "frmMantenimiento", OnSuccess = "SuccessMantAuto_C" }))
+@using (Ajax.BeginForm("UpdateMantenimientoAutopartes", "Mantenimiento", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "frmMantenimiento", OnSuccess = "SuccessMantAuto_U" }))
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
         <div class="modal-header">
-            <h5 class="modal-title">Nuevo Mantenimiento</h5>
+            <h5 class="modal-title">Actualizar Autoparte</h5>
             <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
         </div>
         <div class="modal-body">
@@ -34,39 +34,29 @@
                     @Html.ValidationMessageFor(model => model.Cantidad_Autopartes, "", new { @class = "text-danger" })
                 </div>
             </div>
-
         </div>
+
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-            <button type="submit" class="btn btn-success">Aceptar</button>
+            <button type="submit" id="btn_Aceptar" class="btn btn-success">Aceptar</button>
         </div>
+
     </div>
 }
 
 <script>
-    function SuccessMantAuto_C(data) {
-        MantenimientoAutopartes();
+    function SuccessMantAuto_U(data) {
         if (data == "1") {
-            $('#ManteAutoModal').modal("hide");
+            $('#MantenimientoModal').modal("hide");
+            MantenimientoAutopartesLoad();
+            $('#ManteEmpModal').modal("hide");
             Swal.fire({
                 position: "top",
                 title: "Correcto",
-                text: "Autoparte de mantenimiento creada",
+                text: "Autoparte Actualizada",
                 icon: "success",
                 button: "Aceptar",
             });
         }
-        else {
-            $('#ManteEmpModal').modal("hide");
-            Swal.fire({
-                position: "top",
-                title: "Error",
-                text: "Error No Reconocido",
-                icon: "warning",
-                button: "Aceptar",
-            });
-        }
-
     }
 </script>
-

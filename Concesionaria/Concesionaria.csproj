@@ -473,6 +473,7 @@
     <Content Include="Views\Mantenimiento\Index.cshtml" />
     <Content Include="Views\Mantenimiento\_CreateMantenimiento.cshtml" />
     <Content Include="Views\Mantenimiento\_CreateManteAuto.cshtml" />
+    <Content Include="Views\Mantenimiento\_UpdateManteAuto.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -15,11 +15,10 @@ namespace Concesionaria.Controllers
         private readonly DropDownList Model = new DropDownList();
         private string JsonString = string.Empty;
         //private readonly RemoveEspace Remove = new RemoveEspace();
-        private int IdUsuario, IdSucursal, IdManten_Autopar, IdMantenimiento;
+        private int IdUsuario, IdSucursal, IdManten_Autopar;
         // GET: Mantenimiento
         public ActionResult Index()
         {
-            IdMantenimiento = Convert.ToInt32(Session["IdMantenimiento"]);
             IdUsuario = Convert.ToInt32(Session["IdUsuario"]);
             IdSucursal = Convert.ToInt32(Session["IdSucursal"]);
             if (IdUsuario != 0 && IdSucursal != 0)
@@ -82,32 +81,34 @@ namespace Concesionaria.Controllers
         }
 
         // Mantenimiento Autopartes
-        public ActionResult ManteAutoJson(int? Id)
+        public ActionResult MantenimientoAutopartesJson(int? IdMantenimiento)
         {
-            if (Id == null)
-                Id = Convert.ToInt32(Session["IdMantenimiento"]);
+            if (IdMantenimiento == null)
+                IdMantenimiento = Convert.ToInt32(Session["IdMantenimiento"]);
             else
-                Session["IdMantenimiento"] = Id;
+                Session["IdMantenimiento"] = IdMantenimiento;
 
-            List<ManteAutoJson> json = (from m in db.Manten_Autopar
-                                        where m.IdMantenimiento == Id
-                                            select new ManteAutoJson
+            List<ManteAutoJson> json = (from M in db.Manten_Autopar
+                                        where M.IdMantenimiento == IdMantenimiento
+                                        select new ManteAutoJson
                                             {
-                                                IdManten_Autopar = m.IdManten_Autopar,
-                                                Precio = m.Precio,
-                                                Autopartes = (from a in db.Autopartes where a.IdAutopartes==m.IdAutopartes select a.Nombre).FirstOrDefault(),
-                                                Cantidad_Autopartes = m.Cantidad_Autopartes
+                                                IdManten_Autopar = M.IdManten_Autopar,
+                                                Precio = M.Precio,
+                                                IdMantenimiento = M.IdMantenimiento,
+                                                Autopartes = (from a in db.Autopartes where a.IdAutopartes== M.IdAutopartes select a.Nombre).FirstOrDefault(),
+                                                CantidadAutopartes = M.Cantidad_Autopartes
                                             }).ToList();
             JsonString = JsonConvert.SerializeObject(json);
-            return Json(JsonString, JsonRequestBehavior.AllowGet);
+            var num = (from a in db.Automovil join am in db.AutoModelo on a.IdAutoModelo equals am.IdAutoModelo select am.Nombre).FirstOrDefault();
+            return Json(new { JsonString, num }, JsonRequestBehavior.AllowGet);
         }
-        public ActionResult CreateManteAuto()
+        public ActionResult CreateMantenimientoAutopartes()
         {
             ViewBag.Autopartes = Model.Autopartes();
             return PartialView("_CreateManteAuto");
         }
         [HttpPost]
-        public ActionResult CreateManteAuto(ManteAutoCreate model)
+        public ActionResult CreateMantenimientoAutopartes(ManteAutoCreate model)
         {
             if (!ModelState.IsValid)
             {
@@ -133,11 +134,11 @@ namespace Concesionaria.Controllers
                 }
             }
         }
-        public ActionResult UpdateManteAuto(int Id)
+        public ActionResult UpdateMantenimientoAutopartes(int IdManten_Autopar)
         {
             ViewBag.Autopartes = Model.Autopartes();
             ManteAutoCreate model = (from M in db.Manten_Autopar
-                                     where M.IdManten_Autopar == Id
+                                     where M.IdManten_Autopar == IdManten_Autopar
                                      select new ManteAutoCreate
                                      {
                                          Precio = M.Precio,
@@ -146,11 +147,11 @@ namespace Concesionaria.Controllers
                                          Cantidad_Autopartes = M.Cantidad_Autopartes                                         
                                      }
                                     ).FirstOrDefault();
-            Session["IdManten_Autopar"] = Id;
+            Session["IdManten_Autopar"] = IdManten_Autopar;
             return PartialView("_UpdateManteAuto", model);
         }
         [HttpPost]
-        public ActionResult UpdateManteAuto(ManteAutoCreate model)
+        public ActionResult UpdateMantenimientoAutopartes(ManteAutoCreate model)
         {
             if (!ModelState.IsValid)
             {
@@ -168,7 +169,7 @@ namespace Concesionaria.Controllers
                                            select m).SingleOrDefault();
 
                     ma.Precio = model.Precio;
-                    ma.IdMantenimiento = Convert.ToInt32(Session["IdManten_Autopar"]);
+                    ma.IdMantenimiento = Convert.ToInt32(Session["IdMantenimiento"]);
                     ma.IdAutopartes = model.IdAutopartes;
                     ma.Cantidad_Autopartes = model.Cantidad_Autopartes;
                     db.SaveChanges();
@@ -180,14 +181,39 @@ namespace Concesionaria.Controllers
                 }
             }
         }
-        public ActionResult DeleteManteAuto(int IdManten_Autopar)
+        public ActionResult DeleteMantenimientoAutoparte(int IdManten_Autopar)
         {
-            Manten_Autopar m = db.Manten_Autopar.Where(x => x.IdManten_Autopar == IdManten_Autopar).FirstOrDefault();
-            db.Manten_Autopar.Remove(m);
-            db.SaveChanges();
-            return Content("Correcto");
+            try
+            {
+                List<Manten_Autopar> MantAutoModel = (from ma in db.Manten_Autopar select ma).ToList();
+                foreach (var MatA in MantAutoModel)
+                {
+                    List<Mantenimiento> MantModel = (from mt in db.Mantenimiento where mt.IdMantenimiento == MatA.IdMantenimiento select mt).ToList();
+                    foreach (var Mant in MantModel)
+                    {
+                        List<MantenEstado> EstModel = (from e in db.MantenEstado where e.IdMantenEstado == Mant.IdMantenEstado select e).ToList();
+                        foreach (var Est in EstModel)
+                        {
+                            if (Est.Nombre == "En reparación")
+                            {
+                                db.Manten_Autopar.Remove(MatA);
+                                db.SaveChanges();
+                                return Json("1", JsonRequestBehavior.AllowGet);
+                            }
+                            else 
+                                return Json("2", JsonRequestBehavior.AllowGet);
+                        }
+                        return Json("0", JsonRequestBehavior.AllowGet);
+
+                    }
+                    return Json("0", JsonRequestBehavior.AllowGet);
+                }
+                return Json("0", JsonRequestBehavior.AllowGet);
+            }
+            catch
+            {
+                return Json("0", JsonRequestBehavior.AllowGet);
+            }
         }
-
-
     }
 }
