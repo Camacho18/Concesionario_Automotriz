@@ -78,7 +78,7 @@ namespace Concesionaria.Controllers
                     ObjectParameter Bandera = new ObjectParameter("Bandera", typeof(int));
                     IdUsuario = Convert.ToInt32(Session["IdUsuario"]);
                     IdSucursal = Convert.ToInt32(Session["IdSucursal"]);
-                    db.SP_Automovil_Create_Fabrica(model.IdFabrica, model.NumeroF, IdUsuario, model.NumeroA, model.IdAnio, model.IdAutoModelo, model.IdAutoColor, model.PrecioCompra, model.PrecioVenta, model.FechaIngreso, Bandera);
+                    //db.SP_Automovil_Create_Fabrica(model.IdFabrica, model.NumeroF, IdUsuario, model.NumeroA, model.IdAnio, model.IdAutoModelo, model.IdAutoColor, model.PrecioCompra, model.PrecioVenta, model.FechaIngreso, Bandera);
                     ReturnSP = Convert.ToInt32(Bandera.Value);
 
                     return Json("1", JsonRequestBehavior.AllowGet);
