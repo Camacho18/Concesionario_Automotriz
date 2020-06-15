@@ -1,0 +1,161 @@
+﻿
+@{    
+    Layout = null;
+}
+
+<!--[I] AccesorioList-->
+<br />
+<div class="row">
+    <div class="col-12">
+        
+                <div class="row col-12">
+                    <button class="btn btn-primary col-2" id="Btn_NewAcceAuto">Nuevo +</button>
+
+
+                    
+                </div>
+                <br />
+                <div class="">
+                    @Html.EJS().Grid("Grid_AcceAuto").AllowResizing(true).AllowSorting().AllowFiltering().Columns(col =>
+               {
+                   col.Field("IdAcceAuto").HeaderText("Usuario").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Visible(false).Add();
+                   col.Field("Numero").HeaderText("Número").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("Serie").HeaderText("Serie").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();                   
+                   col.Field("Nombre").HeaderText("Nombre").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("Descrip").HeaderText("Descripción").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.HeaderText("Opciones").Template("#templateAcceAuto").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+               }).AllowPaging().SelectionSettings(select => select.Type(Syncfusion.EJ2.Grids.SelectionType.Single)).PageSettings(page => page.PageCount(2).PageSize(4)).Render()
+                </div>
+
+            </div>
+        </div>
+
+<style>
+    .e-grid .e-headercell {
+        background-color: #eeeeee;
+    }
+
+    .e-grid .e-gridheader {
+        color: black;
+    }
+</style>
+
+<script id="templateAcceAuto" type="text/x-template">
+    <div class="row text-center">
+        <div class="col-md-12 ">
+            <div class="">
+               
+                <a class="text-danger" id="btn_delete" href="javascript:void(0)" onclick="DeleteAcceAuto(${ IdAcceAuto })" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                    <i class="fa fa-remove"></i>
+                </a>
+               
+            </div>
+        </div>
+    </div>
+</script>
+
+<!--[F] AccesorioList-->
+
+<div class="modal fade" id="AcceAutoModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div id="frmAcceAuto">
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+
+    //[I] AccesorioList
+    $(function () {
+        AccesorioAutoLoad();
+        $(function () {
+            $(function () {
+                var m = $("#Auto_Estado").text();
+                if (m != 1) {
+                    $('#Btn_NewAcceAuto').prop('disabled', true);
+                    $('#btn_delete').prop('disabled', true);
+                }
+            })
+        })
+    })
+
+    function AccesorioAutoLoad() {
+            $.get('@Url.Action("AccesorioAutoJson","Accesorio")', function (data) {
+                var grid = document.getElementById('Grid_AcceAuto').ej2_instances[0]; // Grid instance
+                grid.dataSource = JSON.parse(data);
+            });
+        }
+
+    $('#Btn_NewAcceAuto').click(function () {        
+             $.get('@Url.Action("CreateAcceAuto","Accesorio")', function (data) {
+                 $('#frmAcceAuto').html(data);
+                 $('#AcceAutoModal').modal("show");
+                });
+        });
+
+   
+
+    //[F] AccesorioList
+
+    
+
+    function DeleteAcceAuto(id) {
+
+        var m = $("#Auto_Estado").text();
+        if (m != 1) {
+            Swal.fire({
+                position: "top",
+                title: "Cuidado!",
+                text: "Automovil no disponible ",
+                icon: "warning",
+                button: "Aceptar",
+            });
+        } else {
+
+
+            Swal.fire({
+                position: "top",
+                title: 'Eliminar',
+                text: "Desea eliminar accesorio!",
+                icon: 'warning',
+                showCancelButton: true,
+                showConfirmButton: true,
+                cancelButtonColor: '#d33',
+                confirmButtonColor: '#3085d6',
+                cancelButtonText: 'Cancelar',
+                confirmButtonText: 'Eliminar',
+                reverseButtons: true
+            }).then((result) => {
+                if (result.value) {
+                    $.get('@Url.Action("DeleteAcceAuto","Accesorio", new { Id = "_ID_"})'.replace('_ID_', id), function (data) {
+                        AccesorioAutoLoad();
+                        if (data == 1) {
+                            Swal.fire({
+                                position: "top",
+                                title: "Correcto",
+                                text: "Accesorio Eliminado",
+                                icon: "success",
+                                button: "Aceptar",
+                            });
+                        } else {
+                            Swal.fire({
+                                position: "top",
+                                title: "Error",
+                                text: "Error No Reconocido",
+                                icon: "warning",
+                                button: "Aceptar",
+                            });
+                        }
+                    });
+                }
+            })
+        };
+    }
+    //[F] Accesorio
+</script>
+
+

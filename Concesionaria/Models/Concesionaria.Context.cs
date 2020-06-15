@@ -12,6 +12,8 @@ namespace Concesionaria.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class ConcesionariaEntities : DbContext
     {
@@ -57,5 +59,50 @@ namespace Concesionaria.Models
         public virtual DbSet<TipoEmpleado> TipoEmpleado { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<VentaAuto> VentaAuto { get; set; }
+    
+        public virtual int SP_Automovil_Create_Fabrica(Nullable<int> idFabrica, string numeroF, Nullable<int> idUsuario, string numeroA, Nullable<int> idAnio, Nullable<int> idAutoModelo, Nullable<int> idAutoColor, Nullable<decimal> precioCompra, Nullable<decimal> precionVenta, Nullable<System.DateTime> fecha, ObjectParameter bandera)
+        {
+            var idFabricaParameter = idFabrica.HasValue ?
+                new ObjectParameter("IdFabrica", idFabrica) :
+                new ObjectParameter("IdFabrica", typeof(int));
+    
+            var numeroFParameter = numeroF != null ?
+                new ObjectParameter("NumeroF", numeroF) :
+                new ObjectParameter("NumeroF", typeof(string));
+    
+            var idUsuarioParameter = idUsuario.HasValue ?
+                new ObjectParameter("IdUsuario", idUsuario) :
+                new ObjectParameter("IdUsuario", typeof(int));
+    
+            var numeroAParameter = numeroA != null ?
+                new ObjectParameter("NumeroA", numeroA) :
+                new ObjectParameter("NumeroA", typeof(string));
+    
+            var idAnioParameter = idAnio.HasValue ?
+                new ObjectParameter("IdAnio", idAnio) :
+                new ObjectParameter("IdAnio", typeof(int));
+    
+            var idAutoModeloParameter = idAutoModelo.HasValue ?
+                new ObjectParameter("IdAutoModelo", idAutoModelo) :
+                new ObjectParameter("IdAutoModelo", typeof(int));
+    
+            var idAutoColorParameter = idAutoColor.HasValue ?
+                new ObjectParameter("IdAutoColor", idAutoColor) :
+                new ObjectParameter("IdAutoColor", typeof(int));
+    
+            var precioCompraParameter = precioCompra.HasValue ?
+                new ObjectParameter("PrecioCompra", precioCompra) :
+                new ObjectParameter("PrecioCompra", typeof(decimal));
+    
+            var precionVentaParameter = precionVenta.HasValue ?
+                new ObjectParameter("PrecionVenta", precionVenta) :
+                new ObjectParameter("PrecionVenta", typeof(decimal));
+    
+            var fechaParameter = fecha.HasValue ?
+                new ObjectParameter("Fecha", fecha) :
+                new ObjectParameter("Fecha", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_Automovil_Create_Fabrica", idFabricaParameter, numeroFParameter, idUsuarioParameter, numeroAParameter, idAnioParameter, idAutoModeloParameter, idAutoColorParameter, precioCompraParameter, precionVentaParameter, fechaParameter, bandera);
+        }
     }
 }

@@ -48,6 +48,13 @@ namespace Concesionaria.AutoComplete
         {
             return (from AC in db.Fabrica select new DropDownListModel { Id = AC.IdFabrica, Value = AC.Numero+" "+ AC.Nombre }).ToList();
         }
+        public List<DropDownListModel> AutoAcce(int? IDM, int? IDA)
+        {
+            return (from AC in db.Accesorio 
+                    join AL in db.AccesorioList on AC.IdAccesorioList equals AL.IdAccesorioList
+                    where AC.Estado==true && AL.IdAutoModelo==IDM && AL.IdAnios==IDA
+                    select new DropDownListModel { Id = AC.IdAccesorio, Value = AC.Serie+" - "+ AL.Numero+" - "+ AL.Nombre }).ToList();
+        }
         
 
     }

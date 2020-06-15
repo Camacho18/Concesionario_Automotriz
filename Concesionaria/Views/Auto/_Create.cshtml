@@ -22,7 +22,7 @@
                 <div class="form-group">
                     @Html.LabelFor(model => model.IdFabrica, "Fábrica", htmlAttributes: new { @class = "control-label col-md-6" })
                     <div class="col-md-10">
-                        @Html.DropDownListFor(model => model.IdFabrica, new SelectList(ViewBag.IdFabrica, "Id", "Value"), htmlAttributes: new { @class = "custom-select custom-select-md", @data_style = "btn btn-primary btn-round" })
+                        @Html.DropDownListFor(model => model.IdFabrica, new SelectList(ViewBag.IdFabrica, "Id", "Value"), "- Selecciona -", htmlAttributes: new { @class = "custom-select custom-select-md", @data_style = "btn btn-primary btn-round" })
                         @Html.ValidationMessageFor(model => model.IdFabrica, "", new { @class = "text-danger" })
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                 <div class="form-group">
                     @Html.LabelFor(model => model.IdAutoModelo, "Modelo", htmlAttributes: new { @class = "control-label col-md-6" })
                     <div class="col-md-10">
-                        @Html.DropDownListFor(model => model.IdAutoModelo, new SelectList(ViewBag.IdModelo, "Id", "Value"), htmlAttributes: new { @class = "custom-select custom-select-md", @data_style = "btn btn-primary btn-round" })
+                        @Html.DropDownListFor(model => model.IdAutoModelo, new SelectList(ViewBag.IdModelo, "Id", "Value"), "- Selecciona -", htmlAttributes: new { @class = "custom-select custom-select-md", @data_style = "btn btn-primary btn-round" })
                         @Html.ValidationMessageFor(model => model.IdAutoModelo, "", new { @class = "text-danger" })
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                 <div class="form-group">
                     @Html.LabelFor(model => model.IdAutoColor, "Color", htmlAttributes: new { @class = "control-label col-md-6" })
                     <div class="col-md-10">
-                        @Html.DropDownListFor(model => model.IdAutoColor, new SelectList(ViewBag.IdColor, "Id", "Value"), htmlAttributes: new { @class = "custom-select custom-select-md", @data_style = "btn btn-primary btn-round" })
+                        @Html.DropDownListFor(model => model.IdAutoColor, new SelectList(ViewBag.IdColor, "Id", "Value"), "- Selecciona -", htmlAttributes: new { @class = "custom-select custom-select-md", @data_style = "btn btn-primary btn-round" })
                         @Html.ValidationMessageFor(model => model.IdAutoColor, "", new { @class = "text-danger" })
                     </div>
                 </div>
@@ -65,8 +65,32 @@
                 <div class="form-group">
                     @Html.LabelFor(model => model.IdAnio, "Año", htmlAttributes: new { @class = "control-label col-md-6" })
                     <div class="col-md-10">
-                        @Html.DropDownListFor(model => model.IdAnio, new SelectList(ViewBag.IdAnio, "Id", "Value"), htmlAttributes: new { @class = "custom-select custom-select-md", @data_style = "btn btn-primary btn-round" })
+                        @Html.DropDownListFor(model => model.IdAnio, new SelectList(ViewBag.IdAnio, "Id", "Value"), "- Selecciona -", htmlAttributes: new { @class = "custom-select custom-select-md", @data_style = "btn btn-primary btn-round" })
                         @Html.ValidationMessageFor(model => model.IdAnio, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PrecioCompra, "Precio Compra", htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.PrecioCompra, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PrecioCompra, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PrecioVenta, "Precio Venta", htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.PrecioVenta, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PrecioVenta, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.FechaIngreso, "Fecha de Ingreso", htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.FechaIngreso, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.FechaIngreso, "", new { @class = "text-danger" })
                     </div>
                 </div>
             </div>
@@ -85,31 +109,29 @@
     }
 
     function SuccessAuto_C(data) {
+        AutoLoad();
         if (data == "1") {
-            $('#AutoModal').modal("hide");
-            EmpleadoLoad();
+            $('#AutoModal').modal("hide");            
             Swal.fire({
                 position: "top",
                 title: "Correcto",
-                text: "Empleado Creado",
+                text: "Compra Creada",
                 icon: "success",
                 button: "Aceptar",
             });
         }
         else if (data == "2") {
-            $('#AutoModal').modal("hide");
-            EmpleadoLoad();
+            $('#AutoModal').modal("hide");           
             Swal.fire({
                 position: "top",
                 title: "Atención",
-                text: "Numero de empleado existente",
+                text: "Numero de compra o auto existente",
                 icon: "warning",
                 button: "Aceptar",
             });
         }
-        else {
-            $('#AutoModal').modal("hide");
-            EmpleadoLoad();
+        else if (data == "0") {
+            $('#AutoModal').modal("hide");            
             Swal.fire({
                 position: "top",
                 title: "Error",

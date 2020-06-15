@@ -104,6 +104,9 @@ CREATE TABLE AutoColorList(
 create table Automovil(
 	IdAutomovil int identity(1,1) primary key,
 	Numero VARCHAR(30),
+	FechaIngreso DATE,
+	PrecioCompra Money,
+	PrecioVenta Money,
 	IdAnios int foreign key (IdAnios) references Anios(IdAnios),	
 	IdAutoModelo int foreign key (IdAutoModelo) references AutoModelo(IdAutoModelo),
 	IdAutoColor int foreign key (IdAutoColor) references AutoColorList(IdAutoColor),

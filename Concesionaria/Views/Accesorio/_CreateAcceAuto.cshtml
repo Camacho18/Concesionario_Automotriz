@@ -1,0 +1,80 @@
+﻿@model Concesionaria.Models.ModelsSupport.CreateAcceAuto
+
+@{
+    Layout = null;
+}
+
+@using (Ajax.BeginForm("CreateAcceAuto", "Accesorio", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "frmAcce", OnSuccess = "SuccessAccerioA_C" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <div class="modal-header">
+            <h5 class="modal-title">Agregar Accesorio</h5>
+            <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.IdAccesorio,"Accesorios", htmlAttributes: new { @class = "control-label col-md-6" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.IdAccesorio, new SelectList(ViewBag.IdAcce, "Id", "Value"), "- Selecciona -", htmlAttributes: new { @class = "custom-select custom-select-md", @data_style = "btn btn-primary btn-round" })
+                    @Html.ValidationMessageFor(model => model.IdAccesorio, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div id="frmInfAcce">
+
+            </div>
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-success">Aceptar</button>
+        </div>
+    </div>
+
+}
+
+<script>
+
+   
+
+    function SuccessAccerioA_C(data) {
+        AccesorioAutoLoad();
+        if (data == "1") {
+            $('#AcceAutoModal').modal("hide");
+
+            Swal.fire({
+                position: "top",
+                title: "Correcto",
+                text: "Accesorio Creado",
+                icon: "success",
+                button: "Aceptar",
+            });
+        } else if (data == "2") {
+            //$('#AcceAutoModal').modal("hide");
+            Swal.fire({
+                position: "top",
+                title: "Error",
+                text: "Seleccina Accesorio",
+                icon: "warning",
+                button: "Aceptar",
+            });
+        }        
+        else {
+            $('#AcceAutoModal').modal("hide");
+
+            Swal.fire({
+                position: "top",
+                title: "Error",
+                text: "Error No Reconocido",
+                icon: "warning",
+                button: "Aceptar",
+            });
+        }
+
+    }
+</script>
+
+

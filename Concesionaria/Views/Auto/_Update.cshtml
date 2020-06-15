@@ -1,0 +1,130 @@
+﻿@model Concesionaria.Models.ModelsSupport.AutoUpdate
+
+@{
+    Layout = null;
+}
+
+@using (Ajax.BeginForm("UpdateFabrica", "Auto", new AjaxOptions { HttpMethod = "POST", OnSuccess = "SuccessAuto_U" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="row">
+        <div class="col-12">
+            <div class="container-fluid">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <br />
+                <h6 class="text-center"> Datos de Fábrica</h6>
+                <br />
+                <div style="">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            @Html.LabelFor(model => model.IdFabrica, "Fábrica", htmlAttributes: new { @class = "control-label" })
+                            @Html.EditorFor(model => model.IdFabrica, new { htmlAttributes = new { @class = "form-control", @style = "; background-color:white;", @readonly = "readonly" } })                            @Html.ValidationMessageFor(model => model.IdFabrica, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group col-md-6">
+                            @Html.LabelFor(model => model.NumeroF, "Número de Compra", htmlAttributes: new { @class = "control-label" })
+
+                            @Html.EditorFor(model => model.NumeroF, new { htmlAttributes = new { @class = "form-control", @style = "; background-color:white;", @readonly = "readonly" } })
+                            @Html.ValidationMessageFor(model => model.NumeroF, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <br />
+                </div>
+                <br />
+
+                <h6 class="text-center"> Datos de Fábrica</h6>
+                <br />
+                <div style="">
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            @Html.LabelFor(model => model.NumeroA, "Número de Automovil", htmlAttributes: new { @class = "control-label" })
+                            @Html.EditorFor(model => model.NumeroA, new { htmlAttributes = new { @class = "form-control", @style = "; background-color:white;", @readonly = "readonly" } })                            @Html.ValidationMessageFor(model => model.IdFabrica, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group col-md-6">
+                            @Html.LabelFor(model => model.IdAutoModelo, "Modelo", htmlAttributes: new { @class = "control-label" })
+                            @Html.EditorFor(model => model.IdAutoModelo, new { htmlAttributes = new { @class = "form-control", @style = "; background-color:white;", @readonly = "readonly" } })
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            @Html.LabelFor(model => model.IdAutoColor, "Color", htmlAttributes: new { @class = "control-label" })
+                            @Html.EditorFor(model => model.IdAutoColor, new { htmlAttributes = new { @class = "form-control", @style = "; background-color:white;", @readonly = "readonly" } })                            @Html.ValidationMessageFor(model => model.IdFabrica, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group col-md-4">
+                            @Html.LabelFor(model => model.IdAnio, "Año", htmlAttributes: new { @class = "control-label" })
+                            @Html.EditorFor(model => model.IdAnio, new { htmlAttributes = new { @class = "form-control", @style = "; background-color:white;", @readonly = "readonly" } })
+                        </div>
+                        <div class="form-group col-md-4">
+                            @Html.LabelFor(model => model.FechaIngreso, "Fecha de Ingreso", htmlAttributes: new { @class = "control-label" })
+                            @Html.EditorFor(model => model.FechaIngreso, new { htmlAttributes = new { @class = "form-control", @style = "; background-color:white;", @readonly = "readonly" } })
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            @Html.LabelFor(model => model.PrecioCompra, "Precio Compra", htmlAttributes: new { @class = "control-label" })
+                            @Html.EditorFor(model => model.PrecioCompra, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.PrecioCompra, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group col-md-4">
+                            @Html.LabelFor(model => model.PrecioVenta, "Precio Venta", htmlAttributes: new { @class = "control-label" })
+                            @Html.EditorFor(model => model.PrecioVenta, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.PrecioVenta, "", new { @class = "text-danger" })
+
+                        </div>
+                        <div class="form-group col-md-4">
+                            @Html.LabelFor(model => model.Estado, "Estado", htmlAttributes: new { @class = "control-label" })
+                            @Html.EditorFor(model => model.Estado, new { htmlAttributes = new { @class = "form-control", @style = "; background-color:white;", @readonly = "readonly" } })
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-footer">
+                <div class="col-12">
+                    <button id="BtnActAuto" type="submit" class="btn btn-success col-4 float-right">Actualizar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<script>
+
+    $(function () {
+        var m = $("#Auto_Estado").text();
+        if (m != 1) {
+            $('#BtnActAuto').prop('disabled', true);
+        }
+    })
+
+    function SuccessAuto_U(data) {
+        if (data.value == "1") {
+
+            Swal.fire({
+                position: "top",
+                title: "Correcto",
+                text: "Información Actualizada",
+                icon: "success",
+                button: "Aceptar",
+            }).then((result) => {
+                if (result.value) {
+                    $(location).attr('href', '/Auto/Options' + '?Id=' + data.Id);
+                }
+            })
+        }
+        else if (data.value == "0") {
+
+            Swal.fire({
+                position: "top",
+                title: "Error",
+                text: "Error No Reconocido",
+                icon: "warning",
+                button: "Aceptar",
+            });
+        }
+
+    }
+    </script>
