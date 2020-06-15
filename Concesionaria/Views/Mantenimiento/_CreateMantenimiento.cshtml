@@ -1,0 +1,58 @@
+﻿@model Concesionaria.Models.ModelsSupport.MantenimientoCreate
+@{
+    Layout = null;
+}
+@using (Ajax.BeginForm("CreateMantenimiento", "Mantenimiento", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "frmMant", OnSuccess = "SuccessMant_C" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <div class="modal-header">
+            <h5 class="modal-title">Nuevo Mantenimiento</h5>
+            <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.IdAutomovil, "IdAutomovil", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.IdAutomovil, new SelectList(ViewBag.Automovil, "Id", "Value"), htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.IdAutomovil, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-success">Aceptar</button>
+        </div>
+    </div>
+}
+
+<script>
+    function SuccessMant_C(data) {
+        MantenimientoLoad();
+        if (data == "1") {
+            $('#MantModal').modal("hide");
+            Swal.fire({
+                position: "top",
+                title: "Correcto",
+                text: "Mantenimiento Creada",
+                icon: "success",
+                button: "Aceptar",
+            });
+        }
+        else {
+            $('#MantModal').modal("hide");
+
+            Swal.fire({
+                position: "top",
+                title: "Error",
+                text: "Error No Reconocido",
+                icon: "warning",
+                button: "Aceptar",
+            });
+        }
+
+    }
+</script>
+

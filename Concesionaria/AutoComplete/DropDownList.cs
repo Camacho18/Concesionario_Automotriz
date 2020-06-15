@@ -48,7 +48,21 @@ namespace Concesionaria.AutoComplete
         {
             return (from AC in db.Fabrica select new DropDownListModel { Id = AC.IdFabrica, Value = AC.Numero+" "+ AC.Nombre }).ToList();
         }
-        
-
+        public List<DropDownListModel> CategoriaAutopartes() 
+        {
+            return (from A in db.CategoriaAutoparte select new DropDownListModel { Id = A.IdCategoriaAutoparte, Value = A.Categoria }).ToList();
+        }
+        public List<DropDownListModel> MantenEstado()
+        {
+            return (from M in db.MantenEstado select new DropDownListModel { Id = M.IdMantenEstado, Value = M.Nombre }).ToList();
+        }
+        public List<DropDownListModel> Automovil()
+        {
+            return (from AM in db.AutoModelo join A in db.Automovil on AM.IdAutoModelo equals A.IdAutoModelo select new DropDownListModel { Id = AM.IdAutoModelo, Value = AM.Nombre }).ToList();
+        }
+        public List<DropDownListModel> Autopartes()
+        {
+            return (from a in db.Autopartes select new DropDownListModel { Id = a.IdAutopartes, Value = a.Nombre }).ToList();
+        }
     }
 }

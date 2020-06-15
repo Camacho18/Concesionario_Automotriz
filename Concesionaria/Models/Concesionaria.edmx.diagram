@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="4aab86521ab047f5ba8b4a0e60bb2876" Name="Diagram1">
+      <Diagram DiagramId="6af074e3fd234ab8a103d2b2f8eee502" Name="Diagram1">
         <EntityTypeShape EntityType="ConcesionariaModel.Accesorio" Width="1.5" PointX="8.25" PointY="11.25" IsExpanded="true" />
         <EntityTypeShape EntityType="ConcesionariaModel.AccesorioList" Width="1.5" PointX="3" PointY="11.375" IsExpanded="true" />
         <EntityTypeShape EntityType="ConcesionariaModel.Anios" Width="1.5" PointX="0.75" PointY="11.625" IsExpanded="true" />
@@ -15,7 +15,7 @@
         <EntityTypeShape EntityType="ConcesionariaModel.AutoMarca" Width="1.5" PointX="1.5" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="ConcesionariaModel.AutoModelo" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="ConcesionariaModel.Automovil" Width="1.5" PointX="6" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ConcesionariaModel.Autopartes" Width="1.5" PointX="11.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConcesionariaModel.Autopartes" Width="1.5" PointX="11.25" PointY="3.25" IsExpanded="true" />
         <EntityTypeShape EntityType="ConcesionariaModel.CategoriaAutoparte" Width="1.5" PointX="9" PointY="3.875" IsExpanded="true" />
         <EntityTypeShape EntityType="ConcesionariaModel.Cliente" Width="1.5" PointX="6.75" PointY="19.625" IsExpanded="true" />
         <EntityTypeShape EntityType="ConcesionariaModel.Concesinaria" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />

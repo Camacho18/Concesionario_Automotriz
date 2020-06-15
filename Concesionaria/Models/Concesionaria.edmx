@@ -96,6 +96,7 @@
           <Property Name="IdAutopartes" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Nombre" Type="varchar" MaxLength="50" />
           <Property Name="Descripcion" Type="varchar" MaxLength="250" />
+          <Property Name="Cantidad_Total" Type="int" />
           <Property Name="IdCategoriaAutoparte" Type="int" />
           <Property Name="IdConcesinaria" Type="int" />
         </EntityType>
@@ -176,6 +177,7 @@
           <Property Name="Precio" Type="money" />
           <Property Name="IdMantenimiento" Type="int" />
           <Property Name="IdAutopartes" Type="int" />
+          <Property Name="Cantidad_Autopartes" Type="int" />
         </EntityType>
         <EntityType Name="MantenEstado">
           <Key>
@@ -1176,6 +1178,7 @@
           <Property Name="IdAutopartes" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Descripcion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Cantidad_Total" Type="Int32" />
           <Property Name="IdCategoriaAutoparte" Type="Int32" />
           <Property Name="IdConcesinaria" Type="Int32" />
           <NavigationProperty Name="CategoriaAutoparte" Relationship="Self.FK__Autoparte__IdCat__2739D489" FromRole="Autopartes" ToRole="CategoriaAutoparte" />
@@ -1277,6 +1280,7 @@
           <Property Name="Precio" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="IdMantenimiento" Type="Int32" />
           <Property Name="IdAutopartes" Type="Int32" />
+          <Property Name="Cantidad_Autopartes" Type="Int32" />
           <NavigationProperty Name="Autopartes" Relationship="Self.FK__Manten_Au__IdAut__32AB8735" FromRole="Manten_Autopar" ToRole="Autopartes" />
           <NavigationProperty Name="Mantenimiento" Relationship="Self.FK__Manten_Au__IdMan__31B762FC" FromRole="Manten_Autopar" ToRole="Mantenimiento" />
         </EntityType>
@@ -2298,6 +2302,7 @@
                 <ScalarProperty Name="IdAutopartes" ColumnName="IdAutopartes" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
                 <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Cantidad_Total" ColumnName="Cantidad_Total" />
                 <ScalarProperty Name="IdCategoriaAutoparte" ColumnName="IdCategoriaAutoparte" />
                 <ScalarProperty Name="IdConcesinaria" ColumnName="IdConcesinaria" />
               </MappingFragment>
@@ -2386,6 +2391,7 @@
                 <ScalarProperty Name="Precio" ColumnName="Precio" />
                 <ScalarProperty Name="IdMantenimiento" ColumnName="IdMantenimiento" />
                 <ScalarProperty Name="IdAutopartes" ColumnName="IdAutopartes" />
+                <ScalarProperty Name="Cantidad_Autopartes" ColumnName="Cantidad_Autopartes" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
