@@ -91,6 +91,7 @@
           <Property Name="IdAutoModelo" Type="int" />
           <Property Name="IdAutoColor" Type="int" />
           <Property Name="IdAutoEstado" Type="int" />
+          <Property Name="IdConcesinaria" Type="int" />
         </EntityType>
         <EntityType Name="Autopartes">
           <Key>
@@ -455,6 +456,18 @@
             </Principal>
             <Dependent Role="Automovil">
               <PropertyRef Name="IdAutoEstado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Automovil__IdCon__19DFD96B">
+          <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="0..1" />
+          <End Role="Automovil" Type="Self.Automovil" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Concesinaria">
+              <PropertyRef Name="IdConcesinaria" />
+            </Principal>
+            <Dependent Role="Automovil">
+              <PropertyRef Name="IdConcesinaria" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -853,6 +866,7 @@
           <Parameter Name="PrecioCompra" Type="money" Mode="In" />
           <Parameter Name="PrecionVenta" Type="money" Mode="In" />
           <Parameter Name="Fecha" Type="date" Mode="In" />
+          <Parameter Name="IdSuc" Type="int" Mode="In" />
           <Parameter Name="Bandera" Type="int" Mode="InOut" />
         </Function>
         <EntityContainer Name="ConcesionariaModelStoreContainer">
@@ -938,6 +952,10 @@
           </AssociationSet>
           <AssociationSet Name="FK__Automovil__IdAut__5070F446" Association="Self.FK__Automovil__IdAut__5070F446">
             <End Role="AutoEstadoList" EntitySet="AutoEstadoList" />
+            <End Role="Automovil" EntitySet="Automovil" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Automovil__IdCon__19DFD96B" Association="Self.FK__Automovil__IdCon__19DFD96B">
+            <End Role="Concesinaria" EntitySet="Concesinaria" />
             <End Role="Automovil" EntitySet="Automovil" />
           </AssociationSet>
           <AssociationSet Name="FK__Autoparte__IdCat__02084FDA" Association="Self.FK__Autoparte__IdCat__02084FDA">
@@ -1188,6 +1206,8 @@
           <NavigationProperty Name="Mantenimiento" Relationship="Self.FK__Mantenimi__IdAut__08B54D69" FromRole="Automovil" ToRole="Mantenimiento" />
           <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdAut__6477ECF3" FromRole="Automovil" ToRole="Origen_Fabrica" />
           <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdAut__6B24EA82" FromRole="Automovil" ToRole="Origen_Traspaso" />
+          <Property Name="IdConcesinaria" Type="Int32" />
+          <NavigationProperty Name="Concesinaria" Relationship="ConcesionariaModel.FK__Automovil__IdCon__19DFD96B" FromRole="Automovil" ToRole="Concesinaria" />
         </EntityType>
         <EntityType Name="Autopartes">
           <Key>
@@ -1247,6 +1267,7 @@
           <NavigationProperty Name="Empleado" Relationship="Self.FK__Empleado__IdConc__33D4B598" FromRole="Concesinaria" ToRole="Empleado" />
           <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdCon__6A30C649" FromRole="Concesinaria" ToRole="Origen_Traspaso" />
           <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__Promocion__IdCon__45F365D3" FromRole="Concesinaria" ToRole="Promocion_Auto" />
+          <NavigationProperty Name="Automovil" Relationship="ConcesionariaModel.FK__Automovil__IdCon__19DFD96B" FromRole="Concesinaria" ToRole="Automovil" />
         </EntityType>
         <EntityType Name="Empleado">
           <Key>
@@ -1298,14 +1319,9 @@
           <Property Name="Precio" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="IdMantenimiento" Type="Int32" />
           <Property Name="IdAutopartes" Type="Int32" />
-<<<<<<< HEAD:Concesionaria/Models/Concesionaria.edmx
+          <Property Name="Cantidad_Autopartes" Type="Int32" />
           <NavigationProperty Name="Autopartes" Relationship="Self.FK__Manten_Au__IdAut__0D7A0286" FromRole="Manten_Autopar" ToRole="Autopartes" />
           <NavigationProperty Name="Mantenimiento" Relationship="Self.FK__Manten_Au__IdMan__0C85DE4D" FromRole="Manten_Autopar" ToRole="Mantenimiento" />
-=======
-          <Property Name="Cantidad_Autopartes" Type="Int32" />
-          <NavigationProperty Name="Autopartes" Relationship="Self.FK__Manten_Au__IdAut__32AB8735" FromRole="Manten_Autopar" ToRole="Autopartes" />
-          <NavigationProperty Name="Mantenimiento" Relationship="Self.FK__Manten_Au__IdMan__31B762FC" FromRole="Manten_Autopar" ToRole="Mantenimiento" />
->>>>>>> master:Concesionaria/Models/Concecionaria.edmx
         </EntityType>
         <EntityType Name="MantenEstado">
           <Key>
@@ -2229,9 +2245,26 @@
             <Parameter Name="PrecioCompra" Mode="In" Type="Decimal" />
             <Parameter Name="PrecionVenta" Mode="In" Type="Decimal" />
             <Parameter Name="Fecha" Mode="In" Type="DateTime" />
+            <Parameter Name="IdSuc" Mode="In" Type="Int32" />
             <Parameter Name="Bandera" Mode="InOut" Type="Int32" />
           </FunctionImport>
+          <AssociationSet Name="FK__Automovil__IdCon__19DFD96B" Association="ConcesionariaModel.FK__Automovil__IdCon__19DFD96B">
+            <End Role="Concesinaria" EntitySet="Concesinaria" />
+            <End Role="Automovil" EntitySet="Automovil" />
+          </AssociationSet>
         </EntityContainer>
+        <Association Name="FK__Automovil__IdCon__19DFD96B">
+          <End Type="ConcesionariaModel.Concesinaria" Role="Concesinaria" Multiplicity="0..1" />
+          <End Type="ConcesionariaModel.Automovil" Role="Automovil" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Concesinaria">
+              <PropertyRef Name="IdConcesinaria" />
+            </Principal>
+            <Dependent Role="Automovil">
+              <PropertyRef Name="IdConcesinaria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -2323,6 +2356,7 @@
           <EntitySetMapping Name="Automovil">
             <EntityTypeMapping TypeName="ConcesionariaModel.Automovil">
               <MappingFragment StoreEntitySet="Automovil">
+                <ScalarProperty Name="IdConcesinaria" ColumnName="IdConcesinaria" />
                 <ScalarProperty Name="IdAutomovil" ColumnName="IdAutomovil" />
                 <ScalarProperty Name="Numero" ColumnName="Numero" />
                 <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />

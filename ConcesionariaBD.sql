@@ -110,7 +110,8 @@ create table Automovil(
 	IdAnios int foreign key (IdAnios) references Anios(IdAnios),	
 	IdAutoModelo int foreign key (IdAutoModelo) references AutoModelo(IdAutoModelo),
 	IdAutoColor int foreign key (IdAutoColor) references AutoColorList(IdAutoColor),
-	IdAutoEstado int foreign key (IdAutoEstado) references AutoEstadoList(IdAutoEstado)
+	IdAutoEstado int foreign key (IdAutoEstado) references AutoEstadoList(IdAutoEstado),
+	IdConcesinaria int foreign key (IdConcesinaria) references Concesinaria(IdConcesinaria)
 	)
 
 -- __________________________________________________________________ Accesorio

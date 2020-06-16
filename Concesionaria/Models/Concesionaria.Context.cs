@@ -60,7 +60,7 @@ namespace Concesionaria.Models
         public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<VentaAuto> VentaAuto { get; set; }
     
-        public virtual int SP_Automovil_Create_Fabrica(Nullable<int> idFabrica, string numeroF, Nullable<int> idUsuario, string numeroA, Nullable<int> idAnio, Nullable<int> idAutoModelo, Nullable<int> idAutoColor, Nullable<decimal> precioCompra, Nullable<decimal> precionVenta, Nullable<System.DateTime> fecha, ObjectParameter bandera)
+        public virtual int SP_Automovil_Create_Fabrica(Nullable<int> idFabrica, string numeroF, Nullable<int> idUsuario, string numeroA, Nullable<int> idAnio, Nullable<int> idAutoModelo, Nullable<int> idAutoColor, Nullable<decimal> precioCompra, Nullable<decimal> precionVenta, Nullable<System.DateTime> fecha, Nullable<int> idSuc, ObjectParameter bandera)
         {
             var idFabricaParameter = idFabrica.HasValue ?
                 new ObjectParameter("IdFabrica", idFabrica) :
@@ -102,7 +102,11 @@ namespace Concesionaria.Models
                 new ObjectParameter("Fecha", fecha) :
                 new ObjectParameter("Fecha", typeof(System.DateTime));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_Automovil_Create_Fabrica", idFabricaParameter, numeroFParameter, idUsuarioParameter, numeroAParameter, idAnioParameter, idAutoModeloParameter, idAutoColorParameter, precioCompraParameter, precionVentaParameter, fechaParameter, bandera);
+            var idSucParameter = idSuc.HasValue ?
+                new ObjectParameter("IdSuc", idSuc) :
+                new ObjectParameter("IdSuc", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_Automovil_Create_Fabrica", idFabricaParameter, numeroFParameter, idUsuarioParameter, numeroAParameter, idAnioParameter, idAutoModeloParameter, idAutoColorParameter, precioCompraParameter, precionVentaParameter, fechaParameter, idSucParameter, bandera);
         }
     }
 }

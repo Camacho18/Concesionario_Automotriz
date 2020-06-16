@@ -1,0 +1,94 @@
+﻿@model Concesionaria.Models.ModelsSupport.AutoTraspaso
+
+@{    
+    Layout = null;
+}
+
+@using (Ajax.BeginForm("TrasAuto", "Auto", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "frmAuto", OnSuccess = "SuccessAutoT_C" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <div class="modal-header">
+            <h5 class="modal-title">Traspaso de Automovil</h5>
+            <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <h6 class="text-center"> Datos de Concesionaria Receptora</h6>
+            <div style="border: #d5d8db 1px solid">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.IdConcesionaria, "Concesionaria", htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(model => model.IdConcesionaria, new SelectList(ViewBag.IdConce, "Id", "Value"), "- Selecciona -", htmlAttributes: new { @class = "custom-select custom-select-md", @data_style = "btn btn-primary btn-round" })
+                        @Html.ValidationMessageFor(model => model.IdConcesionaria, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Numero, "Número de Traspaso", htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Numero, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Numero, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <br />
+            <h6 class="text-center"> Datos de Automovil</h6>
+            <div style="border: #d5d8db 1px solid">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.IdAutomovil, "Automovil", htmlAttributes: new { @class = "control-label col-md-6" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(model => model.IdAutomovil, new SelectList(ViewBag.IdAuto, "Id", "Value"), "- Selecciona -", htmlAttributes: new { @class = "custom-select custom-select-md", @data_style = "btn btn-primary btn-round" })
+                        @Html.ValidationMessageFor(model => model.IdAutomovil, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-success">Aceptar</button>
+        </div>
+    </div>
+
+}
+
+<script>
+ 
+
+    function SuccessAutoT_C(data) {
+        AutoLoad();
+        if (data == "1") {
+            $('#AutoModal').modal("hide");
+            Swal.fire({
+                position: "top",
+                title: "Correcto",
+                text: "Compra Creada",
+                icon: "success",
+                button: "Aceptar",
+            });
+        }
+        else if (data == "2") {
+            $('#AutoModal').modal("hide");
+            Swal.fire({
+                position: "top",
+                title: "Atención",
+                text: "Numero de compra o auto existente",
+                icon: "warning",
+                button: "Aceptar",
+            });
+        }
+        else if (data == "0") {
+            $('#AutoModal').modal("hide");
+            Swal.fire({
+                position: "top",
+                title: "Error",
+                text: "Error No Reconocido",
+                icon: "warning",
+                button: "Aceptar",
+            });
+        }
+
+    }
+</script>

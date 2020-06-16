@@ -10,7 +10,7 @@ using Microsoft.SqlServer.Server;
 using Newtonsoft.Json;
 using Concesionaria.AutoComplete;
 using System.Data.Entity.Core.Objects;
-
+using EntityFramework.Extensions;
 
 namespace Concesionaria.Controllers
 {
@@ -78,7 +78,7 @@ namespace Concesionaria.Controllers
                     ObjectParameter Bandera = new ObjectParameter("Bandera", typeof(int));
                     IdUsuario = Convert.ToInt32(Session["IdUsuario"]);
                     IdSucursal = Convert.ToInt32(Session["IdSucursal"]);
-                    db.SP_Automovil_Create_Fabrica(model.IdFabrica, model.NumeroF, IdUsuario, model.NumeroA, model.IdAnio, model.IdAutoModelo, model.IdAutoColor, model.PrecioCompra, model.PrecioVenta, model.FechaIngreso, Bandera);
+                    db.SP_Automovil_Create_Fabrica(model.IdFabrica, model.NumeroF, IdUsuario, model.NumeroA, model.IdAnio, model.IdAutoModelo, model.IdAutoColor, model.PrecioCompra, model.PrecioVenta, model.FechaIngreso, IdSucursal, Bandera);
                     ReturnSP = Convert.ToInt32(Bandera.Value);
 
                     return Json("1", JsonRequestBehavior.AllowGet);
@@ -116,7 +116,7 @@ namespace Concesionaria.Controllers
                                 FechaIngreso = A.FechaIngreso.ToString(),
                                 PrecioCompra = A.PrecioCompra,
                                 PrecioVenta = A.PrecioVenta,
-                                Estado=(from E in db.AutoEstadoList where E.IdAutoEstado==A.IdAutoEstado select E.Nombre).FirstOrDefault()
+                                Estado = (from E in db.AutoEstadoList where E.IdAutoEstado == A.IdAutoEstado select E.Nombre).FirstOrDefault()
                             }
                             ).FirstOrDefault();
             m.IdEstado = 1;
@@ -124,7 +124,7 @@ namespace Concesionaria.Controllers
         }
         [HttpPost]
         public ActionResult UpdateFabrica(AutoUpdate model)
-        {     
+        {
             if (!ModelState.IsValid)
             {
 
@@ -137,19 +137,98 @@ namespace Concesionaria.Controllers
                 try
                 {
                     Automovil Aut = (from E in db.Automovil
-                                    where E.IdAutomovil == Comodin
-                                    select E).SingleOrDefault();
+                                     where E.IdAutomovil == Comodin
+                                     select E).SingleOrDefault();
 
                     Aut.PrecioCompra = model.PrecioCompra;
                     Aut.PrecioVenta = model.PrecioVenta;
                     db.SaveChanges();
 
-                    return Json(new { value = "1", Id=Comodin }, JsonRequestBehavior.AllowGet);
+                    return Json(new { value = "1", Id = Comodin }, JsonRequestBehavior.AllowGet);
                 }
                 catch
                 {
                     return Json("0", JsonRequestBehavior.AllowGet);
                 }
+            }
+        }
+
+        public ActionResult DeleteAuto(int Id)
+        {
+            try
+            {
+                Automovil m = (from A in db.Automovil where A.IdAutomovil == Id select A).FirstOrDefault();
+
+                if (m.IdAutoEstado != 1)
+                    return Json("2", JsonRequestBehavior.AllowGet);
+
+                List<Accesorio> Ac = (from A in db.Accesorio
+                                      join AU in db.AutoAccesorio on A.IdAccesorio equals AU.IdAccesorio
+                                      where AU.IdAutomovil == Id
+                                      select A).ToList();
+                foreach (var acc in Ac)
+                {
+                    acc.Estado = true;
+
+                }
+                db.SaveChanges();
+                List<AutoAccesorio> AUC = (from AU in db.AutoAccesorio
+                                           where AU.IdAutomovil == Id
+                                           select AU).ToList();
+                foreach (var auc in AUC)
+                {
+                    db.AutoAccesorio.Remove(auc);
+                }
+                db.SaveChanges();
+
+                Automovil AUM = (from A in db.Automovil where A.IdAutomovil == Id select A).FirstOrDefault();
+                AUM.IdAutoEstado = 4;
+                db.SaveChanges();
+
+                return Json("1", JsonRequestBehavior.AllowGet);
+
+            }
+            catch
+            {
+                return Json("0", JsonRequestBehavior.AllowGet);
+            }
+
+        }
+
+        public ActionResult TrasAuto(int Id)
+        {
+            IdUsuario = Convert.ToInt32(Session["IdUsuario"]);
+            IdSucursal = Convert.ToInt32(Session["IdSucursal"]);
+            ViewBag.IdConce = DropDownLisObject.Sucursal(IdSucursal);
+            ViewBag.IdAuto = DropDownLisObject.AutoConce(IdSucursal);
+            return View("_AutoTras");
+        }
+        [HttpPost]
+        public ActionResult TrasAuto(AutoTraspaso model)
+        {
+            try
+            {
+                IdUsuario = Convert.ToInt32(Session["IdUsuario"]);
+                IdSucursal = Convert.ToInt32(Session["IdSucursal"]);
+
+                // Insert Origen_Traspaso
+                Origen_Traspaso OT = new Origen_Traspaso();
+                OT.Numero = model.Numero;
+                OT.IdVendedor = IdUsuario;
+                OT.IdConcesinaria = model.IdConcesionaria;
+                OT.IdAutomovil = model.IdAutomovil;
+                OT.IdOrigenEstado = 2;
+                db.Origen_Traspaso.Add(OT);
+                db.SaveChanges();
+                // Update Estado del Vehiculo Id=2 - Traspasado
+                Automovil AU = (from au in db.Automovil where au.IdAutomovil == model.IdAutomovil select au).FirstOrDefault();
+                AU.IdAutoEstado = 2;
+                db.SaveChanges();
+                return Json("1", JsonRequestBehavior.AllowGet);
+            }
+            catch
+            {
+                return Json("0", JsonRequestBehavior.AllowGet);
             }
         }
     }

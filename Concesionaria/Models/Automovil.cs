@@ -33,6 +33,7 @@ namespace Concesionaria.Models
         public Nullable<int> IdAutoModelo { get; set; }
         public Nullable<int> IdAutoColor { get; set; }
         public Nullable<int> IdAutoEstado { get; set; }
+        public Nullable<int> IdConcesinaria { get; set; }
     
         public virtual Anios Anios { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -48,5 +49,6 @@ namespace Concesionaria.Models
         public virtual ICollection<Origen_Fabrica> Origen_Fabrica { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Origen_Traspaso> Origen_Traspaso { get; set; }
+        public virtual Concesinaria Concesinaria { get; set; }
     }
 }

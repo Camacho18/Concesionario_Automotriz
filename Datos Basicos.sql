@@ -2572,7 +2572,7 @@ INSERT INTO AutoModelo VALUES
 insert into Estado_Cliente values
 ('Sin compra'),('Compra activa'),('Sin movimientos'),('Inactivo')
 insert into AutoEstadoList values 
-('Existencia'),('Traspasado'),('Vendido')
+('Existencia'),('Traspasado'),('Vendido'),('Eliminado')
 insert into OrigenEstado values 
 ('En proceso'),('Aceptado'),('Cancelado')
 insert into AutoColorList values 

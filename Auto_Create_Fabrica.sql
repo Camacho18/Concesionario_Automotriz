@@ -14,13 +14,14 @@ CREATE PROCEDURE SP_Automovil_Create_Fabrica
 	@PrecioCompra MONEY,
 	@PrecionVenta MONEY,
 	@Fecha date,
+	@IdSuc int, 
 	@Bandera INT OUTPUT
 AS
 BEGIN
 	BEGIN TRAN
 		BEGIN TRY
-			INSERT INTO Automovil (Numero,IdAnios,IdAutoModelo,IdAutoColor,IdAutoEstado,PrecioCompra,PrecioVenta,FechaIngreso) VALUES 
-								  (@NumeroA,@IdAnio,@IdAutoModelo,@IdAutoColor,1,@PrecioCompra,@PrecionVenta,@Fecha)
+			INSERT INTO Automovil (Numero,IdAnios,IdAutoModelo,IdAutoColor,IdAutoEstado,PrecioCompra,PrecioVenta,FechaIngreso,IdConcesinaria) VALUES 
+								  (@NumeroA,@IdAnio,@IdAutoModelo,@IdAutoColor,1,@PrecioCompra,@PrecionVenta,@Fecha,@IdSuc)
 			DECLARE @IdAuto INT
 			SET @IdAuto = SCOPE_IDENTITY()
 
@@ -33,6 +34,5 @@ BEGIN
 		BEGIN CATCH
 			ROLLBACK TRAN
 			SET @Bandera=1
-
 		END CATCH
 END

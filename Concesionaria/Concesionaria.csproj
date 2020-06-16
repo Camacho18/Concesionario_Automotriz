@@ -196,17 +196,10 @@
     </Compile>
     <Compile Include="Models\Cliente.cs">
       <DependentUpon>Concesionaria.tt</DependentUpon>
-<<<<<<< HEAD
     </Compile>
     <Compile Include="Models\Concesinaria.cs">
       <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
-=======
-    </Compile>
-    <Compile Include="Models\Concesinaria.cs">
-      <DependentUpon>Concesionaria.tt</DependentUpon>
-    </Compile>
->>>>>>> master
     <Compile Include="Models\Concesionaria.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -252,12 +245,10 @@
     <Compile Include="Models\ModelsSupport\AutoJson.cs" />
     <Compile Include="Models\ModelsSupport\AutomovilCreate.cs" />
     <Compile Include="Models\ModelsSupport\AutomovilJson.cs" />
-<<<<<<< HEAD
+    <Compile Include="Models\ModelsSupport\AutoTraspaso.cs" />
     <Compile Include="Models\ModelsSupport\AutoUpdate.cs" />
-=======
     <Compile Include="Models\ModelsSupport\AutopartesCreate.cs" />
     <Compile Include="Models\ModelsSupport\AutopartesJson.cs" />
->>>>>>> master
     <Compile Include="Models\ModelsSupport\ClienteCreate.cs" />
     <Compile Include="Models\ModelsSupport\ClienteJson.cs" />
     <Compile Include="Models\ModelsSupport\AccesorioListCreate.cs" />
@@ -482,23 +473,18 @@
     <Content Include="Views\Promocion\_CreatePromAuto.cshtml" />
     <Content Include="Views\Auto\Index.cshtml" />
     <Content Include="Views\Auto\_Create.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Auto\Edit.cshtml" />
     <Content Include="Views\Auto\_Update.cshtml" />
     <Content Include="Views\Accesorio\_AutoAcceIndex.cshtml" />
     <Content Include="Views\Accesorio\_CreateAcceAuto.cshtml" />
-=======
     <Content Include="Views\AutoPartes\Index.cshtml" />
     <Content Include="Views\AutoPartes\_CreateAutoparte.cshtml" />
     <Content Include="Views\AutoPartes\_UpdateAutoparte.cshtml" />
     <Content Include="Views\Mantenimiento\Index.cshtml" />
     <Content Include="Views\Mantenimiento\_CreateMantenimiento.cshtml" />
     <Content Include="Views\Mantenimiento\_CreateManteAuto.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Mantenimiento\_UpdateManteAuto.cshtml" />
-=======
->>>>>>> master
->>>>>>> e8f22299c21c91c69d40c293b38a6d4389646bd4
+    <Content Include="Views\Auto\_AutoTras.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
