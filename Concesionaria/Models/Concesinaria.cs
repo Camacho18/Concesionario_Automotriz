@@ -18,11 +18,11 @@ namespace Concesionaria.Models
         public Concesinaria()
         {
             this.Accesorio = new HashSet<Accesorio>();
+            this.Automovil = new HashSet<Automovil>();
             this.Autopartes = new HashSet<Autopartes>();
             this.Empleado = new HashSet<Empleado>();
             this.Origen_Traspaso = new HashSet<Origen_Traspaso>();
             this.Promocion_Auto = new HashSet<Promocion_Auto>();
-            this.Automovil = new HashSet<Automovil>();
         }
     
         public int IdConcesinaria { get; set; }
@@ -34,6 +34,8 @@ namespace Concesionaria.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Accesorio> Accesorio { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Automovil> Automovil { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Autopartes> Autopartes { get; set; }
         public virtual Municipio Municipio { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -42,7 +44,5 @@ namespace Concesionaria.Models
         public virtual ICollection<Origen_Traspaso> Origen_Traspaso { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Promocion_Auto> Promocion_Auto { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Automovil> Automovil { get; set; }
     }
 }

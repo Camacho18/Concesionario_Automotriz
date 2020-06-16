@@ -49,14 +49,19 @@
                     <i class="fa fa-eye"></i>
                 </a>
                 ${if(Estado=="En reparación")}
-                <a class="text-danger" style="padding:0px,5px,0px,5px; margin-left:10px; margin-right:10px" href="javascript:void(0)" onclick="Cancelar(${ IdMantenimiento })" data-toggle="tooltip" data-placement="top" title="Cancelar">
+                <a class="text-danger" style="padding:0px,5px,0px,5px; margin-left:10px; margin-right:10px" href="javascript:void(0)" onclick="Cancelar(${IdMantenimiento})" data-toggle="tooltip" data-placement="top" title="Cancelar">
                     <i class="fa fa-remove"></i>
                 </a>
                 <a class="text-succcess" href="javascript:void(0)" onclick="Pagar(${IdMantenimiento})" data-toggle="tooltip" data-placement="top" title="Marcar como pagado">
                     <i class="fa fa-money"></i>
                 </a>
                 ${else}
-                
+                <a class="text-danger" style="padding:0px,5px,0px,5px; margin-left:10px; margin-right:10px" href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Cancelar">
+                    <i class="fa fa-remove"></i>
+                </a>
+                <a class="text-succcess" href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Marcar como pagado">
+                    <i class="fa fa-money"></i>
+                </a>
                 ${/if}
 
             </div>
@@ -203,12 +208,33 @@
                 if (result.value) {
                     $.get('@Url.Action("CancelarMant", "Mantenimiento", new { IdMantenimiento = "_id_" })'.replace('_id_', IdMantenimiento), function (data) {
                         MantenimientoLoad();
-                        Swal.fire({
+                        if (data == 1) {
+                            Swal.fire({
                             position: "top",
                             title: "Mantenimiento cancelado",
                             icon: "success",
                             button: "Aceptar",
                         });
+                        }
+                        if (data == 2) {
+                        Swal.fire({
+                            position: "top",
+                            title: "Mantenimiento Pagado",
+                            text: "No puede cancelar",
+                            icon: "warning",
+                            button: "Aceptar",
+                        });
+                        }
+                        else {
+                        Swal.fire({
+                            position: "top",
+                            title: "Error",
+                            text: "Error No Reconocido",
+                            icon: "warning",
+                            button: "Aceptar",
+                        });
+                    }
+                        
                     });
                 } 
             });

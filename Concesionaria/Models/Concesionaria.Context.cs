@@ -44,6 +44,7 @@ namespace Concesionaria.Models
         public virtual DbSet<Empleado> Empleado { get; set; }
         public virtual DbSet<Estado> Estado { get; set; }
         public virtual DbSet<Estado_Cliente> Estado_Cliente { get; set; }
+        public virtual DbSet<EstadoVenta> EstadoVenta { get; set; }
         public virtual DbSet<Fabrica> Fabrica { get; set; }
         public virtual DbSet<Manten_Autopar> Manten_Autopar { get; set; }
         public virtual DbSet<MantenEstado> MantenEstado { get; set; }
@@ -59,7 +60,6 @@ namespace Concesionaria.Models
         public virtual DbSet<TipoEmpleado> TipoEmpleado { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<VentaAuto> VentaAuto { get; set; }
-        public virtual DbSet<EstadoVenta> EstadoVenta { get; set; }
     
         public virtual int SP_Automovil_Create_Fabrica(Nullable<int> idFabrica, string numeroF, Nullable<int> idUsuario, string numeroA, Nullable<int> idAnio, Nullable<int> idAutoModelo, Nullable<int> idAutoColor, Nullable<decimal> precioCompra, Nullable<decimal> precionVenta, Nullable<System.DateTime> fecha, Nullable<int> idSuc, ObjectParameter bandera)
         {
