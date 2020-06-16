@@ -29,8 +29,8 @@ namespace Concesionaria.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AutoCliente> AutoCliente { get; set; }
         public virtual Cliente Cliente { get; set; }
+        public virtual EstadoVenta EstadoVenta { get; set; }
         public virtual PromocionList PromocionList { get; set; }
         public virtual Usuario Usuario { get; set; }
-        public virtual EstadoVenta EstadoVenta { get; set; }
     }
 }

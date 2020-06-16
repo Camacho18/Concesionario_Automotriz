@@ -73,7 +73,7 @@ namespace Concesionaria.AutoComplete
         {
             return (from a in db.Autopartes select new DropDownListModel { Id = a.IdAutopartes, Value = a.Nombre }).ToList();
         }
-<<<<<<< HEAD
+
         public List<DropDownListModel> AutoConce(int id)
         {
 
@@ -90,7 +90,6 @@ namespace Concesionaria.AutoComplete
                     select new DropDownListModel { Id = a.IdConcesinaria, Value = a.Nombre}).ToList();
         }
 
-=======
 
         public List<DropDownListModel> Promocion()
         {
@@ -101,6 +100,5 @@ namespace Concesionaria.AutoComplete
         {
             return (from a in db.Cliente where a.IdEstado_Cliente==1 select new DropDownListModel { Id = a.IdCliente, Value = a.Nombre }).ToList();
         }
->>>>>>> master
     }
 }

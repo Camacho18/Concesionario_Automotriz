@@ -249,10 +249,7 @@
     <Compile Include="Models\ModelsSupport\AutoJson.cs" />
     <Compile Include="Models\ModelsSupport\AutomovilCreate.cs" />
     <Compile Include="Models\ModelsSupport\AutomovilJson.cs" />
-<<<<<<< HEAD
     <Compile Include="Models\ModelsSupport\AutoTraspaso.cs" />
-=======
->>>>>>> master
     <Compile Include="Models\ModelsSupport\AutoUpdate.cs" />
     <Compile Include="Models\ModelsSupport\AutopartesCreate.cs" />
     <Compile Include="Models\ModelsSupport\AutopartesJson.cs" />
@@ -493,13 +490,10 @@
     <Content Include="Views\Mantenimiento\_CreateMantenimiento.cshtml" />
     <Content Include="Views\Mantenimiento\_CreateManteAuto.cshtml" />
     <Content Include="Views\Mantenimiento\_UpdateManteAuto.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Auto\_AutoTras.cshtml" />
-=======
     <Content Include="Views\VentaAuto\Index.cshtml" />
     <Content Include="Views\VentaAuto\_CreateVentaAuto.cshtml" />
     <Content Include="Views\VentaAuto\_CreateAutoCliente.cshtml" />
->>>>>>> master
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

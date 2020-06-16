@@ -209,16 +209,24 @@ create table EstadoVenta (
 
 CREATE TABLE VentaAuto(
 	IdVentaAuto INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	Numero VARCHAR(30),
 	IdUsuario int foreign key(IdUsuario) references Usuario(IdUsuario),
-	IdPromocion int foreign key (IdPromocion) references PromocionList(IdPromocion),
 	IdCliente int foreign key(IdCliente) references Cliente(IdCliente),
 	IdEstadoVenta int foreign key(IdEstadoVenta) references EstadoVenta(IdEstadoVenta)
 )
 
+CREATE TABLE VentaAuto_Promo (
+	IdVentaAuto_Promo int identity(1,1) primary key,
+	IdPromocion int foreign key (IdPromocion) references PromocionList(IdPromocion),
+	IdVentaAuto int foreign key (IdVentaAuto) references VentaAuto(IdVentaAuto)
+)
+
+
 CREATE TABLE AutoCliente(
 	IdAutoCliente INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 	IdAutomovil int foreign key(IdAutomovil) references Automovil(IdAutomovil),
-	IdVentaAuto int foreign key(IdVentaAuto) references VentaAuto(IdVentaAuto)
+	IdVentaAuto int foreign key(IdVentaAuto) references VentaAuto(IdVentaAuto),
+	Promo BIT
 )
 
 
