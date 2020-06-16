@@ -16,7 +16,7 @@ namespace Concesionaria.Controllers
         private readonly DropDownList Model = new DropDownList();
         private string JsonString = string.Empty;
         //private readonly RemoveEspace Remove = new RemoveEspace();
-        private int IdUsuario, IdSucursal;
+        private int IdUsuario, IdSucursal, Comodin;
         // GET: VentaAuto
         public ActionResult Index()
         {
@@ -29,16 +29,13 @@ namespace Concesionaria.Controllers
 
         // GET: VentaAuto/Details/5
         public ActionResult VentaAutoJson()
-        {
-            
+        {           
             List<VentaAutoJson> json = (from V in db.VentaAuto
-                                        select new VentaAutoJson {
-                                            IdVentaAuto = V.IdVentaAuto,
-                                            Usuario = (from U in db.Usuario where U.IdUsuario == V.IdUsuario select U.NomUsuario).FirstOrDefault(),
-                                            NumPromocion = (from P in db.PromocionList where P.IdPromocion == V.IdPromocion select P.Numero).FirstOrDefault(),
-                                            Descuento = (from P in db.PromocionList where P.IdPromocion == V.IdPromocion select P.Descuento).FirstOrDefault(),
+                                        select new VentaAutoJson {                                            
+                                            Numero = V.Numero,
+                                            Usuario = (from U in db.Usuario where U.IdUsuario == V.IdUsuario select U.NomUsuario).FirstOrDefault(),                                        
                                             Cliente = (from C in db.Cliente where C.IdCliente == V.IdCliente select C.Nombre).FirstOrDefault(),
-                                            Estado = (from E in db.EstadoVenta where E.IdEstadoVenta==V.IdEstadoVenta select E.Nombre).FirstOrDefault()
+                                            EstadoVenta = (from E in db.EstadoVenta where E.IdEstadoVenta==V.IdEstadoVenta select E.Nombre).FirstOrDefault()
                                         }).ToList();        
             JsonString = JsonConvert.SerializeObject(json);
             return Json(JsonString, JsonRequestBehavior.AllowGet);
@@ -47,7 +44,6 @@ namespace Concesionaria.Controllers
         // GET: VentaAuto/Create
         public ActionResult CreateVentaAuto()
         {
-            ViewBag.Promocion = Model.Promocion();
             ViewBag.Cliente = Model.Cliente();
             return PartialView("_CreateVentaAuto");
         }
@@ -58,7 +54,6 @@ namespace Concesionaria.Controllers
         {
             if (!ModelState.IsValid)
             {
-                ViewBag.Promocion = Model.Promocion();
                 ViewBag.Cliente = Model.Cliente();
                 return PartialView("_CreateVentaauto");
             }
@@ -67,9 +62,9 @@ namespace Concesionaria.Controllers
                 VentaAuto m = new VentaAuto();
                 
                 try
-                {                                       
-                    m.IdUsuario = Convert.ToInt32(Session["IdUsuario"]);
-                    m.IdPromocion = model.IdPromocion;
+                {
+                    m.Numero = model.Numero;
+                    m.IdUsuario = Convert.ToInt32(Session["IdUsuario"]);                    
                     m.IdCliente = model.IdCliente;
                     m.IdEstadoVenta = 1;
                     db.VentaAuto.Add(m);
@@ -196,6 +191,38 @@ namespace Concesionaria.Controllers
                     return Json("0", JsonRequestBehavior.AllowGet);
                 }
             }
+        }
+
+        public ActionResult Options(int Id)
+        {
+            Session["IdVentaAuto"] = Id;
+            ViewBag.Numero = (from V in db.VentaAuto where V.IdVentaAuto== Id select V.Numero).FirstOrDefault();
+            return View("MenuVenta");
+        }
+
+        public ActionResult InfoCliente()
+        {
+            Comodin = Convert.ToInt32(Session["IdVentaAuto"]);
+            InfoCliente i = (from C in db.Cliente
+                             join V in db.VentaAuto on C.IdCliente equals V.IdCliente
+                             where V.IdVentaAuto == Comodin
+                             select new InfoCliente
+                             {
+                                 Numero = C.Numero,
+                                 Nombre = C.Nombre,
+                                 Direccion = C.Direccion,
+                                 FechaNac = C.FechaNac,
+                                 Sexo = C.Sexo,
+                                 TelCasa = C.TelCasa,
+                                 TelCel = C.TelCel,
+                                 Correo = C.Correo,
+                                 RFC = C.RFC,
+                                 Municipio = (from M in db.Municipio where M.IdMunicipio == C.IdMunicipio select M.Nombre).FirstOrDefault(),
+                                 Estado = (from E in db.Estado join M in db.Municipio on E.IdEstado equals M.IdEstado where M.IdMunicipio == C.IdMunicipio select E.Nombre).FirstOrDefault(),
+                                 Pais = (from P in db.Pais join E in db.Estado on P.IdPais equals E.IdPais join M in db.Municipio on E.IdEstado equals M.IdEstado where M.IdMunicipio == C.IdMunicipio select P.Nombre).FirstOrDefault(),
+                                 Estado_Cliente = (from E in db.Estado_Cliente where E.IdEstado_Cliente == C.IdEstado_Cliente select E.Nombre).FirstOrDefault()
+                             }).FirstOrDefault();
+            return View("_InfoCliente", i);
         }
     }
 }
