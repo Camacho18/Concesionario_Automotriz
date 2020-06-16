@@ -58,5 +58,27 @@
                 button: "Aceptar",
             });
         }
+        else if (data == "2") {
+            $('#MantenimientoModal').modal("hide");
+
+            Swal.fire({
+                position: "top",
+                title: "Atención",
+                text: "El mantenimiento ya se reparo, no se puede actualizar",
+                icon: "warning",
+                button: "Aceptar",
+            });
+        }
+        else {
+            $('#MantenimientoEmpModal').modal("hide");
+
+            Swal.fire({
+                position: "top",
+                title: "Error",
+                text: "Error No Reconocido",
+                icon: "warning",
+                button: "Aceptar",
+            });
+        }
     }
 </script>

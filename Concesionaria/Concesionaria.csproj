@@ -155,6 +155,7 @@
     <Compile Include="Controllers\AccesorioController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="Controllers\VentaAutoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -221,6 +222,9 @@
     <Compile Include="Models\Estado.cs">
       <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\EstadoVenta.cs">
+      <DependentUpon>Concesionaria.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Estado_Cliente.cs">
       <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
@@ -245,7 +249,10 @@
     <Compile Include="Models\ModelsSupport\AutoJson.cs" />
     <Compile Include="Models\ModelsSupport\AutomovilCreate.cs" />
     <Compile Include="Models\ModelsSupport\AutomovilJson.cs" />
+<<<<<<< HEAD
     <Compile Include="Models\ModelsSupport\AutoTraspaso.cs" />
+=======
+>>>>>>> master
     <Compile Include="Models\ModelsSupport\AutoUpdate.cs" />
     <Compile Include="Models\ModelsSupport\AutopartesCreate.cs" />
     <Compile Include="Models\ModelsSupport\AutopartesJson.cs" />
@@ -269,6 +276,8 @@
     <Compile Include="Models\ModelsSupport\ReferenciaCreate.cs" />
     <Compile Include="Models\ModelsSupport\ReferenciaJson.cs" />
     <Compile Include="Models\ModelsSupport\UsuarioModel.cs" />
+    <Compile Include="Models\ModelsSupport\VentaAutoCreate.cs" />
+    <Compile Include="Models\ModelsSupport\VentaAutoJson.cs" />
     <Compile Include="Models\Municipio.cs">
       <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
@@ -484,7 +493,13 @@
     <Content Include="Views\Mantenimiento\_CreateMantenimiento.cshtml" />
     <Content Include="Views\Mantenimiento\_CreateManteAuto.cshtml" />
     <Content Include="Views\Mantenimiento\_UpdateManteAuto.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Auto\_AutoTras.cshtml" />
+=======
+    <Content Include="Views\VentaAuto\Index.cshtml" />
+    <Content Include="Views\VentaAuto\_CreateVentaAuto.cshtml" />
+    <Content Include="Views\VentaAuto\_CreateAutoCliente.cshtml" />
+>>>>>>> master
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

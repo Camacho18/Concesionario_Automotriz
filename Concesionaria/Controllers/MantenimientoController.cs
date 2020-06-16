@@ -162,18 +162,26 @@ namespace Concesionaria.Controllers
             else
             {
                 IdManten_Autopar = Convert.ToInt32(Session["IdManten_Autopar"]);
+                int IdMantenimiento = Convert.ToInt32(Session["IdMantenimiento"]);
                 try
                 {
-                    Manten_Autopar ma = (from m in db.Manten_Autopar
-                                           where m.IdManten_Autopar == IdManten_Autopar
-                                           select m).SingleOrDefault();
+                    Mantenimiento M = db.Mantenimiento.Where(x => x.IdMantenimiento == IdMantenimiento).Select(x => x).FirstOrDefault();
+                    if (M.IdMantenEstado == 1)
+                    {
+                        Manten_Autopar ma = (from m in db.Manten_Autopar
+                                             where m.IdManten_Autopar == IdManten_Autopar
+                                             select m).SingleOrDefault();
 
-                    ma.Precio = model.Precio;
-                    ma.IdMantenimiento = Convert.ToInt32(Session["IdMantenimiento"]);
-                    ma.IdAutopartes = model.IdAutopartes;
-                    ma.Cantidad_Autopartes = model.Cantidad_Autopartes;
-                    db.SaveChanges();
-                    return Json("1", JsonRequestBehavior.AllowGet);
+                        ma.Precio = model.Precio;
+                        ma.IdMantenimiento = Convert.ToInt32(Session["IdMantenimiento"]);
+                        ma.IdAutopartes = model.IdAutopartes;
+                        ma.Cantidad_Autopartes = model.Cantidad_Autopartes;
+                        db.SaveChanges();
+                        return Json("1", JsonRequestBehavior.AllowGet);
+                    }
+                    else
+                        return Json("2", JsonRequestBehavior.AllowGet);
+
                 }
                 catch
                 {
@@ -185,35 +193,90 @@ namespace Concesionaria.Controllers
         {
             try
             {
-                List<Manten_Autopar> MantAutoModel = (from ma in db.Manten_Autopar select ma).ToList();
-                foreach (var MatA in MantAutoModel)
+                int IdMantenimiento = Convert.ToInt32(Session["IdMantenimiento"]);
+                List<Mantenimiento> MT = (from ma in db.Manten_Autopar join m in db.Mantenimiento on ma.IdMantenimiento equals m.IdMantenimiento select m).ToList();
+                foreach (var m in MT)
                 {
-                    List<Mantenimiento> MantModel = (from mt in db.Mantenimiento where mt.IdMantenimiento == MatA.IdMantenimiento select mt).ToList();
-                    foreach (var Mant in MantModel)
+                    if (m.IdMantenimiento == IdMantenimiento && m.IdMantenEstado == 1)
                     {
-                        List<MantenEstado> EstModel = (from e in db.MantenEstado where e.IdMantenEstado == Mant.IdMantenEstado select e).ToList();
-                        foreach (var Est in EstModel)
-                        {
-                            if (Est.Nombre == "En reparación")
-                            {
-                                db.Manten_Autopar.Remove(MatA);
-                                db.SaveChanges();
-                                return Json("1", JsonRequestBehavior.AllowGet);
-                            }
-                            else 
-                                return Json("2", JsonRequestBehavior.AllowGet);
-                        }
-                        return Json("0", JsonRequestBehavior.AllowGet);
-
+                        var eliminar = (from MA in db.Manten_Autopar where MA.IdManten_Autopar == IdManten_Autopar select MA).FirstOrDefault();
+                        db.Manten_Autopar.Remove(eliminar);
+                        db.SaveChanges();
+                        return Json("1", JsonRequestBehavior.AllowGet);
                     }
-                    return Json("0", JsonRequestBehavior.AllowGet);
+                    
                 }
-                return Json("0", JsonRequestBehavior.AllowGet);
+                return Json("2", JsonRequestBehavior.AllowGet);
+
             }
             catch
             {
                 return Json("0", JsonRequestBehavior.AllowGet);
             }
         }
+
+        public ActionResult PagarVen(int? IdMantenimiento)
+        {
+            if (IdMantenimiento == null)
+                IdMantenimiento = Convert.ToInt32(Session["IdMantenimiento"]);
+            else
+                Session["IdMantenimiento"] = IdMantenimiento;
+
+            Mantenimiento m = db.Mantenimiento.Where(x => x.IdMantenimiento == IdMantenimiento).Select(x => x).FirstOrDefault();
+            if (m.IdMantenEstado == 1)
+            {
+                m.IdMantenEstado = 2;
+                db.Entry(m).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+                List<Manten_Autopar> MAmodel = (from MA in db.Manten_Autopar where MA.IdMantenimiento == m.IdMantenimiento select MA).ToList();
+                foreach (var MA in MAmodel)
+                {
+                    List<Autopartes> Amodel = (from A in db.Autopartes where A.IdAutopartes == MA.IdAutopartes select A).ToList();
+                    foreach (var A in Amodel)
+                    {
+                        if (m.IdMantenEstado == 2)
+                        {
+                            A.Cantidad_Total = A.Cantidad_Total - MA.Cantidad_Autopartes;
+                            db.SaveChanges();
+                        }
+                    }
+                    
+                }
+                return Content("Correcto");
+            }
+            return Content("Incorrecto");
+        }
+
+        public ActionResult CancelarMant(int? IdMantenimiento)
+        {
+            if (IdMantenimiento == null)
+                IdMantenimiento = Convert.ToInt32(Session["IdMantenimiento"]);
+            else
+                Session["IdMantenimiento"] = IdMantenimiento;
+
+            Mantenimiento m = db.Mantenimiento.Where(x => x.IdMantenimiento == IdMantenimiento).Select(x => x).FirstOrDefault();
+            if (m.IdMantenEstado == 1)
+            {
+                m.IdMantenEstado = 3;
+                db.Entry(m).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+                List<Manten_Autopar> MAmodel = (from MA in db.Manten_Autopar where MA.IdMantenimiento == m.IdMantenimiento select MA).ToList();
+                foreach (var MA in MAmodel)
+                {
+                    if (m.IdMantenEstado == 3)
+                    {
+                        db.Manten_Autopar.Remove(MA);
+                        db.SaveChanges();
+                    }
+
+                }
+                return Content("Correcto");
+            }
+            return Content("Incorrecto");
+
+            
+        }
+
+
     }
 }

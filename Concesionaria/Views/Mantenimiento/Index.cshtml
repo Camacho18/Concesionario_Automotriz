@@ -49,13 +49,14 @@
                     <i class="fa fa-eye"></i>
                 </a>
                 ${if(Estado=="En reparación")}
-                <a class="text-danger" style="padding:0px,5px,0px,5px; margin-left:10px; margin-right:10px" href="javascript:void(0)" onclick="CancelarMantenimiento(${ IdMantenimiento })" data-toggle="tooltip" data-placement="top" title="Cancelar">
+                <a class="text-danger" style="padding:0px,5px,0px,5px; margin-left:10px; margin-right:10px" href="javascript:void(0)" onclick="Cancelar(${ IdMantenimiento })" data-toggle="tooltip" data-placement="top" title="Cancelar">
                     <i class="fa fa-remove"></i>
+                </a>
+                <a class="text-succcess" href="javascript:void(0)" onclick="Pagar(${IdMantenimiento})" data-toggle="tooltip" data-placement="top" title="Marcar como pagado">
+                    <i class="fa fa-money"></i>
                 </a>
                 ${else}
-                <a class="text-danger" style="padding:0px,5px,0px,5px; margin-left:10px; margin-right:10px" href="javascript:void(0)" onclick="Denegado()" data-toggle="tooltip" data-placement="top" title="Cancelar">
-                    <i class="fa fa-remove"></i>
-                </a>
+                
                 ${/if}
 
             </div>
@@ -78,7 +79,7 @@
                 <div class="row col-12">
                     <button class="btn btn-primary col-2" id="Btn_NewMantenimientoAutopartes">Nuevo +</button>
                     <div class="col-8 text-center"><h6 id="num"></h6></div>
-                    <button class="btn btn-success col-2" id="Btn_NewPagar">Pagar</button>
+                    
                     <div class="col-2"></div>
                 </div>
                 <br />
@@ -102,21 +103,12 @@
     <div class="row text-center">
         <div class="col-md-12 ">
             <div class="">
-                ${if(Estado=="En reparación")}
                 <a class="text-succcess" href="javascript:void(0)" onclick="SelectMantenimientoAutoparte(${IdManten_Autopar})" data-toggle="tooltip" data-placement="top" title="Editar">
                     <i class="fa fa-edit"></i>
                 </a>
                 <a class="text-danger" style="padding:0px,5px,0px,5px; margin-left:10px; margin-right:10px" href="javascript:void(0)" onclick="DeleteMantenimientoAutoparte(${ IdManten_Autopar })" data-toggle="tooltip" data-placement="top" title="Eliminar">
                     <i class="fa fa-remove"></i>
                 </a>
-                ${else}
-                <a class="text-succcess" href="javascript:void(0)" onclick="SelectMantenimientoAutoparte(${IdManten_Autopar})" data-toggle="tooltip" data-placement="top" title="Editar">
-                    <i class="fa fa-edit"></i>
-                </a>
-                <a class="text-danger" style="padding:0px,5px,0px,5px; margin-left:10px; margin-right:10px" href="javascript:void(0)" onclick="DeleteMantenimientoAutoparte(${ IdManten_Autopar })" data-toggle="tooltip" data-placement="top" title="Eliminar">
-                    <i class="fa fa-remove"></i>
-                </a>
-                ${/if}
             </div>
         </div>
     </div>
@@ -164,6 +156,64 @@
         });
     }
 
+    function Pagar(IdMantenimiento){
+        $('#Btn_NewMantenimientoAutopartes').attr("disabled", false);
+            Swal.fire({
+                position: "top",
+                title: 'Pagar',
+                text: "¿Marcar como pagado?",
+                icon: 'success',
+                showCancelButton: true,
+                showConfirmButton: true,
+                cancelButtonColor: '#d33',
+                confirmButtonColor: '#3085d6',
+                cancelButtonText: 'Cancelar',
+                confirmButtonText: 'Aceptar',
+                reverseButtons: true
+        }).then((result) => {
+                if (result.value) {
+                    $.get('@Url.Action("PagarVen", "Mantenimiento", new { IdMantenimiento = "_id_" })'.replace('_id_', IdMantenimiento), function (data) {
+                        MantenimientoLoad();
+                        Swal.fire({
+                            position: "top",
+                            title: "Mantenimiento pagado",
+                            icon: "success",
+                            button: "Aceptar",
+                        });
+                    });
+                } 
+            });
+    };
+
+    function Cancelar(IdMantenimiento){
+        $('#Btn_NewMantenimientoAutopartes').attr("disabled", false);
+            Swal.fire({
+                position: "top",
+                title: 'Cancelar',
+                text: "Desea cancelar el mantenimiento!",
+                icon: 'warning',
+                showCancelButton: true,
+                showConfirmButton: true,
+                cancelButtonColor: '#d33',
+                confirmButtonColor: '#3085d6',
+                cancelButtonText: 'Cancelar',
+                confirmButtonText: 'Aceptar',
+                reverseButtons: true
+        }).then((result) => {
+                if (result.value) {
+                    $.get('@Url.Action("CancelarMant", "Mantenimiento", new { IdMantenimiento = "_id_" })'.replace('_id_', IdMantenimiento), function (data) {
+                        MantenimientoLoad();
+                        Swal.fire({
+                            position: "top",
+                            title: "Mantenimiento cancelado",
+                            icon: "success",
+                            button: "Aceptar",
+                        });
+                    });
+                } 
+            });
+    };
+
     //[F] PromocionList
 
     //[I] Accesorio
@@ -187,10 +237,8 @@
                 });
     });
 
-    $('#Btn_NewPagar').click(function () {
-             //$.get('@Url.Action("PagarMantenimiento","Mantenimiento")', function (data) {
-             
-    });
+    
+    
 
     function SelectMantenimientoAutoparte(IdManten_Autopar){
         $('#Btn_NewMantenimientoAutopartes').attr("disabled", false);
@@ -246,6 +294,8 @@
             }
         })
     };
+
+    
 
     //[F] Accesorio
 </script>

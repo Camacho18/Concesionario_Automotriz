@@ -56,6 +56,16 @@
                 button: "Aceptar",
             });
         }
+        else if (data == "2") {
+            $('#ManteAutoModal').modal("hide");
+            Swal.fire({
+                position: "top",
+                title: "Atención",
+                text: "El mantenimiento ya se reparo, no se puede crear una autoparte",
+                icon: "warning",
+                button: "Aceptar",
+            });
+        }
         else {
             $('#ManteEmpModal').modal("hide");
             Swal.fire({

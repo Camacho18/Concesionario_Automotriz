@@ -4,7 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
+<<<<<<< HEAD
       <Diagram DiagramId="03d68da2ecec4bae9202dba90830de91" Name="Diagram1">
+=======
+      <Diagram DiagramId="d26641f6d63e45e6b4da9c2928893120" Name="Diagram1" ZoomLevel="63">
+>>>>>>> master
         <EntityTypeShape EntityType="ConcesionariaModel.Accesorio" Width="1.5" PointX="8.25" PointY="11.25" IsExpanded="true" />
         <EntityTypeShape EntityType="ConcesionariaModel.AccesorioList" Width="1.5" PointX="3" PointY="11.375" IsExpanded="true" />
         <EntityTypeShape EntityType="ConcesionariaModel.Anios" Width="1.5" PointX="0.75" PointY="11.625" IsExpanded="true" />
@@ -37,6 +41,7 @@
         <EntityTypeShape EntityType="ConcesionariaModel.TipoEmpleado" Width="1.5" PointX="1.5" PointY="28.875" IsExpanded="true" />
         <EntityTypeShape EntityType="ConcesionariaModel.Usuario" Width="1.5" PointX="6" PointY="28.25" IsExpanded="true" />
         <EntityTypeShape EntityType="ConcesionariaModel.VentaAuto" Width="1.5" PointX="9" PointY="20.375" IsExpanded="true" />
+<<<<<<< HEAD
         <AssociationConnector Association="ConcesionariaModel.FK__Accesorio__IdAcc__571DF1D5" ManuallyRouted="false" />
         <AssociationConnector Association="ConcesionariaModel.FK__Accesorio__IdCon__5812160E" ManuallyRouted="false" />
         <AssociationConnector Association="ConcesionariaModel.FK__AutoAcces__IdAcc__5AEE82B9" ManuallyRouted="false" />
@@ -83,6 +88,55 @@
         <AssociationConnector Association="ConcesionariaModel.FK__VentaAuto__IdPro__787EE5A0" ManuallyRouted="false" />
         <AssociationConnector Association="ConcesionariaModel.FK__VentaAuto__IdUsu__778AC167" ManuallyRouted="false" />
         <AssociationConnector Association="ConcesionariaModel.FK__Automovil__IdCon__19DFD96B" />
+=======
+        <AssociationConnector Association="ConcesionariaModel.FK__Accesorio__IdAcc__7C4F7684" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Accesorio__IdCon__7D439ABD" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__AutoAcces__IdAcc__00200768" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Accesorio__IdAni__797309D9" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Accesorio__IdAut__787EE5A0" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Automovil__IdAni__72C60C4A" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Promocion__IdAni__693CA210" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__AutoAcces__IdAut__01142BA1" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__AutoClien__IdAut__2180FB33" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__AutoClien__IdVen__22751F6C" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Automovil__IdAut__74AE54BC" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Automovil__IdAut__75A278F5" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__AutoModel__IdAut__656C112C" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Automovil__IdAut__73BA3083" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Promocion__IdAut__68487DD7" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Mantenimi__IdAut__2DE6D218" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Origen_Fa__IdAut__09A971A2" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Origen_Tr__IdAut__10566F31" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Autoparte__IdCat__2739D489" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Autoparte__IdCon__282DF8C2" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Manten_Au__IdAut__32AB8735" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Cliente__IdEstad__17036CC0" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Cliente__IdMunic__160F4887" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Referenci__IdCli__19DFD96B" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__VentaAuto__IdCli__1EA48E88" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Concesina__IdMun__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Empleado__IdConc__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Origen_Tr__IdCon__0F624AF8" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Promocion__IdCon__6B24EA82" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Empleado__IdTipo__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Usuario__IdEmple__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Estado__IdPais__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Municipio__IdEst__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Origen_Fa__IdFab__07C12930" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Manten_Au__IdMan__31B762FC" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Mantenimi__IdMan__2EDAF651" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Mantenimi__IdUsu__2CF2ADDF" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Origen_Fa__IdOri__0A9D95DB" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Origen_Fa__IdUsu__08B54D69" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Origen_Tr__IdCom__0E6E26BF" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Origen_Tr__IdOri__114A936A" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Origen_Tr__IdVen__0D7A0286" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__Promocion__IdPro__6A30C649" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__VentaAuto__IdPro__1DB06A4F" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcesionariaModel.FK__VentaAuto__IdUsu__1CBC4616" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ConcesionariaModel.EstadoVenta" Width="1.5" PointX="4.375" PointY="0.875" />
+        <AssociationConnector Association="ConcesionariaModel.FK__VentaAuto__IdEst__3D2915A8" />
+>>>>>>> master
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
