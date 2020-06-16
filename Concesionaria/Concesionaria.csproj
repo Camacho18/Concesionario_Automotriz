@@ -154,6 +154,7 @@
     <Compile Include="Controllers\ReferenciasController.cs" />
     <Compile Include="Controllers\AccesorioController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\ReportesController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Controllers\VentaAutoController.cs" />
     <Compile Include="Global.asax.cs">
@@ -494,6 +495,7 @@
     <Content Include="Views\VentaAuto\Index.cshtml" />
     <Content Include="Views\VentaAuto\_CreateVentaAuto.cshtml" />
     <Content Include="Views\VentaAuto\_CreateAutoCliente.cshtml" />
+    <Content Include="Views\Reportes\FacturaReport.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
