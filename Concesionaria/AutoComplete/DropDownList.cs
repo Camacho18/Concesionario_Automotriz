@@ -73,5 +73,15 @@ namespace Concesionaria.AutoComplete
         {
             return (from a in db.Autopartes select new DropDownListModel { Id = a.IdAutopartes, Value = a.Nombre }).ToList();
         }
+
+        public List<DropDownListModel> Promocion()
+        {
+            return (from a in db.PromocionList select new DropDownListModel { Id = a.IdPromocion, Value = a.Numero }).ToList();
+        }
+
+        public List<DropDownListModel> Cliente()
+        {
+            return (from a in db.Cliente where a.IdEstado_Cliente==1 select new DropDownListModel { Id = a.IdCliente, Value = a.Nombre }).ToList();
+        }
     }
 }

@@ -1,4 +1,6 @@
 
+INSERT INTO EstadoVenta VALUES 
+('Creado'),('Pagado'),('Cancelado')
 
 INSERT INTO Anios VALUES
 ('2000'),

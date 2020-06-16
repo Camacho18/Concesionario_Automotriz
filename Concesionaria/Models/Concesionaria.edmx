@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ConcesionariaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ConcesionariaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Accesorio">
           <Key>
             <PropertyRef Name="IdAccesorio" />
@@ -164,6 +164,13 @@
           <Property Name="IdEstado_Cliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Nombre" Type="varchar" MaxLength="30" />
         </EntityType>
+        <EntityType Name="EstadoVenta">
+          <Key>
+            <PropertyRef Name="IdEstadoVenta" />
+          </Key>
+          <Property Name="IdEstadoVenta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="20" />
+        </EntityType>
         <EntityType Name="Fabrica">
           <Key>
             <PropertyRef Name="IdFabrica" />
@@ -301,6 +308,7 @@
           <Property Name="IdUsuario" Type="int" />
           <Property Name="IdPromocion" Type="int" />
           <Property Name="IdCliente" Type="int" />
+          <Property Name="IdEstadoVenta" Type="int" />
         </EntityType>
         <Association Name="FK__Accesorio__IdAcc__7C4F7684">
           <End Role="AccesorioList" Type="Self.AccesorioList" Multiplicity="0..1" />
@@ -818,6 +826,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__VentaAuto__IdEst__3D2915A8">
+          <End Role="EstadoVenta" Type="Self.EstadoVenta" Multiplicity="0..1" />
+          <End Role="VentaAuto" Type="Self.VentaAuto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EstadoVenta">
+              <PropertyRef Name="IdEstadoVenta" />
+            </Principal>
+            <Dependent Role="VentaAuto">
+              <PropertyRef Name="IdEstadoVenta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__VentaAuto__IdPro__1DB06A4F">
           <End Role="PromocionList" Type="Self.PromocionList" Multiplicity="0..1" />
           <End Role="VentaAuto" Type="Self.VentaAuto" Multiplicity="*" />
@@ -842,6 +862,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="SP_Automovil_Create_Fabrica" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdFabrica" Type="int" Mode="In" />
+          <Parameter Name="NumeroF" Type="varchar" Mode="In" />
+          <Parameter Name="IdUsuario" Type="int" Mode="In" />
+          <Parameter Name="NumeroA" Type="varchar" Mode="In" />
+          <Parameter Name="IdAnio" Type="int" Mode="In" />
+          <Parameter Name="IdAutoModelo" Type="int" Mode="In" />
+          <Parameter Name="IdAutoColor" Type="int" Mode="In" />
+          <Parameter Name="PrecioCompra" Type="money" Mode="In" />
+          <Parameter Name="PrecionVenta" Type="money" Mode="In" />
+          <Parameter Name="Fecha" Type="date" Mode="In" />
+          <Parameter Name="Bandera" Type="int" Mode="InOut" />
+        </Function>
         <EntityContainer Name="ConcesionariaModelStoreContainer">
           <EntitySet Name="Accesorio" EntityType="Self.Accesorio" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AccesorioList" EntityType="Self.AccesorioList" Schema="dbo" store:Type="Tables" />
@@ -860,6 +893,7 @@
           <EntitySet Name="Empleado" EntityType="Self.Empleado" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Estado" EntityType="Self.Estado" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Estado_Cliente" EntityType="Self.Estado_Cliente" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EstadoVenta" EntityType="Self.EstadoVenta" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Fabrica" EntityType="Self.Fabrica" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Manten_Autopar" EntityType="Self.Manten_Autopar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MantenEstado" EntityType="Self.MantenEstado" Schema="dbo" store:Type="Tables" />
@@ -1047,6 +1081,10 @@
             <End Role="Cliente" EntitySet="Cliente" />
             <End Role="VentaAuto" EntitySet="VentaAuto" />
           </AssociationSet>
+          <AssociationSet Name="FK__VentaAuto__IdEst__3D2915A8" Association="Self.FK__VentaAuto__IdEst__3D2915A8">
+            <End Role="EstadoVenta" EntitySet="EstadoVenta" />
+            <End Role="VentaAuto" EntitySet="VentaAuto" />
+          </AssociationSet>
           <AssociationSet Name="FK__VentaAuto__IdPro__1DB06A4F" Association="Self.FK__VentaAuto__IdPro__1DB06A4F">
             <End Role="PromocionList" EntitySet="PromocionList" />
             <End Role="VentaAuto" EntitySet="VentaAuto" />
@@ -1056,8 +1094,7 @@
             <End Role="VentaAuto" EntitySet="VentaAuto" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ConcesionariaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -1447,6 +1484,8 @@
           <NavigationProperty Name="Cliente" Relationship="Self.FK__VentaAuto__IdCli__1EA48E88" FromRole="VentaAuto" ToRole="Cliente" />
           <NavigationProperty Name="PromocionList" Relationship="Self.FK__VentaAuto__IdPro__1DB06A4F" FromRole="VentaAuto" ToRole="PromocionList" />
           <NavigationProperty Name="Usuario" Relationship="Self.FK__VentaAuto__IdUsu__1CBC4616" FromRole="VentaAuto" ToRole="Usuario" />
+          <Property Name="IdEstadoVenta" Type="Int32" />
+          <NavigationProperty Name="EstadoVenta" Relationship="ConcesionariaModel.FK__VentaAuto__IdEst__3D2915A8" FromRole="VentaAuto" ToRole="EstadoVenta" />
         </EntityType>
         <Association Name="FK__Accesorio__IdAcc__7C4F7684">
           <End Role="AccesorioList" Type="Self.AccesorioList" Multiplicity="0..1" />
@@ -2201,7 +2240,45 @@
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="VentaAuto" EntitySet="VentaAuto" />
           </AssociationSet>
+          <FunctionImport Name="SP_Automovil_Create_Fabrica">
+            <Parameter Name="IdFabrica" Mode="In" Type="Int32" />
+            <Parameter Name="NumeroF" Mode="In" Type="String" />
+            <Parameter Name="IdUsuario" Mode="In" Type="Int32" />
+            <Parameter Name="NumeroA" Mode="In" Type="String" />
+            <Parameter Name="IdAnio" Mode="In" Type="Int32" />
+            <Parameter Name="IdAutoModelo" Mode="In" Type="Int32" />
+            <Parameter Name="IdAutoColor" Mode="In" Type="Int32" />
+            <Parameter Name="PrecioCompra" Mode="In" Type="Decimal" />
+            <Parameter Name="PrecionVenta" Mode="In" Type="Decimal" />
+            <Parameter Name="Fecha" Mode="In" Type="DateTime" />
+            <Parameter Name="Bandera" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="EstadoVenta" EntityType="ConcesionariaModel.EstadoVenta" />
+          <AssociationSet Name="FK__VentaAuto__IdEst__3D2915A8" Association="ConcesionariaModel.FK__VentaAuto__IdEst__3D2915A8">
+            <End Role="EstadoVenta" EntitySet="EstadoVenta" />
+            <End Role="VentaAuto" EntitySet="VentaAuto" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="EstadoVenta">
+          <Key>
+            <PropertyRef Name="IdEstadoVenta" />
+          </Key>
+          <Property Name="IdEstadoVenta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="VentaAuto" Relationship="ConcesionariaModel.FK__VentaAuto__IdEst__3D2915A8" FromRole="EstadoVenta" ToRole="VentaAuto" />
+        </EntityType>
+        <Association Name="FK__VentaAuto__IdEst__3D2915A8">
+          <End Type="ConcesionariaModel.EstadoVenta" Role="EstadoVenta" Multiplicity="0..1" />
+          <End Type="ConcesionariaModel.VentaAuto" Role="VentaAuto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EstadoVenta">
+              <PropertyRef Name="IdEstadoVenta" />
+            </Principal>
+            <Dependent Role="VentaAuto">
+              <PropertyRef Name="IdEstadoVenta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -2530,10 +2607,20 @@
           <EntitySetMapping Name="VentaAuto">
             <EntityTypeMapping TypeName="ConcesionariaModel.VentaAuto">
               <MappingFragment StoreEntitySet="VentaAuto">
+                <ScalarProperty Name="IdEstadoVenta" ColumnName="IdEstadoVenta" />
                 <ScalarProperty Name="IdVentaAuto" ColumnName="IdVentaAuto" />
                 <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
                 <ScalarProperty Name="IdPromocion" ColumnName="IdPromocion" />
                 <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="SP_Automovil_Create_Fabrica" FunctionName="ConcesionariaModel.Store.SP_Automovil_Create_Fabrica" />
+          <EntitySetMapping Name="EstadoVenta">
+            <EntityTypeMapping TypeName="ConcesionariaModel.EstadoVenta">
+              <MappingFragment StoreEntitySet="EstadoVenta">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="IdEstadoVenta" ColumnName="IdEstadoVenta" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

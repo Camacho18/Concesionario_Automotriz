@@ -274,29 +274,7 @@ namespace Concesionaria.Controllers
             }
             return Content("Incorrecto");
 
-            //List<Manten_Autopar> MantAutoModel = (from ma in db.Manten_Autopar select ma).ToList();
-            //foreach (var MatA in MantAutoModel)
-            //{
-            //    List<Mantenimiento> MantModel = (from mt in db.Mantenimiento where mt.IdMantenimiento == MatA.IdMantenimiento select mt).ToList();
-            //    foreach (var Mant in MantModel)
-            //    {
-            //        List<MantenEstado> EstModel = (from e in db.MantenEstado where e.IdMantenEstado == Mant.IdMantenEstado select e).ToList();
-            //        foreach (var Est in EstModel)
-            //        {
-            //            if (Est.Nombre == "En reparación")
-            //            {
-            //                db.Manten_Autopar.Remove(MatA);
-            //                db.SaveChanges();
-            //                return Json("1", JsonRequestBehavior.AllowGet);
-            //            }
-
-            //        }
-            //        return Json("0", JsonRequestBehavior.AllowGet);
-
-            //    }
-            //    return Json("0", JsonRequestBehavior.AllowGet);
-            //}
-            //return Json("0", JsonRequestBehavior.AllowGet);
+            
         }
 
 

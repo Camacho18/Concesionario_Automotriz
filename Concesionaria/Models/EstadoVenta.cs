@@ -12,25 +12,18 @@ namespace Concesionaria.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class VentaAuto
+    public partial class EstadoVenta
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public VentaAuto()
+        public EstadoVenta()
         {
-            this.AutoCliente = new HashSet<AutoCliente>();
+            this.VentaAuto = new HashSet<VentaAuto>();
         }
     
-        public int IdVentaAuto { get; set; }
-        public Nullable<int> IdUsuario { get; set; }
-        public Nullable<int> IdPromocion { get; set; }
-        public Nullable<int> IdCliente { get; set; }
-        public Nullable<int> IdEstadoVenta { get; set; }
+        public int IdEstadoVenta { get; set; }
+        public string Nombre { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AutoCliente> AutoCliente { get; set; }
-        public virtual Cliente Cliente { get; set; }
-        public virtual PromocionList PromocionList { get; set; }
-        public virtual Usuario Usuario { get; set; }
-        public virtual EstadoVenta EstadoVenta { get; set; }
+        public virtual ICollection<VentaAuto> VentaAuto { get; set; }
     }
 }

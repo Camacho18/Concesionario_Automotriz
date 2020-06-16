@@ -201,12 +201,17 @@ create table Referencias(
 	)
 
 -- __________________________________________________________________ Venta
+create table EstadoVenta (
+	IdEstadoVenta int identity(1,1) primary key not null,
+	Nombre varchar(20)
+	)
 
 CREATE TABLE VentaAuto(
 	IdVentaAuto INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 	IdUsuario int foreign key(IdUsuario) references Usuario(IdUsuario),
 	IdPromocion int foreign key (IdPromocion) references PromocionList(IdPromocion),
 	IdCliente int foreign key(IdCliente) references Cliente(IdCliente),
+	IdEstadoVenta int foreign key(IdEstadoVenta) references EstadoVenta(IdEstadoVenta)
 )
 
 CREATE TABLE AutoCliente(

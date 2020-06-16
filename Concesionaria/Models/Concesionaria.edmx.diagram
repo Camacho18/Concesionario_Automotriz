@@ -82,6 +82,8 @@
         <AssociationConnector Association="ConcesionariaModel.FK__Promocion__IdPro__6A30C649" ManuallyRouted="false" />
         <AssociationConnector Association="ConcesionariaModel.FK__VentaAuto__IdPro__1DB06A4F" ManuallyRouted="false" />
         <AssociationConnector Association="ConcesionariaModel.FK__VentaAuto__IdUsu__1CBC4616" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ConcesionariaModel.EstadoVenta" Width="1.5" PointX="4.375" PointY="0.875" />
+        <AssociationConnector Association="ConcesionariaModel.FK__VentaAuto__IdEst__3D2915A8" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
