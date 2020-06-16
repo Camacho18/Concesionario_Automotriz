@@ -18,7 +18,7 @@ namespace Concesionaria.Models
         public PromocionList()
         {
             this.Promocion_Auto = new HashSet<Promocion_Auto>();
-            this.VentaAuto = new HashSet<VentaAuto>();
+            this.VentaAuto_Promo = new HashSet<VentaAuto_Promo>();
         }
     
         public int IdPromocion { get; set; }
@@ -30,6 +30,6 @@ namespace Concesionaria.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Promocion_Auto> Promocion_Auto { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<VentaAuto> VentaAuto { get; set; }
+        public virtual ICollection<VentaAuto_Promo> VentaAuto_Promo { get; set; }
     }
 }
