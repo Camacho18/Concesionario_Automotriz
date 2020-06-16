@@ -30,12 +30,11 @@ namespace Concesionaria.Controllers
         public ActionResult MantenimientoJson()
         {
             List<MantenimientoJson> json = (from m in db.Mantenimiento
-                                         select new MantenimientoJson
-                                         {
-                                             IdMantenimiento = m.IdMantenimiento,
+                                            select new MantenimientoJson
+                                         {                                            
                                              Fecha = m.Fecha,
                                              Usuario = (from u in db.Usuario where u.IdUsuario==m.IdUsuario select u.NomUsuario).FirstOrDefault(),
-                                             Automovil = (from a in db.Automovil join am in db.AutoModelo on a.IdAutoModelo equals am.IdAutoModelo select am.Nombre).FirstOrDefault(),
+                                             Automovil = (from a in db.Automovil join am in db.AutoModelo on a.IdAutoModelo equals am.IdAutoModelo where a.IdAutomovil==m.IdAutomovil select am.Nombre).FirstOrDefault(),
                                              Estado = (from e in db.MantenEstado where e.IdMantenEstado==m.IdMantenEstado select e.Nombre).FirstOrDefault()
                                          }).ToList();
             JsonString = JsonConvert.SerializeObject(json);
@@ -99,7 +98,7 @@ namespace Concesionaria.Controllers
                                                 CantidadAutopartes = M.Cantidad_Autopartes
                                             }).ToList();
             JsonString = JsonConvert.SerializeObject(json);
-            var num = (from a in db.Automovil join am in db.AutoModelo on a.IdAutoModelo equals am.IdAutoModelo select am.Nombre).FirstOrDefault();
+            var num = (from m in db.Mantenimiento join a in db.Automovil on m.IdAutomovil equals a.IdAutomovil join am in db.AutoModelo on a.IdAutoModelo equals am.IdAutoModelo where m.IdMantenimiento==IdMantenimiento select am.Nombre).FirstOrDefault();
             return Json(new { JsonString, num }, JsonRequestBehavior.AllowGet);
         }
         public ActionResult CreateMantenimientoAutopartes()
@@ -247,32 +246,35 @@ namespace Concesionaria.Controllers
             return Content("Incorrecto");
         }
 
-        public ActionResult CancelarMant(int? IdMantenimiento)
+        public ActionResult CancelarMant(int IdMantenimiento)
         {
-            if (IdMantenimiento == null)
-                IdMantenimiento = Convert.ToInt32(Session["IdMantenimiento"]);
-            else
-                Session["IdMantenimiento"] = IdMantenimiento;
 
-            Mantenimiento m = db.Mantenimiento.Where(x => x.IdMantenimiento == IdMantenimiento).Select(x => x).FirstOrDefault();
-            if (m.IdMantenEstado == 1)
+            try
             {
-                m.IdMantenEstado = 3;
-                db.Entry(m).State = System.Data.Entity.EntityState.Modified;
-                db.SaveChanges();
-                List<Manten_Autopar> MAmodel = (from MA in db.Manten_Autopar where MA.IdMantenimiento == m.IdMantenimiento select MA).ToList();
-                foreach (var MA in MAmodel)
+                Mantenimiento m = db.Mantenimiento.Where(x => x.IdMantenimiento == IdMantenimiento).Select(x => x).FirstOrDefault();
+                if (m.IdMantenEstado == 1)
                 {
-                    if (m.IdMantenEstado == 3)
+                    m.IdMantenEstado = 3;
+                    db.Entry(m).State = System.Data.Entity.EntityState.Modified;
+                    db.SaveChanges();
+                    List<Manten_Autopar> MAmodel = (from MA in db.Manten_Autopar where MA.IdMantenimiento == m.IdMantenimiento select MA).ToList();
+                    foreach (var MA in MAmodel)
                     {
-                        db.Manten_Autopar.Remove(MA);
-                        db.SaveChanges();
-                    }
-
+                        if (m.IdMantenEstado == 3)
+                        {
+                            db.Manten_Autopar.Remove(MA);
+                            db.SaveChanges();
+                            return Json("1", JsonRequestBehavior.AllowGet);
+                        }
+                    }                  
                 }
-                return Content("Correcto");
+                return Json("2", JsonRequestBehavior.AllowGet);
             }
-            return Content("Incorrecto");
+            catch (Exception)
+            {
+                return Json("0", JsonRequestBehavior.AllowGet);
+            }
+            
 
             
         }
