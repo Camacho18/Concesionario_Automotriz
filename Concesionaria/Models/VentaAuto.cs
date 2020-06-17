@@ -26,6 +26,7 @@ namespace Concesionaria.Models
         public Nullable<int> IdUsuario { get; set; }
         public Nullable<int> IdCliente { get; set; }
         public Nullable<int> IdEstadoVenta { get; set; }
+        public Nullable<decimal> PrecioFinal { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AutoCliente> AutoCliente { get; set; }

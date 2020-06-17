@@ -144,6 +144,7 @@ namespace Concesionaria.Controllers
                     Aut.PrecioCompra = model.PrecioCompra;
                     Aut.PrecioVenta = model.PrecioVenta;
                     Aut.PrecioTotal = p;
+                    Aut.PrecioPromo = model.PrecioVenta;
                     db.SaveChanges();
 
                     return Json(new { value = "1", Id = Comodin }, JsonRequestBehavior.AllowGet);

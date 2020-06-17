@@ -1244,6 +1244,7 @@
           <Property Name="IdAutoColor" Type="Int32" />
           <Property Name="IdAutoEstado" Type="Int32" />
           <Property Name="IdConcesinaria" Type="Int32" />
+<<<<<<< HEAD
           <NavigationProperty Name="Anios" Relationship="Self.FK__Automovil__IdAni__73BA3083" FromRole="Automovil" ToRole="Anios" />
           <NavigationProperty Name="AutoAccesorio" Relationship="Self.FK__AutoAcces__IdAut__02FC7413" FromRole="Automovil" ToRole="AutoAccesorio" />
           <NavigationProperty Name="AutoCliente" Relationship="Self.FK__AutoClien__IdAut__25518C17" FromRole="Automovil" ToRole="AutoCliente" />
@@ -1254,6 +1255,19 @@
           <NavigationProperty Name="Mantenimiento" Relationship="Self.FK__Mantenimi__IdAut__32AB8735" FromRole="Automovil" ToRole="Mantenimiento" />
           <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdAut__0B91BA14" FromRole="Automovil" ToRole="Origen_Fabrica" />
           <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdAut__123EB7A3" FromRole="Automovil" ToRole="Origen_Traspaso" />
+=======
+          <NavigationProperty Name="Anios" Relationship="Self.FK__Automovil__IdAni__4E88ABD4" FromRole="Automovil" ToRole="Anios" />
+          <NavigationProperty Name="AutoAccesorio" Relationship="Self.FK__AutoAcces__IdAut__5DCAEF64" FromRole="Automovil" ToRole="AutoAccesorio" />
+          <NavigationProperty Name="AutoCliente" Relationship="Self.FK__AutoClien__IdAut__00200768" FromRole="Automovil" ToRole="AutoCliente" />
+          <NavigationProperty Name="AutoColorList" Relationship="Self.FK__Automovil__IdAut__5070F446" FromRole="Automovil" ToRole="AutoColorList" />
+          <NavigationProperty Name="AutoEstadoList" Relationship="Self.FK__Automovil__IdAut__5165187F" FromRole="Automovil" ToRole="AutoEstadoList" />
+          <NavigationProperty Name="AutoModelo" Relationship="Self.FK__Automovil__IdAut__4F7CD00D" FromRole="Automovil" ToRole="AutoModelo" />
+          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Automovil__IdCon__52593CB8" FromRole="Automovil" ToRole="Concesinaria" />
+          <NavigationProperty Name="Mantenimiento" Relationship="Self.FK__Mantenimi__IdAut__0D7A0286" FromRole="Automovil" ToRole="Mantenimiento" />
+          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdAut__66603565" FromRole="Automovil" ToRole="Origen_Fabrica" />
+          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdAut__6D0D32F4" FromRole="Automovil" ToRole="Origen_Traspaso" />
+          <Property Name="PrecioPromo" Type="Decimal" Precision="19" Scale="4" />
+>>>>>>> Camacho
         </EntityType>
         <EntityType Name="Autopartes">
           <Key>
@@ -1533,10 +1547,18 @@
           <Property Name="IdUsuario" Type="Int32" />
           <Property Name="IdCliente" Type="Int32" />
           <Property Name="IdEstadoVenta" Type="Int32" />
+<<<<<<< HEAD
           <NavigationProperty Name="AutoCliente" Relationship="Self.FK__AutoClien__IdVen__2645B050" FromRole="VentaAuto" ToRole="AutoCliente" />
           <NavigationProperty Name="Cliente" Relationship="Self.FK__VentaAuto__IdCli__2180FB33" FromRole="VentaAuto" ToRole="Cliente" />
           <NavigationProperty Name="EstadoVenta" Relationship="Self.FK__VentaAuto__IdEst__22751F6C" FromRole="VentaAuto" ToRole="EstadoVenta" />
           <NavigationProperty Name="Usuario" Relationship="Self.FK__VentaAuto__IdUsu__208CD6FA" FromRole="VentaAuto" ToRole="Usuario" />
+=======
+          <NavigationProperty Name="AutoCliente" Relationship="Self.FK__AutoClien__IdVen__01142BA1" FromRole="VentaAuto" ToRole="AutoCliente" />
+          <NavigationProperty Name="Cliente" Relationship="Self.FK__VentaAuto__IdCli__7C4F7684" FromRole="VentaAuto" ToRole="Cliente" />
+          <NavigationProperty Name="EstadoVenta" Relationship="Self.FK__VentaAuto__IdEst__7D439ABD" FromRole="VentaAuto" ToRole="EstadoVenta" />
+          <NavigationProperty Name="Usuario" Relationship="Self.FK__VentaAuto__IdUsu__7B5B524B" FromRole="VentaAuto" ToRole="Usuario" />
+          <Property Name="PrecioFinal" Type="Decimal" Precision="19" Scale="4" />
+>>>>>>> Camacho
         </EntityType>
         <Association Name="FK__Accesorio__IdAcc__7E37BEF6">
           <End Role="AccesorioList" Type="Self.AccesorioList" Multiplicity="0..1" />
@@ -2441,6 +2463,7 @@
           <EntitySetMapping Name="Automovil">
             <EntityTypeMapping TypeName="ConcesionariaModel.Automovil">
               <MappingFragment StoreEntitySet="Automovil">
+                <ScalarProperty Name="PrecioPromo" ColumnName="PrecioPromo" />
                 <ScalarProperty Name="IdAutomovil" ColumnName="IdAutomovil" />
                 <ScalarProperty Name="Numero" ColumnName="Numero" />
                 <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
@@ -2690,6 +2713,7 @@
           <EntitySetMapping Name="VentaAuto">
             <EntityTypeMapping TypeName="ConcesionariaModel.VentaAuto">
               <MappingFragment StoreEntitySet="VentaAuto">
+                <ScalarProperty Name="PrecioFinal" ColumnName="PrecioFinal" />
                 <ScalarProperty Name="IdVentaAuto" ColumnName="IdVentaAuto" />
                 <ScalarProperty Name="Numero" ColumnName="Numero" />
                 <ScalarProperty Name="PrecioFinal" ColumnName="PrecioFinal" />
