@@ -80,7 +80,7 @@ namespace Concesionaria.Controllers
                     Automovil au = (from aut in db.Automovil where aut.IdAutomovil == model.IdAutomovil select aut).FirstOrDefault();
                     au.IdAutoEstado = 3;
                     db.SaveChanges();
-                    return Json("1", JsonRequestBehavior.AllowGet);
+                    return Json(new { value = "1" }, JsonRequestBehavior.AllowGet);
                         
                 }              
                 catch

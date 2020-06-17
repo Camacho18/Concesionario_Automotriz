@@ -22,9 +22,9 @@
                    col.Field("Modelo").HeaderText("Modelo").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
                    col.Field("Color").HeaderText("Color").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
                    col.Field("Anio").HeaderText("Año").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
-                   col.Field("PrecioVenta").HeaderText("Precio del Auto").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
-                   col.Field("PrecioTotal").HeaderText("Precio con Accesorios").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
-                   col.Field("PrecioPromo").HeaderText("Precio de Promoción").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("PrecioVenta").HeaderText("Precio del Auto").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Format("C").Add();
+                   col.Field("PrecioTotal").HeaderText("Precio con Accesorios").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Format("C").Add();
+                   col.Field("PrecioPromo").HeaderText("Precio de Promoción").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Format("C").Add();
                    col.HeaderText("Opciones").Template("#templateAutoC").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
                }).AllowPaging().SelectionSettings(select => select.Type(Syncfusion.EJ2.Grids.SelectionType.Single)).PageSettings(page => page.PageCount(8).PageSize(4)).Render()
                 </div>
@@ -66,7 +66,8 @@
                 <div class="card-body">
                     <div class="row col-12">
                         <br />
-                        <h5 class="col-12 text-center">Accesorios del Automóvil</h5>
+                        <h5 class="col-12 text-center">
+                        s del Automóvil</h5>
                     </div>
                     <br />
                     <div class="row col-12">
@@ -82,7 +83,7 @@
                        col.Field("Serie").HeaderText("Serie del Accesorio").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
                        col.Field("Nombre").HeaderText("Nombre").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
                        col.Field("Descripcion").HeaderText("Descripción").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
-                       col.Field("Precio").HeaderText("Precio").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                       col.Field("Precio").HeaderText("Precio").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Format("C").Add();
                    }).AllowPaging().SelectionSettings(select => select.Type(Syncfusion.EJ2.Grids.SelectionType.Single)).PageSettings(page => page.PageCount(5).PageSize(4)).Render()
                     </div>
 
