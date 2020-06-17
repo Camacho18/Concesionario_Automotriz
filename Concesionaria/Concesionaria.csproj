@@ -312,9 +312,6 @@
     <Compile Include="Models\VentaAuto.cs">
       <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\VentaAuto_Promo.cs">
-      <DependentUpon>Concesionaria.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

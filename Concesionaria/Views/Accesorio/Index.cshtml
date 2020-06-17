@@ -83,6 +83,7 @@
                    col.Field("Descripcion").HeaderText("Descripción").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
                    col.Field("Estado").HeaderText("Estado").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Width("50").Add();
                    //col.Field("IdAnios").HeaderText("Año").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("Precio").HeaderText("Precio").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Format("C").Width("50").Add();
                    col.HeaderText("Opciones").Template("#templateAcce").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Width("50").Add();
                }).AllowPaging().SelectionSettings(select => select.Type(Syncfusion.EJ2.Grids.SelectionType.Single)).PageSettings(page => page.PageCount(2).PageSize(5)).Render()
                 </div>

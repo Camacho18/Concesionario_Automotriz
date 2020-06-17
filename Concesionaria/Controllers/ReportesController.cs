@@ -23,6 +23,9 @@ namespace Concesionaria.Controllers
         // GET: Reportes
         public ActionResult FacturaReport()
         {
+            IdSucursal = Convert.ToInt32(Session["IdSucursal"]);
+            ViewBag.NameSuc = (from s in db.Concesinaria where s.IdConcesinaria == IdSucursal select s.Nombre).FirstOrDefault();
+
             List<AccesorioList> m = (from a in db.AccesorioList select a).ToList();
             return View(m);
         }        

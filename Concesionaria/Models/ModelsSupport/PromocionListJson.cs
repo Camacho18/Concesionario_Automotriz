@@ -12,5 +12,7 @@ namespace Concesionaria.Models.ModelsSupport
         public int? Cantidad_Auto { get; set; }
         public int? Descuento { get; set; }
         public DateTime? FechaVigencia { get; set; }
+
+        public string Tipo { get; set; }
     }
 }

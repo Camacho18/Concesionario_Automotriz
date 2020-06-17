@@ -2,6 +2,11 @@ drop database Concesionaria
 CREATE DATABASE Concesionaria	
 USE Concesionaria
 
+CREATE TABLE eRROR
+(
+DESCR varchar(300)
+)
+
 -- Tablas varias (necesarias)
 create table Pais(
 	IdPais int identity(1,1) primary key,
@@ -61,7 +66,8 @@ create table PromocionList(
 	Numero VARCHAR(30),
 	Cantidad_Auto INT,
 	Descuento INT,
-	FechaVigencia date
+	FechaVigencia date,
+	Tipo BIT,
 )
 
 -- __________________________________________________________________ Automovil
@@ -107,6 +113,7 @@ create table Automovil(
 	FechaIngreso DATE,
 	PrecioCompra Money,
 	PrecioVenta Money,
+	PrecioTotal MONEY,
 	IdAnios int foreign key (IdAnios) references Anios(IdAnios),	
 	IdAutoModelo int foreign key (IdAutoModelo) references AutoModelo(IdAutoModelo),
 	IdAutoColor int foreign key (IdAutoColor) references AutoColorList(IdAutoColor),
@@ -129,6 +136,7 @@ create table AccesorioList(
 	Serie VARCHAR(30),
 	Descripcion VARCHAR(300),
 	Estado BIT,
+	Precio MONEY,
 	IdAccesorioList int foreign key(IdAccesorioList) references AccesorioList(IdAccesorioList),
 	IdConcesinaria int foreign key(IdConcesinaria) references Concesinaria(IdConcesinaria)
 	)
@@ -215,17 +223,13 @@ CREATE TABLE VentaAuto(
 	IdEstadoVenta int foreign key(IdEstadoVenta) references EstadoVenta(IdEstadoVenta)
 )
 
-CREATE TABLE VentaAuto_Promo (
-	IdVentaAuto_Promo int identity(1,1) primary key,
-	IdPromocion int foreign key (IdPromocion) references PromocionList(IdPromocion),
-	IdVentaAuto int foreign key (IdVentaAuto) references VentaAuto(IdVentaAuto)
-)
 
 
 CREATE TABLE AutoCliente(
 	IdAutoCliente INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 	IdAutomovil int foreign key(IdAutomovil) references Automovil(IdAutomovil),
 	IdVentaAuto int foreign key(IdVentaAuto) references VentaAuto(IdVentaAuto),
+	IdPromocion_Auto int foreign key (IdPromocion_Auto) references Promocion_Auto(IdPromocion_Auto),
 	Promo BIT
 )
 

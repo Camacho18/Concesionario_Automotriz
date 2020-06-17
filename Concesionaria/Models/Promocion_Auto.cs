@@ -14,6 +14,12 @@ namespace Concesionaria.Models
     
     public partial class Promocion_Auto
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Promocion_Auto()
+        {
+            this.AutoCliente = new HashSet<AutoCliente>();
+        }
+    
         public int IdPromocion_Auto { get; set; }
         public Nullable<int> IdAutoModelo { get; set; }
         public Nullable<int> IdAnios { get; set; }
@@ -22,6 +28,8 @@ namespace Concesionaria.Models
         public Nullable<bool> Vigente { get; set; }
     
         public virtual Anios Anios { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<AutoCliente> AutoCliente { get; set; }
         public virtual AutoModelo AutoModelo { get; set; }
         public virtual Concesinaria Concesinaria { get; set; }
         public virtual PromocionList PromocionList { get; set; }

@@ -106,6 +106,7 @@ namespace Concesionaria.Controllers
                                             IdAccesorio = A.IdAccesorio,
                                             Serie = A.Serie,
                                             Descripcion = A.Descripcion,
+                                            Precio = A.Precio,
                                             Estado = (A.Estado == true ? "Disponible" : "Vendido")
                                         }).ToList();
             JsonString = JsonConvert.SerializeObject(json);
@@ -142,6 +143,7 @@ namespace Concesionaria.Controllers
                     modeladd.IdAccesorioList = Convert.ToInt32(Session["IdAccesorioList"]);
                     modeladd.IdConcesinaria = Convert.ToInt32(Session["IdSucursal"]);
                     modeladd.Estado = true;
+                    modeladd.Precio = model.Precio;
                     db.Accesorio.Add(modeladd);
                     db.SaveChanges();
 
@@ -241,7 +243,8 @@ namespace Concesionaria.Controllers
                                                 Serie=A.Serie,
                                                 Numero=AL.Numero,
                                                 Nombre=AL.Nombre,
-                                                Descrip=A.Descripcion
+                                                Descrip=A.Descripcion,
+                                                Precio=A.Precio
                                             }).ToList();
             JsonString = JsonConvert.SerializeObject(json);
             return Json(JsonString, JsonRequestBehavior.AllowGet);
@@ -277,12 +280,13 @@ namespace Concesionaria.Controllers
                                      select E).SingleOrDefault();
                     acc.Estado = false;
                     db.SaveChanges();
-                    return Json("1", JsonRequestBehavior.AllowGet);
+                   int  Comodin = Convert.ToInt32(Session["IdAuto"]);
+                    return Json(new { value = "1",Id=Comodin }, JsonRequestBehavior.AllowGet);
 
                 }
-                catch
+                catch(Exception e) 
                 {
-                    return Json("0", JsonRequestBehavior.AllowGet);
+                    return Json(new { value = "0", Id = "0" }, JsonRequestBehavior.AllowGet);
                 }
             }
         }
@@ -296,9 +300,9 @@ namespace Concesionaria.Controllers
                 db.SaveChanges();
                 db.AutoAccesorio.Remove(m);
                 db.SaveChanges();
-                
-                
-                    return Json("1", JsonRequestBehavior.AllowGet);
+
+                int Comodin = Convert.ToInt32(Session["IdAuto"]);
+                return Json(new { value = "1", Id=Comodin }, JsonRequestBehavior.AllowGet);
                 
             }
             catch

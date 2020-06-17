@@ -35,7 +35,7 @@ namespace Concesionaria.Controllers
                                        IdAutomovil = A.IdAutomovil,
                                        Numero = A.Numero,
                                        Adquisicion = "Fábrica",
-                                       Precio = A.PrecioVenta.ToString(),
+                                       Precio = A.PrecioTotal.ToString(),
                                        Modelo = (from m in db.AutoModelo where m.IdAutoModelo == A.IdAutoModelo select m.Nombre).FirstOrDefault(),
                                        Estado = (from m in db.AutoEstadoList where m.IdAutoEstado == A.IdAutoEstado select m.Nombre).FirstOrDefault(),
                                    }).ToList();
@@ -116,6 +116,7 @@ namespace Concesionaria.Controllers
                                 FechaIngreso = A.FechaIngreso.ToString(),
                                 PrecioCompra = A.PrecioCompra,
                                 PrecioVenta = A.PrecioVenta,
+                                PrecioTotal = A.PrecioTotal,
                                 Estado = (from E in db.AutoEstadoList where E.IdAutoEstado == A.IdAutoEstado select E.Nombre).FirstOrDefault()
                             }
                             ).FirstOrDefault();
@@ -139,9 +140,10 @@ namespace Concesionaria.Controllers
                     Automovil Aut = (from E in db.Automovil
                                      where E.IdAutomovil == Comodin
                                      select E).SingleOrDefault();
-
+                    var p = ((Aut.PrecioTotal - Aut.PrecioVenta) + model.PrecioVenta);
                     Aut.PrecioCompra = model.PrecioCompra;
                     Aut.PrecioVenta = model.PrecioVenta;
+                    Aut.PrecioTotal = p;
                     db.SaveChanges();
 
                     return Json(new { value = "1", Id = Comodin }, JsonRequestBehavior.AllowGet);

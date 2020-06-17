@@ -12,5 +12,6 @@ namespace Concesionaria.Models.ModelsSupport
         public string Numero { get; set; }
         public string Nombre { get; set; }
         public string Descrip { get; set; }
+        public decimal? Precio { get; set; }
     }
 }
