@@ -16,7 +16,7 @@ namespace Concesionaria.Controllers
         private readonly ConcesionariaEntities db = new ConcesionariaEntities();
         private readonly DropDownList Model = new DropDownList();
         private string JsonString = string.Empty;
-        private int  IdVentaAuto;
+        private int  IdVentaAuto, IdSucursal;
         // GET: AutoCliente
         public ActionResult Index()
         {
@@ -47,7 +47,8 @@ namespace Concesionaria.Controllers
         // GET: AutoCliente/Details/5
         public ActionResult CreateAutoCliente()
         {
-            ViewBag.Automovil = Model.Automovil();
+            IdSucursal = Convert.ToInt32(Session["IdSucursal"]);
+            ViewBag.Automovil = Model.AutomovilVenta(IdSucursal);
             return PartialView("_CreateAutoCliente");
         }
 
@@ -57,7 +58,8 @@ namespace Concesionaria.Controllers
         {
             if (!ModelState.IsValid)
             {
-                ViewBag.Automovil = Model.Automovil();
+                IdSucursal = Convert.ToInt32(Session["IdSucursal"]);
+                ViewBag.Automovil = Model.AutomovilVenta(IdSucursal);
                 return PartialView("_CreateAutoCliente", model);
             }
             else
@@ -65,10 +67,18 @@ namespace Concesionaria.Controllers
                 AutoCliente modeladd = new AutoCliente();
                 try
                 {
+                    // Agrega un nuevo registro a la tabla AutoCliente
                     modeladd.IdAutomovil = model.IdAutomovil;
                     modeladd.IdVentaAuto = Convert.ToInt32(Session["IdVentaAuto"]);
                     db.AutoCliente.Add(modeladd);
                     db.SaveChanges();
+
+                    //Cambiar el estado del automovil
+                    Automovil au = (from aut in db.Automovil where aut.IdAutomovil == model.IdAutomovil select aut).FirstOrDefault();
+                    au.IdAutoEstado = 3;
+                    db.SaveChanges();
+
+
                     return Json("1", JsonRequestBehavior.AllowGet);
 
                 }
@@ -85,8 +95,11 @@ namespace Concesionaria.Controllers
             try
             {
                 var m = (from A in db.AutoCliente where A.IdAutoCliente == Id select A).FirstOrDefault();
+                Automovil autCli = (from a in db.Automovil where a.IdAutomovil == m.IdAutomovil select a).FirstOrDefault();               
+                autCli.IdAutoEstado = 1;
                 db.AutoCliente.Remove(m);
                 db.SaveChanges();
+                
                 return Json("1", JsonRequestBehavior.AllowGet);                
             }
             catch

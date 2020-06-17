@@ -114,6 +114,7 @@ create table Automovil(
 	PrecioCompra Money,
 	PrecioVenta Money,
 	PrecioTotal MONEY,
+	PrecioPromo MONEY,
 	IdAnios int foreign key (IdAnios) references Anios(IdAnios),	
 	IdAutoModelo int foreign key (IdAutoModelo) references AutoModelo(IdAutoModelo),
 	IdAutoColor int foreign key (IdAutoColor) references AutoColorList(IdAutoColor),
@@ -218,6 +219,7 @@ create table EstadoVenta (
 CREATE TABLE VentaAuto(
 	IdVentaAuto INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 	Numero VARCHAR(30),
+	PrecioFinal MONEY,
 	IdUsuario int foreign key(IdUsuario) references Usuario(IdUsuario),
 	IdCliente int foreign key(IdCliente) references Cliente(IdCliente),
 	IdEstadoVenta int foreign key(IdEstadoVenta) references EstadoVenta(IdEstadoVenta)
@@ -229,7 +231,7 @@ CREATE TABLE AutoCliente(
 	IdAutoCliente INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 	IdAutomovil int foreign key(IdAutomovil) references Automovil(IdAutomovil),
 	IdVentaAuto int foreign key(IdVentaAuto) references VentaAuto(IdVentaAuto),
-	IdPromocion_Auto int foreign key (IdPromocion_Auto) references Promocion_Auto(IdPromocion_Auto),
+	IdPromocion_Auto int foreign key (IdPromocion_Auto) references Promocion_Auto(IdPromocion_Auto),	
 	Promo BIT
 )
 

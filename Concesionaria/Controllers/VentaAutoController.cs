@@ -30,13 +30,9 @@ namespace Concesionaria.Controllers
         public ActionResult VentaAutoJson()
         {           
             List<VentaAutoJson> json = (from V in db.VentaAuto
-<<<<<<< HEAD
-                                        select new VentaAutoJson { 
-                                            IdVentaAuto = V.IdVentaAuto,
-=======
+
                                         select new VentaAutoJson {  
                                             IdVentaAuto=V.IdVentaAuto,
->>>>>>> Camacho
                                             Numero = V.Numero,
                                             Usuario = (from U in db.Usuario where U.IdUsuario == V.IdUsuario select U.NomUsuario).FirstOrDefault(),                                        
                                             Cliente = (from C in db.Cliente where C.IdCliente == V.IdCliente select C.Nombre).FirstOrDefault(),
@@ -75,22 +71,18 @@ namespace Concesionaria.Controllers
                     db.VentaAuto.Add(m);
                     db.SaveChanges();
 
-                    List<Cliente> Clte = (from cl in db.Cliente where cl.IdCliente == m.IdCliente select cl).ToList();
-                    foreach (var  clte in Clte)
-                    {
-                        if (m.IdCliente == clte.IdCliente)
-                        {
-                            clte.IdEstado_Cliente = 2;
+                    Cliente Clte = (from cl in db.Cliente where cl.IdCliente == m.IdCliente select cl).FirstOrDefault();
+                   
+                            Clte.IdEstado_Cliente = 2;
                             db.SaveChanges();
                             return Json("1", JsonRequestBehavior.AllowGet);
-                        }
-                    }
+                       
                     
-                    return Json("0", JsonRequestBehavior.AllowGet);
+                    
                 }
                 catch
                 {
-                    return View();
+                    return Json("0", JsonRequestBehavior.AllowGet);
                 }
             }
         }
@@ -124,9 +116,26 @@ namespace Concesionaria.Controllers
                 VentaAuto m = db.VentaAuto.Where(x => x.IdVentaAuto == IdVentaAuto).Select(x => x).FirstOrDefault();
                 if (m.IdEstadoVenta == 1)
                 {
+                    //cambia el estado de la venta
                     m.IdEstadoVenta = 3;
                     db.Entry(m).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
+
+                    //Cambia el estado del automovil
+                    List<Automovil> autCli = (from a in db.Automovil join aC in db.AutoCliente on a.IdAutomovil equals aC.IdAutomovil  where aC.IdVentaAuto == m.IdVentaAuto select a).ToList();
+                    foreach(var mod in autCli)
+                    {
+                        mod.IdAutoEstado = 1;
+                        db.SaveChanges();
+                    }
+
+                    //Cambia el estado del clienet
+                    Cliente ct = (from c in db.Cliente where c.IdCliente == m.IdCliente select c).FirstOrDefault();
+
+                    ct.IdEstado_Cliente = 3;
+                    db.SaveChanges();
+
+                    
                 }
                 return Json("1", JsonRequestBehavior.AllowGet);
             }

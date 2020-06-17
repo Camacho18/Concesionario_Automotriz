@@ -95,7 +95,12 @@ namespace Concesionaria.AutoComplete
 
         public List<DropDownListModel> Cliente()
         {
-            return (from a in db.Cliente where a.IdEstado_Cliente==1 select new DropDownListModel { Id = a.IdCliente, Value = a.Nombre }).ToList();
+
+            return (from a in db.Cliente where a.IdEstado_Cliente!=2 select new DropDownListModel { Id = a.IdCliente, Value = a.Nombre }).ToList();
+        }
+        public List<DropDownListModel> AutomovilVenta(int Con)
+        {
+            return (from AM in db.Automovil join A in db.AutoModelo on AM.IdAutoModelo equals A.IdAutoModelo where AM.IdConcesinaria==Con && AM.IdAutoEstado==1 select new DropDownListModel { Id = AM.IdAutomovil, Value = AM.Numero +" - "+A.Nombre }).ToList();
         }
     }
 }
