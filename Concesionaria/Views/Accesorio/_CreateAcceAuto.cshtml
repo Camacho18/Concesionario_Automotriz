@@ -42,7 +42,7 @@
 
     function SuccessAccerioA_C(data) {
         AccesorioAutoLoad();
-        if (data == "1") {
+        if (data.value == "1") {
             $('#AcceAutoModal').modal("hide");
 
             Swal.fire({
@@ -51,8 +51,12 @@
                 text: "Accesorio Creado",
                 icon: "success",
                 button: "Aceptar",
-            });
-        } else if (data == "2") {
+            }).then((result) => {
+                if (result.value) {
+                    $(location).attr('href', '/Auto/Options' + '?Id=' + data.Id);
+                }
+            })
+        } else if (data.value == "2") {
             //$('#AcceAutoModal').modal("hide");
             Swal.fire({
                 position: "top",

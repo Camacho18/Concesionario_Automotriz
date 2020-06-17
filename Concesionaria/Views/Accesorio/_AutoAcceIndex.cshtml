@@ -21,8 +21,9 @@
                    col.Field("IdAcceAuto").HeaderText("Usuario").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Visible(false).Add();
                    col.Field("Numero").HeaderText("Número").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
                    col.Field("Serie").HeaderText("Serie").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();                   
-                   col.Field("Nombre").HeaderText("Nombre").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("Nombre").HeaderText("Nombre").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();                   
                    col.Field("Descrip").HeaderText("Descripción").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("Precio").HeaderText("Precio").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Format("C").Add();
                    col.HeaderText("Opciones").Template("#templateAcceAuto").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
                }).AllowPaging().SelectionSettings(select => select.Type(Syncfusion.EJ2.Grids.SelectionType.Single)).PageSettings(page => page.PageCount(2).PageSize(4)).Render()
                 </div>
@@ -133,14 +134,18 @@
                 if (result.value) {
                     $.get('@Url.Action("DeleteAcceAuto","Accesorio", new { Id = "_ID_"})'.replace('_ID_', id), function (data) {
                         AccesorioAutoLoad();
-                        if (data == 1) {
+                        if (data.value == 1) {
                             Swal.fire({
                                 position: "top",
                                 title: "Correcto",
                                 text: "Accesorio Eliminado",
                                 icon: "success",
                                 button: "Aceptar",
-                            });
+                            }).then((result) => {
+                                if (result.value) {
+                                    $(location).attr('href', '/Auto/Options' + '?Id=' + data.Id);
+                                }
+                            })
                         } else {
                             Swal.fire({
                                 position: "top",

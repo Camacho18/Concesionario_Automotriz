@@ -18,7 +18,6 @@ namespace Concesionaria.Models
         public PromocionList()
         {
             this.Promocion_Auto = new HashSet<Promocion_Auto>();
-            this.VentaAuto_Promo = new HashSet<VentaAuto_Promo>();
         }
     
         public int IdPromocion { get; set; }
@@ -26,10 +25,9 @@ namespace Concesionaria.Models
         public Nullable<int> Cantidad_Auto { get; set; }
         public Nullable<int> Descuento { get; set; }
         public Nullable<System.DateTime> FechaVigencia { get; set; }
+        public Nullable<bool> Tipo { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Promocion_Auto> Promocion_Auto { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<VentaAuto_Promo> VentaAuto_Promo { get; set; }
     }
 }

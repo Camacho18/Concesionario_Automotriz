@@ -17,9 +17,11 @@ namespace Concesionaria.Models
         public int IdAutoCliente { get; set; }
         public Nullable<int> IdAutomovil { get; set; }
         public Nullable<int> IdVentaAuto { get; set; }
+        public Nullable<int> IdPromocion_Auto { get; set; }
         public Nullable<bool> Promo { get; set; }
     
         public virtual Automovil Automovil { get; set; }
+        public virtual Promocion_Auto Promocion_Auto { get; set; }
         public virtual VentaAuto VentaAuto { get; set; }
     }
 }

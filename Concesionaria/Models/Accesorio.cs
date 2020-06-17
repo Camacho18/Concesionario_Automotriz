@@ -24,6 +24,7 @@ namespace Concesionaria.Models
         public string Serie { get; set; }
         public string Descripcion { get; set; }
         public Nullable<bool> Estado { get; set; }
+        public Nullable<decimal> Precio { get; set; }
         public Nullable<int> IdAccesorioList { get; set; }
         public Nullable<int> IdConcesinaria { get; set; }
     

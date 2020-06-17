@@ -22,5 +22,6 @@ namespace Concesionaria.Models.ModelsSupport
         public Nullable<decimal> PrecioCompra { get; set; }
         [Required]
         public Nullable<decimal> PrecioVenta { get; set; }
+        public Nullable<decimal> PrecioTotal { get; set; }
     }
 }

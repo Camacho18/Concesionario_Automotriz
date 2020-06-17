@@ -12,5 +12,6 @@ namespace Concesionaria.Models.ModelsSupport
         public string Descripcion { get; set; }
         public Nullable<int> IdAccesorioList { get; set; }
         public Nullable<int> IdConcesinaria { get; set; }
+        public decimal Precio { get; set; }
     }
 }

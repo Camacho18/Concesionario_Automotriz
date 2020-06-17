@@ -16,5 +16,6 @@ namespace Concesionaria.Models.ModelsSupport
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public Nullable<DateTime> FechaVigencia { get; set; }
+        public bool Tipo { get; set; }
     }
 }

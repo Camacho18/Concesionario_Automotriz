@@ -40,7 +40,8 @@ namespace Concesionaria.Controllers
                                                 Numero = P.Numero,
                                                 Cantidad_Auto = P.Cantidad_Auto,
                                                 Descuento = P.Descuento,
-                                                FechaVigencia = P.FechaVigencia                                                
+                                                FechaVigencia = P.FechaVigencia,
+                                                Tipo = (P.Tipo==true? "Flotilla":"Normal")
                                             }).ToList();
             JsonString = JsonConvert.SerializeObject(json);
             return Json(JsonString, JsonRequestBehavior.AllowGet);
@@ -83,6 +84,7 @@ namespace Concesionaria.Controllers
                     modeladd.Cantidad_Auto = model.Cantidad_Auto;
                     modeladd.Descuento = model.Descuento;
                     modeladd.FechaVigencia = model.FechaVigencia;
+                    modeladd.Tipo = model.Tipo;
                     db.PromocionList.Add(modeladd);
                     db.SaveChanges();
 

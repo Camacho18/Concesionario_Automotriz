@@ -31,7 +31,8 @@ namespace Concesionaria.Controllers
         public ActionResult VentaAutoJson()
         {           
             List<VentaAutoJson> json = (from V in db.VentaAuto
-                                        select new VentaAutoJson {                                            
+                                        select new VentaAutoJson {  
+                                            IdVentaAuto=V.IdVentaAuto,
                                             Numero = V.Numero,
                                             Usuario = (from U in db.Usuario where U.IdUsuario == V.IdUsuario select U.NomUsuario).FirstOrDefault(),                                        
                                             Cliente = (from C in db.Cliente where C.IdCliente == V.IdCliente select C.Nombre).FirstOrDefault(),
