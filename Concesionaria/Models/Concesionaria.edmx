@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ConcesionariaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ConcesionariaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Accesorio">
           <Key>
             <PropertyRef Name="IdAccesorio" />
@@ -91,6 +91,7 @@
           <Property Name="PrecioCompra" Type="money" />
           <Property Name="PrecioVenta" Type="money" />
           <Property Name="PrecioTotal" Type="money" />
+          <Property Name="PrecioPromo" Type="money" />
           <Property Name="IdAnios" Type="int" />
           <Property Name="IdAutoModelo" Type="int" />
           <Property Name="IdAutoColor" Type="int" />
@@ -317,6 +318,7 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           </Key>
           <Property Name="IdVentaAuto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Numero" Type="varchar" MaxLength="30" />
+          <Property Name="PrecioFinal" Type="money" />
           <Property Name="IdUsuario" Type="int" />
           <Property Name="IdCliente" Type="int" />
           <Property Name="IdEstadoVenta" Type="int" />
@@ -1122,8 +1124,7 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             <End Role="VentaAuto" EntitySet="VentaAuto" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ConcesionariaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -1249,6 +1250,7 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           <NavigationProperty Name="Mantenimiento" Relationship="Self.FK__Mantenimi__IdAut__0D7A0286" FromRole="Automovil" ToRole="Mantenimiento" />
           <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdAut__66603565" FromRole="Automovil" ToRole="Origen_Fabrica" />
           <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdAut__6D0D32F4" FromRole="Automovil" ToRole="Origen_Traspaso" />
+          <Property Name="PrecioPromo" Type="Decimal" Precision="19" Scale="4" />
         </EntityType>
         <EntityType Name="Autopartes">
           <Key>
@@ -1531,6 +1533,7 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           <NavigationProperty Name="Cliente" Relationship="Self.FK__VentaAuto__IdCli__7C4F7684" FromRole="VentaAuto" ToRole="Cliente" />
           <NavigationProperty Name="EstadoVenta" Relationship="Self.FK__VentaAuto__IdEst__7D439ABD" FromRole="VentaAuto" ToRole="EstadoVenta" />
           <NavigationProperty Name="Usuario" Relationship="Self.FK__VentaAuto__IdUsu__7B5B524B" FromRole="VentaAuto" ToRole="Usuario" />
+          <Property Name="PrecioFinal" Type="Decimal" Precision="19" Scale="4" />
         </EntityType>
         <Association Name="FK__Accesorio__IdAcc__59063A47">
           <End Role="AccesorioList" Type="Self.AccesorioList" Multiplicity="0..1" />
@@ -2427,6 +2430,7 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           <EntitySetMapping Name="Automovil">
             <EntityTypeMapping TypeName="ConcesionariaModel.Automovil">
               <MappingFragment StoreEntitySet="Automovil">
+                <ScalarProperty Name="PrecioPromo" ColumnName="PrecioPromo" />
                 <ScalarProperty Name="IdAutomovil" ColumnName="IdAutomovil" />
                 <ScalarProperty Name="Numero" ColumnName="Numero" />
                 <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
@@ -2675,6 +2679,7 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           <EntitySetMapping Name="VentaAuto">
             <EntityTypeMapping TypeName="ConcesionariaModel.VentaAuto">
               <MappingFragment StoreEntitySet="VentaAuto">
+                <ScalarProperty Name="PrecioFinal" ColumnName="PrecioFinal" />
                 <ScalarProperty Name="IdVentaAuto" ColumnName="IdVentaAuto" />
                 <ScalarProperty Name="Numero" ColumnName="Numero" />
                 <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
