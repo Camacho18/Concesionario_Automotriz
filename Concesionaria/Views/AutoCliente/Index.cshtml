@@ -3,62 +3,182 @@
 }
 
 <div class="row">
-    <div class="col-md-12">
-        <div class="">
-            <div class="">
-                <div class="">
-                    <button class="btn btn-primary col-2" id="Btn_NewRef">Nuevo +</button>
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row col-12">
+                    <br />
+                    <h5 class="col-12 text-center">Automóvil</h5>
+                </div>
+                <div class="row col-12">
+                    <button class="btn btn-primary col-2" id="Btn_NewAutoC">Nuevo +</button>
                 </div>
                 <br />
                 <div class="">
-                    @Html.EJS().Grid("Grid_AutoMovilClte").RowSelected("SelectAutoClte").AllowResizing(true).AllowSorting().AllowFiltering().Columns(col =>
+                    @Html.EJS().Grid("Grid_AutoCliente").RowSelected("RowClearSelect").RowDeselected("RowClearSelect").AllowResizing(true).AllowSorting().AllowFiltering().Columns(col =>
                {
-                   col.Field("IdAutomovil").HeaderText("Automovil").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Visible(false).Add();
-                   col.Field("Numero").HeaderText("Número").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("IdAutoCliente").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Visible(false).Add();
+                   col.Field("Numero").HeaderText("Número de Auto").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("PrecioVenta").HeaderText("Precio del Auto").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
                    col.Field("Marca").HeaderText("Marca").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
                    col.Field("Modelo").HeaderText("Modelo").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
-                   col.Field("Nombre").HeaderText("Estado").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
-                   col.Field("Opciones").Template("#templateAutoClte").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
-               }).AllowPaging().SelectionSettings(select => select.Type(Syncfusion.EJ2.Grids.SelectionType.Single)).PageSettings(page => page.PageCount(5)).Render()
+                   col.Field("Color").HeaderText("Estado").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("Anio").HeaderText("Año").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.HeaderText("Opciones").Template("#templateAutoC").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+               }).AllowPaging().SelectionSettings(select => select.Type(Syncfusion.EJ2.Grids.SelectionType.Single)).PageSettings(page => page.PageCount(7).PageSize(4)).Render()
                 </div>
+                <br />
+                <br />
             </div>
         </div>
     </div>
 </div>
+<style>
+    .e-grid .e-headercell {
+        background-color: #eeeeee;
+    }
 
-<script id="templateAutoClte" type="text/x-template">
+    .e-grid .e-gridheader {
+        color: black;
+    }
+</style>
+
+<script id="templateAutoC" type="text/x-template">
     <div class="row text-center">
         <div class="col-md-12 ">
             <div class="">
-                <a class="text-succcess" href="javascript:void(0)" onclick="SelectAutoClte(${IdAutomovil})" data-toggle="tooltip" data-placement="top" title="Ver Auto">
-                    <i class="fa fa-edit"></i>
+                <a class="text-succcess" style="padding:0px,5px,0px,5px; margin-left:10px; margin-right:10px" href="javascript:void(0)" onclick="Accesorio(${ IdAutoCliente })" data-toggle="tooltip" data-placement="top" title="Ver Accesorios">
+                    <i class="fa fa-eye"></i>
                 </a>
-                <a class="text-succcess" style="padding:0px,5px,0px,5px; margin-left:10px; margin-right:10px" href="javascript:void(0)" onclick="Contrato(${IdAutomovil})" data-toggle="tooltip" data-placement="top" title="Contrato">
-                    <i class="fa fa-ellipsis-h"></i>
+                <a class="text-danger" style="padding:0px,5px,0px,5px; margin-left:10px; margin-right:10px" href="javascript:void(0)" onclick="DeleteAuto(${ IdAutoCliente })" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                    <i class="fa fa-remove"></i>
                 </a>
             </div>
         </div>
     </div>
 </script>
 
-<script>
-    $(function () { AutomovilClienteLoad(); })
+<div id="viewAcce" class="row" hidden>
+    
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row col-12">
+                        <br />
+                        <h5 class="col-12 text-center">Accesorios del Automóvil</h5>
+                    </div>
+                    <br />
+                    <div class="row col-12">
+                        <h6 class="col-12 text-center" id="num"></h6>
+                        <div class="col-2"></div>
+                    </div>
+                    <br />
+                    <div class="">
+                        @Html.EJS().Grid("Grid_AutoAccesorio").AllowResizing(true).AllowSorting().AllowFiltering().Columns(col =>
+                   {
+                       col.Field("IdAutoAccesorio").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Visible(false).Add();
+                       col.Field("Numero").HeaderText("Número de Accesorio").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                       col.Field("Serie").HeaderText("Serie del Accesorio").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                       col.Field("Nombre").HeaderText("Nombre").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                       col.Field("Descripcion").HeaderText("Descripción").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                       col.Field("Precio").HeaderText("Precio").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   }).AllowPaging().SelectionSettings(select => select.Type(Syncfusion.EJ2.Grids.SelectionType.Single)).PageSettings(page => page.PageCount(5).PageSize(4)).Render()
+                    </div>
 
-    function AutomovilClienteLoad() {
-        $.get('@Url.Action("AutomovilClteJson","Automovil")', function (data) {
-            var grid = document.getElementById('Grid_AutoMovilClte').ej2_instances[0]; // Grid instance
+                </div>
+            </div>
+        </div>
+</div>
+
+<div class="modal fade" id="AutoModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div id="frmAuto">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(function () { AutoClienteLoad(); })
+
+    function AutoClienteLoad() {
+        $.get('@Url.Action("AutoClienteJson","AutoCliente")', function (data) {
+            var grid = document.getElementById('Grid_AutoCliente').ej2_instances[0]; // Grid instance
             grid.dataSource = JSON.parse(data);
         });
     }
+    $('#Btn_NewAutoC').click(function () {
+        RowClearSelect();
+        $.get('@Url.Action("CreateAutoCliente", "AutoCliente")', function (data) {
+            $('#frmAuto').html(data);
+            $('#AutoModal').modal("show");
+        });
+    });
 
-    function SelectAutoClte() {
-        var grid = document.getElementById("Grid_AutoMovilClte").ej2_instances[0];
-        var selectedrecords = grid.getSelectedRecords()[0].IdReferencia;
-        @*$.get('@Url.Action("UpdateRef", "Referencias", new { Id = "_id_" })'.replace('_id_', selectedrecords), function (data) {
-            $("#frmRef").html(data);
-            $("#CreateRefModal").modal("show");
-        });*@
+    function RowClearSelect() { $("#viewAcce").attr("hidden", true); }
+
+    function Accesorio(IdAutoCliente) {
+        $.get('@Url.Action("AutoAccesorioJson","AutoCliente", new { IdAutoCliente = "_id_" })'.replace('_id_', IdAutoCliente), function (data) {
+            $("#viewAcce").removeAttr("hidden");
+            var grid = document.getElementById('Grid_AutoAccesorio').ej2_instances[0]; // Grid instance
+            grid.dataSource = JSON.parse(data.JsonString);
+            var text ="Número de Automovil:" +" "+ data.num;
+            $('#num').text(text);
+        });
     }
+
+    function AccesorioLoad() {
+
+            $.get('@Url.Action("AutoAccesorioJson","AutoCliente")', function (data) {
+                $("#viewAcce").removeAttr("hidden");
+                var grid = document.getElementById('Grid_AutoAccesorio').ej2_instances[0]; // Grid instance
+                grid.dataSource = JSON.parse(data.JsonString);
+                var text = "Número de Automovil:" + " " + data.num;
+                $('#num').text(text);
+            });
+        }
+    function DeleteAuto(id) {
+       Swal.fire({
+            position: "top",
+            title: 'Eliminar',
+            text: "Desea eliminar el automóvil!",
+            icon: 'warning',
+            showCancelButton: true,
+            showConfirmButton: true,
+            cancelButtonColor: '#d33',
+            confirmButtonColor: '#3085d6',
+            cancelButtonText: 'Cancelar',
+            confirmButtonText: 'Eliminar',
+            reverseButtons: true
+        }).then((result) => {
+            if (result.value) {
+                $.get('@Url.Action("DeleteAuto","AutoCliente", new { Id = "_ID_"})'.replace('_ID_', id), function (data) {
+                    AutoClienteLoad();
+                    if (data == 1) {
+                        Swal.fire({
+                            position: "top",
+                            title: "Correcto",
+                            text: "Automóvil Eliminado",
+                            icon: "success",
+                            button: "Aceptar",
+                        });
+                    } else {
+                        Swal.fire({
+                            position: "top",
+                            title: "Error",
+                            text: "Error No Reconocido",
+                            icon: "warning",
+                            button: "Aceptar",
+                        });
+                    }
+                });
+            }
+        })
+    };
+
 </script>
 
 

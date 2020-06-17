@@ -2,7 +2,7 @@
 @{
     Layout = null;
 }
-@using (Ajax.BeginForm("CreateAutoCliente", "VentaAuto", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "frmVenta", OnSuccess = "SuccessAutoCliente_C" }))
+@using (Ajax.BeginForm("CreateAutoCliente", "AutoCliente", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "frmAuto", OnSuccess = "SuccessAutoCliente_C" }))
 {
     @Html.AntiForgeryToken()
 
@@ -26,12 +26,12 @@
             <button type="submit" class="btn btn-success">Aceptar</button>
         </div>
     </div>
-        }
+}
 <script>
     function SuccessAutoCliente_C(data) {
         AutoClienteLoad();
         if (data == "1") {
-            $('#VentaModal').modal("hide");
+            $('#AutoModal').modal("hide");
 
             Swal.fire({
                 position: "top",
@@ -41,30 +41,8 @@
                 button: "Aceptar",
             });
         }
-        else if (data == "2") {
-            $('#VentaModal').modal("hide");
-
-            Swal.fire({
-                position: "top",
-                title: "Atención",
-                text: "Numero de promoción existente",
-                icon: "warning",
-                button: "Aceptar",
-            });
-        }
-        else if (data == "3") {
-            $('#VentaModal').modal("hide");
-
-            Swal.fire({
-                position: "top",
-                title: "Atención",
-                text: "La fecha de vigencia no es valida",
-                icon: "warning",
-                button: "Aceptar",
-            });
-        }
         else {
-            $('#AutoClteEmpModal').modal("hide");
+            $('#AutoClteModal').modal("hide");
 
             Swal.fire({
                 position: "top",

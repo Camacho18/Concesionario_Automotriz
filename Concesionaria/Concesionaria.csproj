@@ -244,6 +244,8 @@
     <Compile Include="Models\ModelsSupport\AccesorioCreate.cs" />
     <Compile Include="Models\ModelsSupport\AccesorioJson.cs" />
     <Compile Include="Models\ModelsSupport\AccesorioUpdate.cs" />
+    <Compile Include="Models\ModelsSupport\AutoAccesorioCreate.cs" />
+    <Compile Include="Models\ModelsSupport\AutoAccesorioJson.cs" />
     <Compile Include="Models\ModelsSupport\AutoClienteCreate.cs" />
     <Compile Include="Models\ModelsSupport\AutoClienteJson.cs" />
     <Compile Include="Models\ModelsSupport\AutoJson.cs" />
@@ -497,9 +499,9 @@
     <Content Include="Views\Auto\_AutoTras.cshtml" />
     <Content Include="Views\VentaAuto\Index.cshtml" />
     <Content Include="Views\VentaAuto\_CreateVentaAuto.cshtml" />
-    <Content Include="Views\VentaAuto\_CreateAutoCliente.cshtml" />
     <Content Include="Views\VentaAuto\MenuVenta.cshtml" />
     <Content Include="Views\VentaAuto\_InfoCliente.cshtml" />
+    <Content Include="Views\AutoCliente\_CreateAutoCliente.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

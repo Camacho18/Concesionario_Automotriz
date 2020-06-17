@@ -10,5 +10,6 @@ namespace Concesionaria.Models.ModelsSupport
         public int IdAutoCliente { get; set; }
         public int IdAutomovil { get; set; }
         public int IdVentaAuto { get; set; }
+        public Nullable<bool> Promo { get; set; }
     }
 }

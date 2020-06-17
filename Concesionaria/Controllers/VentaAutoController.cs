@@ -15,7 +15,6 @@ namespace Concesionaria.Controllers
         private readonly ConcesionariaEntities db = new ConcesionariaEntities();
         private readonly DropDownList Model = new DropDownList();
         private string JsonString = string.Empty;
-        //private readonly RemoveEspace Remove = new RemoveEspace();
         private int IdUsuario, IdSucursal, Comodin;
         // GET: VentaAuto
         public ActionResult Index()
@@ -31,7 +30,8 @@ namespace Concesionaria.Controllers
         public ActionResult VentaAutoJson()
         {           
             List<VentaAutoJson> json = (from V in db.VentaAuto
-                                        select new VentaAutoJson {                                            
+                                        select new VentaAutoJson { 
+                                            IdVentaAuto = V.IdVentaAuto,
                                             Numero = V.Numero,
                                             Usuario = (from U in db.Usuario where U.IdUsuario == V.IdUsuario select U.NomUsuario).FirstOrDefault(),                                        
                                             Cliente = (from C in db.Cliente where C.IdCliente == V.IdCliente select C.Nombre).FirstOrDefault(),
@@ -112,92 +112,32 @@ namespace Concesionaria.Controllers
             }
         }
 
-        // GET: VentaAuto/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: VentaAuto/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult CancelarVenta(int IdVentaAuto)
         {
             try
             {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
+                VentaAuto m = db.VentaAuto.Where(x => x.IdVentaAuto == IdVentaAuto).Select(x => x).FirstOrDefault();
+                if (m.IdEstadoVenta == 1)
+                {
+                    m.IdEstadoVenta = 3;
+                    db.Entry(m).State = System.Data.Entity.EntityState.Modified;
+                    db.SaveChanges();
+                }
+                return Json("1", JsonRequestBehavior.AllowGet);
             }
-            catch
+            catch (Exception)
             {
-                return View();
+                return Json("0", JsonRequestBehavior.AllowGet);
             }
         }
 
         //----------------------------------------AUTOCLIENTE
-        public ActionResult AutoClienteJson(int? IdVentaAuto)
-        {
-            if (IdVentaAuto == null)
-                IdVentaAuto = Convert.ToInt32(Session["IdVentaAuto"]);
-            else
-                Session["IdVentaAuto"] = IdVentaAuto;
-
-            List<AutoClienteJson> json = (from V in db.AutoCliente
-                                          where V.IdVentaAuto ==IdVentaAuto
-                                        select new AutoClienteJson
-                                        {
-                                            IdAutoCliente = V.IdAutoCliente,
-                                            Numero = (from A in db.Automovil where A.IdAutomovil == V.IdAutomovil select A.Numero).FirstOrDefault(),
-                                            PrecioVenta = (from A in db.Automovil where A.IdAutomovil == V.IdAutomovil select A.PrecioVenta).FirstOrDefault(),
-                                            Marca = (from P in db.Automovil join Ma in db.AutoModelo on P.IdAutoModelo equals Ma.IdAutoModelo join M in db.AutoMarca on Ma.IdAutoMarca equals M.IdAutoMarca where P.IdAutomovil==V.IdAutomovil select M.Nombre).FirstOrDefault(),
-                                            Modelo = (from P in db.Automovil join Ma in db.AutoModelo on P.IdAutoModelo equals Ma.IdAutoModelo where P.IdAutomovil == V.IdAutomovil select Ma.Nombre).FirstOrDefault(),
-                                            Color = (from P in db.Automovil join C in db.AutoColorList on P.IdAutoColor equals C.IdAutoColor where P.IdAutomovil==V.IdAutomovil select C.Nombre).FirstOrDefault(),
-                                            Anio = (from P in db.Automovil join C in db.Anios on P.IdAnios equals C.IdAnios where P.IdAutomovil == V.IdAutomovil select C.Numero).FirstOrDefault()
-                                        }).ToList();
-            JsonString = JsonConvert.SerializeObject(json);
-            var num = (from v in db.VentaAuto join c in db.Cliente on v.IdCliente equals c.IdCliente where v.IdVentaAuto== IdVentaAuto select c.Nombre).FirstOrDefault();
-            return Json(new { JsonString, num }, JsonRequestBehavior.AllowGet);
-        }
-
-        public ActionResult CreateAutoCliente()
-        {
-            ViewBag.Automovil = Model.Automovil();
-            return PartialView("_CreateAutoCliente");
-        }
-
-        [HttpPost]
-        public ActionResult CreateAutoCliente(AutoClienteCreate model)
-        {
-            if (!ModelState.IsValid)
-            {
-                ViewBag.Automovil = Model.Automovil();
-                return PartialView("_CreateAutoCliente", model);
-            }
-            else
-            {
-                AutoCliente modeladd = new AutoCliente();
-                int IdVentaAuto = Convert.ToInt32(Session["IdVentaAuto"]);
-                try
-                {
-                    modeladd.IdAutomovil = model.IdAutomovil;
-                    modeladd.IdVentaAuto = IdVentaAuto;
-                    db.AutoCliente.Add(modeladd);
-                    db.SaveChanges();
-                    return Json("1", JsonRequestBehavior.AllowGet);
-
-                }
-                catch
-                {
-                    return Json("0", JsonRequestBehavior.AllowGet);
-                }
-            }
-        }
 
         public ActionResult Options(int Id)
         {
             Session["IdVentaAuto"] = Id;
             ViewBag.Numero = (from V in db.VentaAuto where V.IdVentaAuto== Id select V.Numero).FirstOrDefault();
-            return View("MenuVenta");
+            return PartialView("MenuVenta");
         }
 
         public ActionResult InfoCliente()
@@ -211,7 +151,7 @@ namespace Concesionaria.Controllers
                                  Numero = C.Numero,
                                  Nombre = C.Nombre,
                                  Direccion = C.Direccion,
-                                 FechaNac = C.FechaNac,
+                                 FechaNac = C.FechaNac.ToString(),
                                  Sexo = C.Sexo,
                                  TelCasa = C.TelCasa,
                                  TelCel = C.TelCel,

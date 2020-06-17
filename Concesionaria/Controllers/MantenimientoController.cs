@@ -31,7 +31,8 @@ namespace Concesionaria.Controllers
         {
             List<MantenimientoJson> json = (from m in db.Mantenimiento
                                             select new MantenimientoJson
-                                         {                                            
+                                         {   
+                                             IdMantenimiento = m.IdMantenimiento,   
                                              Fecha = m.Fecha,
                                              Usuario = (from u in db.Usuario where u.IdUsuario==m.IdUsuario select u.NomUsuario).FirstOrDefault(),
                                              Automovil = (from a in db.Automovil join am in db.AutoModelo on a.IdAutoModelo equals am.IdAutoModelo where a.IdAutomovil==m.IdAutomovil select am.Nombre).FirstOrDefault(),

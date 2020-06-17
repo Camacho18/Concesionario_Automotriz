@@ -15,8 +15,8 @@ namespace Concesionaria.Models.ModelsSupport
         [Required(ErrorMessage = "Campo obligatorio")]
         public string Nombre { get; set; }
         public string Direccion { get; set; }
+        [DisplayFormat(DataFormatString = "{0:dd MMM yyyy}", ApplyFormatInEditMode = true)]
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public Nullable<DateTime> FechaNac { get; set; }
         public string Sexo { get; set; }
         public string TelCasa { get; set; }
