@@ -22,6 +22,7 @@ namespace Concesionaria.Models
     
         public int IdVentaAuto { get; set; }
         public string Numero { get; set; }
+        public Nullable<decimal> PrecioFinal { get; set; }
         public Nullable<int> IdUsuario { get; set; }
         public Nullable<int> IdCliente { get; set; }
         public Nullable<int> IdEstadoVenta { get; set; }

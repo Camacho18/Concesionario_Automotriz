@@ -14,6 +14,8 @@ namespace Concesionaria.Models.ModelsSupport
         public string Modelo { get; set; }
         public string Color { get; set; }
         public string Anio { get; set; }
+        public decimal? PrecioPromo { get; set; }
+        public decimal? PrecioTotal { get; set; }
 
     }
 }

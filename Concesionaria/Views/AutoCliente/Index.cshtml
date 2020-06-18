@@ -18,14 +18,15 @@
                     @Html.EJS().Grid("Grid_AutoCliente").RowSelected("RowClearSelect").RowDeselected("RowClearSelect").AllowResizing(true).AllowSorting().AllowFiltering().Columns(col =>
                {
                    col.Field("IdAutoCliente").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Visible(false).Add();
-                   col.Field("Numero").HeaderText("Número de Auto").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
-                   col.Field("PrecioVenta").HeaderText("Precio del Auto").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
-                   col.Field("Marca").HeaderText("Marca").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("Numero").HeaderText("No. de Auto").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
                    col.Field("Modelo").HeaderText("Modelo").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
-                   col.Field("Color").HeaderText("Estado").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("Color").HeaderText("Color").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
                    col.Field("Anio").HeaderText("Año").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("PrecioVenta").HeaderText("Precio del Auto").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("PrecioTotal").HeaderText("Precio con Accesorios").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("PrecioPromo").HeaderText("Precio de Promoción").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
                    col.HeaderText("Opciones").Template("#templateAutoC").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
-               }).AllowPaging().SelectionSettings(select => select.Type(Syncfusion.EJ2.Grids.SelectionType.Single)).PageSettings(page => page.PageCount(7).PageSize(4)).Render()
+               }).AllowPaging().SelectionSettings(select => select.Type(Syncfusion.EJ2.Grids.SelectionType.Single)).PageSettings(page => page.PageCount(8).PageSize(4)).Render()
                 </div>
                 <br />
                 <br />
@@ -102,8 +103,17 @@
 
 
 <script>
-    $(function () { AutoClienteLoad(); })
-
+    $(function () {
+        AutoClienteLoad();
+        $(function () {
+            $(function () {
+                var m = $("#EstadoV").text();
+                if (m ==3) {
+                    $('#Btn_NewAutoC').prop('disabled', true);                    
+                }
+            })
+        })
+    })
     function AutoClienteLoad() {
         $.get('@Url.Action("AutoClienteJson","AutoCliente")', function (data) {
             var grid = document.getElementById('Grid_AutoCliente').ej2_instances[0]; // Grid instance

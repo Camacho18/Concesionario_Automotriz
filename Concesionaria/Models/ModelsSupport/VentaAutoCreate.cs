@@ -12,5 +12,6 @@ namespace Concesionaria.Models.ModelsSupport
         public Nullable<int> IdUsuario { get; set; }
         public Nullable<int> IdCliente { get; set; }
         public Nullable<int> IdEstadoVenta { get; set; }
+        public Nullable<decimal> PrecioFinal { get; set; }
     }
 }

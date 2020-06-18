@@ -35,7 +35,7 @@ namespace Concesionaria.Controllers
                                              IdMantenimiento = m.IdMantenimiento,   
                                              Fecha = m.Fecha,
                                              Usuario = (from u in db.Usuario where u.IdUsuario==m.IdUsuario select u.NomUsuario).FirstOrDefault(),
-                                             Automovil = (from a in db.Automovil join am in db.AutoModelo on a.IdAutoModelo equals am.IdAutoModelo where a.IdAutomovil==m.IdAutomovil select am.Nombre).FirstOrDefault(),
+                                             Automovil = (from a in db.Automovil join am in db.AutoModelo on a.IdAutoModelo equals am.IdAutoModelo where a.IdAutomovil==m.IdAutomovil select a.Numero).FirstOrDefault(),
                                              Estado = (from e in db.MantenEstado where e.IdMantenEstado==m.IdMantenEstado select e.Nombre).FirstOrDefault()
                                          }).ToList();
             JsonString = JsonConvert.SerializeObject(json);
@@ -75,7 +75,7 @@ namespace Concesionaria.Controllers
                 }
                 catch
                 {
-                    return View();
+                    return Json("0", JsonRequestBehavior.AllowGet);
                 }
             }
         }
@@ -267,17 +267,18 @@ namespace Concesionaria.Controllers
                             db.SaveChanges();
                             return Json("1", JsonRequestBehavior.AllowGet);
                         }
-                    }                  
+
+                    }
+                    
                 }
-                return Json("2", JsonRequestBehavior.AllowGet);
+                return Json("1", JsonRequestBehavior.AllowGet);
+
             }
             catch (Exception)
             {
                 return Json("0", JsonRequestBehavior.AllowGet);
             }
-            
-
-            
+                       
         }
 
 

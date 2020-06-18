@@ -60,6 +60,7 @@ namespace Concesionaria.Models
         public virtual DbSet<TipoEmpleado> TipoEmpleado { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<VentaAuto> VentaAuto { get; set; }
+        public virtual DbSet<eRROR> eRROR { get; set; }
     
         public virtual int SP_Automovil_Create_Fabrica(Nullable<int> idFabrica, string numeroF, Nullable<int> idUsuario, string numeroA, Nullable<int> idAnio, Nullable<int> idAutoModelo, Nullable<int> idAutoColor, Nullable<decimal> precioCompra, Nullable<decimal> precionVenta, Nullable<System.DateTime> fecha, Nullable<int> idSuc, ObjectParameter bandera)
         {

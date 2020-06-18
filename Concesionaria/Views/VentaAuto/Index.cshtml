@@ -22,6 +22,7 @@
                    col.Field("Usuario").HeaderText("Empleado responsable").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
                    col.Field("Cliente").HeaderText("Cliente").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
                    col.Field("EstadoVenta").HeaderText("Estado de la venta").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
+                   col.Field("PrecioFinal").HeaderText("Precio Total").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
                    col.HeaderText("Opciones").Template("#templateVenta").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Center).Add();
                }).AllowPaging().SelectionSettings(select => select.Type(Syncfusion.EJ2.Grids.SelectionType.Single)).PageSettings(page => page.PageCount(5).PageSize(4)).Render()
                 </div>
@@ -43,19 +44,14 @@
     <div class="row text-center">
         <div class="col-md-12 ">
             <div class="">
-
-                ${if(EstadoVenta=="Creado")}
                 <a class="text-succcess" href="javascript:void(0)" onclick="RowSelectVenta(${IdVentaAuto})" data-toggle="tooltip" data-placement="top" title="Detalles">
                     <i class="fa fa-eye"></i>
                 </a>
+                ${if(EstadoVenta=="Creado")}
                 <a class="text-danger" style="padding:0px,5px,0px,5px; margin-left:10px; margin-right:10px" href="javascript:void(0)" onclick="Cancelar(${ IdVentaAuto })" data-toggle="tooltip" data-placement="top" title="Cancelar">
                     <i class="fa fa-remove"></i>
                 </a>
-
-                ${else}
-                <a class="text-muted" href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Detalles">
-                    <i class="fa fa-eye"></i>
-                </a>
+                ${else}             
                 <a class="text-muted" style="padding:0px,5px,0px,5px; margin-left:10px; margin-right:10px" href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Cancelar">
                     <i class="fa fa-remove"></i>
                 </a>

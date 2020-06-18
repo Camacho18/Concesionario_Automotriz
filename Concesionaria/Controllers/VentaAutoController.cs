@@ -15,7 +15,7 @@ namespace Concesionaria.Controllers
         private readonly ConcesionariaEntities db = new ConcesionariaEntities();
         private readonly DropDownList Model = new DropDownList();
         private string JsonString = string.Empty;
-        private int IdUsuario, IdSucursal, Comodin;
+        private int IdUsuario, IdSucursal, Comodin, IdVentaAuto;
         // GET: VentaAuto
         public ActionResult Index()
         {
@@ -30,13 +30,14 @@ namespace Concesionaria.Controllers
         public ActionResult VentaAutoJson()
         {           
             List<VentaAutoJson> json = (from V in db.VentaAuto
-
+                                        orderby V.IdVentaAuto descending
                                         select new VentaAutoJson {  
                                             IdVentaAuto=V.IdVentaAuto,
                                             Numero = V.Numero,
                                             Usuario = (from U in db.Usuario where U.IdUsuario == V.IdUsuario select U.NomUsuario).FirstOrDefault(),                                        
                                             Cliente = (from C in db.Cliente where C.IdCliente == V.IdCliente select C.Nombre).FirstOrDefault(),
-                                            EstadoVenta = (from E in db.EstadoVenta where E.IdEstadoVenta==V.IdEstadoVenta select E.Nombre).FirstOrDefault()
+                                            EstadoVenta = (from E in db.EstadoVenta where E.IdEstadoVenta==V.IdEstadoVenta select E.Nombre).FirstOrDefault(),
+                                            PrecioFinal = V.PrecioFinal
                                         }).ToList();        
             JsonString = JsonConvert.SerializeObject(json);
             return Json(JsonString, JsonRequestBehavior.AllowGet);
@@ -61,21 +62,25 @@ namespace Concesionaria.Controllers
             else
             {
                 VentaAuto m = new VentaAuto();
-                
                 try
                 {
+                    IdVentaAuto = Convert.ToInt32(Session["IdVentaAuto"]);
+                    //VentaAuto v = (from ve in db.VentaAuto where ve.IdVentaAuto == IdVentaAuto select ve).FirstOrDefault();
+                    //Automovil aut = (from e in db.Automovil join ac in db.AutoCliente on e.IdAutomovil equals ac.IdAutomovil where ac.IdVentaAuto == v.IdVentaAuto select e).FirstOrDefault();
+                    //var p = ((aut.PrecioTotal + aut.PrecioPromo));
                     m.Numero = model.Numero;
                     m.IdUsuario = Convert.ToInt32(Session["IdUsuario"]);                    
                     m.IdCliente = model.IdCliente;
                     m.IdEstadoVenta = 1;
+                    //m.PrecioFinal = p;
                     db.VentaAuto.Add(m);
                     db.SaveChanges();
 
                     Cliente Clte = (from cl in db.Cliente where cl.IdCliente == m.IdCliente select cl).FirstOrDefault();
                    
-                            Clte.IdEstado_Cliente = 2;
-                            db.SaveChanges();
-                            return Json("1", JsonRequestBehavior.AllowGet);
+                    Clte.IdEstado_Cliente = 2;
+                    db.SaveChanges();
+                    return Json("1", JsonRequestBehavior.AllowGet);
                        
                     
                     
@@ -84,28 +89,6 @@ namespace Concesionaria.Controllers
                 {
                     return Json("0", JsonRequestBehavior.AllowGet);
                 }
-            }
-        }
-
-        // GET: VentaAuto/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: VentaAuto/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
             }
         }
 
@@ -125,13 +108,15 @@ namespace Concesionaria.Controllers
                     List<Automovil> autCli = (from a in db.Automovil join aC in db.AutoCliente on a.IdAutomovil equals aC.IdAutomovil  where aC.IdVentaAuto == m.IdVentaAuto select a).ToList();
                     foreach(var mod in autCli)
                     {
-                        mod.IdAutoEstado = 1;
+                        mod.IdAutoEstado = 1;                        
+                        db.SaveChanges();
+                        var ac = (from A in db.AutoCliente where A.IdVentaAuto == m.IdVentaAuto  select A).FirstOrDefault();
+                        db.AutoCliente.Remove(ac);
                         db.SaveChanges();
                     }
 
                     //Cambia el estado del clienet
                     Cliente ct = (from c in db.Cliente where c.IdCliente == m.IdCliente select c).FirstOrDefault();
-
                     ct.IdEstado_Cliente = 3;
                     db.SaveChanges();
 
@@ -151,6 +136,7 @@ namespace Concesionaria.Controllers
         {
             Session["IdVentaAuto"] = Id;
             ViewBag.Numero = (from V in db.VentaAuto where V.IdVentaAuto== Id select V.Numero).FirstOrDefault();
+            ViewBag.IdEstad = (from V in db.VentaAuto where V.IdVentaAuto == Id select V.IdEstadoVenta).FirstOrDefault();
             return PartialView("MenuVenta");
         }
 

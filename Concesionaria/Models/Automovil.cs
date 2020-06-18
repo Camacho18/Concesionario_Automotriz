@@ -30,6 +30,7 @@ namespace Concesionaria.Models
         public Nullable<decimal> PrecioCompra { get; set; }
         public Nullable<decimal> PrecioVenta { get; set; }
         public Nullable<decimal> PrecioTotal { get; set; }
+        public Nullable<decimal> PrecioPromo { get; set; }
         public Nullable<int> IdAnios { get; set; }
         public Nullable<int> IdAutoModelo { get; set; }
         public Nullable<int> IdAutoColor { get; set; }

@@ -4,6 +4,7 @@ USE Concesionaria
 
 CREATE TABLE eRROR
 (
+IdeRROR int identity(1,1) primary key, 
 DESCR varchar(300)
 )
 

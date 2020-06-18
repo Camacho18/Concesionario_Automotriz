@@ -220,6 +220,9 @@
     <Compile Include="Models\Empleado.cs">
       <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\eRROR.cs">
+      <DependentUpon>Concesionaria.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Estado.cs">
       <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
@@ -497,7 +500,6 @@
     <Content Include="Views\Auto\_AutoTras.cshtml" />
     <Content Include="Views\VentaAuto\Index.cshtml" />
     <Content Include="Views\VentaAuto\_CreateVentaAuto.cshtml" />
-    <Content Include="Views\VentaAuto\_CreateAutoCliente.cshtml" />
     <Content Include="Views\Reportes\FacturaReport.cshtml" />
     <Content Include="Views\VentaAuto\MenuVenta.cshtml" />
     <Content Include="Views\VentaAuto\_InfoCliente.cshtml" />

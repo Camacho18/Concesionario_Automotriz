@@ -30,6 +30,7 @@ namespace Concesionaria.Controllers
             
             List<AutoClienteJson> json = (from V in db.AutoCliente
                                           where V.IdVentaAuto == IdVentaAuto
+                                          
                                           select new AutoClienteJson
                                           {
                                               IdAutoCliente = V.IdAutoCliente,
@@ -38,7 +39,10 @@ namespace Concesionaria.Controllers
                                               Marca = (from P in db.Automovil join Ma in db.AutoModelo on P.IdAutoModelo equals Ma.IdAutoModelo join M in db.AutoMarca on Ma.IdAutoMarca equals M.IdAutoMarca where P.IdAutomovil == V.IdAutomovil select M.Nombre).FirstOrDefault(),
                                               Modelo = (from P in db.Automovil join Ma in db.AutoModelo on P.IdAutoModelo equals Ma.IdAutoModelo where P.IdAutomovil == V.IdAutomovil select Ma.Nombre).FirstOrDefault(),
                                               Color = (from P in db.Automovil join C in db.AutoColorList on P.IdAutoColor equals C.IdAutoColor where P.IdAutomovil == V.IdAutomovil select C.Nombre).FirstOrDefault(),
-                                              Anio = (from P in db.Automovil join C in db.Anios on P.IdAnios equals C.IdAnios where P.IdAutomovil == V.IdAutomovil select C.Numero).FirstOrDefault()
+                                              Anio = (from P in db.Automovil join C in db.Anios on P.IdAnios equals C.IdAnios where P.IdAutomovil == V.IdAutomovil select C.Numero).FirstOrDefault(),
+                                              PrecioTotal = (from A in db.Automovil where A.IdAutomovil == V.IdAutomovil select A.PrecioTotal).FirstOrDefault(),
+                                              PrecioPromo = (from A in db.Automovil where A.IdAutomovil == V.IdAutomovil select A.PrecioPromo).FirstOrDefault()
+
                                           }).ToList();
             JsonString = JsonConvert.SerializeObject(json);
             return Json(JsonString, JsonRequestBehavior.AllowGet);
@@ -58,13 +62,13 @@ namespace Concesionaria.Controllers
         {
             if (!ModelState.IsValid)
             {
-                IdSucursal = Convert.ToInt32(Session["IdSucursal"]);
+                IdVentaAuto = Convert.ToInt32(Session["IdVentaAuto"]);
                 ViewBag.Automovil = Model.AutomovilVenta(IdSucursal);
                 return PartialView("_CreateAutoCliente", model);
             }
             else
-            {
-                AutoCliente modeladd = new AutoCliente();
+            {               
+                AutoCliente modeladd = new AutoCliente();                
                 try
                 {
                     // Agrega un nuevo registro a la tabla AutoCliente
@@ -72,16 +76,13 @@ namespace Concesionaria.Controllers
                     modeladd.IdVentaAuto = Convert.ToInt32(Session["IdVentaAuto"]);
                     db.AutoCliente.Add(modeladd);
                     db.SaveChanges();
-
                     //Cambiar el estado del automovil
                     Automovil au = (from aut in db.Automovil where aut.IdAutomovil == model.IdAutomovil select aut).FirstOrDefault();
                     au.IdAutoEstado = 3;
                     db.SaveChanges();
-
-
                     return Json("1", JsonRequestBehavior.AllowGet);
-
-                }
+                        
+                }              
                 catch
                 {
                     return Json("0", JsonRequestBehavior.AllowGet);
@@ -106,7 +107,6 @@ namespace Concesionaria.Controllers
             {
                 return Json("0", JsonRequestBehavior.AllowGet);
             }
-
         }
 
         //------------------------------ACCESORIOS DE AUTOMOVILES--------------------------
@@ -127,6 +127,7 @@ namespace Concesionaria.Controllers
                                                 Serie = (from AA in db.AutoAccesorio join Ac in db.Accesorio on AA.IdAccesorio equals Ac.IdAccesorio where AA.IdAutoAccesorio == A.IdAutoAccesorio select Ac.Serie).FirstOrDefault(),
                                                 Nombre = (from AA in db.AutoAccesorio join Ac in db.Accesorio on AA.IdAccesorio equals Ac.IdAccesorio join Al in db.AccesorioList on Ac.IdAccesorioList equals Al.IdAccesorioList where AA.IdAutoAccesorio == A.IdAutoAccesorio select Al.Nombre).FirstOrDefault(),
                                                 Descripcion = (from AA in db.AutoAccesorio join Ac in db.Accesorio on AA.IdAccesorio equals Ac.IdAccesorio where AA.IdAutoAccesorio == A.IdAutoAccesorio select Ac.Descripcion).FirstOrDefault(),
+                                                Precio = (from AA in db.AutoAccesorio join Ac in db.Accesorio on AA.IdAccesorio equals Ac.IdAccesorio where AA.IdAutoAccesorio == A.IdAutoAccesorio select Ac.Precio).FirstOrDefault()
                                             }).ToList();
             JsonString = JsonConvert.SerializeObject(json);
             var num = (from A in db.AutoCliente join Ac in db.Automovil on A.IdAutomovil equals Ac.IdAutomovil where A.IdAutoCliente == IdAutoCliente select Ac.Numero).FirstOrDefault();
