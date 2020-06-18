@@ -220,9 +220,6 @@
     <Compile Include="Models\Empleado.cs">
       <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\eRROR.cs">
-      <DependentUpon>Concesionaria.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Estado.cs">
       <DependentUpon>Concesionaria.tt</DependentUpon>
     </Compile>

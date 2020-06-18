@@ -20,8 +20,8 @@ AS
 BEGIN
 	BEGIN TRAN
 		BEGIN TRY
-			INSERT INTO Automovil (Numero,IdAnios,IdAutoModelo,IdAutoColor,IdAutoEstado,PrecioCompra,PrecioVenta,FechaIngreso,IdConcesinaria,PrecioTotal) VALUES 
-								  (@NumeroA,@IdAnio,@IdAutoModelo,@IdAutoColor,1,@PrecioCompra,@PrecionVenta,@Fecha,@IdSuc,@PrecionVenta)
+			INSERT INTO Automovil (Numero,IdAnios,IdAutoModelo,IdAutoColor,IdAutoEstado,PrecioCompra,PrecioVenta,FechaIngreso,IdConcesinaria,PrecioTotal,PrecioPromo) VALUES 
+								  (@NumeroA,@IdAnio,@IdAutoModelo,@IdAutoColor,1,@PrecioCompra,@PrecionVenta,@Fecha,@IdSuc,@PrecionVenta,@PrecionVenta)
 			DECLARE @IdAuto INT
 			SET @IdAuto = SCOPE_IDENTITY()
 

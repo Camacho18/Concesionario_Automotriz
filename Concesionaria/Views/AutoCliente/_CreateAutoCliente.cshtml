@@ -29,9 +29,10 @@
 }
 <script>
     function SuccessAutoCliente_C(data) {
+       
         AutoClienteLoad();
-        if (data == "1") {
-            $('#AutoClteModal').modal("hide");
+        if (data.value == "1") {
+            $('#AutoModal').modal("hide");
             Swal.fire({
                 position: "top",
                 title: "Correcto",
@@ -39,9 +40,9 @@
                 icon: "success",
                 button: "Aceptar",
             });
-        }
-        if (data == "2") {
-            $('#AutoClteModal').modal("hide");
+        }else
+        if (data.value == "2") {
+            $('#AutoModal').modal("hide");
 
             Swal.fire({
                 position: "top",
@@ -52,7 +53,7 @@
             });
         }
         else {
-            $('#AutoClteModal').modal("hide");
+            $('#AutoModal').modal("hide");
 
             Swal.fire({
                 position: "top",
