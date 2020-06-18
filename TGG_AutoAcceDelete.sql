@@ -2,7 +2,7 @@
 -- Create date: <Create Date,,>
 -- Description:	<Description,,>
 -- =============================================
-alter TRIGGER TGG_AutoAcceDelete
+CREATE TRIGGER TGG_AutoAcceDelete
    ON  AutoAccesorio 
    AFTER DELETE
 AS 

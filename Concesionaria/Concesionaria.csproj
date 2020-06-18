@@ -497,11 +497,8 @@
     <Content Include="Views\Auto\_AutoTras.cshtml" />
     <Content Include="Views\VentaAuto\Index.cshtml" />
     <Content Include="Views\VentaAuto\_CreateVentaAuto.cshtml" />
-<<<<<<< HEAD
-=======
     <Content Include="Views\VentaAuto\_CreateAutoCliente.cshtml" />
     <Content Include="Views\Reportes\FacturaReport.cshtml" />
->>>>>>> 36b1814fa141a4ae525992d2bc0b0e09af9ec302
     <Content Include="Views\VentaAuto\MenuVenta.cshtml" />
     <Content Include="Views\VentaAuto\_InfoCliente.cshtml" />
     <Content Include="Views\AutoCliente\_CreateAutoCliente.cshtml" />
