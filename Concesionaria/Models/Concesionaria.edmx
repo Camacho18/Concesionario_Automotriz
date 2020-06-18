@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="ConcesionariaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="ConcesionariaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Accesorio">
           <Key>
             <PropertyRef Name="IdAccesorio" />
@@ -1127,7 +1127,8 @@
             <End Role="VentaAuto" EntitySet="VentaAuto" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ConcesionariaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -1329,6 +1330,13 @@
           <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Empleado__IdConc__59FA5E80" FromRole="Empleado" ToRole="Concesinaria" />
           <NavigationProperty Name="TipoEmpleado" Relationship="Self.FK__Empleado__IdTipo__59063A47" FromRole="Empleado" ToRole="TipoEmpleado" />
           <NavigationProperty Name="Usuario" Relationship="Self.FK__Usuario__IdEmple__5DCAEF64" FromRole="Empleado" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="eRROR">
+          <Key>
+            <PropertyRef Name="IdeRROR" />
+          </Key>
+          <Property Name="DESCR" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="IdeRROR" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="Estado">
           <Key>
@@ -2118,6 +2126,7 @@
           <EntitySet Name="Cliente" EntityType="Self.Cliente" />
           <EntitySet Name="Concesinaria" EntityType="Self.Concesinaria" />
           <EntitySet Name="Empleado" EntityType="Self.Empleado" />
+          <EntitySet Name="eRROR" EntityType="Self.eRROR" />
           <EntitySet Name="Estado" EntityType="Self.Estado" />
           <EntitySet Name="Estado_Cliente" EntityType="Self.Estado_Cliente" />
           <EntitySet Name="EstadoVenta" EntityType="Self.EstadoVenta" />
@@ -2338,15 +2347,7 @@
             <Parameter Name="IdSuc" Mode="In" Type="Int32" />
             <Parameter Name="Bandera" Mode="InOut" Type="Int32" />
           </FunctionImport>
-          <EntitySet Name="eRROR" EntityType="ConcesionariaModel.eRROR" />
         </EntityContainer>
-        <EntityType Name="eRROR">
-          <Key>
-            <PropertyRef Name="IdeRROR" />
-          </Key>
-          <Property Name="DESCR" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
-          <Property Name="IdeRROR" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -2515,6 +2516,14 @@
                 <ScalarProperty Name="C_Estado" ColumnName="_Estado" />
                 <ScalarProperty Name="IdTipoEmpleado" ColumnName="IdTipoEmpleado" />
                 <ScalarProperty Name="IdConcesinaria" ColumnName="IdConcesinaria" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="eRROR">
+            <EntityTypeMapping TypeName="ConcesionariaModel.eRROR">
+              <MappingFragment StoreEntitySet="eRROR">
+                <ScalarProperty Name="DESCR" ColumnName="DESCR" />
+                <ScalarProperty Name="IdeRROR" ColumnName="IdeRROR" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2700,14 +2709,6 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="SP_Automovil_Create_Fabrica" FunctionName="ConcesionariaModel.Store.SP_Automovil_Create_Fabrica" />
-          <EntitySetMapping Name="eRROR">
-            <EntityTypeMapping TypeName="ConcesionariaModel.eRROR">
-              <MappingFragment StoreEntitySet="eRROR">
-                <ScalarProperty Name="IdeRROR" ColumnName="IdeRROR" />
-                <ScalarProperty Name="DESCR" ColumnName="DESCR" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
