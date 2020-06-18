@@ -22,6 +22,10 @@ BEGIN TRY
 		END	
 END TRY
 BEGIN CATCH
+<<<<<<< HEAD
 	INSERT into eRROR values ( ERROR_MESSAGE())
+=======
+	INSERT into eRROR values (ERROR_MESSAGE())
+>>>>>>> jennifer
 END CATCH
 END

@@ -321,7 +321,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           <Property Name="IdCliente" Type="int" />
           <Property Name="IdEstadoVenta" Type="int" />
         </EntityType>
+<<<<<<< HEAD
         <Association Name="FK__Accesorio__IdAcc__59063A47">
+=======
+        <Association Name="FK__Accesorio__IdAcc__7E37BEF6">
+>>>>>>> jennifer
           <End Role="AccesorioList" Type="Self.AccesorioList" Multiplicity="0..1" />
           <End Role="Accesorio" Type="Self.Accesorio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -333,7 +337,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Accesorio__IdAni__5629CD9C">
+=======
+        <Association Name="FK__Accesorio__IdAni__7B5B524B">
+>>>>>>> jennifer
           <End Role="Anios" Type="Self.Anios" Multiplicity="0..1" />
           <End Role="AccesorioList" Type="Self.AccesorioList" Multiplicity="*" />
           <ReferentialConstraint>
@@ -345,7 +353,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Accesorio__IdAut__5535A963">
+=======
+        <Association Name="FK__Accesorio__IdAut__7A672E12">
+>>>>>>> jennifer
           <End Role="AutoModelo" Type="Self.AutoModelo" Multiplicity="0..1" />
           <End Role="AccesorioList" Type="Self.AccesorioList" Multiplicity="*" />
           <ReferentialConstraint>
@@ -357,7 +369,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Accesorio__IdCon__59FA5E80">
+=======
+        <Association Name="FK__Accesorio__IdCon__7F2BE32F">
+>>>>>>> jennifer
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="0..1" />
           <End Role="Accesorio" Type="Self.Accesorio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -369,7 +385,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__AutoAcces__IdAcc__5CD6CB2B">
+=======
+        <Association Name="FK__AutoAcces__IdAcc__02084FDA">
+>>>>>>> jennifer
           <End Role="Accesorio" Type="Self.Accesorio" Multiplicity="0..1" />
           <End Role="AutoAccesorio" Type="Self.AutoAccesorio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -381,7 +401,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__AutoAcces__IdAut__5DCAEF64">
+=======
+        <Association Name="FK__AutoAcces__IdAut__02FC7413">
+>>>>>>> jennifer
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="AutoAccesorio" Type="Self.AutoAccesorio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -393,7 +417,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__AutoClien__IdAut__00200768">
+=======
+        <Association Name="FK__AutoClien__IdAut__25518C17">
+>>>>>>> jennifer
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="AutoCliente" Type="Self.AutoCliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -405,7 +433,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__AutoClien__IdPro__02084FDA">
+=======
+        <Association Name="FK__AutoClien__IdPro__2739D489">
+>>>>>>> jennifer
           <End Role="Promocion_Auto" Type="Self.Promocion_Auto" Multiplicity="0..1" />
           <End Role="AutoCliente" Type="Self.AutoCliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -417,7 +449,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__AutoClien__IdVen__01142BA1">
+=======
+        <Association Name="FK__AutoClien__IdVen__2645B050">
+>>>>>>> jennifer
           <End Role="VentaAuto" Type="Self.VentaAuto" Multiplicity="0..1" />
           <End Role="AutoCliente" Type="Self.AutoCliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -429,7 +465,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__AutoModel__IdAut__412EB0B6">
+=======
+        <Association Name="FK__AutoModel__IdAut__66603565">
+>>>>>>> jennifer
           <End Role="AutoMarca" Type="Self.AutoMarca" Multiplicity="0..1" />
           <End Role="AutoModelo" Type="Self.AutoModelo" Multiplicity="*" />
           <ReferentialConstraint>
@@ -441,7 +481,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Automovil__IdAni__4E88ABD4">
+=======
+        <Association Name="FK__Automovil__IdAni__73BA3083">
+>>>>>>> jennifer
           <End Role="Anios" Type="Self.Anios" Multiplicity="0..1" />
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="*" />
           <ReferentialConstraint>
@@ -453,7 +497,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Automovil__IdAut__4F7CD00D">
+=======
+        <Association Name="FK__Automovil__IdAut__74AE54BC">
+>>>>>>> jennifer
           <End Role="AutoModelo" Type="Self.AutoModelo" Multiplicity="0..1" />
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="*" />
           <ReferentialConstraint>
@@ -465,7 +513,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Automovil__IdAut__5070F446">
+=======
+        <Association Name="FK__Automovil__IdAut__75A278F5">
+>>>>>>> jennifer
           <End Role="AutoColorList" Type="Self.AutoColorList" Multiplicity="0..1" />
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="*" />
           <ReferentialConstraint>
@@ -477,7 +529,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Automovil__IdAut__5165187F">
+=======
+        <Association Name="FK__Automovil__IdAut__76969D2E">
+>>>>>>> jennifer
           <End Role="AutoEstadoList" Type="Self.AutoEstadoList" Multiplicity="0..1" />
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="*" />
           <ReferentialConstraint>
@@ -489,7 +545,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Automovil__IdCon__52593CB8">
+=======
+        <Association Name="FK__Automovil__IdCon__778AC167">
+>>>>>>> jennifer
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="0..1" />
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="*" />
           <ReferentialConstraint>
@@ -501,7 +561,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Autoparte__IdCat__06CD04F7">
+=======
+        <Association Name="FK__Autoparte__IdCat__2BFE89A6">
+>>>>>>> jennifer
           <End Role="CategoriaAutoparte" Type="Self.CategoriaAutoparte" Multiplicity="0..1" />
           <End Role="Autopartes" Type="Self.Autopartes" Multiplicity="*" />
           <ReferentialConstraint>
@@ -513,7 +577,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Autoparte__IdCon__07C12930">
+=======
+        <Association Name="FK__Autoparte__IdCon__2CF2ADDF">
+>>>>>>> jennifer
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="0..1" />
           <End Role="Autopartes" Type="Self.Autopartes" Multiplicity="*" />
           <ReferentialConstraint>
@@ -525,7 +593,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Cliente__IdEstad__73BA3083">
+=======
+        <Association Name="FK__Cliente__IdEstad__18EBB532">
+>>>>>>> jennifer
           <End Role="Estado_Cliente" Type="Self.Estado_Cliente" Multiplicity="0..1" />
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -537,7 +609,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Cliente__IdMunic__72C60C4A">
+=======
+        <Association Name="FK__Cliente__IdMunic__17F790F9">
+>>>>>>> jennifer
           <End Role="Municipio" Type="Self.Municipio" Multiplicity="0..1" />
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -549,7 +625,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Concesina__IdMun__2D27B809">
+=======
+        <Association Name="FK__Concesina__IdMun__52593CB8">
+>>>>>>> jennifer
           <End Role="Municipio" Type="Self.Municipio" Multiplicity="0..1" />
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="*" />
           <ReferentialConstraint>
@@ -561,7 +641,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Empleado__IdConc__34C8D9D1">
+=======
+        <Association Name="FK__Empleado__IdConc__59FA5E80">
+>>>>>>> jennifer
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="0..1" />
           <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
           <ReferentialConstraint>
@@ -573,7 +657,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Empleado__IdTipo__33D4B598">
+=======
+        <Association Name="FK__Empleado__IdTipo__59063A47">
+>>>>>>> jennifer
           <End Role="TipoEmpleado" Type="Self.TipoEmpleado" Multiplicity="0..1" />
           <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
           <ReferentialConstraint>
@@ -585,7 +673,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Estado__IdPais__276EDEB3">
+=======
+        <Association Name="FK__Estado__IdPais__4CA06362">
+>>>>>>> jennifer
           <End Role="Pais" Type="Self.Pais" Multiplicity="0..1" />
           <End Role="Estado" Type="Self.Estado" Multiplicity="*" />
           <ReferentialConstraint>
@@ -597,7 +689,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Manten_Au__IdAut__123EB7A3">
+=======
+        <Association Name="FK__Manten_Au__IdAut__37703C52">
+>>>>>>> jennifer
           <End Role="Autopartes" Type="Self.Autopartes" Multiplicity="0..1" />
           <End Role="Manten_Autopar" Type="Self.Manten_Autopar" Multiplicity="*" />
           <ReferentialConstraint>
@@ -609,7 +705,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Manten_Au__IdMan__114A936A">
+=======
+        <Association Name="FK__Manten_Au__IdMan__367C1819">
+>>>>>>> jennifer
           <End Role="Mantenimiento" Type="Self.Mantenimiento" Multiplicity="0..1" />
           <End Role="Manten_Autopar" Type="Self.Manten_Autopar" Multiplicity="*" />
           <ReferentialConstraint>
@@ -621,7 +721,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Mantenimi__IdAut__0D7A0286">
+=======
+        <Association Name="FK__Mantenimi__IdAut__32AB8735">
+>>>>>>> jennifer
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="Mantenimiento" Type="Self.Mantenimiento" Multiplicity="*" />
           <ReferentialConstraint>
@@ -633,7 +737,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Mantenimi__IdMan__0E6E26BF">
+=======
+        <Association Name="FK__Mantenimi__IdMan__339FAB6E">
+>>>>>>> jennifer
           <End Role="MantenEstado" Type="Self.MantenEstado" Multiplicity="0..1" />
           <End Role="Mantenimiento" Type="Self.Mantenimiento" Multiplicity="*" />
           <ReferentialConstraint>
@@ -645,7 +753,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Mantenimi__IdUsu__0C85DE4D">
+=======
+        <Association Name="FK__Mantenimi__IdUsu__31B762FC">
+>>>>>>> jennifer
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="Mantenimiento" Type="Self.Mantenimiento" Multiplicity="*" />
           <ReferentialConstraint>
@@ -657,7 +769,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Municipio__IdEst__2A4B4B5E">
+=======
+        <Association Name="FK__Municipio__IdEst__4F7CD00D">
+>>>>>>> jennifer
           <End Role="Estado" Type="Self.Estado" Multiplicity="0..1" />
           <End Role="Municipio" Type="Self.Municipio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -669,7 +785,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Origen_Fa__IdAut__66603565">
+=======
+        <Association Name="FK__Origen_Fa__IdAut__0B91BA14">
+>>>>>>> jennifer
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="Origen_Fabrica" Type="Self.Origen_Fabrica" Multiplicity="*" />
           <ReferentialConstraint>
@@ -681,7 +801,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Origen_Fa__IdFab__6477ECF3">
+=======
+        <Association Name="FK__Origen_Fa__IdFab__09A971A2">
+>>>>>>> jennifer
           <End Role="Fabrica" Type="Self.Fabrica" Multiplicity="0..1" />
           <End Role="Origen_Fabrica" Type="Self.Origen_Fabrica" Multiplicity="*" />
           <ReferentialConstraint>
@@ -693,7 +817,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Origen_Fa__IdOri__6754599E">
+=======
+        <Association Name="FK__Origen_Fa__IdOri__0C85DE4D">
+>>>>>>> jennifer
           <End Role="OrigenEstado" Type="Self.OrigenEstado" Multiplicity="0..1" />
           <End Role="Origen_Fabrica" Type="Self.Origen_Fabrica" Multiplicity="*" />
           <ReferentialConstraint>
@@ -705,7 +833,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Origen_Fa__IdUsu__656C112C">
+=======
+        <Association Name="FK__Origen_Fa__IdUsu__0A9D95DB">
+>>>>>>> jennifer
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="Origen_Fabrica" Type="Self.Origen_Fabrica" Multiplicity="*" />
           <ReferentialConstraint>
@@ -717,7 +849,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Origen_Tr__IdAut__6D0D32F4">
+=======
+        <Association Name="FK__Origen_Tr__IdAut__123EB7A3">
+>>>>>>> jennifer
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -729,7 +865,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Origen_Tr__IdCom__6B24EA82">
+=======
+        <Association Name="FK__Origen_Tr__IdCom__10566F31">
+>>>>>>> jennifer
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -741,7 +881,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Origen_Tr__IdCon__6C190EBB">
+=======
+        <Association Name="FK__Origen_Tr__IdCon__114A936A">
+>>>>>>> jennifer
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -753,7 +897,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Origen_Tr__IdOri__6E01572D">
+=======
+        <Association Name="FK__Origen_Tr__IdOri__1332DBDC">
+>>>>>>> jennifer
           <End Role="OrigenEstado" Type="Self.OrigenEstado" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -765,7 +913,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Origen_Tr__IdVen__6A30C649">
+=======
+        <Association Name="FK__Origen_Tr__IdVen__0F624AF8">
+>>>>>>> jennifer
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -777,7 +929,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Promocion__IdAni__44FF419A">
+=======
+        <Association Name="FK__Promocion__IdAni__6A30C649">
+>>>>>>> jennifer
           <End Role="Anios" Type="Self.Anios" Multiplicity="0..1" />
           <End Role="Promocion_Auto" Type="Self.Promocion_Auto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -789,7 +945,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Promocion__IdAut__440B1D61">
+=======
+        <Association Name="FK__Promocion__IdAut__693CA210">
+>>>>>>> jennifer
           <End Role="AutoModelo" Type="Self.AutoModelo" Multiplicity="0..1" />
           <End Role="Promocion_Auto" Type="Self.Promocion_Auto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -801,7 +961,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Promocion__IdCon__46E78A0C">
+=======
+        <Association Name="FK__Promocion__IdCon__6C190EBB">
+>>>>>>> jennifer
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="0..1" />
           <End Role="Promocion_Auto" Type="Self.Promocion_Auto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -813,7 +977,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Promocion__IdPro__45F365D3">
+=======
+        <Association Name="FK__Promocion__IdPro__6B24EA82">
+>>>>>>> jennifer
           <End Role="PromocionList" Type="Self.PromocionList" Multiplicity="0..1" />
           <End Role="Promocion_Auto" Type="Self.Promocion_Auto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -825,7 +993,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Referenci__IdCli__76969D2E">
+=======
+        <Association Name="FK__Referenci__IdCli__1BC821DD">
+>>>>>>> jennifer
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
           <End Role="Referencias" Type="Self.Referencias" Multiplicity="*" />
           <ReferentialConstraint>
@@ -837,7 +1009,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Usuario__IdEmple__38996AB5">
+=======
+        <Association Name="FK__Usuario__IdEmple__5DCAEF64">
+>>>>>>> jennifer
           <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
           <ReferentialConstraint>
@@ -849,7 +1025,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__VentaAuto__IdCli__7C4F7684">
+=======
+        <Association Name="FK__VentaAuto__IdCli__2180FB33">
+>>>>>>> jennifer
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
           <End Role="VentaAuto" Type="Self.VentaAuto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -861,7 +1041,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__VentaAuto__IdEst__7D439ABD">
+=======
+        <Association Name="FK__VentaAuto__IdEst__22751F6C">
+>>>>>>> jennifer
           <End Role="EstadoVenta" Type="Self.EstadoVenta" Multiplicity="0..1" />
           <End Role="VentaAuto" Type="Self.VentaAuto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -873,7 +1057,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__VentaAuto__IdUsu__7B5B524B">
+=======
+        <Association Name="FK__VentaAuto__IdUsu__208CD6FA">
+>>>>>>> jennifer
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="VentaAuto" Type="Self.VentaAuto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -933,6 +1121,7 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           <EntitySet Name="TipoEmpleado" EntityType="Self.TipoEmpleado" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VentaAuto" EntityType="Self.VentaAuto" Schema="dbo" store:Type="Tables" />
+<<<<<<< HEAD
           <AssociationSet Name="FK__Accesorio__IdAcc__59063A47" Association="Self.FK__Accesorio__IdAcc__59063A47">
             <End Role="AccesorioList" EntitySet="AccesorioList" />
             <End Role="Accesorio" EntitySet="Accesorio" />
@@ -1118,6 +1307,193 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             <End Role="VentaAuto" EntitySet="VentaAuto" />
           </AssociationSet>
           <AssociationSet Name="FK__VentaAuto__IdUsu__7B5B524B" Association="Self.FK__VentaAuto__IdUsu__7B5B524B">
+=======
+          <AssociationSet Name="FK__Accesorio__IdAcc__7E37BEF6" Association="Self.FK__Accesorio__IdAcc__7E37BEF6">
+            <End Role="AccesorioList" EntitySet="AccesorioList" />
+            <End Role="Accesorio" EntitySet="Accesorio" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Accesorio__IdAni__7B5B524B" Association="Self.FK__Accesorio__IdAni__7B5B524B">
+            <End Role="Anios" EntitySet="Anios" />
+            <End Role="AccesorioList" EntitySet="AccesorioList" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Accesorio__IdAut__7A672E12" Association="Self.FK__Accesorio__IdAut__7A672E12">
+            <End Role="AutoModelo" EntitySet="AutoModelo" />
+            <End Role="AccesorioList" EntitySet="AccesorioList" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Accesorio__IdCon__7F2BE32F" Association="Self.FK__Accesorio__IdCon__7F2BE32F">
+            <End Role="Concesinaria" EntitySet="Concesinaria" />
+            <End Role="Accesorio" EntitySet="Accesorio" />
+          </AssociationSet>
+          <AssociationSet Name="FK__AutoAcces__IdAcc__02084FDA" Association="Self.FK__AutoAcces__IdAcc__02084FDA">
+            <End Role="Accesorio" EntitySet="Accesorio" />
+            <End Role="AutoAccesorio" EntitySet="AutoAccesorio" />
+          </AssociationSet>
+          <AssociationSet Name="FK__AutoAcces__IdAut__02FC7413" Association="Self.FK__AutoAcces__IdAut__02FC7413">
+            <End Role="Automovil" EntitySet="Automovil" />
+            <End Role="AutoAccesorio" EntitySet="AutoAccesorio" />
+          </AssociationSet>
+          <AssociationSet Name="FK__AutoClien__IdAut__25518C17" Association="Self.FK__AutoClien__IdAut__25518C17">
+            <End Role="Automovil" EntitySet="Automovil" />
+            <End Role="AutoCliente" EntitySet="AutoCliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__AutoClien__IdPro__2739D489" Association="Self.FK__AutoClien__IdPro__2739D489">
+            <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
+            <End Role="AutoCliente" EntitySet="AutoCliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__AutoClien__IdVen__2645B050" Association="Self.FK__AutoClien__IdVen__2645B050">
+            <End Role="VentaAuto" EntitySet="VentaAuto" />
+            <End Role="AutoCliente" EntitySet="AutoCliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__AutoModel__IdAut__66603565" Association="Self.FK__AutoModel__IdAut__66603565">
+            <End Role="AutoMarca" EntitySet="AutoMarca" />
+            <End Role="AutoModelo" EntitySet="AutoModelo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Automovil__IdAni__73BA3083" Association="Self.FK__Automovil__IdAni__73BA3083">
+            <End Role="Anios" EntitySet="Anios" />
+            <End Role="Automovil" EntitySet="Automovil" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Automovil__IdAut__74AE54BC" Association="Self.FK__Automovil__IdAut__74AE54BC">
+            <End Role="AutoModelo" EntitySet="AutoModelo" />
+            <End Role="Automovil" EntitySet="Automovil" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Automovil__IdAut__75A278F5" Association="Self.FK__Automovil__IdAut__75A278F5">
+            <End Role="AutoColorList" EntitySet="AutoColorList" />
+            <End Role="Automovil" EntitySet="Automovil" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Automovil__IdAut__76969D2E" Association="Self.FK__Automovil__IdAut__76969D2E">
+            <End Role="AutoEstadoList" EntitySet="AutoEstadoList" />
+            <End Role="Automovil" EntitySet="Automovil" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Automovil__IdCon__778AC167" Association="Self.FK__Automovil__IdCon__778AC167">
+            <End Role="Concesinaria" EntitySet="Concesinaria" />
+            <End Role="Automovil" EntitySet="Automovil" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Autoparte__IdCat__2BFE89A6" Association="Self.FK__Autoparte__IdCat__2BFE89A6">
+            <End Role="CategoriaAutoparte" EntitySet="CategoriaAutoparte" />
+            <End Role="Autopartes" EntitySet="Autopartes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Autoparte__IdCon__2CF2ADDF" Association="Self.FK__Autoparte__IdCon__2CF2ADDF">
+            <End Role="Concesinaria" EntitySet="Concesinaria" />
+            <End Role="Autopartes" EntitySet="Autopartes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cliente__IdEstad__18EBB532" Association="Self.FK__Cliente__IdEstad__18EBB532">
+            <End Role="Estado_Cliente" EntitySet="Estado_Cliente" />
+            <End Role="Cliente" EntitySet="Cliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cliente__IdMunic__17F790F9" Association="Self.FK__Cliente__IdMunic__17F790F9">
+            <End Role="Municipio" EntitySet="Municipio" />
+            <End Role="Cliente" EntitySet="Cliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Concesina__IdMun__52593CB8" Association="Self.FK__Concesina__IdMun__52593CB8">
+            <End Role="Municipio" EntitySet="Municipio" />
+            <End Role="Concesinaria" EntitySet="Concesinaria" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Empleado__IdConc__59FA5E80" Association="Self.FK__Empleado__IdConc__59FA5E80">
+            <End Role="Concesinaria" EntitySet="Concesinaria" />
+            <End Role="Empleado" EntitySet="Empleado" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Empleado__IdTipo__59063A47" Association="Self.FK__Empleado__IdTipo__59063A47">
+            <End Role="TipoEmpleado" EntitySet="TipoEmpleado" />
+            <End Role="Empleado" EntitySet="Empleado" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Estado__IdPais__4CA06362" Association="Self.FK__Estado__IdPais__4CA06362">
+            <End Role="Pais" EntitySet="Pais" />
+            <End Role="Estado" EntitySet="Estado" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Manten_Au__IdAut__37703C52" Association="Self.FK__Manten_Au__IdAut__37703C52">
+            <End Role="Autopartes" EntitySet="Autopartes" />
+            <End Role="Manten_Autopar" EntitySet="Manten_Autopar" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Manten_Au__IdMan__367C1819" Association="Self.FK__Manten_Au__IdMan__367C1819">
+            <End Role="Mantenimiento" EntitySet="Mantenimiento" />
+            <End Role="Manten_Autopar" EntitySet="Manten_Autopar" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Mantenimi__IdAut__32AB8735" Association="Self.FK__Mantenimi__IdAut__32AB8735">
+            <End Role="Automovil" EntitySet="Automovil" />
+            <End Role="Mantenimiento" EntitySet="Mantenimiento" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Mantenimi__IdMan__339FAB6E" Association="Self.FK__Mantenimi__IdMan__339FAB6E">
+            <End Role="MantenEstado" EntitySet="MantenEstado" />
+            <End Role="Mantenimiento" EntitySet="Mantenimiento" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Mantenimi__IdUsu__31B762FC" Association="Self.FK__Mantenimi__IdUsu__31B762FC">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Mantenimiento" EntitySet="Mantenimiento" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Municipio__IdEst__4F7CD00D" Association="Self.FK__Municipio__IdEst__4F7CD00D">
+            <End Role="Estado" EntitySet="Estado" />
+            <End Role="Municipio" EntitySet="Municipio" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Origen_Fa__IdAut__0B91BA14" Association="Self.FK__Origen_Fa__IdAut__0B91BA14">
+            <End Role="Automovil" EntitySet="Automovil" />
+            <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Origen_Fa__IdFab__09A971A2" Association="Self.FK__Origen_Fa__IdFab__09A971A2">
+            <End Role="Fabrica" EntitySet="Fabrica" />
+            <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Origen_Fa__IdOri__0C85DE4D" Association="Self.FK__Origen_Fa__IdOri__0C85DE4D">
+            <End Role="OrigenEstado" EntitySet="OrigenEstado" />
+            <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Origen_Fa__IdUsu__0A9D95DB" Association="Self.FK__Origen_Fa__IdUsu__0A9D95DB">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Origen_Tr__IdAut__123EB7A3" Association="Self.FK__Origen_Tr__IdAut__123EB7A3">
+            <End Role="Automovil" EntitySet="Automovil" />
+            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Origen_Tr__IdCom__10566F31" Association="Self.FK__Origen_Tr__IdCom__10566F31">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Origen_Tr__IdCon__114A936A" Association="Self.FK__Origen_Tr__IdCon__114A936A">
+            <End Role="Concesinaria" EntitySet="Concesinaria" />
+            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Origen_Tr__IdOri__1332DBDC" Association="Self.FK__Origen_Tr__IdOri__1332DBDC">
+            <End Role="OrigenEstado" EntitySet="OrigenEstado" />
+            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Origen_Tr__IdVen__0F624AF8" Association="Self.FK__Origen_Tr__IdVen__0F624AF8">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Promocion__IdAni__6A30C649" Association="Self.FK__Promocion__IdAni__6A30C649">
+            <End Role="Anios" EntitySet="Anios" />
+            <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Promocion__IdAut__693CA210" Association="Self.FK__Promocion__IdAut__693CA210">
+            <End Role="AutoModelo" EntitySet="AutoModelo" />
+            <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Promocion__IdCon__6C190EBB" Association="Self.FK__Promocion__IdCon__6C190EBB">
+            <End Role="Concesinaria" EntitySet="Concesinaria" />
+            <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Promocion__IdPro__6B24EA82" Association="Self.FK__Promocion__IdPro__6B24EA82">
+            <End Role="PromocionList" EntitySet="PromocionList" />
+            <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Referenci__IdCli__1BC821DD" Association="Self.FK__Referenci__IdCli__1BC821DD">
+            <End Role="Cliente" EntitySet="Cliente" />
+            <End Role="Referencias" EntitySet="Referencias" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Usuario__IdEmple__5DCAEF64" Association="Self.FK__Usuario__IdEmple__5DCAEF64">
+            <End Role="Empleado" EntitySet="Empleado" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK__VentaAuto__IdCli__2180FB33" Association="Self.FK__VentaAuto__IdCli__2180FB33">
+            <End Role="Cliente" EntitySet="Cliente" />
+            <End Role="VentaAuto" EntitySet="VentaAuto" />
+          </AssociationSet>
+          <AssociationSet Name="FK__VentaAuto__IdEst__22751F6C" Association="Self.FK__VentaAuto__IdEst__22751F6C">
+            <End Role="EstadoVenta" EntitySet="EstadoVenta" />
+            <End Role="VentaAuto" EntitySet="VentaAuto" />
+          </AssociationSet>
+          <AssociationSet Name="FK__VentaAuto__IdUsu__208CD6FA" Association="Self.FK__VentaAuto__IdUsu__208CD6FA">
+>>>>>>> jennifer
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="VentaAuto" EntitySet="VentaAuto" />
           </AssociationSet>
@@ -1138,9 +1514,15 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           <Property Name="Precio" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="IdAccesorioList" Type="Int32" />
           <Property Name="IdConcesinaria" Type="Int32" />
+<<<<<<< HEAD
           <NavigationProperty Name="AccesorioList" Relationship="Self.FK__Accesorio__IdAcc__59063A47" FromRole="Accesorio" ToRole="AccesorioList" />
           <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Accesorio__IdCon__59FA5E80" FromRole="Accesorio" ToRole="Concesinaria" />
           <NavigationProperty Name="AutoAccesorio" Relationship="Self.FK__AutoAcces__IdAcc__5CD6CB2B" FromRole="Accesorio" ToRole="AutoAccesorio" />
+=======
+          <NavigationProperty Name="AccesorioList" Relationship="Self.FK__Accesorio__IdAcc__7E37BEF6" FromRole="Accesorio" ToRole="AccesorioList" />
+          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Accesorio__IdCon__7F2BE32F" FromRole="Accesorio" ToRole="Concesinaria" />
+          <NavigationProperty Name="AutoAccesorio" Relationship="Self.FK__AutoAcces__IdAcc__02084FDA" FromRole="Accesorio" ToRole="AutoAccesorio" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="AccesorioList">
           <Key>
@@ -1151,9 +1533,15 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="IdAutoModelo" Type="Int32" />
           <Property Name="IdAnios" Type="Int32" />
+<<<<<<< HEAD
           <NavigationProperty Name="Accesorio" Relationship="Self.FK__Accesorio__IdAcc__59063A47" FromRole="AccesorioList" ToRole="Accesorio" />
           <NavigationProperty Name="Anios" Relationship="Self.FK__Accesorio__IdAni__5629CD9C" FromRole="AccesorioList" ToRole="Anios" />
           <NavigationProperty Name="AutoModelo" Relationship="Self.FK__Accesorio__IdAut__5535A963" FromRole="AccesorioList" ToRole="AutoModelo" />
+=======
+          <NavigationProperty Name="Accesorio" Relationship="Self.FK__Accesorio__IdAcc__7E37BEF6" FromRole="AccesorioList" ToRole="Accesorio" />
+          <NavigationProperty Name="Anios" Relationship="Self.FK__Accesorio__IdAni__7B5B524B" FromRole="AccesorioList" ToRole="Anios" />
+          <NavigationProperty Name="AutoModelo" Relationship="Self.FK__Accesorio__IdAut__7A672E12" FromRole="AccesorioList" ToRole="AutoModelo" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="Anios">
           <Key>
@@ -1161,9 +1549,15 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           </Key>
           <Property Name="IdAnios" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Numero" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+<<<<<<< HEAD
           <NavigationProperty Name="AccesorioList" Relationship="Self.FK__Accesorio__IdAni__5629CD9C" FromRole="Anios" ToRole="AccesorioList" />
           <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAni__4E88ABD4" FromRole="Anios" ToRole="Automovil" />
           <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__Promocion__IdAni__44FF419A" FromRole="Anios" ToRole="Promocion_Auto" />
+=======
+          <NavigationProperty Name="AccesorioList" Relationship="Self.FK__Accesorio__IdAni__7B5B524B" FromRole="Anios" ToRole="AccesorioList" />
+          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAni__73BA3083" FromRole="Anios" ToRole="Automovil" />
+          <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__Promocion__IdAni__6A30C649" FromRole="Anios" ToRole="Promocion_Auto" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="AutoAccesorio">
           <Key>
@@ -1172,8 +1566,13 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           <Property Name="IdAutoAccesorio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdAccesorio" Type="Int32" />
           <Property Name="IdAutomovil" Type="Int32" />
+<<<<<<< HEAD
           <NavigationProperty Name="Accesorio" Relationship="Self.FK__AutoAcces__IdAcc__5CD6CB2B" FromRole="AutoAccesorio" ToRole="Accesorio" />
           <NavigationProperty Name="Automovil" Relationship="Self.FK__AutoAcces__IdAut__5DCAEF64" FromRole="AutoAccesorio" ToRole="Automovil" />
+=======
+          <NavigationProperty Name="Accesorio" Relationship="Self.FK__AutoAcces__IdAcc__02084FDA" FromRole="AutoAccesorio" ToRole="Accesorio" />
+          <NavigationProperty Name="Automovil" Relationship="Self.FK__AutoAcces__IdAut__02FC7413" FromRole="AutoAccesorio" ToRole="Automovil" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="AutoCliente">
           <Key>
@@ -1184,9 +1583,15 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           <Property Name="IdVentaAuto" Type="Int32" />
           <Property Name="IdPromocion_Auto" Type="Int32" />
           <Property Name="Promo" Type="Boolean" />
+<<<<<<< HEAD
           <NavigationProperty Name="Automovil" Relationship="Self.FK__AutoClien__IdAut__00200768" FromRole="AutoCliente" ToRole="Automovil" />
           <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__AutoClien__IdPro__02084FDA" FromRole="AutoCliente" ToRole="Promocion_Auto" />
           <NavigationProperty Name="VentaAuto" Relationship="Self.FK__AutoClien__IdVen__01142BA1" FromRole="AutoCliente" ToRole="VentaAuto" />
+=======
+          <NavigationProperty Name="Automovil" Relationship="Self.FK__AutoClien__IdAut__25518C17" FromRole="AutoCliente" ToRole="Automovil" />
+          <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__AutoClien__IdPro__2739D489" FromRole="AutoCliente" ToRole="Promocion_Auto" />
+          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__AutoClien__IdVen__2645B050" FromRole="AutoCliente" ToRole="VentaAuto" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="AutoColorList">
           <Key>
@@ -1194,7 +1599,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           </Key>
           <Property Name="IdAutoColor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+<<<<<<< HEAD
           <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAut__5070F446" FromRole="AutoColorList" ToRole="Automovil" />
+=======
+          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAut__75A278F5" FromRole="AutoColorList" ToRole="Automovil" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="AutoEstadoList">
           <Key>
@@ -1202,7 +1611,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           </Key>
           <Property Name="IdAutoEstado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+<<<<<<< HEAD
           <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAut__5165187F" FromRole="AutoEstadoList" ToRole="Automovil" />
+=======
+          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAut__76969D2E" FromRole="AutoEstadoList" ToRole="Automovil" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="AutoMarca">
           <Key>
@@ -1210,7 +1623,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           </Key>
           <Property Name="IdAutoMarca" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+<<<<<<< HEAD
           <NavigationProperty Name="AutoModelo" Relationship="Self.FK__AutoModel__IdAut__412EB0B6" FromRole="AutoMarca" ToRole="AutoModelo" />
+=======
+          <NavigationProperty Name="AutoModelo" Relationship="Self.FK__AutoModel__IdAut__66603565" FromRole="AutoMarca" ToRole="AutoModelo" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="AutoModelo">
           <Key>
@@ -1219,10 +1636,17 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           <Property Name="IdAutoModelo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
           <Property Name="IdAutoMarca" Type="Int32" />
+<<<<<<< HEAD
           <NavigationProperty Name="AccesorioList" Relationship="Self.FK__Accesorio__IdAut__5535A963" FromRole="AutoModelo" ToRole="AccesorioList" />
           <NavigationProperty Name="AutoMarca" Relationship="Self.FK__AutoModel__IdAut__412EB0B6" FromRole="AutoModelo" ToRole="AutoMarca" />
           <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAut__4F7CD00D" FromRole="AutoModelo" ToRole="Automovil" />
           <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__Promocion__IdAut__440B1D61" FromRole="AutoModelo" ToRole="Promocion_Auto" />
+=======
+          <NavigationProperty Name="AccesorioList" Relationship="Self.FK__Accesorio__IdAut__7A672E12" FromRole="AutoModelo" ToRole="AccesorioList" />
+          <NavigationProperty Name="AutoMarca" Relationship="Self.FK__AutoModel__IdAut__66603565" FromRole="AutoModelo" ToRole="AutoMarca" />
+          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdAut__74AE54BC" FromRole="AutoModelo" ToRole="Automovil" />
+          <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__Promocion__IdAut__693CA210" FromRole="AutoModelo" ToRole="Promocion_Auto" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="Automovil">
           <Key>
@@ -1239,6 +1663,7 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           <Property Name="IdAutoColor" Type="Int32" />
           <Property Name="IdAutoEstado" Type="Int32" />
           <Property Name="IdConcesinaria" Type="Int32" />
+<<<<<<< HEAD
           <NavigationProperty Name="Anios" Relationship="Self.FK__Automovil__IdAni__4E88ABD4" FromRole="Automovil" ToRole="Anios" />
           <NavigationProperty Name="AutoAccesorio" Relationship="Self.FK__AutoAcces__IdAut__5DCAEF64" FromRole="Automovil" ToRole="AutoAccesorio" />
           <NavigationProperty Name="AutoCliente" Relationship="Self.FK__AutoClien__IdAut__00200768" FromRole="Automovil" ToRole="AutoCliente" />
@@ -1249,6 +1674,18 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           <NavigationProperty Name="Mantenimiento" Relationship="Self.FK__Mantenimi__IdAut__0D7A0286" FromRole="Automovil" ToRole="Mantenimiento" />
           <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdAut__66603565" FromRole="Automovil" ToRole="Origen_Fabrica" />
           <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdAut__6D0D32F4" FromRole="Automovil" ToRole="Origen_Traspaso" />
+=======
+          <NavigationProperty Name="Anios" Relationship="Self.FK__Automovil__IdAni__73BA3083" FromRole="Automovil" ToRole="Anios" />
+          <NavigationProperty Name="AutoAccesorio" Relationship="Self.FK__AutoAcces__IdAut__02FC7413" FromRole="Automovil" ToRole="AutoAccesorio" />
+          <NavigationProperty Name="AutoCliente" Relationship="Self.FK__AutoClien__IdAut__25518C17" FromRole="Automovil" ToRole="AutoCliente" />
+          <NavigationProperty Name="AutoColorList" Relationship="Self.FK__Automovil__IdAut__75A278F5" FromRole="Automovil" ToRole="AutoColorList" />
+          <NavigationProperty Name="AutoEstadoList" Relationship="Self.FK__Automovil__IdAut__76969D2E" FromRole="Automovil" ToRole="AutoEstadoList" />
+          <NavigationProperty Name="AutoModelo" Relationship="Self.FK__Automovil__IdAut__74AE54BC" FromRole="Automovil" ToRole="AutoModelo" />
+          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Automovil__IdCon__778AC167" FromRole="Automovil" ToRole="Concesinaria" />
+          <NavigationProperty Name="Mantenimiento" Relationship="Self.FK__Mantenimi__IdAut__32AB8735" FromRole="Automovil" ToRole="Mantenimiento" />
+          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdAut__0B91BA14" FromRole="Automovil" ToRole="Origen_Fabrica" />
+          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdAut__123EB7A3" FromRole="Automovil" ToRole="Origen_Traspaso" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="Autopartes">
           <Key>
@@ -1260,9 +1697,15 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           <Property Name="Cantidad_Total" Type="Int32" />
           <Property Name="IdCategoriaAutoparte" Type="Int32" />
           <Property Name="IdConcesinaria" Type="Int32" />
+<<<<<<< HEAD
           <NavigationProperty Name="CategoriaAutoparte" Relationship="Self.FK__Autoparte__IdCat__06CD04F7" FromRole="Autopartes" ToRole="CategoriaAutoparte" />
           <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Autoparte__IdCon__07C12930" FromRole="Autopartes" ToRole="Concesinaria" />
           <NavigationProperty Name="Manten_Autopar" Relationship="Self.FK__Manten_Au__IdAut__123EB7A3" FromRole="Autopartes" ToRole="Manten_Autopar" />
+=======
+          <NavigationProperty Name="CategoriaAutoparte" Relationship="Self.FK__Autoparte__IdCat__2BFE89A6" FromRole="Autopartes" ToRole="CategoriaAutoparte" />
+          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Autoparte__IdCon__2CF2ADDF" FromRole="Autopartes" ToRole="Concesinaria" />
+          <NavigationProperty Name="Manten_Autopar" Relationship="Self.FK__Manten_Au__IdAut__37703C52" FromRole="Autopartes" ToRole="Manten_Autopar" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="CategoriaAutoparte">
           <Key>
@@ -1270,7 +1713,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           </Key>
           <Property Name="IdCategoriaAutoparte" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Categoria" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+<<<<<<< HEAD
           <NavigationProperty Name="Autopartes" Relationship="Self.FK__Autoparte__IdCat__06CD04F7" FromRole="CategoriaAutoparte" ToRole="Autopartes" />
+=======
+          <NavigationProperty Name="Autopartes" Relationship="Self.FK__Autoparte__IdCat__2BFE89A6" FromRole="CategoriaAutoparte" ToRole="Autopartes" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="Cliente">
           <Key>
@@ -1288,10 +1735,17 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           <Property Name="RFC" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
           <Property Name="IdMunicipio" Type="Int32" />
           <Property Name="IdEstado_Cliente" Type="Int32" />
+<<<<<<< HEAD
           <NavigationProperty Name="Estado_Cliente" Relationship="Self.FK__Cliente__IdEstad__73BA3083" FromRole="Cliente" ToRole="Estado_Cliente" />
           <NavigationProperty Name="Municipio" Relationship="Self.FK__Cliente__IdMunic__72C60C4A" FromRole="Cliente" ToRole="Municipio" />
           <NavigationProperty Name="Referencias" Relationship="Self.FK__Referenci__IdCli__76969D2E" FromRole="Cliente" ToRole="Referencias" />
           <NavigationProperty Name="VentaAuto" Relationship="Self.FK__VentaAuto__IdCli__7C4F7684" FromRole="Cliente" ToRole="VentaAuto" />
+=======
+          <NavigationProperty Name="Estado_Cliente" Relationship="Self.FK__Cliente__IdEstad__18EBB532" FromRole="Cliente" ToRole="Estado_Cliente" />
+          <NavigationProperty Name="Municipio" Relationship="Self.FK__Cliente__IdMunic__17F790F9" FromRole="Cliente" ToRole="Municipio" />
+          <NavigationProperty Name="Referencias" Relationship="Self.FK__Referenci__IdCli__1BC821DD" FromRole="Cliente" ToRole="Referencias" />
+          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__VentaAuto__IdCli__2180FB33" FromRole="Cliente" ToRole="VentaAuto" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="Concesinaria">
           <Key>
@@ -1302,6 +1756,7 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           <Property Name="Clave" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="IdMunicipio" Type="Int32" />
+<<<<<<< HEAD
           <NavigationProperty Name="Accesorio" Relationship="Self.FK__Accesorio__IdCon__59FA5E80" FromRole="Concesinaria" ToRole="Accesorio" />
           <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdCon__52593CB8" FromRole="Concesinaria" ToRole="Automovil" />
           <NavigationProperty Name="Autopartes" Relationship="Self.FK__Autoparte__IdCon__07C12930" FromRole="Concesinaria" ToRole="Autopartes" />
@@ -1309,6 +1764,15 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           <NavigationProperty Name="Empleado" Relationship="Self.FK__Empleado__IdConc__34C8D9D1" FromRole="Concesinaria" ToRole="Empleado" />
           <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdCon__6C190EBB" FromRole="Concesinaria" ToRole="Origen_Traspaso" />
           <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__Promocion__IdCon__46E78A0C" FromRole="Concesinaria" ToRole="Promocion_Auto" />
+=======
+          <NavigationProperty Name="Accesorio" Relationship="Self.FK__Accesorio__IdCon__7F2BE32F" FromRole="Concesinaria" ToRole="Accesorio" />
+          <NavigationProperty Name="Automovil" Relationship="Self.FK__Automovil__IdCon__778AC167" FromRole="Concesinaria" ToRole="Automovil" />
+          <NavigationProperty Name="Autopartes" Relationship="Self.FK__Autoparte__IdCon__2CF2ADDF" FromRole="Concesinaria" ToRole="Autopartes" />
+          <NavigationProperty Name="Municipio" Relationship="Self.FK__Concesina__IdMun__52593CB8" FromRole="Concesinaria" ToRole="Municipio" />
+          <NavigationProperty Name="Empleado" Relationship="Self.FK__Empleado__IdConc__59FA5E80" FromRole="Concesinaria" ToRole="Empleado" />
+          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdCon__114A936A" FromRole="Concesinaria" ToRole="Origen_Traspaso" />
+          <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__Promocion__IdCon__6C190EBB" FromRole="Concesinaria" ToRole="Promocion_Auto" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="Empleado">
           <Key>
@@ -1321,9 +1785,15 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           <Property Name="C_Estado" Type="Boolean" />
           <Property Name="IdTipoEmpleado" Type="Int32" />
           <Property Name="IdConcesinaria" Type="Int32" />
+<<<<<<< HEAD
           <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Empleado__IdConc__34C8D9D1" FromRole="Empleado" ToRole="Concesinaria" />
           <NavigationProperty Name="TipoEmpleado" Relationship="Self.FK__Empleado__IdTipo__33D4B598" FromRole="Empleado" ToRole="TipoEmpleado" />
           <NavigationProperty Name="Usuario" Relationship="Self.FK__Usuario__IdEmple__38996AB5" FromRole="Empleado" ToRole="Usuario" />
+=======
+          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Empleado__IdConc__59FA5E80" FromRole="Empleado" ToRole="Concesinaria" />
+          <NavigationProperty Name="TipoEmpleado" Relationship="Self.FK__Empleado__IdTipo__59063A47" FromRole="Empleado" ToRole="TipoEmpleado" />
+          <NavigationProperty Name="Usuario" Relationship="Self.FK__Usuario__IdEmple__5DCAEF64" FromRole="Empleado" ToRole="Usuario" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="Estado">
           <Key>
@@ -1332,8 +1802,13 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           <Property Name="IdEstado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="IdPais" Type="Int32" />
+<<<<<<< HEAD
           <NavigationProperty Name="Pais" Relationship="Self.FK__Estado__IdPais__276EDEB3" FromRole="Estado" ToRole="Pais" />
           <NavigationProperty Name="Municipio" Relationship="Self.FK__Municipio__IdEst__2A4B4B5E" FromRole="Estado" ToRole="Municipio" />
+=======
+          <NavigationProperty Name="Pais" Relationship="Self.FK__Estado__IdPais__4CA06362" FromRole="Estado" ToRole="Pais" />
+          <NavigationProperty Name="Municipio" Relationship="Self.FK__Municipio__IdEst__4F7CD00D" FromRole="Estado" ToRole="Municipio" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="Estado_Cliente">
           <Key>
@@ -1341,7 +1816,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           </Key>
           <Property Name="IdEstado_Cliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+<<<<<<< HEAD
           <NavigationProperty Name="Cliente" Relationship="Self.FK__Cliente__IdEstad__73BA3083" FromRole="Estado_Cliente" ToRole="Cliente" />
+=======
+          <NavigationProperty Name="Cliente" Relationship="Self.FK__Cliente__IdEstad__18EBB532" FromRole="Estado_Cliente" ToRole="Cliente" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="EstadoVenta">
           <Key>
@@ -1349,7 +1828,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           </Key>
           <Property Name="IdEstadoVenta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+<<<<<<< HEAD
           <NavigationProperty Name="VentaAuto" Relationship="Self.FK__VentaAuto__IdEst__7D439ABD" FromRole="EstadoVenta" ToRole="VentaAuto" />
+=======
+          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__VentaAuto__IdEst__22751F6C" FromRole="EstadoVenta" ToRole="VentaAuto" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="Fabrica">
           <Key>
@@ -1358,7 +1841,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           <Property Name="IdFabrica" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Numero" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+<<<<<<< HEAD
           <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdFab__6477ECF3" FromRole="Fabrica" ToRole="Origen_Fabrica" />
+=======
+          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdFab__09A971A2" FromRole="Fabrica" ToRole="Origen_Fabrica" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="Manten_Autopar">
           <Key>
@@ -1369,8 +1856,13 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           <Property Name="IdMantenimiento" Type="Int32" />
           <Property Name="IdAutopartes" Type="Int32" />
           <Property Name="Cantidad_Autopartes" Type="Int32" />
+<<<<<<< HEAD
           <NavigationProperty Name="Autopartes" Relationship="Self.FK__Manten_Au__IdAut__123EB7A3" FromRole="Manten_Autopar" ToRole="Autopartes" />
           <NavigationProperty Name="Mantenimiento" Relationship="Self.FK__Manten_Au__IdMan__114A936A" FromRole="Manten_Autopar" ToRole="Mantenimiento" />
+=======
+          <NavigationProperty Name="Autopartes" Relationship="Self.FK__Manten_Au__IdAut__37703C52" FromRole="Manten_Autopar" ToRole="Autopartes" />
+          <NavigationProperty Name="Mantenimiento" Relationship="Self.FK__Manten_Au__IdMan__367C1819" FromRole="Manten_Autopar" ToRole="Mantenimiento" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="MantenEstado">
           <Key>
@@ -1378,7 +1870,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           </Key>
           <Property Name="IdMantenEstado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+<<<<<<< HEAD
           <NavigationProperty Name="Mantenimiento" Relationship="Self.FK__Mantenimi__IdMan__0E6E26BF" FromRole="MantenEstado" ToRole="Mantenimiento" />
+=======
+          <NavigationProperty Name="Mantenimiento" Relationship="Self.FK__Mantenimi__IdMan__339FAB6E" FromRole="MantenEstado" ToRole="Mantenimiento" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="Mantenimiento">
           <Key>
@@ -1389,10 +1885,17 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           <Property Name="IdUsuario" Type="Int32" />
           <Property Name="IdAutomovil" Type="Int32" />
           <Property Name="IdMantenEstado" Type="Int32" />
+<<<<<<< HEAD
           <NavigationProperty Name="Automovil" Relationship="Self.FK__Mantenimi__IdAut__0D7A0286" FromRole="Mantenimiento" ToRole="Automovil" />
           <NavigationProperty Name="Manten_Autopar" Relationship="Self.FK__Manten_Au__IdMan__114A936A" FromRole="Mantenimiento" ToRole="Manten_Autopar" />
           <NavigationProperty Name="MantenEstado" Relationship="Self.FK__Mantenimi__IdMan__0E6E26BF" FromRole="Mantenimiento" ToRole="MantenEstado" />
           <NavigationProperty Name="Usuario" Relationship="Self.FK__Mantenimi__IdUsu__0C85DE4D" FromRole="Mantenimiento" ToRole="Usuario" />
+=======
+          <NavigationProperty Name="Automovil" Relationship="Self.FK__Mantenimi__IdAut__32AB8735" FromRole="Mantenimiento" ToRole="Automovil" />
+          <NavigationProperty Name="Manten_Autopar" Relationship="Self.FK__Manten_Au__IdMan__367C1819" FromRole="Mantenimiento" ToRole="Manten_Autopar" />
+          <NavigationProperty Name="MantenEstado" Relationship="Self.FK__Mantenimi__IdMan__339FAB6E" FromRole="Mantenimiento" ToRole="MantenEstado" />
+          <NavigationProperty Name="Usuario" Relationship="Self.FK__Mantenimi__IdUsu__31B762FC" FromRole="Mantenimiento" ToRole="Usuario" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="Municipio">
           <Key>
@@ -1401,9 +1904,15 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           <Property Name="IdMunicipio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="IdEstado" Type="Int32" />
+<<<<<<< HEAD
           <NavigationProperty Name="Cliente" Relationship="Self.FK__Cliente__IdMunic__72C60C4A" FromRole="Municipio" ToRole="Cliente" />
           <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Concesina__IdMun__2D27B809" FromRole="Municipio" ToRole="Concesinaria" />
           <NavigationProperty Name="Estado" Relationship="Self.FK__Municipio__IdEst__2A4B4B5E" FromRole="Municipio" ToRole="Estado" />
+=======
+          <NavigationProperty Name="Cliente" Relationship="Self.FK__Cliente__IdMunic__17F790F9" FromRole="Municipio" ToRole="Cliente" />
+          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Concesina__IdMun__52593CB8" FromRole="Municipio" ToRole="Concesinaria" />
+          <NavigationProperty Name="Estado" Relationship="Self.FK__Municipio__IdEst__4F7CD00D" FromRole="Municipio" ToRole="Estado" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="Origen_Fabrica">
           <Key>
@@ -1415,10 +1924,17 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           <Property Name="IdUsuario" Type="Int32" />
           <Property Name="IdAutomovil" Type="Int32" />
           <Property Name="IdOrigenEstado" Type="Int32" />
+<<<<<<< HEAD
           <NavigationProperty Name="Automovil" Relationship="Self.FK__Origen_Fa__IdAut__66603565" FromRole="Origen_Fabrica" ToRole="Automovil" />
           <NavigationProperty Name="Fabrica" Relationship="Self.FK__Origen_Fa__IdFab__6477ECF3" FromRole="Origen_Fabrica" ToRole="Fabrica" />
           <NavigationProperty Name="OrigenEstado" Relationship="Self.FK__Origen_Fa__IdOri__6754599E" FromRole="Origen_Fabrica" ToRole="OrigenEstado" />
           <NavigationProperty Name="Usuario" Relationship="Self.FK__Origen_Fa__IdUsu__656C112C" FromRole="Origen_Fabrica" ToRole="Usuario" />
+=======
+          <NavigationProperty Name="Automovil" Relationship="Self.FK__Origen_Fa__IdAut__0B91BA14" FromRole="Origen_Fabrica" ToRole="Automovil" />
+          <NavigationProperty Name="Fabrica" Relationship="Self.FK__Origen_Fa__IdFab__09A971A2" FromRole="Origen_Fabrica" ToRole="Fabrica" />
+          <NavigationProperty Name="OrigenEstado" Relationship="Self.FK__Origen_Fa__IdOri__0C85DE4D" FromRole="Origen_Fabrica" ToRole="OrigenEstado" />
+          <NavigationProperty Name="Usuario" Relationship="Self.FK__Origen_Fa__IdUsu__0A9D95DB" FromRole="Origen_Fabrica" ToRole="Usuario" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="Origen_Traspaso">
           <Key>
@@ -1431,11 +1947,19 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           <Property Name="IdConcesinaria" Type="Int32" />
           <Property Name="IdAutomovil" Type="Int32" />
           <Property Name="IdOrigenEstado" Type="Int32" />
+<<<<<<< HEAD
           <NavigationProperty Name="Automovil" Relationship="Self.FK__Origen_Tr__IdAut__6D0D32F4" FromRole="Origen_Traspaso" ToRole="Automovil" />
           <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Origen_Tr__IdCon__6C190EBB" FromRole="Origen_Traspaso" ToRole="Concesinaria" />
           <NavigationProperty Name="Usuario" Relationship="Self.FK__Origen_Tr__IdCom__6B24EA82" FromRole="Origen_Traspaso" ToRole="Usuario" />
           <NavigationProperty Name="OrigenEstado" Relationship="Self.FK__Origen_Tr__IdOri__6E01572D" FromRole="Origen_Traspaso" ToRole="OrigenEstado" />
           <NavigationProperty Name="Usuario1" Relationship="Self.FK__Origen_Tr__IdVen__6A30C649" FromRole="Origen_Traspaso" ToRole="Usuario" />
+=======
+          <NavigationProperty Name="Automovil" Relationship="Self.FK__Origen_Tr__IdAut__123EB7A3" FromRole="Origen_Traspaso" ToRole="Automovil" />
+          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Origen_Tr__IdCon__114A936A" FromRole="Origen_Traspaso" ToRole="Concesinaria" />
+          <NavigationProperty Name="Usuario" Relationship="Self.FK__Origen_Tr__IdCom__10566F31" FromRole="Origen_Traspaso" ToRole="Usuario" />
+          <NavigationProperty Name="OrigenEstado" Relationship="Self.FK__Origen_Tr__IdOri__1332DBDC" FromRole="Origen_Traspaso" ToRole="OrigenEstado" />
+          <NavigationProperty Name="Usuario1" Relationship="Self.FK__Origen_Tr__IdVen__0F624AF8" FromRole="Origen_Traspaso" ToRole="Usuario" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="OrigenEstado">
           <Key>
@@ -1443,8 +1967,13 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           </Key>
           <Property Name="IdOrigenEstado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+<<<<<<< HEAD
           <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdOri__6754599E" FromRole="OrigenEstado" ToRole="Origen_Fabrica" />
           <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdOri__6E01572D" FromRole="OrigenEstado" ToRole="Origen_Traspaso" />
+=======
+          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdOri__0C85DE4D" FromRole="OrigenEstado" ToRole="Origen_Fabrica" />
+          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdOri__1332DBDC" FromRole="OrigenEstado" ToRole="Origen_Traspaso" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="Pais">
           <Key>
@@ -1452,7 +1981,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           </Key>
           <Property Name="IdPais" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+<<<<<<< HEAD
           <NavigationProperty Name="Estado" Relationship="Self.FK__Estado__IdPais__276EDEB3" FromRole="Pais" ToRole="Estado" />
+=======
+          <NavigationProperty Name="Estado" Relationship="Self.FK__Estado__IdPais__4CA06362" FromRole="Pais" ToRole="Estado" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="Promocion_Auto">
           <Key>
@@ -1464,11 +1997,19 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           <Property Name="IdPromocion" Type="Int32" />
           <Property Name="IdConcesinaria" Type="Int32" />
           <Property Name="Vigente" Type="Boolean" />
+<<<<<<< HEAD
           <NavigationProperty Name="Anios" Relationship="Self.FK__Promocion__IdAni__44FF419A" FromRole="Promocion_Auto" ToRole="Anios" />
           <NavigationProperty Name="AutoCliente" Relationship="Self.FK__AutoClien__IdPro__02084FDA" FromRole="Promocion_Auto" ToRole="AutoCliente" />
           <NavigationProperty Name="AutoModelo" Relationship="Self.FK__Promocion__IdAut__440B1D61" FromRole="Promocion_Auto" ToRole="AutoModelo" />
           <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Promocion__IdCon__46E78A0C" FromRole="Promocion_Auto" ToRole="Concesinaria" />
           <NavigationProperty Name="PromocionList" Relationship="Self.FK__Promocion__IdPro__45F365D3" FromRole="Promocion_Auto" ToRole="PromocionList" />
+=======
+          <NavigationProperty Name="Anios" Relationship="Self.FK__Promocion__IdAni__6A30C649" FromRole="Promocion_Auto" ToRole="Anios" />
+          <NavigationProperty Name="AutoCliente" Relationship="Self.FK__AutoClien__IdPro__2739D489" FromRole="Promocion_Auto" ToRole="AutoCliente" />
+          <NavigationProperty Name="AutoModelo" Relationship="Self.FK__Promocion__IdAut__693CA210" FromRole="Promocion_Auto" ToRole="AutoModelo" />
+          <NavigationProperty Name="Concesinaria" Relationship="Self.FK__Promocion__IdCon__6C190EBB" FromRole="Promocion_Auto" ToRole="Concesinaria" />
+          <NavigationProperty Name="PromocionList" Relationship="Self.FK__Promocion__IdPro__6B24EA82" FromRole="Promocion_Auto" ToRole="PromocionList" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="PromocionList">
           <Key>
@@ -1480,7 +2021,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           <Property Name="Descuento" Type="Int32" />
           <Property Name="FechaVigencia" Type="DateTime" Precision="0" />
           <Property Name="Tipo" Type="Boolean" />
+<<<<<<< HEAD
           <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__Promocion__IdPro__45F365D3" FromRole="PromocionList" ToRole="Promocion_Auto" />
+=======
+          <NavigationProperty Name="Promocion_Auto" Relationship="Self.FK__Promocion__IdPro__6B24EA82" FromRole="PromocionList" ToRole="Promocion_Auto" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="Referencias">
           <Key>
@@ -1491,7 +2036,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="TelCel" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="IdCliente" Type="Int32" />
+<<<<<<< HEAD
           <NavigationProperty Name="Cliente" Relationship="Self.FK__Referenci__IdCli__76969D2E" FromRole="Referencias" ToRole="Cliente" />
+=======
+          <NavigationProperty Name="Cliente" Relationship="Self.FK__Referenci__IdCli__1BC821DD" FromRole="Referencias" ToRole="Cliente" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="TipoEmpleado">
           <Key>
@@ -1500,7 +2049,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           <Property Name="IdTipoEmpleado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="C_Estado" Type="Boolean" />
+<<<<<<< HEAD
           <NavigationProperty Name="Empleado" Relationship="Self.FK__Empleado__IdTipo__33D4B598" FromRole="TipoEmpleado" ToRole="Empleado" />
+=======
+          <NavigationProperty Name="Empleado" Relationship="Self.FK__Empleado__IdTipo__59063A47" FromRole="TipoEmpleado" ToRole="Empleado" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="Usuario">
           <Key>
@@ -1511,12 +2064,21 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           <Property Name="Contrasena" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Acceso" Type="Boolean" />
           <Property Name="IdEmpleado" Type="Int32" />
+<<<<<<< HEAD
           <NavigationProperty Name="Empleado" Relationship="Self.FK__Usuario__IdEmple__38996AB5" FromRole="Usuario" ToRole="Empleado" />
           <NavigationProperty Name="Mantenimiento" Relationship="Self.FK__Mantenimi__IdUsu__0C85DE4D" FromRole="Usuario" ToRole="Mantenimiento" />
           <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdUsu__656C112C" FromRole="Usuario" ToRole="Origen_Fabrica" />
           <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdCom__6B24EA82" FromRole="Usuario" ToRole="Origen_Traspaso" />
           <NavigationProperty Name="Origen_Traspaso1" Relationship="Self.FK__Origen_Tr__IdVen__6A30C649" FromRole="Usuario" ToRole="Origen_Traspaso" />
           <NavigationProperty Name="VentaAuto" Relationship="Self.FK__VentaAuto__IdUsu__7B5B524B" FromRole="Usuario" ToRole="VentaAuto" />
+=======
+          <NavigationProperty Name="Empleado" Relationship="Self.FK__Usuario__IdEmple__5DCAEF64" FromRole="Usuario" ToRole="Empleado" />
+          <NavigationProperty Name="Mantenimiento" Relationship="Self.FK__Mantenimi__IdUsu__31B762FC" FromRole="Usuario" ToRole="Mantenimiento" />
+          <NavigationProperty Name="Origen_Fabrica" Relationship="Self.FK__Origen_Fa__IdUsu__0A9D95DB" FromRole="Usuario" ToRole="Origen_Fabrica" />
+          <NavigationProperty Name="Origen_Traspaso" Relationship="Self.FK__Origen_Tr__IdCom__10566F31" FromRole="Usuario" ToRole="Origen_Traspaso" />
+          <NavigationProperty Name="Origen_Traspaso1" Relationship="Self.FK__Origen_Tr__IdVen__0F624AF8" FromRole="Usuario" ToRole="Origen_Traspaso" />
+          <NavigationProperty Name="VentaAuto" Relationship="Self.FK__VentaAuto__IdUsu__208CD6FA" FromRole="Usuario" ToRole="VentaAuto" />
+>>>>>>> jennifer
         </EntityType>
         <EntityType Name="VentaAuto">
           <Key>
@@ -1527,12 +2089,21 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           <Property Name="IdUsuario" Type="Int32" />
           <Property Name="IdCliente" Type="Int32" />
           <Property Name="IdEstadoVenta" Type="Int32" />
+<<<<<<< HEAD
           <NavigationProperty Name="AutoCliente" Relationship="Self.FK__AutoClien__IdVen__01142BA1" FromRole="VentaAuto" ToRole="AutoCliente" />
           <NavigationProperty Name="Cliente" Relationship="Self.FK__VentaAuto__IdCli__7C4F7684" FromRole="VentaAuto" ToRole="Cliente" />
           <NavigationProperty Name="EstadoVenta" Relationship="Self.FK__VentaAuto__IdEst__7D439ABD" FromRole="VentaAuto" ToRole="EstadoVenta" />
           <NavigationProperty Name="Usuario" Relationship="Self.FK__VentaAuto__IdUsu__7B5B524B" FromRole="VentaAuto" ToRole="Usuario" />
         </EntityType>
         <Association Name="FK__Accesorio__IdAcc__59063A47">
+=======
+          <NavigationProperty Name="AutoCliente" Relationship="Self.FK__AutoClien__IdVen__2645B050" FromRole="VentaAuto" ToRole="AutoCliente" />
+          <NavigationProperty Name="Cliente" Relationship="Self.FK__VentaAuto__IdCli__2180FB33" FromRole="VentaAuto" ToRole="Cliente" />
+          <NavigationProperty Name="EstadoVenta" Relationship="Self.FK__VentaAuto__IdEst__22751F6C" FromRole="VentaAuto" ToRole="EstadoVenta" />
+          <NavigationProperty Name="Usuario" Relationship="Self.FK__VentaAuto__IdUsu__208CD6FA" FromRole="VentaAuto" ToRole="Usuario" />
+        </EntityType>
+        <Association Name="FK__Accesorio__IdAcc__7E37BEF6">
+>>>>>>> jennifer
           <End Role="AccesorioList" Type="Self.AccesorioList" Multiplicity="0..1" />
           <End Role="Accesorio" Type="Self.Accesorio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1544,7 +2115,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Accesorio__IdCon__59FA5E80">
+=======
+        <Association Name="FK__Accesorio__IdCon__7F2BE32F">
+>>>>>>> jennifer
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="0..1" />
           <End Role="Accesorio" Type="Self.Accesorio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1556,7 +2131,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__AutoAcces__IdAcc__5CD6CB2B">
+=======
+        <Association Name="FK__AutoAcces__IdAcc__02084FDA">
+>>>>>>> jennifer
           <End Role="Accesorio" Type="Self.Accesorio" Multiplicity="0..1" />
           <End Role="AutoAccesorio" Type="Self.AutoAccesorio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1568,7 +2147,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Accesorio__IdAni__5629CD9C">
+=======
+        <Association Name="FK__Accesorio__IdAni__7B5B524B">
+>>>>>>> jennifer
           <End Role="Anios" Type="Self.Anios" Multiplicity="0..1" />
           <End Role="AccesorioList" Type="Self.AccesorioList" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1580,7 +2163,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Accesorio__IdAut__5535A963">
+=======
+        <Association Name="FK__Accesorio__IdAut__7A672E12">
+>>>>>>> jennifer
           <End Role="AutoModelo" Type="Self.AutoModelo" Multiplicity="0..1" />
           <End Role="AccesorioList" Type="Self.AccesorioList" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1592,7 +2179,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Automovil__IdAni__4E88ABD4">
+=======
+        <Association Name="FK__Automovil__IdAni__73BA3083">
+>>>>>>> jennifer
           <End Role="Anios" Type="Self.Anios" Multiplicity="0..1" />
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1604,7 +2195,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Promocion__IdAni__44FF419A">
+=======
+        <Association Name="FK__Promocion__IdAni__6A30C649">
+>>>>>>> jennifer
           <End Role="Anios" Type="Self.Anios" Multiplicity="0..1" />
           <End Role="Promocion_Auto" Type="Self.Promocion_Auto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1616,7 +2211,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__AutoAcces__IdAut__5DCAEF64">
+=======
+        <Association Name="FK__AutoAcces__IdAut__02FC7413">
+>>>>>>> jennifer
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="AutoAccesorio" Type="Self.AutoAccesorio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1628,7 +2227,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__AutoClien__IdAut__00200768">
+=======
+        <Association Name="FK__AutoClien__IdAut__25518C17">
+>>>>>>> jennifer
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="AutoCliente" Type="Self.AutoCliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1640,7 +2243,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__AutoClien__IdPro__02084FDA">
+=======
+        <Association Name="FK__AutoClien__IdPro__2739D489">
+>>>>>>> jennifer
           <End Role="Promocion_Auto" Type="Self.Promocion_Auto" Multiplicity="0..1" />
           <End Role="AutoCliente" Type="Self.AutoCliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1652,7 +2259,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__AutoClien__IdVen__01142BA1">
+=======
+        <Association Name="FK__AutoClien__IdVen__2645B050">
+>>>>>>> jennifer
           <End Role="VentaAuto" Type="Self.VentaAuto" Multiplicity="0..1" />
           <End Role="AutoCliente" Type="Self.AutoCliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1664,7 +2275,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Automovil__IdAut__5070F446">
+=======
+        <Association Name="FK__Automovil__IdAut__75A278F5">
+>>>>>>> jennifer
           <End Role="AutoColorList" Type="Self.AutoColorList" Multiplicity="0..1" />
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1676,7 +2291,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Automovil__IdAut__5165187F">
+=======
+        <Association Name="FK__Automovil__IdAut__76969D2E">
+>>>>>>> jennifer
           <End Role="AutoEstadoList" Type="Self.AutoEstadoList" Multiplicity="0..1" />
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1688,7 +2307,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__AutoModel__IdAut__412EB0B6">
+=======
+        <Association Name="FK__AutoModel__IdAut__66603565">
+>>>>>>> jennifer
           <End Role="AutoMarca" Type="Self.AutoMarca" Multiplicity="0..1" />
           <End Role="AutoModelo" Type="Self.AutoModelo" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1700,7 +2323,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Automovil__IdAut__4F7CD00D">
+=======
+        <Association Name="FK__Automovil__IdAut__74AE54BC">
+>>>>>>> jennifer
           <End Role="AutoModelo" Type="Self.AutoModelo" Multiplicity="0..1" />
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1712,7 +2339,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Promocion__IdAut__440B1D61">
+=======
+        <Association Name="FK__Promocion__IdAut__693CA210">
+>>>>>>> jennifer
           <End Role="AutoModelo" Type="Self.AutoModelo" Multiplicity="0..1" />
           <End Role="Promocion_Auto" Type="Self.Promocion_Auto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1724,7 +2355,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Automovil__IdCon__52593CB8">
+=======
+        <Association Name="FK__Automovil__IdCon__778AC167">
+>>>>>>> jennifer
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="0..1" />
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1736,7 +2371,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Mantenimi__IdAut__0D7A0286">
+=======
+        <Association Name="FK__Mantenimi__IdAut__32AB8735">
+>>>>>>> jennifer
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="Mantenimiento" Type="Self.Mantenimiento" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1748,7 +2387,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Origen_Fa__IdAut__66603565">
+=======
+        <Association Name="FK__Origen_Fa__IdAut__0B91BA14">
+>>>>>>> jennifer
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="Origen_Fabrica" Type="Self.Origen_Fabrica" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1760,7 +2403,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Origen_Tr__IdAut__6D0D32F4">
+=======
+        <Association Name="FK__Origen_Tr__IdAut__123EB7A3">
+>>>>>>> jennifer
           <End Role="Automovil" Type="Self.Automovil" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1772,7 +2419,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Autoparte__IdCat__06CD04F7">
+=======
+        <Association Name="FK__Autoparte__IdCat__2BFE89A6">
+>>>>>>> jennifer
           <End Role="CategoriaAutoparte" Type="Self.CategoriaAutoparte" Multiplicity="0..1" />
           <End Role="Autopartes" Type="Self.Autopartes" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1784,7 +2435,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Autoparte__IdCon__07C12930">
+=======
+        <Association Name="FK__Autoparte__IdCon__2CF2ADDF">
+>>>>>>> jennifer
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="0..1" />
           <End Role="Autopartes" Type="Self.Autopartes" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1796,7 +2451,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Manten_Au__IdAut__123EB7A3">
+=======
+        <Association Name="FK__Manten_Au__IdAut__37703C52">
+>>>>>>> jennifer
           <End Role="Autopartes" Type="Self.Autopartes" Multiplicity="0..1" />
           <End Role="Manten_Autopar" Type="Self.Manten_Autopar" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1808,7 +2467,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Cliente__IdEstad__73BA3083">
+=======
+        <Association Name="FK__Cliente__IdEstad__18EBB532">
+>>>>>>> jennifer
           <End Role="Estado_Cliente" Type="Self.Estado_Cliente" Multiplicity="0..1" />
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1820,7 +2483,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Cliente__IdMunic__72C60C4A">
+=======
+        <Association Name="FK__Cliente__IdMunic__17F790F9">
+>>>>>>> jennifer
           <End Role="Municipio" Type="Self.Municipio" Multiplicity="0..1" />
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1832,7 +2499,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Referenci__IdCli__76969D2E">
+=======
+        <Association Name="FK__Referenci__IdCli__1BC821DD">
+>>>>>>> jennifer
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
           <End Role="Referencias" Type="Self.Referencias" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1844,7 +2515,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__VentaAuto__IdCli__7C4F7684">
+=======
+        <Association Name="FK__VentaAuto__IdCli__2180FB33">
+>>>>>>> jennifer
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
           <End Role="VentaAuto" Type="Self.VentaAuto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1856,7 +2531,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Concesina__IdMun__2D27B809">
+=======
+        <Association Name="FK__Concesina__IdMun__52593CB8">
+>>>>>>> jennifer
           <End Role="Municipio" Type="Self.Municipio" Multiplicity="0..1" />
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1868,7 +2547,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Empleado__IdConc__34C8D9D1">
+=======
+        <Association Name="FK__Empleado__IdConc__59FA5E80">
+>>>>>>> jennifer
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="0..1" />
           <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1880,7 +2563,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Origen_Tr__IdCon__6C190EBB">
+=======
+        <Association Name="FK__Origen_Tr__IdCon__114A936A">
+>>>>>>> jennifer
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1892,7 +2579,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Promocion__IdCon__46E78A0C">
+=======
+        <Association Name="FK__Promocion__IdCon__6C190EBB">
+>>>>>>> jennifer
           <End Role="Concesinaria" Type="Self.Concesinaria" Multiplicity="0..1" />
           <End Role="Promocion_Auto" Type="Self.Promocion_Auto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1904,7 +2595,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Empleado__IdTipo__33D4B598">
+=======
+        <Association Name="FK__Empleado__IdTipo__59063A47">
+>>>>>>> jennifer
           <End Role="TipoEmpleado" Type="Self.TipoEmpleado" Multiplicity="0..1" />
           <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1916,7 +2611,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Usuario__IdEmple__38996AB5">
+=======
+        <Association Name="FK__Usuario__IdEmple__5DCAEF64">
+>>>>>>> jennifer
           <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1928,7 +2627,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Estado__IdPais__276EDEB3">
+=======
+        <Association Name="FK__Estado__IdPais__4CA06362">
+>>>>>>> jennifer
           <End Role="Pais" Type="Self.Pais" Multiplicity="0..1" />
           <End Role="Estado" Type="Self.Estado" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1940,7 +2643,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Municipio__IdEst__2A4B4B5E">
+=======
+        <Association Name="FK__Municipio__IdEst__4F7CD00D">
+>>>>>>> jennifer
           <End Role="Estado" Type="Self.Estado" Multiplicity="0..1" />
           <End Role="Municipio" Type="Self.Municipio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1952,7 +2659,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__VentaAuto__IdEst__7D439ABD">
+=======
+        <Association Name="FK__VentaAuto__IdEst__22751F6C">
+>>>>>>> jennifer
           <End Role="EstadoVenta" Type="Self.EstadoVenta" Multiplicity="0..1" />
           <End Role="VentaAuto" Type="Self.VentaAuto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1964,7 +2675,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Origen_Fa__IdFab__6477ECF3">
+=======
+        <Association Name="FK__Origen_Fa__IdFab__09A971A2">
+>>>>>>> jennifer
           <End Role="Fabrica" Type="Self.Fabrica" Multiplicity="0..1" />
           <End Role="Origen_Fabrica" Type="Self.Origen_Fabrica" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1976,7 +2691,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Manten_Au__IdMan__114A936A">
+=======
+        <Association Name="FK__Manten_Au__IdMan__367C1819">
+>>>>>>> jennifer
           <End Role="Mantenimiento" Type="Self.Mantenimiento" Multiplicity="0..1" />
           <End Role="Manten_Autopar" Type="Self.Manten_Autopar" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1988,7 +2707,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Mantenimi__IdMan__0E6E26BF">
+=======
+        <Association Name="FK__Mantenimi__IdMan__339FAB6E">
+>>>>>>> jennifer
           <End Role="MantenEstado" Type="Self.MantenEstado" Multiplicity="0..1" />
           <End Role="Mantenimiento" Type="Self.Mantenimiento" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2000,7 +2723,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Mantenimi__IdUsu__0C85DE4D">
+=======
+        <Association Name="FK__Mantenimi__IdUsu__31B762FC">
+>>>>>>> jennifer
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="Mantenimiento" Type="Self.Mantenimiento" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2012,7 +2739,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Origen_Fa__IdOri__6754599E">
+=======
+        <Association Name="FK__Origen_Fa__IdOri__0C85DE4D">
+>>>>>>> jennifer
           <End Role="OrigenEstado" Type="Self.OrigenEstado" Multiplicity="0..1" />
           <End Role="Origen_Fabrica" Type="Self.Origen_Fabrica" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2024,7 +2755,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Origen_Fa__IdUsu__656C112C">
+=======
+        <Association Name="FK__Origen_Fa__IdUsu__0A9D95DB">
+>>>>>>> jennifer
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="Origen_Fabrica" Type="Self.Origen_Fabrica" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2036,7 +2771,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Origen_Tr__IdCom__6B24EA82">
+=======
+        <Association Name="FK__Origen_Tr__IdCom__10566F31">
+>>>>>>> jennifer
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2048,7 +2787,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Origen_Tr__IdOri__6E01572D">
+=======
+        <Association Name="FK__Origen_Tr__IdOri__1332DBDC">
+>>>>>>> jennifer
           <End Role="OrigenEstado" Type="Self.OrigenEstado" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2060,7 +2803,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Origen_Tr__IdVen__6A30C649">
+=======
+        <Association Name="FK__Origen_Tr__IdVen__0F624AF8">
+>>>>>>> jennifer
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="Origen_Traspaso" Type="Self.Origen_Traspaso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2072,7 +2819,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__Promocion__IdPro__45F365D3">
+=======
+        <Association Name="FK__Promocion__IdPro__6B24EA82">
+>>>>>>> jennifer
           <End Role="PromocionList" Type="Self.PromocionList" Multiplicity="0..1" />
           <End Role="Promocion_Auto" Type="Self.Promocion_Auto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2084,7 +2835,11 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK__VentaAuto__IdUsu__7B5B524B">
+=======
+        <Association Name="FK__VentaAuto__IdUsu__208CD6FA">
+>>>>>>> jennifer
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="VentaAuto" Type="Self.VentaAuto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -2130,6 +2885,7 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
           <EntitySet Name="TipoEmpleado" EntityType="Self.TipoEmpleado" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" />
           <EntitySet Name="VentaAuto" EntityType="Self.VentaAuto" />
+<<<<<<< HEAD
           <AssociationSet Name="FK__Accesorio__IdAcc__59063A47" Association="Self.FK__Accesorio__IdAcc__59063A47">
             <End Role="AccesorioList" EntitySet="AccesorioList" />
             <End Role="Accesorio" EntitySet="Accesorio" />
@@ -2315,6 +3071,193 @@ advertencia 6013: La tabla o vista 'Concesionaria.dbo.eRROR' no tiene definida u
             <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
           </AssociationSet>
           <AssociationSet Name="FK__VentaAuto__IdUsu__7B5B524B" Association="Self.FK__VentaAuto__IdUsu__7B5B524B">
+=======
+          <AssociationSet Name="FK__Accesorio__IdAcc__7E37BEF6" Association="Self.FK__Accesorio__IdAcc__7E37BEF6">
+            <End Role="AccesorioList" EntitySet="AccesorioList" />
+            <End Role="Accesorio" EntitySet="Accesorio" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Accesorio__IdCon__7F2BE32F" Association="Self.FK__Accesorio__IdCon__7F2BE32F">
+            <End Role="Concesinaria" EntitySet="Concesinaria" />
+            <End Role="Accesorio" EntitySet="Accesorio" />
+          </AssociationSet>
+          <AssociationSet Name="FK__AutoAcces__IdAcc__02084FDA" Association="Self.FK__AutoAcces__IdAcc__02084FDA">
+            <End Role="Accesorio" EntitySet="Accesorio" />
+            <End Role="AutoAccesorio" EntitySet="AutoAccesorio" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Accesorio__IdAni__7B5B524B" Association="Self.FK__Accesorio__IdAni__7B5B524B">
+            <End Role="Anios" EntitySet="Anios" />
+            <End Role="AccesorioList" EntitySet="AccesorioList" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Accesorio__IdAut__7A672E12" Association="Self.FK__Accesorio__IdAut__7A672E12">
+            <End Role="AutoModelo" EntitySet="AutoModelo" />
+            <End Role="AccesorioList" EntitySet="AccesorioList" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Automovil__IdAni__73BA3083" Association="Self.FK__Automovil__IdAni__73BA3083">
+            <End Role="Anios" EntitySet="Anios" />
+            <End Role="Automovil" EntitySet="Automovil" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Promocion__IdAni__6A30C649" Association="Self.FK__Promocion__IdAni__6A30C649">
+            <End Role="Anios" EntitySet="Anios" />
+            <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
+          </AssociationSet>
+          <AssociationSet Name="FK__AutoAcces__IdAut__02FC7413" Association="Self.FK__AutoAcces__IdAut__02FC7413">
+            <End Role="Automovil" EntitySet="Automovil" />
+            <End Role="AutoAccesorio" EntitySet="AutoAccesorio" />
+          </AssociationSet>
+          <AssociationSet Name="FK__AutoClien__IdAut__25518C17" Association="Self.FK__AutoClien__IdAut__25518C17">
+            <End Role="Automovil" EntitySet="Automovil" />
+            <End Role="AutoCliente" EntitySet="AutoCliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__AutoClien__IdPro__2739D489" Association="Self.FK__AutoClien__IdPro__2739D489">
+            <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
+            <End Role="AutoCliente" EntitySet="AutoCliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__AutoClien__IdVen__2645B050" Association="Self.FK__AutoClien__IdVen__2645B050">
+            <End Role="VentaAuto" EntitySet="VentaAuto" />
+            <End Role="AutoCliente" EntitySet="AutoCliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Automovil__IdAut__75A278F5" Association="Self.FK__Automovil__IdAut__75A278F5">
+            <End Role="AutoColorList" EntitySet="AutoColorList" />
+            <End Role="Automovil" EntitySet="Automovil" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Automovil__IdAut__76969D2E" Association="Self.FK__Automovil__IdAut__76969D2E">
+            <End Role="AutoEstadoList" EntitySet="AutoEstadoList" />
+            <End Role="Automovil" EntitySet="Automovil" />
+          </AssociationSet>
+          <AssociationSet Name="FK__AutoModel__IdAut__66603565" Association="Self.FK__AutoModel__IdAut__66603565">
+            <End Role="AutoMarca" EntitySet="AutoMarca" />
+            <End Role="AutoModelo" EntitySet="AutoModelo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Automovil__IdAut__74AE54BC" Association="Self.FK__Automovil__IdAut__74AE54BC">
+            <End Role="AutoModelo" EntitySet="AutoModelo" />
+            <End Role="Automovil" EntitySet="Automovil" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Promocion__IdAut__693CA210" Association="Self.FK__Promocion__IdAut__693CA210">
+            <End Role="AutoModelo" EntitySet="AutoModelo" />
+            <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Automovil__IdCon__778AC167" Association="Self.FK__Automovil__IdCon__778AC167">
+            <End Role="Concesinaria" EntitySet="Concesinaria" />
+            <End Role="Automovil" EntitySet="Automovil" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Mantenimi__IdAut__32AB8735" Association="Self.FK__Mantenimi__IdAut__32AB8735">
+            <End Role="Automovil" EntitySet="Automovil" />
+            <End Role="Mantenimiento" EntitySet="Mantenimiento" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Origen_Fa__IdAut__0B91BA14" Association="Self.FK__Origen_Fa__IdAut__0B91BA14">
+            <End Role="Automovil" EntitySet="Automovil" />
+            <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Origen_Tr__IdAut__123EB7A3" Association="Self.FK__Origen_Tr__IdAut__123EB7A3">
+            <End Role="Automovil" EntitySet="Automovil" />
+            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Autoparte__IdCat__2BFE89A6" Association="Self.FK__Autoparte__IdCat__2BFE89A6">
+            <End Role="CategoriaAutoparte" EntitySet="CategoriaAutoparte" />
+            <End Role="Autopartes" EntitySet="Autopartes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Autoparte__IdCon__2CF2ADDF" Association="Self.FK__Autoparte__IdCon__2CF2ADDF">
+            <End Role="Concesinaria" EntitySet="Concesinaria" />
+            <End Role="Autopartes" EntitySet="Autopartes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Manten_Au__IdAut__37703C52" Association="Self.FK__Manten_Au__IdAut__37703C52">
+            <End Role="Autopartes" EntitySet="Autopartes" />
+            <End Role="Manten_Autopar" EntitySet="Manten_Autopar" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cliente__IdEstad__18EBB532" Association="Self.FK__Cliente__IdEstad__18EBB532">
+            <End Role="Estado_Cliente" EntitySet="Estado_Cliente" />
+            <End Role="Cliente" EntitySet="Cliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cliente__IdMunic__17F790F9" Association="Self.FK__Cliente__IdMunic__17F790F9">
+            <End Role="Municipio" EntitySet="Municipio" />
+            <End Role="Cliente" EntitySet="Cliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Referenci__IdCli__1BC821DD" Association="Self.FK__Referenci__IdCli__1BC821DD">
+            <End Role="Cliente" EntitySet="Cliente" />
+            <End Role="Referencias" EntitySet="Referencias" />
+          </AssociationSet>
+          <AssociationSet Name="FK__VentaAuto__IdCli__2180FB33" Association="Self.FK__VentaAuto__IdCli__2180FB33">
+            <End Role="Cliente" EntitySet="Cliente" />
+            <End Role="VentaAuto" EntitySet="VentaAuto" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Concesina__IdMun__52593CB8" Association="Self.FK__Concesina__IdMun__52593CB8">
+            <End Role="Municipio" EntitySet="Municipio" />
+            <End Role="Concesinaria" EntitySet="Concesinaria" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Empleado__IdConc__59FA5E80" Association="Self.FK__Empleado__IdConc__59FA5E80">
+            <End Role="Concesinaria" EntitySet="Concesinaria" />
+            <End Role="Empleado" EntitySet="Empleado" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Origen_Tr__IdCon__114A936A" Association="Self.FK__Origen_Tr__IdCon__114A936A">
+            <End Role="Concesinaria" EntitySet="Concesinaria" />
+            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Promocion__IdCon__6C190EBB" Association="Self.FK__Promocion__IdCon__6C190EBB">
+            <End Role="Concesinaria" EntitySet="Concesinaria" />
+            <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Empleado__IdTipo__59063A47" Association="Self.FK__Empleado__IdTipo__59063A47">
+            <End Role="TipoEmpleado" EntitySet="TipoEmpleado" />
+            <End Role="Empleado" EntitySet="Empleado" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Usuario__IdEmple__5DCAEF64" Association="Self.FK__Usuario__IdEmple__5DCAEF64">
+            <End Role="Empleado" EntitySet="Empleado" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Estado__IdPais__4CA06362" Association="Self.FK__Estado__IdPais__4CA06362">
+            <End Role="Pais" EntitySet="Pais" />
+            <End Role="Estado" EntitySet="Estado" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Municipio__IdEst__4F7CD00D" Association="Self.FK__Municipio__IdEst__4F7CD00D">
+            <End Role="Estado" EntitySet="Estado" />
+            <End Role="Municipio" EntitySet="Municipio" />
+          </AssociationSet>
+          <AssociationSet Name="FK__VentaAuto__IdEst__22751F6C" Association="Self.FK__VentaAuto__IdEst__22751F6C">
+            <End Role="EstadoVenta" EntitySet="EstadoVenta" />
+            <End Role="VentaAuto" EntitySet="VentaAuto" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Origen_Fa__IdFab__09A971A2" Association="Self.FK__Origen_Fa__IdFab__09A971A2">
+            <End Role="Fabrica" EntitySet="Fabrica" />
+            <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Manten_Au__IdMan__367C1819" Association="Self.FK__Manten_Au__IdMan__367C1819">
+            <End Role="Mantenimiento" EntitySet="Mantenimiento" />
+            <End Role="Manten_Autopar" EntitySet="Manten_Autopar" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Mantenimi__IdMan__339FAB6E" Association="Self.FK__Mantenimi__IdMan__339FAB6E">
+            <End Role="MantenEstado" EntitySet="MantenEstado" />
+            <End Role="Mantenimiento" EntitySet="Mantenimiento" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Mantenimi__IdUsu__31B762FC" Association="Self.FK__Mantenimi__IdUsu__31B762FC">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Mantenimiento" EntitySet="Mantenimiento" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Origen_Fa__IdOri__0C85DE4D" Association="Self.FK__Origen_Fa__IdOri__0C85DE4D">
+            <End Role="OrigenEstado" EntitySet="OrigenEstado" />
+            <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Origen_Fa__IdUsu__0A9D95DB" Association="Self.FK__Origen_Fa__IdUsu__0A9D95DB">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Origen_Fabrica" EntitySet="Origen_Fabrica" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Origen_Tr__IdCom__10566F31" Association="Self.FK__Origen_Tr__IdCom__10566F31">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Origen_Tr__IdOri__1332DBDC" Association="Self.FK__Origen_Tr__IdOri__1332DBDC">
+            <End Role="OrigenEstado" EntitySet="OrigenEstado" />
+            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Origen_Tr__IdVen__0F624AF8" Association="Self.FK__Origen_Tr__IdVen__0F624AF8">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Origen_Traspaso" EntitySet="Origen_Traspaso" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Promocion__IdPro__6B24EA82" Association="Self.FK__Promocion__IdPro__6B24EA82">
+            <End Role="PromocionList" EntitySet="PromocionList" />
+            <End Role="Promocion_Auto" EntitySet="Promocion_Auto" />
+          </AssociationSet>
+          <AssociationSet Name="FK__VentaAuto__IdUsu__208CD6FA" Association="Self.FK__VentaAuto__IdUsu__208CD6FA">
+>>>>>>> jennifer
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="VentaAuto" EntitySet="VentaAuto" />
           </AssociationSet>
