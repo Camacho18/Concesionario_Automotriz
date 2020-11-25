@@ -2,7 +2,7 @@
 Free admin dashboard template
 
 # Preview
-![ejemplo](../srtdash-admin-dashboard-master/documentation/img/logo.png)
+![ejemplo](/srtdash-admin-dashboard-master/documentation/img/logo.png)
 ![SRTdash admin dashboard template preview](https://colorlib.com/wp/wp-content/uploads/sites/2/srtdash-html-free-admin-dashboard.jpg)
 
 # Overview
